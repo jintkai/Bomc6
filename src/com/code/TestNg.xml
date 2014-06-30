@@ -3,7 +3,7 @@
     <test  name="KbpList">
         <parameter name="Action_URL" value="/ibnms/config/kbpList.action" />
         <classes>
-            <class name="com.code.test.KbpListTest"/>
+            <class name="com.code.test.KbpListTest2"/>
         </classes>
     </test>
 </suite>

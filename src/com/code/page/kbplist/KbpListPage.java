@@ -14,6 +14,7 @@ public class KbpListPage extends Page {
     KbpBtnPage kbpBtn=new KbpBtnPage();
 
 
+
     public GridTablePage getTableByClass(String searchClass){
         return gridTable=searchKbp.searchByClass(searchClass);
     }
