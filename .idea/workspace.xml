@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test Results - D__Test_Bomc6_src_com_code_TestNg_xml.html" afterPath="$PROJECT_DIR$/Test Results - D__Test_Bomc6_src_com_code_TestNg_xml.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/TestNg.xml" afterPath="$PROJECT_DIR$/src/com/code/TestNg.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylog.txt" afterPath="$PROJECT_DIR$/mylog.txt" />
-      <change type="MOVED" beforePath="D:\Test\Bomc6\src\com\code\page\kbplist\KbpListPage2.java" afterPath="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListPage.java" />
-      <change type="MOVED" beforePath="D:\Test\Bomc6\src\com\code\page\kbplist\SearchBasePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/SearchBasePage.java" />
-      <change type="MOVED" beforePath="D:\Test\Bomc6\src\com\code\test\KbpListTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/KbpListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bomc6.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -545,7 +540,7 @@
       <created>1404110625494</created>
       <updated>1404110625494</updated>
       <workItem from="1404110627300" duration="8551000" />
-      <workItem from="1404132941738" duration="6403000" />
+      <workItem from="1404132941738" duration="6650000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -567,7 +562,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14954000" />
+    <option name="totallyTimeSpent" value="15201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="0" />
