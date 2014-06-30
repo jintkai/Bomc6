@@ -1,5 +1,6 @@
 package com.code.page.kbplist;
 
+import com.code.common.GridTablePage;
 import com.code.common.Page;
 
 
@@ -10,7 +11,7 @@ import org.openqa.selenium.support.ui.Select;
 /**
  * Created by jinkai on 2014/6/22.
  */
-public class KbpFromPage extends Page {
+public class KbpFormPage extends Page {
     WebElement classAfter;
     @FindBy(how= How.ID,using="kbp.kbpCaption")
     WebElement kbpCaption;

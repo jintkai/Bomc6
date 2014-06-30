@@ -1,5 +1,6 @@
-package com.code.page;
+package com.code.page.kbplist;
 
+import com.code.common.GridTablePage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,5 +18,6 @@ public class SearchBasePage extends Page {
     WebElement bzTypeKbpClass;
     @FindBy(how= How.ID,using="btn-search")
     WebElement searchButton;
+
 
 }

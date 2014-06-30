@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="log4j-1.2.13">
+    <CLASSES>
+      <root url="jar://D:/eclipse/selenium/log4j-1.2.13.jar!/" />
+      <root url="jar://D:/eclipse/selenium/jxl.jar!/" />
+      <root url="jar://D:/eclipse/selenium/selenium-server-standalone-2.40.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
