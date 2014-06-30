@@ -1,4 +1,4 @@
-package com.code.page.kbplist;
+package com.code.page;
 
 import com.code.common.GridTablePage;
 import com.code.common.Page;

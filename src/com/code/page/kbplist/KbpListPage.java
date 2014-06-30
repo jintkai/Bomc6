@@ -1,65 +1,41 @@
 package com.code.page.kbplist;
 
-import com.code.common.Page;
 import com.code.common.GridTablePage;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
+import com.code.common.Page;
 
 /**
- * Created by jinkai on 2014/6/22.
+ * Created by jinkai on 01/07/2014.
  */
 public class KbpListPage extends Page {
 
-    @FindBy(how= How.ID,using="filter.kbpClass")
-    WebElement kbpClass;
-
-    @FindBy(how= How.ID,using="filter.kbpCaption")
-    WebElement kbpCaption;
-
-    @FindBy(how= How.ID,using="btn-search")
-    WebElement searchBtn;
-
-    @FindBy(id="btn-add")
-    WebElement addBtn;
-
-
+    SearchKbpPage searchKbp=new SearchKbpPage();
     GridTablePage gridTable=new GridTablePage();
+    KbpFormPage kbpForm=new KbpFormPage();
+    KbpBtnPage kbpBtn=new KbpBtnPage();
 
-    KbpFormPage kbpFrom=new KbpFormPage();
 
+    public GridTablePage getTableByClass(String searchClass){
+        return gridTable=searchKbp.searchByClass(searchClass);
+    }
+
+    public GridTablePage getTableByCaption(String searchCaption){
+        return gridTable=searchKbp.searchByCaption(searchCaption);
+    }
+
+    public GridTablePage getTableByMulit(String searchClass,String searchCaption)
+    {
+
+        return gridTable=searchKbp.searchMulti(searchClass,searchCaption);
+    }
+
+    public int addKbp(String obj[])
+    {
+        kbpForm= (KbpFormPage) kbpBtn.getAddForm();
+        kbpForm.addKBP(obj);
+        return searchKbp.searchByCaption(obj[7]).getRowNum();
+    }
     public void init()
     {
-        kbpCaption.clear();
-        kbpClass.clear();
+        searchKbp.init();
     }
-
-    public GridTablePage searchByClass(String searchClass)
-    {
-        init();
-        kbpClass.sendKeys(searchClass);
-        searchBtn.click();
-        return gridTable=new GridTablePage();
     }
-
-    public GridTablePage searchByCaption(String searchCaption)
-    {
-        kbpCaption.sendKeys(searchCaption);
-        searchBtn.click();
-        return gridTable=new GridTablePage();
-    }
-    public GridTablePage searchMulti(String searchClass,String searchCaption)
-    {
-        kbpClass.sendKeys(searchClass);
-        kbpCaption.sendKeys(searchCaption);
-        searchBtn.click();
-        return gridTable=new GridTablePage();
-    }
-    public boolean  addKBP(String[] obj)
-    {
-        addBtn.click();
-        kbpFrom.addKBP(obj);
-        System.out.println(obj[7]+"实际查询数据："+searchByCaption(obj[7]).getRowNum());
-        return searchByClass(obj[7]).getRowNum()==1;
-    }
-}
