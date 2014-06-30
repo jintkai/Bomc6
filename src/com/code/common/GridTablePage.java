@@ -32,14 +32,9 @@ public class GridTablePage extends Page {
     /*
     返回列表中某一个td的值，传入参数，该参数是td的xpath。eg： ./td[2]
      */
-    public String[] getRowValue(String xpath)
+    public String[] getRowsValue(String xpath)
     {
         String[] rowVales=new String[getRowNum()];
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         List<WebElement> list=grid.findElements(By.xpath(".//tr[@id]"));
         WebElement[] webList = new WebElement[list.size()];
         list.toArray(webList);
@@ -69,7 +64,7 @@ public class GridTablePage extends Page {
             return false;
         }
         for (int i=0;i<getRowNum();i++)
-            if(!getRowValue(xpath)[i].contains(searchClass))
+            if(!getRowsValue(xpath)[i].contains(searchClass))
             {
                 System.out.println("数据条目正确，但列表数据错误！");
                 return false;

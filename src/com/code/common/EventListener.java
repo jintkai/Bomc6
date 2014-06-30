@@ -56,7 +56,7 @@ public class EventListener implements WebDriverEventListener {
                 return ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete");
             }
         };
-        while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
+       /* while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
         {
             try {
                 Thread.sleep(1000);
@@ -64,18 +64,13 @@ public class EventListener implements WebDriverEventListener {
                 e.printStackTrace();
             }
         }
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        /*
+*/
         Wait<WebDriver> wait=new WebDriverWait(webDriver,30);
         wait.until(
                 expection
         );
-        */
+        mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
+
     }
 
     @Override

@@ -29,7 +29,6 @@ public class KbpFromPage extends Page {
         classAfter.clear();
         kbpCaption.clear();
         kbpDesc.clear();
-        //middle.clear();
     }
     public void addKBP(String obj[])
     {

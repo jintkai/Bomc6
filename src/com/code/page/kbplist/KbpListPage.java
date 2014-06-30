@@ -48,7 +48,7 @@ public class KbpListPage extends Page {
         searchBtn.click();
         return gridTable=new GridTablePage();
     }
-    public GridTablePage searchGroup(String searchClass,String searchCaption)
+    public GridTablePage searchMulti(String searchClass,String searchCaption)
     {
         kbpClass.sendKeys(searchClass);
         kbpCaption.sendKeys(searchCaption);

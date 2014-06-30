@@ -1,6 +1,6 @@
 package com.code.test;
 
-import com.code.common.ExcelDriver2;
+import com.code.common.ExcelDriver;
 import com.code.common.TestCase;
 import com.code.common.GridTablePage;
 import com.code.page.kbplist.KbpListPage;
@@ -23,29 +23,29 @@ public class KbpListTest extends TestCase {
     public Iterator dataForKbpClass(Method method) throws IOException, BiffException {
 
         System.out.println(method.getName());
-        return new ExcelDriver2("CASE",method.getName());
+        return new ExcelDriver("CASE",method.getName());
     }
 
-    //@Test(dataProvider="kbplist")
+    @Test(dataProvider="kbplist")
     public void searchByClass(String[] obj)
     {
         gridTable=kbpList.searchByClass( obj[5]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]", Integer.parseInt(obj[3]), obj[5]));
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]", Integer.parseInt(obj[3]), obj[5]),"Case ID:"+obj[1]);
     }
 
-    //@Test(dataProvider="kbplist")
+    @Test(dataProvider="kbplist")
     public void searchByCaption(String[] obj)
     {
        gridTable = kbpList.searchByCaption(obj[5]);
-       Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[5]));
+       Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[5]),"Case ID:"+obj[1]);
     }
 
     //@Test(dataProvider="kbplist")
     public void searchGroup(String[] obj)
     {
-        gridTable = kbpList.searchGroup(obj[5],obj[6]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]));
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]));
+        gridTable = kbpList.searchMulti(obj[5],obj[6]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"Case ID:"+obj[1]);
     }
 
     @Test(dataProvider = "kbplist")

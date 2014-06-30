@@ -61,7 +61,7 @@ public class TestCase {
     {
         System.out.println("BeforeClass");
         eventDriver.get(base_url);
-        eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         new LoginPage().login();
     }
     @AfterClass(alwaysRun=true)

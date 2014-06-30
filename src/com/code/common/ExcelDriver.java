@@ -7,11 +7,12 @@ import jxl.read.biff.BiffException;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Iterator;
 
 /**
- * Created by jinkai on 2014/6/23.
+ * Created by jinkai on 2014/6/24.
  */
-public class ExcelDriver {
+public class ExcelDriver implements Iterator {
     private Workbook book;
     private Sheet sheet;
     private int rowNum=0;
@@ -24,41 +25,42 @@ public class ExcelDriver {
         rowNum=sheet.getRows();
         colNum=sheet.getColumns();
     }
-    public boolean hasNext()
-    {
-        if (rowNum==1 || curRowNum>=rowNum ||rowNum==0)
+    @Override
+    public boolean hasNext() {
+        curRowNum++;
+        if(rowNum==0 || rowNum==1 || curRowNum>rowNum)
         {
-
             book.close();
+
             return false;
         }
-        else
-        {
-            curRowNum++;
-            return true;
-        }
+
+        if (!isEnable())
+            return hasNext();
+        return true;
     }
-    /*
-    将每一行保存为一个数组；
-     */
-    public String[] getCols()
+    public boolean isEnable()
     {
-        String[] colsStr=new String[colNum];
-        Cell[] cell=sheet.getRow(curRowNum-1);
-        for (int i=0;i<cell.length;i++)
-        {
-            colsStr[i]=cell[i].getContents();
-        }
-        return colsStr;
+        //getCell(x,y),第y行的第x列坐标
+        Cell cell=sheet.getCell(0,curRowNum-1);
+        if (cell.getContents().equals("Y"))
+            return  true;
+        else
+            return false;
+    }
+    @Override
+    public Object[] next() {
+        Cell[] cells=sheet.getRow(curRowNum-1);
+        Object[] reslut=new Object[1];
+        String[] str=new String[cells.length];
+        for (int i=0;i<cells.length;i++)
+            str[i]=cells[i].getContents();
+        reslut[0]=str;
+        return reslut;
     }
 
-    public String[][] getDate()
-    {
-        String str[][]=new String[rowNum-1][colNum];
-        while(hasNext())
-        {
-            str[curRowNum-2]=getCols();
-        }
-        return str;
+    @Override
+    public void remove() {
+
     }
 }

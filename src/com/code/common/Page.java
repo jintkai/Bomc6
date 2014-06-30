@@ -8,6 +8,6 @@ import org.openqa.selenium.support.PageFactory;
 public class Page {
     public Page()
     {
-        PageFactory.initElements(TestCase.driver,this);
+        PageFactory.initElements(TestCase.eventDriver,this);
     }
 }
