@@ -10,11 +10,30 @@ public class KbpListFramePage extends Page {
 
     KbpTreePage kbpTree=new KbpTreePage();
     GridTablePage gridTable=new GridTablePage();
+    SearchKbpPage searchKbp=new SearchKbpPage();
 
-    public void searchKbpByTree()
+
+    public GridTablePage searchKbpByTree(String kbpClass)
     {
-        gridTable=kbpTree.searchKpiByTree("10-10");
+        return gridTable=kbpTree.searchKpiByTree(kbpClass);
     }
 
+    public GridTablePage searchByClass(String searchClass){
+        return gridTable=searchKbp.searchByClass(searchClass);
+    }
+
+    public GridTablePage searchByCaption(String searchCaption){
+        return gridTable=searchKbp.searchByCaption(searchCaption);
+    }
+
+    public GridTablePage searchByMulti(String searchClass,String searchCaption)
+    {
+
+        return gridTable=searchKbp.searchByMulti(searchClass, searchCaption);
+    }
+    public void init()
+    {
+        searchKbp.init();
+    }
 
 }

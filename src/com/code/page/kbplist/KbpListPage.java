@@ -26,7 +26,7 @@ public class KbpListPage extends Page {
     public GridTablePage getTableByMulit(String searchClass,String searchCaption)
     {
 
-        return gridTable=searchKbp.searchMulti(searchClass,searchCaption);
+        return gridTable=searchKbp.searchByMulti(searchClass, searchCaption);
     }
 
     public int addKbp(String obj[])

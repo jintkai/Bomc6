@@ -50,21 +50,26 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
 
+        /*mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
+        */
         ExpectedCondition<Boolean> expection=new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver webDriver) {
                 return ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete");
             }
         };
-       /* while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
+
+        //document.getElementById("kbpListFrame").contentWindow.document.readyState
+        while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
         {
             try {
                 Thread.sleep(1000);
+                mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-*/
+
         Wait<WebDriver> wait=new WebDriverWait(webDriver,30);
         wait.until(
                 expection
@@ -74,7 +79,6 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
-
     }
 
     @Override

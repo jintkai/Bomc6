@@ -1,6 +1,5 @@
 package com.code.common;
 
-import com.code.page.HomePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;

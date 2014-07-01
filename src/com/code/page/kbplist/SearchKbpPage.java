@@ -2,6 +2,8 @@ package com.code.page.kbplist;
 
 import com.code.common.GridTablePage;
 import com.code.common.Page;
+import com.code.common.TestCase;
+import com.code.page.kpilist.SearchKpiPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -21,6 +23,8 @@ public class SearchKbpPage extends Page{
 
     public void init()
     {
+        TestCase.eventDriver.switchTo().defaultContent();
+        TestCase.eventDriver.switchTo().frame("kbpListFrame");
         kbpCaption.clear();
         kbpClass.clear();
     }
@@ -35,12 +39,14 @@ public class SearchKbpPage extends Page{
 
     public GridTablePage searchByCaption(String searchCaption)
     {
+        init();
         kbpCaption.sendKeys(searchCaption);
         searchBtn.click();
         return new GridTablePage();
     }
-    public GridTablePage searchMulti(String searchClass,String searchCaption)
+    public GridTablePage searchByMulti(String searchClass,String searchCaption)
     {
+        init();
         kbpClass.sendKeys(searchClass);
         kbpCaption.sendKeys(searchCaption);
         searchBtn.click();

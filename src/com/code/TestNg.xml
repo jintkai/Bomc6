@@ -16,11 +16,13 @@
         </classes>
     </test>
     -->
-    <test name="aaa">
+
+    <test name="frame">
         <classes>
-        <parameter name="Action_URL" value="" />
-            <class name="com.code.test.HomePage" />
+            <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
+            <class name="com.code.test.KbpFrameTest" />
         </classes>
     </test>
+
 
 </suite>

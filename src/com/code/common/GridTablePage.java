@@ -63,8 +63,9 @@ public class GridTablePage extends Page {
             System.out.println("期望值:" + rowNum + ",实际值：" + getRowNum());
             return false;
         }
+        String[] rows=getRowsValue(xpath);
         for (int i=0;i<getRowNum();i++)
-            if(!getRowsValue(xpath)[i].contains(searchClass))
+            if(!rows[i].contains(searchClass))
             {
                 System.out.println("数据条目正确，但列表数据错误！");
                 return false;
