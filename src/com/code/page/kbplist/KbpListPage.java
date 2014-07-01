@@ -35,6 +35,7 @@ public class KbpListPage extends Page {
         kbpForm.addKBP(obj);
         return searchKbp.searchByCaption(obj[7]).getRowNum();
     }
+
     public void init()
     {
         searchKbp.init();
