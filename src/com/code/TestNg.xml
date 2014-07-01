@@ -1,7 +1,8 @@
 <suite name="suite" >
-    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
-    <test  name="KbpList">
 
+    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
+    <!--
+    <test  name="KbpList">
         <classes>
             <parameter name="Action_URL" value="/ibnms/config/kbpList.action" />
             <class name="com.code.test.KbpListTest"/>
@@ -14,4 +15,12 @@
             <class name="com.code.test.KpiListTest"/>
         </classes>
     </test>
+    -->
+    <test name="aaa">
+        <classes>
+        <parameter name="Action_URL" value="" />
+            <class name="com.code.test.HomePage" />
+        </classes>
+    </test>
+
 </suite>

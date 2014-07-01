@@ -52,7 +52,7 @@ public class KpiListTest extends TestCase {
     public void searchKpiByMulit(String[] obj)
     {
         GridTablePage gridTable = kpiList.getGridTableByMulit(obj[5],obj[6]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"searchMulit,ÓÃÀıÊ§°Ü£¬Case ID:"+obj[1]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"searchMulit,ÓÃÀıÊ§°Ü£¬Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"searchMulit,IDÓÃÀıÊ§°Ü£¬Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[4]",Integer.parseInt(obj[3]),obj[6]),"searchMulit,NameÓÃÀıÊ§°Ü£¬Case ID:"+obj[1]);
     }
 }
