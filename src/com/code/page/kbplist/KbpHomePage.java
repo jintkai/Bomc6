@@ -1,4 +1,4 @@
-package com.code.page.kpilist;
+package com.code.page.kbplist;
 
 import com.code.common.Page;
 
