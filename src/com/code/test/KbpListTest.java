@@ -22,7 +22,7 @@ public class KbpListTest extends TestCase{
     private KbpListPage kbplist=new KbpListPage();
 
     @DataProvider(name="kbplist")
-    public Iterator dataForKbpClass(Method method) throws IOException, BiffException {
+    public Iterator dataForKbp(Method method) throws IOException, BiffException {
 
         System.out.println(method.getName());
         return new ExcelDriver("CASE",method.getName());
@@ -32,29 +32,29 @@ public class KbpListTest extends TestCase{
     public void searchByClass(String[] obj)
     {
         GridTablePage gridTable= kbplist.getTableByClass(obj[5]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]", Integer.parseInt(obj[3]), obj[5]), "Case ID:" + obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]", Integer.parseInt(obj[3]), obj[5]), "searchByClass,”√¿˝ ß∞‹£¨Case ID:" + obj[1]);
     }
 
     @Test(dataProvider="kbplist")
     public void searchByCaption(String[] obj)
     {
         GridTablePage gridTable = kbplist.getTableByCaption(obj[5]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[5]),"Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[5]),"searchByCaption,”√¿˝ ß∞‹£¨Case ID:"+obj[1]);
     }
 
     //@Test(dataProvider="kbplist")
     public void searchMulit(String[] obj)
     {
         GridTablePage gridTable = kbplist.getTableByMulit(obj[5],obj[6]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"Case ID:"+obj[1]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"searchMulit,”√¿˝ ß∞‹£¨Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"searchMulit,”√¿˝ ß∞‹£¨Case ID:"+obj[1]);
     }
 
-    @Test(dataProvider = "kbplist")
+   // @Test(dataProvider = "kbplist")
     public void addKPI(String[] obj)
     {
         TestCase.eventDriver.get(TestCase.eventDriver.getCurrentUrl()+"?kbp_class="+obj[5]);
-        Assert.assertEquals(kbplist.addKbp(obj),1,"”√¿˝ ß∞‹£¨CASE ID£∫"+obj[1]);
+        Assert.assertEquals(kbplist.addKbp(obj),1,"addKPI,”√¿˝ ß∞‹£¨CASE ID£∫"+obj[1]);
     }
 
     @BeforeMethod

@@ -69,7 +69,6 @@ public class EventListener implements WebDriverEventListener {
         wait.until(
                 expection
         );
-        mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
 
     }
 

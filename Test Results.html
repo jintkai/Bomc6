@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Test Results &mdash; D:/JavaWorkspace/ied/Bomc/src/com/code/TestNg.xml (2)</title>
+<title>Test Results &mdash; D:/Test/Bomc6/src/com/code/TestNg.xml (1)</title>
 <style type="text/css">
           html {
             height: 100%
@@ -572,8 +572,8 @@ jQuery.cookie = function(name, value, options) {
 <body>
 <div id="container">
 <div id="header">
-<div class="time">1 m 42 s</div>
-<h1>D:/JavaWorkspace/ied/Bomc/src/com/code/TestNg.xml (2): <strong><span class="total">12 total, </span><span class="failed">4 failed, </span><span class="passed">8 passed</span></strong>
+<div class="time">2 m 1 s</div>
+<h1>D:/Test/Bomc6/src/com/code/TestNg.xml (1): <strong><span class="total">12 total, </span><span class="failed">3 failed, </span><span class="passed">9 passed</span></strong>
 </h1>
 <div id="treecontrol">
 <ul>
@@ -591,28 +591,28 @@ jQuery.cookie = function(name, value, options) {
 <ul id="tree">
 <li xmlns="" class="level top failed open">
 <span><em class="time">
-<div class="time">1 m 42 s</div>
+<div class="time">2 m 1 s</div>
 </em>com.code.test</span>
 <ul>
 <li class="level suite failed open">
 <span><em class="time">
-<div class="time">1 m 42 s</div>
+<div class="time">2 m 1 s</div>
 </em>KbpListTest</span>
 <ul>
 <li class="level test">
 <span><em class="time">
-<div class="time">1.02 s</div>
-</em><em class="status">passed</em>KbpList ([Y,1,按KBP编号、KBP名称组合查询,1,我是描述,10-10,111,123KBP名称,testDesc,无用,一维表格,是]) [addKPI]</span>
+<div class="time">13.88 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@36c8570c) [addKPI]</span>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">809 ms</div>
-</em><em class="status">passed</em>KbpList ([Y,2,按KBP编号查询KBP2,0,我是描述,10-10,112,124KBP名称,testDesc,无用,二维表格,否]) [addKPI]</span>
+<div class="time">14.67 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@3e68cd79) [addKPI]</span>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">789 ms</div>
-</em><em class="status">passed</em>KbpList ([Y,3,按KBP编号查询KBP2,0,我是描述,10-10,113,125KBP名称,testDesc,无用,一维表格,是]) [addKPI]</span>
+<div class="time">14.61 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@26c1186f) [addKPI]</span>
 <ul>
 <li class="text">
 <span class="stdout">searchByCaption<br/></span>
@@ -621,14 +621,11 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">200 ms</div>
-</em><em class="status">failed</em>KbpList ([Y,1,按KBP名称查询KBP1,9,我是描述,TOTAL]) [searchByCaption]</span>
+<div class="time">6.14 s</div>
+</em><em class="status">failed</em>test ([Ljava.lang.String;@1bd7b222) [searchByCaption]</span>
 <ul>
 <li class="text">
-<span class="stdout">期望值:9,实际值：10<br/></span>
-</li>
-<li class="text">
-<span class="stderr">java.lang.AssertionError: <br/></span>
+<span class="stderr">java.lang.AssertionError: searchByCaption,用例失败，Case ID:1 <br/></span>
 </li>
 <li class="text">
 <span class="stdout">Expected :<br/></span>
@@ -640,14 +637,17 @@ jQuery.cookie = function(name, value, options) {
 <span class="stdout">Actual   :<br/></span>
 </li>
 <li class="text">
-<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at org.testng.Assert.assertTrue(Assert.java:52)<br/>	at com.code.test.KbpListTest.searchByCaption(KbpListTest.java:41)<br/></span>
+<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at com.code.test.KbpListTest.searchByCaption(KbpListTest.java:42)<br/></span>
+</li>
+<li class="text">
+<span class="stdout">期望值:9,实际值：10<br/></span>
 </li>
 </ul>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">15.33 s</div>
-</em><em class="status">passed</em>KbpList ([Y,2,按KBP名称查询KBP2,0,我是描述,TEST]) [searchByCaption]</span>
+<div class="time">5.16 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@5fa5e5e) [searchByCaption]</span>
 <ul>
 <li class="text">
 <span class="stdout">期望值:0,实际值：0<br/></span>
@@ -656,11 +656,14 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">10.27 s</div>
-</em><em class="status">failed</em>KbpList ([Y,3,按KBP名称查询KBP3,9,我是描述,10-10-201]) [searchByCaption]</span>
+<div class="time">5.96 s</div>
+</em><em class="status">failed</em>test ([Ljava.lang.String;@4cd4544) [searchByCaption]</span>
 <ul>
 <li class="text">
-<span class="stderr">java.lang.AssertionError: <br/></span>
+<span class="stdout">期望值:9,实际值：0<br/></span>
+</li>
+<li class="text">
+<span class="stderr">java.lang.AssertionError: searchByCaption,用例失败，Case ID:3 <br/></span>
 </li>
 <li class="text">
 <span class="stdout">Expected :<br/></span>
@@ -672,20 +675,20 @@ jQuery.cookie = function(name, value, options) {
 <span class="stdout">Actual   :<br/></span>
 </li>
 <li class="text">
-<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at org.testng.Assert.assertTrue(Assert.java:52)<br/>	at com.code.test.KbpListTest.searchByCaption(KbpListTest.java:41)<br/></span>
+<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at com.code.test.KbpListTest.searchByCaption(KbpListTest.java:42)<br/></span>
 </li>
 <li class="text">
-<span class="stdout">期望值:9,实际值：0<br/>searchByClass<br/></span>
+<span class="stdout">searchByClass<br/></span>
 </li>
 </ul>
 </li>
 <li class="level test failed open">
 <span><em class="time">
-<div class="time">165 ms</div>
-</em><em class="status">failed</em>KbpList ([Y,1,按KBP编号查询KBP1,9,我是描述,10-10-20]) [searchByClass]</span>
+<div class="time">8.11 s</div>
+</em><em class="status">failed</em>test ([Ljava.lang.String;@2d35da43) [searchByClass]</span>
 <ul>
 <li class="text">
-<span class="stderr">java.lang.AssertionError: <br/></span>
+<span class="stderr">java.lang.AssertionError: searchByClass,用例失败，Case ID:1 <br/></span>
 </li>
 <li class="text">
 <span class="stdout">Expected :<br/></span>
@@ -697,52 +700,37 @@ jQuery.cookie = function(name, value, options) {
 <span class="stdout">Actual   :<br/></span>
 </li>
 <li class="text">
-<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at org.testng.Assert.assertTrue(Assert.java:52)<br/>	at com.code.test.KbpListTest.searchByClass(KbpListTest.java:34)<br/></span>
+<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at com.code.test.KbpListTest.searchByClass(KbpListTest.java:35)<br/></span>
 </li>
 <li class="text">
 <span class="stdout">期望值:9,实际值：15<br/></span>
 </li>
 </ul>
 </li>
-<li class="level test failed open">
+<li class="level test">
 <span><em class="time">
-<div class="time">5.20 s</div>
-</em><em class="status">failed</em>KbpList ([Y,2,按KBP编号查询KBP2,0,我是描述,10-10-20-10111]) [searchByClass]</span>
+<div class="time">7.09 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@18f2225f) [searchByClass]</span>
 <ul>
 <li class="text">
 <span class="stdout">期望值:0,实际值：0<br/></span>
 </li>
-<li class="text">
-<span class="stderr">java.lang.AssertionError: <br/></span>
-</li>
-<li class="text">
-<span class="stdout">Expected :<br/></span>
-</li>
-<li class="text">
-<span class="stderr">true<br/></span>
-</li>
-<li class="text">
-<span class="stdout">Actual   :<br/></span>
-</li>
-<li class="text">
-<span class="stderr">false<br/>  <br/><br/>	at org.testng.Assert.fail(Assert.java:94)<br/>	at org.testng.Assert.failNotEquals(Assert.java:494)<br/>	at org.testng.Assert.assertTrue(Assert.java:42)<br/>	at org.testng.Assert.assertTrue(Assert.java:52)<br/>	at com.code.test.KbpListTest.searchByClass(KbpListTest.java:34)<br/></span>
-</li>
 </ul>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">10.20 s</div>
-</em><em class="status">passed</em>KbpList ([Y,3,按KBP编号查询KBP2,0,我是描述,10-10-201]) [searchByClass]</span>
+<div class="time">7.16 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@62114b17) [searchByClass]</span>
 <ul>
 <li class="text">
-<span class="stdout">期望值:0,实际值：0<br/>searchGroup<br/></span>
+<span class="stdout">期望值:0,实际值：0<br/>searchMulit<br/></span>
 </li>
 </ul>
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">6.68 s</div>
-</em><em class="status">passed</em>KbpList ([Y,1,按KBP编号、KBP名称组合查询,1,我是描述,10-10-20-10,TOTAL]) [searchGroup]</span>
+<div class="time">20.52 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@5b6b9e62) [searchMulit]</span>
 <ul>
 <li class="text">
 <span class="stdout">期望值:1,实际值：1<br/>期望值:1,实际值：1<br/></span>
@@ -751,8 +739,8 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">25.48 s</div>
-</em><em class="status">passed</em>KbpList ([Y,2,按KBP编号查询KBP2,0,我是描述,10-10-20-10,TOTAL1]) [searchGroup]</span>
+<div class="time">9.06 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@54fedfb6) [searchMulit]</span>
 <ul>
 <li class="text">
 <span class="stdout">期望值:0,实际值：0<br/>期望值:0,实际值：0<br/></span>
@@ -761,8 +749,8 @@ jQuery.cookie = function(name, value, options) {
 </li>
 <li class="level test">
 <span><em class="time">
-<div class="time">25.51 s</div>
-</em><em class="status">passed</em>KbpList ([Y,3,按KBP编号查询KBP2,0,我是描述,10-10-20-1011,TOTAL]) [searchGroup]</span>
+<div class="time">8.71 s</div>
+</em><em class="status">passed</em>test ([Ljava.lang.String;@388698fa) [searchMulit]</span>
 <ul>
 <li class="text">
 <span class="stdout">期望值:0,实际值：0<br/>期望值:0,实际值：0<br/></span>
@@ -777,7 +765,7 @@ jQuery.cookie = function(name, value, options) {
 </div>
 </div>
 <div id="footer">
-<p>Generated by IntelliJ IDEA on 27/06/14 17:05</p>
+<p>Generated by IntelliJ IDEA on 01/07/14 13:09</p>
 </div>
 </body>
 </html>

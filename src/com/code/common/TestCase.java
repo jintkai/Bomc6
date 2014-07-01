@@ -47,7 +47,8 @@ public class TestCase {
         return driver;
     }
 
-    public static WebDriver driver=createDriver("CHROME");
+    public static WebDriver driver=createDriver("IE");
+    //public static WebDriver driver;
     public static EventFiringWebDriver eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
 
     @BeforeMethod
@@ -59,7 +60,8 @@ public class TestCase {
     @BeforeClass
     public void beforeClass(String base_url)
     {
-        System.out.println("BeforeClass");
+        //driver=createDriver("IE");
+        //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
         //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         new LoginPage().login();
@@ -67,8 +69,9 @@ public class TestCase {
     @AfterClass(alwaysRun=true)
     public  void afterClass()
     {
-        eventDriver.close();
-        eventDriver.quit();
+        //eventDriver.close();
+       // eventDriver.quit();
+
     }
 
 }
