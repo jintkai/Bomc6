@@ -6,6 +6,6 @@ package com.code.common;
 public class Tools {
     public Tools()
     {
-
+        System.out.println("a");
     }
 }
