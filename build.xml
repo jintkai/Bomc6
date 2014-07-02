@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="123" default="init" basedir=".">
+     <property name="backup" value="Backup" />
+     <property name="src" value="${basedir}\srctest"/>
+     <property name="dest" value="${basedir}\dest"/>
+
+    <path id="lib_classpath">
+        <fileset dir="${basedir}/lib">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <target name="init" depends="clean">
+        <mkdir dir="${src}"/>
+        <mkdir dir="${dest}"/>
+        <!--建立目录hello-->
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="${basedir}\src" destdir="${src}">
+                <classpath refid="lib_classpath"/>
+        </javac>
+    </target>
+    <target name="build" depends="compile">
+        <jar destfile="${dest}\bomc.jar" basedir="${src}"/>
+    </target>
+    <target name="run" depends="build">
+        <java classname="com.code.test.KbpFrameTest" classpath="${dest}\bomc.jar">
+            <classpath refid="lib_classpath"/>
+        </java>
+    </target>
+
+    <target name="clean">
+        <delete dir="${src}" />
+        <delete dir="${dest}" />
+    </target>
+</project>
