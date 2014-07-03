@@ -57,14 +57,15 @@ public class TestCase {
         //driver=createDriver("IE");
         //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
+        eventDriver.manage().window().maximize();
         //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         new LoginPage().login();
     }
     @AfterClass(alwaysRun=true)
     public  void afterClass()
     {
-        //eventDriver.close();
-       // eventDriver.quit();
+        eventDriver.close();
+        eventDriver.quit();
 
     }
 

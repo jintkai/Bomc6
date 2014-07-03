@@ -25,24 +25,15 @@ public class KbpFormPage extends Page {
     @FindBy(how=How.ID,using="btn-submit")
     WebElement btn;
 
-    public void init()
-    {
-        classAfter.clear();
-        kbpCaption.clear();
-        kbpDesc.clear();
-    }
     public void addKBP(String obj[])
     {
-        init();
-        classAfter.sendKeys(obj[6]);
-        kbpCaption.sendKeys(obj[7]);
-        kbpDesc.sendKeys(obj[8]);
+        tools.sendKeys(classAfter,obj[6]);
+        tools.sendKeys(kbpCaption,obj[7]);
+        tools.sendKeys(kbpDesc,obj[8]);
        //middle.sendKeys("006");
-        Select select= new Select(viewStyle);
-        select.selectByVisibleText(obj[10]);
-        (new Select(enable)).selectByVisibleText(obj[11]);
-        enable.submit();
-        //btn.click();
+        tools.SelectByVisibleText(viewStyle,obj[10]);
+        tools.SelectByVisibleText(enable,obj[11]);
+        tools.click(btn);
     }
 
 }

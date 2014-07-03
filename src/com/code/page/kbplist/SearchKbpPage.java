@@ -33,21 +33,21 @@ public class SearchKbpPage extends Page{
     public GridTablePage searchByClass(String searchClass)
     {
         tools.sendKeys(kbpClass,searchClass);
-        tools.clinck(searchBtn);
+        tools.click(searchBtn);
         return new GridTablePage();
     }
 
     public GridTablePage searchByCaption(String searchCaption)
     {
         tools.sendKeys(kbpCaption,searchCaption);
-        tools.clinck(searchBtn);
+        tools.click(searchBtn);
         return new GridTablePage();
     }
     public GridTablePage searchByMulti(String searchClass,String searchCaption)
     {
         tools.sendKeys(kbpCaption,searchCaption);
         tools.sendKeys(kbpClass,searchClass);
-        tools.clinck(searchBtn);
+        tools.click(searchBtn);
         return new GridTablePage();
     }
 

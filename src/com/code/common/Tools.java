@@ -3,6 +3,7 @@ package com.code.common;
 import junit.framework.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -23,10 +24,10 @@ public class Tools {
 
     WebDriver driver= TestCase.eventDriver;
 
-    public boolean isElementExist(By by)
+    public boolean isElementExist(SearchContext d,By by)
     {
         try {
-            driver.findElement(by);
+            d.findElement(by);
             return true;
         }catch(NoSuchElementException e)
         {
@@ -37,14 +38,13 @@ public class Tools {
     /*
     通过By类型查找元素；
      */
-    public WebElement findBy(By by)
+    public WebElement findBy(SearchContext d,By by)
     {
         WebElement ele=null;
-        if (isElementExist(by))
-            ele=driver.findElement(by);
+        if (isElementExist(d,by))
+            ele=d.findElement(by);
         return ele;
     }
-
     public java.util.List<WebElement> findElements(SearchContext d,By by)
     {
         try {
@@ -58,15 +58,33 @@ public class Tools {
 
     public void sendKeys(WebElement ele,String value)
     {
-        ele.sendKeys(value);
+
+        try {
+            ele.sendKeys(value);
+        }catch(Exception e)
+        {
+            System.out.println(e);
+            screen();
+            System.out.println("sendKeys元素失败");
+        }
     }
     public void clear(WebElement ele){ele.clear();}
-
-    public void clinck(WebElement ele)
+    public void SelectByVisibleText(WebElement ele,String text)
     {
-        ele.click();
+        (new Select(ele)).selectByVisibleText(text);
     }
-    public void assertEqual(String actual,String expected)
+    public void click(WebElement ele)
+    {
+        try {
+            ele.click();
+        }catch(Exception e)
+        {
+            System.out.println(e);
+            screen();
+            System.out.println("点击元素失败");
+        }
+    }
+    public void assertEquals(Object actual,Object expected)
     {
         try {
             Assert.assertEquals(actual, expected, "执行错误");

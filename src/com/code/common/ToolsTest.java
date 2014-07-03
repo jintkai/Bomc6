@@ -21,9 +21,9 @@ public class ToolsTest  {
 
         tools.executeByAutoIT(Data.baseDir + "res\\agent.exe");
 
-        tools.findBy(By.id("userId"));
-        tools.sendKeys(tools.findBy(By.id("userId")),"admin123456");
-        tools.assertEqual("2","3");
+        //tools.findBy(By.id("userId"));
+        //tools.sendKeys(tools.findBy(By.id("userId")),"admin123456");
+        tools.assertEquals("2","3");
     }
 
 }

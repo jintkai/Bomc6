@@ -11,6 +11,8 @@ public class KbpListFramePage extends Page {
     KbpTreePage kbpTree=new KbpTreePage();
     GridTablePage gridTable=new GridTablePage();
     SearchKbpPage searchKbp=new SearchKbpPage();
+    KbpFormPage kbpForm=new KbpFormPage();
+    KbpBtnPage kbpBtn=new KbpBtnPage();
 
 
     public GridTablePage searchKbpByTree(String treeValue)
@@ -33,9 +35,30 @@ public class KbpListFramePage extends Page {
         tools.switchToFrame("kbpListFrame");
         return gridTable=searchKbp.searchByMulti(searchClass, searchCaption);
     }
-    public void init()
+    public int addKbp(String obj[])
     {
-       // searchKbp.init();
+
+        if (!obj[5].equals("0"))
+        {
+            //通过ifram，tree打开对应的增加窗口
+            tools.switchToFrame();
+            (new KbpTreePage()).searchKpiByTree(obj[5]);
+        }
+        else
+            tools.switchToFrame("kbpListFrame");
+        kbpForm=kbpBtn.openFormByAdd();
+        kbpForm.addKBP(obj);
+        if (!obj[5].equals("0"))
+        return searchKbp.searchByClass(obj[12]).getRowNum();
+        return searchKbp.searchByCaption(obj[7]).getRowNum();
+    }
+    public int delKbp(String obj[])
+    {
+        tools.switchToFrame("kbpListFrame");
+        gridTable=new GridTablePage();
+        gridTable.selectGridTable(2);
+        int a=1;
+        return a;
     }
 
 }

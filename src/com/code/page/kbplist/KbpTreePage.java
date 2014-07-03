@@ -59,6 +59,11 @@ public class KbpTreePage extends Page {
         }
         */
         //TestCase.eventDriver.switchTo().frame("kbpListFrame");
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.switchToFrame("kbpListFrame");
         return new GridTablePage();
     }

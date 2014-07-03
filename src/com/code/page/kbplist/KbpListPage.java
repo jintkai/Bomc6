@@ -29,9 +29,11 @@ public class KbpListPage extends Page {
         return gridTable=searchKbp.searchByMulti(searchClass, searchCaption);
     }
 
+
     public int addKbp(String obj[])
     {
-        kbpForm= (KbpFormPage) kbpBtn.getAddForm();
+
+        kbpForm=kbpBtn.openFormByAdd();
         kbpForm.addKBP(obj);
         return searchKbp.searchByCaption(obj[7]).getRowNum();
     }

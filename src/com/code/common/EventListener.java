@@ -88,7 +88,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        mylog.info("AfterClickOn"+webElement.getTagName());
+       // mylog.info("AfterClickOn"+webElement.getTagName());
     }
 
     @Override

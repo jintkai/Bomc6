@@ -16,10 +16,9 @@ public class KbpBtnPage extends Page {
     WebElement editBtn;
     @FindBy(how= How.ID,using="btn-del")
     WebElement delBtn;
-    public KbpFormPage getAddForm()
+    public KbpFormPage openFormByAdd()
     {
-        //tools.clinck(addBtn);
-        addBtn.click();
+        tools.click(addBtn);
         return new KbpFormPage();
     }
 }

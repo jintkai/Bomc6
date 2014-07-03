@@ -16,7 +16,11 @@ public class GridTablePage extends Page {
     private int gridCount=0;
     @FindBy(how= How.XPATH,using="//*[@id=\"gridTable\"]")
     WebElement grid;
-
+    /*
+    全选单选框
+     */
+    @FindBy(how=How.XPATH,using="//input[@id=\"cb_gridTable\"]")
+    WebElement cd_gridTable;
     List<WebElement> list=null;
     /*
     返回当前页中总行数
@@ -57,21 +61,43 @@ public class GridTablePage extends Page {
     {
         rowNum=getRowNum();
         if (expNum==0 && rowNum==0) {
-            System.out.println("列表中行数错误，期望值："+expNum+"，实际值："+rowNum);
+            System.out.println("期望值："+expNum+"，实际值："+rowNum);
             return true;
         }
         if (expNum!=rowNum) {
-            System.out.println("列表中行数错误，期望值："+expNum+"，实际值："+rowNum);
+            System.out.println("通过xpath："+xpath+"定位，列表中行数错误，期望值："+expNum+"，实际值："+rowNum);
             return false;
         }
         String[] rows=getRowsValue(xpath);
         for (int i=0;i<rowNum;i++)
             if(!rows[i].contains(searchClass))
             {
-                System.out.println("列表中数据错误，第"+(i+1)+"的值为："+rows[i]+"，期望值是："+searchClass);
+                System.out.println("通过xpath："+xpath+"定位，列表中行数错误，期望值："+expNum+"，实际值："+rowNum);
                 return false;
             }
         System.out.println("期望值："+expNum+"，实际值："+rowNum);
         return true;
     }
+
+    /*
+    根据index来选择元素，0表示别表中所有
+     */
+    public void selectGridTable(int index)
+    {
+        if(index == 0)
+        {
+            tools.click(cd_gridTable);
+
+        }
+        else{
+            list=tools.findElements(grid,By.xpath(".//tr[@id]"));
+            WebElement[] webList = new WebElement[list.size()];
+            list.toArray(webList);
+            tools.click(tools.findBy(webList[index-1],By.xpath("./td/input")));
+            //tools.click(tools.findBy(grid,By.xpath("./tbody/tr/td")));
+        }
+
+
+    }
+
 }

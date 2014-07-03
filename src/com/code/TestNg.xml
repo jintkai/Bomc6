@@ -20,7 +20,11 @@
     <test name="frame">
         <classes>
             <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
-            <class name="com.code.test.KbpFrameTest" />
+            <class name="com.code.test.KbpFrameTest" >
+            <methods>
+                <include name="delKbp"/>
+            </methods>
+            </class>
         </classes>
     </test>
 
