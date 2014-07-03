@@ -20,6 +20,7 @@
     <orderEntry type="library" name="log4j-1.2.13" level="project" />
     <orderEntry type="library" name="selenium-java-2.40.0" level="project" />
     <orderEntry type="library" name="selenium-server-standalone-2.40.0" level="application" />
+    <orderEntry type="library" name="selenium-java-2.40.0-srcs" level="project" />
   </component>
 </module>
 

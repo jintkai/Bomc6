@@ -1,18 +1,26 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <project name="123" default="init" basedir=".">
+
      <property name="backup" value="Backup" />
      <property name="src" value="${basedir}\srctest"/>
      <property name="dest" value="${basedir}\dest"/>
-
+    <!--设置classPath-->
     <path id="lib_classpath">
         <fileset dir="${basedir}/lib">
             <include name="*.jar" />
         </fileset>
     </path>
 
-    <target name="init" depends="clean">
+    <path id="runtest">
+        <fileset dir="${dest}/">
+            <include name="*" />
+        </fileset>
+    </path>
+
+    <target name="init" depends="clean" >
         <mkdir dir="${src}"/>
         <mkdir dir="${dest}"/>
+        <echo message="Hello App"/>
         <!--建立目录hello-->
     </target>
 
@@ -20,6 +28,7 @@
         <javac srcdir="${basedir}\src" destdir="${src}">
                 <classpath refid="lib_classpath"/>
         </javac>
+
     </target>
     <target name="build" depends="compile">
         <jar destfile="${dest}\bomc.jar" basedir="${src}"/>
@@ -34,4 +43,17 @@
         <delete dir="${src}" />
         <delete dir="${dest}" />
     </target>
+
+    <taskdef name="testng"
+             classname="com.beust.testng.TestNGAntTask"
+             classpathref="lib_classpath"/>
+
+    <target name="testng" >
+        <testng outputdir="${basedir}"
+                classpathref="runtest"
+                classpath="lib_classpath" >
+            <xmlfileset dir="${basedir}\src\com\code" includes="TestNg.xml"/> <!--在指定路径下，找文件名由testng.file-->
+        </testng>                                                           <!--定义的testng.xml文件-->
+    </target>
+
 </project>

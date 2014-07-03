@@ -6,6 +6,8 @@
       <root url="jar://D:/eclipse/selenium/selenium-server-standalone-2.40.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/" />
+    </SOURCES>
   </library>
 </component>
