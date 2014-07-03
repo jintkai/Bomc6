@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class Page {
     public Actions actions=new Actions(TestCase.eventDriver);
+    public Tools tools=new Tools();
     public Page()
     {
         PageFactory.initElements(TestCase.eventDriver,this);

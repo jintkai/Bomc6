@@ -11,6 +11,7 @@ import org.openqa.selenium.WebElement;
  * Created by jinkai on 01/07/2014.
  */
 public class KbpTreePage extends Page {
+
     WebElement fuzzy;
     public void init()
     {
@@ -19,8 +20,9 @@ public class KbpTreePage extends Page {
 
     public GridTablePage searchKpiByTree(String kbpClass)
     {
-        TestCase.eventDriver.switchTo().defaultContent();
-        TestCase.eventDriver.switchTo().frame("kbpTree");
+        //TestCase.eventDriver.switchTo().defaultContent();
+        //TestCase.eventDriver.switchTo().frame("kbpTree");
+        tools.switchToFrame("kbpTree");
         init();
         fuzzy.sendKeys(kbpClass);
 

@@ -5,4 +5,5 @@ package com.code.common;
  */
 public class Data {
     public static String browserType="IE";
+    public static String baseDir="D:\\Test\\Bomc6\\";
 }

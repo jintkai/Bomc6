@@ -18,6 +18,7 @@ public class KbpBtnPage extends Page {
     WebElement delBtn;
     public KbpFormPage getAddForm()
     {
+        //tools.clinck(addBtn);
         addBtn.click();
         return new KbpFormPage();
     }

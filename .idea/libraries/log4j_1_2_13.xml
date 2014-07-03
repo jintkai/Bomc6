@@ -8,6 +8,7 @@
     <JAVADOC />
     <SOURCES>
       <root url="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
