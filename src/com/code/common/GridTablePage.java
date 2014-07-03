@@ -17,12 +17,14 @@ public class GridTablePage extends Page {
     @FindBy(how= How.XPATH,using="//*[@id=\"gridTable\"]")
     WebElement grid;
 
+    List<WebElement> list=null;
     /*
-    ·µ»ØtableÖĞtrµÄ³¤¶È
+    è¿”å›å½“å‰é¡µä¸­æ€»è¡Œæ•°
      */
     public int getRowNum()
     {
-        List<WebElement> list=grid.findElements(By.xpath(".//tr[@id]"));
+        //List<WebElement> list=grid.findElements(By.xpath(".//tr[@id]"));
+        list=tools.findElements(grid,By.xpath(".//tr[@id]"));
         if (list==null)
             rowNum=0;
         else
@@ -30,12 +32,12 @@ public class GridTablePage extends Page {
         return  rowNum;
     }
     /*
-    ·µ»ØÁĞ±íÖĞÄ³Ò»¸ötdµÄÖµ£¬´«Èë²ÎÊı£¬¸Ã²ÎÊıÊÇtdµÄxpath¡£eg£º ./td[2]
+    è¿”å›xpathåˆ—çš„æ•°ç»„
      */
     public String[] getRowsValue(String xpath)
     {
-        String[] rowVales=new String[getRowNum()];
-        List<WebElement> list=grid.findElements(By.xpath(".//tr[@id]"));
+        String[] rowVales=new String[rowNum];
+       // List<WebElement> list=tools.findElements(grid,By.xpath(".//tr[@id]"));
         WebElement[] webList = new WebElement[list.size()];
         list.toArray(webList);
 
@@ -49,28 +51,27 @@ public class GridTablePage extends Page {
     }
 
     /*
-    *ÅĞ¶ÏÄ³¸ötdÖĞµÄ·µ»ØÖµ£¬ÊÇ·ñÓëÔ¤ÆÚµÄÖµÏàµ±£¬²ÎÊıÖĞ
-    *@param xpath±íÊ¾Ä³¸ötdĞèÒª¶¨Î»£¬eg ./td[2]±íÊ¾·µ»ØµÄtd
-    * @rowNum ±íÊ¾²éÑ¯½á¹ûÖĞÓ¦¸Ã¾ßÓĞµÄĞĞÊı£¬caseÖĞ¿ÉÒÔ´«Èë£¬searchClass¶Ô±ÈÔ¤ÆÚÖµ£¬caseÖĞ´«Èë
+    åˆ¤æ–­æ•°ç»„ä¸­çš„å€¼æ˜¯å¦éƒ½åŒ…å«æ‰€æŸ¥è¯¢çš„å€¼
      */
-    public boolean equalsSearch(String xpath,int rowNum,String searchClass)
+    public boolean equalsSearch(String xpath,int expNum,String searchClass)
     {
-        if (getRowNum()==0 && rowNum==0) {
-            System.out.println("ÆÚÍûÖµ:"+rowNum+",Êµ¼ÊÖµ£º"+getRowNum());
+        rowNum=getRowNum();
+        if (expNum==0 && rowNum==0) {
+            System.out.println("åˆ—è¡¨ä¸­è¡Œæ•°é”™è¯¯ï¼ŒæœŸæœ›å€¼ï¼š"+expNum+"ï¼Œå®é™…å€¼ï¼š"+rowNum);
             return true;
         }
-        if (getRowNum()!=rowNum) {
-            System.out.println("ÆÚÍûÖµ:" + rowNum + ",Êµ¼ÊÖµ£º" + getRowNum());
+        if (expNum!=rowNum) {
+            System.out.println("åˆ—è¡¨ä¸­è¡Œæ•°é”™è¯¯ï¼ŒæœŸæœ›å€¼ï¼š"+expNum+"ï¼Œå®é™…å€¼ï¼š"+rowNum);
             return false;
         }
         String[] rows=getRowsValue(xpath);
-        for (int i=0;i<getRowNum();i++)
+        for (int i=0;i<rowNum;i++)
             if(!rows[i].contains(searchClass))
             {
-                System.out.println("Êı¾İÌõÄ¿ÕıÈ·£¬µ«ÁĞ±íÊı¾İ´íÎó£¡");
+                System.out.println("åˆ—è¡¨ä¸­æ•°æ®é”™è¯¯ï¼Œç¬¬"+(i+1)+"çš„å€¼ä¸ºï¼š"+rows[i]+"ï¼ŒæœŸæœ›å€¼æ˜¯ï¼š"+searchClass);
                 return false;
             }
-        System.out.println("ÆÚÍûÖµ:"+rowNum+",Êµ¼ÊÖµ£º"+getRowNum());
+        System.out.println("æœŸæœ›å€¼ï¼š"+expNum+"ï¼Œå®é™…å€¼ï¼š"+rowNum);
         return true;
     }
 }

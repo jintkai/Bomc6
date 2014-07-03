@@ -23,33 +23,31 @@ public class SearchKbpPage extends Page{
 
     public void init()
     {
-        TestCase.eventDriver.switchTo().defaultContent();
+        /*TestCase.eventDriver.switchTo().defaultContent();
         TestCase.eventDriver.switchTo().frame("kbpListFrame");
-        kbpCaption.clear();
-        kbpClass.clear();
+        */
+        tools.clear(kbpClass);
+        tools.clear(kbpCaption);
     }
 
     public GridTablePage searchByClass(String searchClass)
     {
-        init();
-        kbpClass.sendKeys(searchClass);
-        searchBtn.click();
+        tools.sendKeys(kbpClass,searchClass);
+        tools.clinck(searchBtn);
         return new GridTablePage();
     }
 
     public GridTablePage searchByCaption(String searchCaption)
     {
-        init();
-        kbpCaption.sendKeys(searchCaption);
-        searchBtn.click();
+        tools.sendKeys(kbpCaption,searchCaption);
+        tools.clinck(searchBtn);
         return new GridTablePage();
     }
     public GridTablePage searchByMulti(String searchClass,String searchCaption)
     {
-        init();
-        kbpClass.sendKeys(searchClass);
-        kbpCaption.sendKeys(searchCaption);
-        searchBtn.click();
+        tools.sendKeys(kbpCaption,searchCaption);
+        tools.sendKeys(kbpClass,searchClass);
+        tools.clinck(searchBtn);
         return new GridTablePage();
     }
 

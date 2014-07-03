@@ -1,20 +1,20 @@
 package com.code.common;
 
 import junit.framework.Test;
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.Reporter;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created by jinkai on 02/07/2014.
@@ -45,11 +45,22 @@ public class Tools {
         return ele;
     }
 
+    public java.util.List<WebElement> findElements(SearchContext d,By by)
+    {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        List<WebElement> eles=d.findElements(by);
+        return  eles;
+    }
 
     public void sendKeys(WebElement ele,String value)
     {
         ele.sendKeys(value);
     }
+    public void clear(WebElement ele){ele.clear();}
 
     public void clinck(WebElement ele)
     {
@@ -66,12 +77,34 @@ public class Tools {
             driver.close();
         }
     }
+    public void assertTrue(boolean actual)
+    {
+        try {
+            Assert.assertTrue(actual, "执行错误");
+        }
+        catch(AssertionError e){
+            screen();
+            System.out.println(e);
+            Assert.assertTrue(actual, "执行错误");
+        }
+    }
     public void switchToFrame(int index){
         driver.switchTo().defaultContent();
         try {driver.switchTo().frame(index);}
         catch(Exception e)
         {
             System.out.println("通过index跳转iframe时错误");
+            System.out.println(e);
+            screen();
+        }
+    }
+    public void switchToFrame(){
+        try {
+            driver.switchTo().defaultContent();
+        }
+        catch(Exception e)
+        {
+            System.out.println("切换到默认frame失败");
             System.out.println(e);
             screen();
         }
@@ -105,13 +138,13 @@ public class Tools {
      */
     public void screen()
     {
-        String imageFormat = ".bmp";// 图像文件的格式
+        String imageFormat = "jpg";// 图像文件的格式
         String picDir="D:\\Test\\Bomc6\\pictures\\";
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
         try {
             // 拷贝屏幕到一个BufferedImage对象screenshot
             BufferedImage screenshot = (new Robot()).createScreenCapture(new Rectangle(0, 0,(int) d.getWidth(), (int) d.getHeight() - 40));
-            String filename = picDir + getCurrentDateTime() + imageFormat;	//设置截屏保存的路径名称
+            String filename = picDir + getCurrentDateTime() +"."+imageFormat;	//设置截屏保存的路径名称
             File f = new File(filename);
             System.out.print("Save File " + filename);
             ImageIO.write(screenshot, imageFormat, f);		// 将screenshot对象写入图像文件

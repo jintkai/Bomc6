@@ -34,44 +34,41 @@ public class KbpFrameTest extends TestCase {
         return new ExcelDriver("KBP",method.getName());
     }
 
-    @Test(dataProvider = "kbpList")
+    //@Test(dataProvider = "kbpList")
     public void searchKbpByTreeCaption(String[] obj)
     {
         GridTablePage gridTable=kbpFrame.searchKbpByTree(obj[5]);
-        Assert.assertEquals(gridTable.getRowNum(), Integer.parseInt(obj[3]), "KBPTree²éÑ¯ÌõÊý´íÎó");
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]", gridTable.getRowNum(), obj[5]), "KBPTree²éÑ¯½á¹û´íÎó");
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[6]));
     }
 
-    @Test(dataProvider = "kbpList")
+    //@Test(dataProvider = "kbpList")
     public void searchKbpByTreeClass(String[] obj)
     {
         GridTablePage gridTable=kbpFrame.searchKbpByTree(obj[5]);
-        Assert.assertEquals(gridTable.getRowNum(), Integer.parseInt(obj[3]), "KBPTree²éÑ¯ÌõÊý´íÎó");
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]", gridTable.getRowNum(), obj[5]), "KBPTree²éÑ¯½á¹û´íÎó");
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[5]));
     }
 
     @Test(dataProvider = "kbpList")
     public void searchByClass(String[] obj)
     {
         GridTablePage gridTable=kbpFrame.searchByClass(obj[5]);
-        Assert.assertEquals(gridTable.getRowNum(), Integer.parseInt(obj[3]), "KbpClass²éÑ¯");
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]", gridTable.getRowNum(), obj[5]), "KbpClass²éÑ¯");
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[5]));
     }
 
-    @Test(dataProvider = "kbpList")
+  //  @Test(dataProvider = "kbpList")
     public void searchByCaption(String[] obj)
     {
         GridTablePage gridTable=kbpFrame.searchByCaption(obj[5]);
-        Assert.assertEquals(gridTable.getRowNum(), Integer.parseInt(obj[3]), "KBPTree²éÑ¯ÌõÊý´íÎó");
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]", gridTable.getRowNum(), obj[5]), "KBPTree²éÑ¯½á¹û´íÎó");
+        Assert.assertEquals(gridTable.getRowNum(), Integer.parseInt(obj[3]), "KBPTreeï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        Assert.assertTrue(gridTable.equalsSearch("./td[3]", gridTable.getRowNum(), obj[5]), "KBPTreeï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
     }
 
-    @Test(dataProvider = "kbpList")
+    //@Test(dataProvider = "kbpList")
     public void searchByMulti(String[] obj)
     {
         GridTablePage gridTable=kbpFrame.searchByMulti(obj[5],obj[6]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"searchMulit,ÓÃÀýÊ§°Ü£¬Case ID:"+obj[1]);
-        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"searchMulit,ÓÃÀýÊ§°Ü£¬Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]),obj[5]),"searchMulit,ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½Case ID:"+obj[1]);
+        Assert.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]),obj[6]),"searchMulit,ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½Case ID:"+obj[1]);
     }
 
 }

@@ -13,12 +13,13 @@ import org.testng.annotations.*;
  * Created by jinkai on 2014/6/21.
  */
 public class TestCase {
+    public Tools tools=new Tools();
     public static WebDriver 	createDriver(String BrowerType)
     {
         if(BrowerType=="IE")
         {
             System.setProperty("webdriver.ie.driver",
-                    "D:\\eclipse\\selenium\\IEDriverServer.exe");//注意这里IEDriverServer.exe的文件存放路径
+                    "D:\\eclipse\\selenium\\IEDriverServer.exe");
             DesiredCapabilities ieCapabilities = DesiredCapabilities
                     .internetExplorer();
             ieCapabilities
