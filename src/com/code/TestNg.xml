@@ -1,31 +1,12 @@
-<suite name="suite" >
 
+<suite name="suite"  >
     <parameter name="Base_URL" value="http://172.21.0.31:8084" />
-    <!--
-    <test  name="KbpList">
-        <classes>
-            <parameter name="Action_URL" value="/ibnms/config/kbpList.action" />
-            <class name="com.code.test.KbpListTest"/>
-        </classes>
-    </test>
-
-    <test name="KpiList">
-        <classes>
-            <parameter name="Action_URL" value="/ibnms/config/kpiList.action" />
-            <class name="com.code.test.KpiListTest"/>
-        </classes>
-    </test>
-    -->
 
     <test name="frame">
         <classes>
             <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
-            <class name="com.code.test.KbpFrameTest" >
-            <methods>
-                <include name="searchKbpByTreeClass"/>
-                <include name="searchByClass"/>
-            </methods>
-            </class>
+            <class name="com.code.test.LoginPageTest"></class>
+            <class name="com.code.test.KbpFrameTest" ></class>
         </classes>
     </test>
 

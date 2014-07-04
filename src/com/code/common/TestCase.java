@@ -9,11 +9,15 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
+import java.util.Map;
+
 /**
  * Created by jinkai on 2014/6/21.
  */
 public class TestCase {
     public Tools tools=new Tools();
+    public String[] excelHead;
+    public Map<String,String> map;
     public static WebDriver 	createDriver(String BrowerType)
     {
         if(BrowerType=="IE")
@@ -41,7 +45,7 @@ public class TestCase {
         return driver;
     }
 
-    public static WebDriver driver=createDriver("IE");
+    public static WebDriver driver=createDriver(Data.browserType);
     //public static WebDriver driver;
     public static EventFiringWebDriver eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
 
@@ -50,8 +54,8 @@ public class TestCase {
     {
 
     }
-    /*@Parameters({"Base_URL"})
-    @BeforeClass
+    @Parameters({"Base_URL"})
+    //@BeforeClass
     public void beforeClass(String base_url)
     {
         //driver=createDriver("IE");
@@ -59,15 +63,26 @@ public class TestCase {
         eventDriver.get(base_url);
         eventDriver.manage().window().maximize();
         //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        new LoginPage().login();
     }
-    */
-    @AfterClass(alwaysRun=true)
+
+    //@AfterClass(alwaysRun=true)
     public  void afterClass()
     {
         eventDriver.close();
         eventDriver.quit();
 
     }
-
+    //@Parameters({"Base_URL"})
+    @BeforeSuite
+    public void beforeSuite()
+    {
+        eventDriver.get(Data.baseUrl);
+        eventDriver.manage().window().maximize();
+    }
+    @AfterSuite
+    public void afterSuite()
+    {
+        eventDriver.close();
+        eventDriver.quit();
+    }
 }

@@ -2,16 +2,19 @@ package com.code.common;
 
 import com.code.common.Page;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
 /**
  * Created by jinkai on 2014/6/22.
  */
-public class GridTablePage extends Page {
+public class GridTablePage2{
+    Tools tools=new Tools();
     private int rowNum;
     private int gridCount=0;
     @FindBy(how= How.XPATH,using="//*[@id=\"gridTable\"]")
@@ -21,13 +24,26 @@ public class GridTablePage extends Page {
      */
     @FindBy(how=How.XPATH,using="//input[@id=\"cb_gridTable\"]")
     WebElement cd_gridTable;
-
-
     List<WebElement> list=null;
 
+    //@FindBy(how=How.CSS,using="ui-jqgrid-htable")
+    @FindBy(how=How.XPATH,using="//*[@id=\"gview_gridTable\"]/div[2]/div/table")
+    WebElement htable;
+    public void getHead()
+    {
+        System.out.println(htable.getTagName());
+        List<WebElement> list=tools.findElements(htable,By.xpath(".//th[@id]"));
+        System.out.println(list.size());
+        WebElement[] eles = new WebElement[list.size()];
+        list.toArray(eles);
+        for(int i=0;i<list.size();i++)
+        {
+            String str=eles[i].getText();
+            System.out.println(str);
+        }
 
 
-
+    }
 
     /*
     返回当前页中总行数
@@ -48,7 +64,7 @@ public class GridTablePage extends Page {
     public String[] getRowsValue(String xpath)
     {
         String[] rowVales=new String[rowNum];
-       // List<WebElement> list=tools.findElements(grid,By.xpath(".//tr[@id]"));
+        // List<WebElement> list=tools.findElements(grid,By.xpath(".//tr[@id]"));
         WebElement[] webList = new WebElement[list.size()];
         list.toArray(webList);
 
@@ -105,6 +121,13 @@ public class GridTablePage extends Page {
         }
 
 
+    }
+    public GridTablePage2(WebDriver driver)
+    {
+
+        {
+            PageFactory.initElements(driver, this);
+        }
     }
 
 }

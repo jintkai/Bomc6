@@ -48,25 +48,13 @@ public class ExcelMapDriver implements Iterator {
         return head;
     }
 
-    /*public Map<String,String> getMap(int rowNum)
-    {
-        Map<String,String> map=new HashMap<String, String>();
-        for(int i=0;i<colNum;i++)
-        {
-            //getHead(i);
-            getColumValue(rowNum,i);
-            map.put(getHead(0)[i],getColumValue(rowNum,i));
-        }
-        return  map;
-    }
-    */
     @Override
     public boolean hasNext() {
         curRowNum++;
         if(rowNum==0 || rowNum==1 || curRowNum>rowNum)
         {
             book.close();
-
+            System.out.println("测试用例中无数据！");
             return false;
         }
 

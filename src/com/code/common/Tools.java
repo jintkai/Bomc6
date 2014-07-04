@@ -69,9 +69,14 @@ public class Tools {
         }
     }
     public void clear(WebElement ele){ele.clear();}
+    public void submit(WebElement ele){ele.submit();}
     public void SelectByVisibleText(WebElement ele,String text)
     {
         (new Select(ele)).selectByVisibleText(text);
+    }
+    public String getTitle(WebDriver driver)
+    {
+        return driver.getTitle();
     }
     public void click(WebElement ele)
     {
@@ -186,11 +191,14 @@ public class Tools {
         }
     }
 
-
+    /*
+        ****************************************************************************************************
+        * 以下方法中主要对map进行操作。组合map，按key查找value
+    */
     /*
     将两个String数组转换成一个Map对象
      */
-    public Map change(String heads[],String values[])
+    public Map changeStringToMap(String heads[],String values[])
     {
         Map<String ,String > map=new HashMap<String, String>();
         for (int i=0;i<heads.length;i++)
@@ -198,5 +206,10 @@ public class Tools {
             map.put(heads[i],values[i]);
         }
         return map;
+    }
+
+    public String getMapValue(Map<String,String> map,String key)
+    {
+        return map.get(key);
     }
 }

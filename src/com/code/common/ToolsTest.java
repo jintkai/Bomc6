@@ -30,7 +30,7 @@ public class ToolsTest  {
     public void testmap(Object[] obj)
     {
        // System.out.println(map.get("测试用例编号"));
-        Map<String,String> map=tools.change(excelHead, (String[]) obj);
+        Map<String,String> map=tools.changeStringToMap(excelHead, (String[]) obj);
         System.out.println(map.get("测试用例编号"));
         //System.out.println(obj[1]);
     }

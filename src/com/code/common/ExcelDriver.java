@@ -25,6 +25,25 @@ public class ExcelDriver implements Iterator {
         rowNum=sheet.getRows();
         colNum=sheet.getColumns();
     }
+    public int getRowNum(){
+        return rowNum;
+    }
+    public int getColNum()
+    {return colNum;}
+    public String[] getHead(int rowNum)
+    {
+        String head[]=new String[colNum];
+        for (int i = 0; i < colNum; i++) {
+            head[i]=getColumValue(rowNum,i);
+        }
+        return head;
+    }
+
+    public String getColumValue(int rowNum, int colNum) {
+        Cell cell = sheet.getCell(colNum, rowNum);
+        return cell.getContents();
+    }
+
     @Override
     public boolean hasNext() {
         curRowNum++;
@@ -43,7 +62,7 @@ public class ExcelDriver implements Iterator {
     {
         //getCell(x,y),第y行的第x列坐标
         Cell cell=sheet.getCell(0,curRowNum-1);
-        if (cell.getContents().equals("Y"))
+        if (cell.getContents().equals("是"))
             return  true;
         else
             return false;

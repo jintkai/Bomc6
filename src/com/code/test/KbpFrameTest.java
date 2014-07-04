@@ -30,43 +30,56 @@ public class KbpFrameTest extends TestCase {
 
     @DataProvider(name="kbpList")
     public Iterator dataForKbp(Method method) throws IOException, BiffException {
-        return new ExcelDriver("KBP",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("KBP",method.getName());
+        excelHead=excelDriver.getHead(0);
+        return excelDriver;
     }
 
-    //@Test(dataProvider = "kbpList")
+    @Test(dataProvider = "kbpList")
     public void searchKbpByTreeCaption(String[] obj)
     {
-        GridTablePage gridTable=kbpFrame.searchKbpByTree(obj[5]);
-        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[6]));
+        map=tools.changeStringToMap(excelHead,obj);
+        GridTablePage gridTable=kbpFrame.searchKbpByTree(tools.getMapValue(map,"KBP名称"));
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP编号")));
     }
 
     @Test(dataProvider = "kbpList")
     public void searchKbpByTreeClass(String[] obj)
     {
-        GridTablePage gridTable=kbpFrame.searchKbpByTree(obj[5]);
-        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[5]));
+        map=tools.changeStringToMap(excelHead,obj);
+        GridTablePage gridTable=kbpFrame.searchKbpByTree(tools.getMapValue(map,"KBP编号"));
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP编号")));
     }
 
     @Test(dataProvider = "kbpList")
     public void searchByClass(String[] obj)
     {
-        GridTablePage gridTable=kbpFrame.searchByClass(obj[5]);
-        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[5]));
+        map=tools.changeStringToMap(excelHead,obj);
+        GridTablePage gridTable=kbpFrame.searchByClass(tools.getMapValue(map,"KBP编号"));
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP编号")));
     }
 
     @Test(dataProvider = "kbpList")
     public void searchByCaption(String[] obj)
     {
-        GridTablePage gridTable=kbpFrame.searchByCaption(obj[5]);
-        tools.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]), obj[5]));
+        map=tools.changeStringToMap(excelHead,obj);
+        GridTablePage gridTable=kbpFrame.searchByCaption(tools.getMapValue(map,"KBP名称"));
+        tools.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP名称")));
     }
 
     @Test(dataProvider = "kbpList")
     public void searchByMulti(String[] obj)
     {
-        GridTablePage gridTable=kbpFrame.searchByMulti(obj[5],obj[6]);
-        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(obj[3]), obj[5]));
-        tools.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(obj[3]), obj[6]));
+        map=tools.changeStringToMap(excelHead,obj);
+        GridTablePage gridTable=kbpFrame.searchByMulti(tools.getMapValue(map,"KBP编号"),tools.getMapValue(map,"KBP名称"));
+        tools.assertTrue(gridTable.equalsSearch("./td[2]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP编号")));
+        tools.assertTrue(gridTable.equalsSearch("./td[3]",Integer.parseInt(tools.getMapValue(map,"期望值")),
+                tools.getMapValue(map,"KBP名称")));
     }
     @Test(dataProvider = "kbpList")
     public void addKbp(String[] obj)

@@ -12,5 +12,4 @@ import org.testng.annotations.Test;
  * Created by jinkai on 01/07/2014.
  */
 public class HomePage extends Page {
-
 }
