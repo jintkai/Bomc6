@@ -50,7 +50,7 @@ public class TestCase {
     {
 
     }
-    @Parameters({"Base_URL"})
+    /*@Parameters({"Base_URL"})
     @BeforeClass
     public void beforeClass(String base_url)
     {
@@ -61,6 +61,7 @@ public class TestCase {
         //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         new LoginPage().login();
     }
+    */
     @AfterClass(alwaysRun=true)
     public  void afterClass()
     {

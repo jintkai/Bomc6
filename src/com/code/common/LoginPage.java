@@ -22,12 +22,12 @@ public class LoginPage extends Page {
         return  this;
     }
     */
-    public HomePage login()
+    public HomePage login(String name,String passwd)
     {
         userId.clear();
-        userId.sendKeys("admin");
+        userId.sendKeys(name);
         password.clear();
-        password.sendKeys("123456");
+        password.sendKeys(passwd);
         userId.submit();
         return new HomePage();
     }

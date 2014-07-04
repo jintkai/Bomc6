@@ -22,7 +22,8 @@
             <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             <class name="com.code.test.KbpFrameTest" >
             <methods>
-                <include name="delKbp"/>
+                <include name="searchKbpByTreeClass"/>
+                <include name="searchByClass"/>
             </methods>
             </class>
         </classes>

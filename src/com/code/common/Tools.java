@@ -185,4 +185,18 @@ public class Tools {
             e.printStackTrace();
         }
     }
+
+
+    /*
+    将两个String数组转换成一个Map对象
+     */
+    public Map change(String heads[],String values[])
+    {
+        Map<String ,String > map=new HashMap<String, String>();
+        for (int i=0;i<heads.length;i++)
+        {
+            map.put(heads[i],values[i]);
+        }
+        return map;
+    }
 }

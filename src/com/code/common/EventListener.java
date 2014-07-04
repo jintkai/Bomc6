@@ -19,6 +19,7 @@ public class EventListener implements WebDriverEventListener {
     Logger mylog=Logger.getLogger(this.getClass());
     @Override
     public void beforeNavigateTo(String s, WebDriver webDriver) {
+
         mylog.info("beforeNavigateTo:"+s);
     }
 
@@ -74,6 +75,7 @@ public class EventListener implements WebDriverEventListener {
         wait.until(
                 expection
         );
+
 
     }
 
