@@ -82,7 +82,7 @@ public class TestCase {
     @AfterSuite
     public void afterSuite()
     {
-        eventDriver.close();
-        eventDriver.quit();
+        //eventDriver.close();
+        //eventDriver.quit();
     }
 }

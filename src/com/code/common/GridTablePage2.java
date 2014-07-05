@@ -17,34 +17,63 @@ public class GridTablePage2{
     Tools tools=new Tools();
     private int rowNum;
     private int gridCount=0;
-    @FindBy(how= How.XPATH,using="//*[@id=\"gridTable\"]")
+    /*
+    table数据区域
+     */
+    @FindBy(how= How.XPATH,using=".//*[@id=\"gridTable\"]")
     WebElement grid;
+    String gridXpath=".//*[@id=\"gridTable\"]";
     /*
     全选单选框
      */
-    @FindBy(how=How.XPATH,using="//input[@id=\"cb_gridTable\"]")
+    @FindBy(how=How.XPATH,using=".//input[@id=\"cb_gridTable\"]")
     WebElement cd_gridTable;
     List<WebElement> list=null;
-
+    /*
+    表头xpath
+     */
     //@FindBy(how=How.CSS,using="ui-jqgrid-htable")
-    @FindBy(how=How.XPATH,using="//*[@id=\"gview_gridTable\"]/div[2]/div/table")
+    @FindBy(how=How.XPATH,using=".//*[@id=\"gview_gridTable\"]/div[2]/div/table")
     WebElement htable;
-    public void getHead()
+    public String[] getHead()
     {
+
         System.out.println(htable.getTagName());
         List<WebElement> list=tools.findElements(htable,By.xpath(".//th[@id]"));
         System.out.println(list.size());
         WebElement[] eles = new WebElement[list.size()];
         list.toArray(eles);
+        String str[]=new String[list.size()];
         for(int i=0;i<list.size();i++)
         {
-            String str=eles[i].getText();
-            System.out.println(str);
+            str[i]=eles[i].getText().trim();
+            //System.out.println(i+":"+str[i]);
         }
-
-
+        return str;
     }
+   public int HeadIndex(String str)
+   {
+       String head[]=this.getHead();
+       for (int i=0;i<head.length;i++)
+       {
+           if (head[i].equals(str))
+               return  i+1;
+       }
+    return 0;
+   }
 
+    public String getTdOfTr(int index,String str)
+    {
+        int tdIndex=this.HeadIndex(str);
+        String trXpath=".//tr[@id]["+index+"]";
+        String tdXpath=".//td["+tdIndex+"]";
+        WebElement webTr=this.grid.findElement(By.xpath(trXpath));
+        WebElement webTd=webTr.findElement(By.xpath(tdXpath));
+        String a=webTd.getTagName();
+        a=webTd.getAttribute("title");
+        return webTd.getText().trim();
+       // grid.findElements()
+    }
     /*
     返回当前页中总行数
      */

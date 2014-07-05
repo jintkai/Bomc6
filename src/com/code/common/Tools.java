@@ -35,6 +35,19 @@ public class Tools {
             return false;
         }
     }
+    public boolean isElementsExist(SearchContext d,By by)
+    {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        List<WebElement> list=d.findElements(by);
+        if (list.size()>0)
+            return  true;
+            else
+            return  false;
+    }
     /*
     通过By类型查找元素；
      */
@@ -47,12 +60,11 @@ public class Tools {
     }
     public java.util.List<WebElement> findElements(SearchContext d,By by)
     {
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        List<WebElement> eles=null;
+        if(isElementsExist(d,by))
+        {
+            eles=d.findElements(by);
         }
-        List<WebElement> eles=d.findElements(by);
         return  eles;
     }
 

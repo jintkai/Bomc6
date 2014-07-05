@@ -6,7 +6,8 @@
         <classes>
             <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             <class name="com.code.test.LoginPageTest"></class>
-            <class name="com.code.test.KbpFrameTest" ></class>
+            <class name="com.code.test.GridTest"></class>
+            <!--class name="com.code.test.KbpFrameTest" ></class-->
         </classes>
     </test>
 

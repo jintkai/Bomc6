@@ -53,7 +53,7 @@ public class EventListener implements WebDriverEventListener {
 
         /*mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
         */
-        ExpectedCondition<Boolean> expection=new ExpectedCondition<Boolean>() {
+        /*ExpectedCondition<Boolean> expection=new ExpectedCondition<Boolean>() {
             @Override
             public Boolean apply(WebDriver webDriver) {
                 return ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete");
@@ -75,7 +75,7 @@ public class EventListener implements WebDriverEventListener {
         wait.until(
                 expection
         );
-
+*/
 
     }
 
