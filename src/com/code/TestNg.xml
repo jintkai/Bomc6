@@ -6,10 +6,10 @@
         <classes>
             <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             <class name="com.code.test.LoginPageTest"></class>
-            <class name="com.code.test.KbpFrameTest" >
-                <!--methods>
-                    <include name="editKbp"></include>
-                </methods-->
+
+
+            <class name="com.code.test.KpiFrameTest" >
+                <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class>
         </classes>
     </test>

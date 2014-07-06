@@ -1,5 +1,7 @@
 package com.code.page.kbplist.page;
 
+import com.code.common.Data;
+import com.code.common.FormPage;
 import com.code.common.GridTablePage;
 import com.code.common.Page;
 
@@ -14,19 +16,19 @@ import java.util.Map;
 /**
  * Created by jinkai on 2014/6/22.
  */
-public class KbpFormPage extends Page {
+public class KbpFormPage extends FormPage {
+    @FindBy(id= Data.classAfterID)
     WebElement classAfter;
-    @FindBy(how= How.ID,using="kbp.kbpCaption")
+    @FindBy(id= Data.kbpCaptionID)
     WebElement kbpCaption;
-    @FindBy(how=How.NAME,using="kbp.kbpDesc")
+    @FindBy(name=Data.kbpDescName)
     WebElement kbpDesc;
+    @FindBy(id= Data.middleID)
     WebElement middle;
-    @FindBy(how=How.ID,using="kbp_viewStyle")
+    @FindBy(id= Data.viewStyleID)
     WebElement viewStyle;
-    @FindBy(how=How.ID,using="kbp_enable")
+    @FindBy(id= Data.enableID)
     WebElement enable;
-    @FindBy(how=How.ID,using="btn-submit")
-    WebElement btn;
 
     public void addKBP(Map<String,String> map)
     {
@@ -36,12 +38,12 @@ public class KbpFormPage extends Page {
        //middle.sendKeys("006");
         tools.SelectByVisibleText(viewStyle,map.get("展现样式"));
         tools.SelectByVisibleText(enable,map.get("是否有效"));
-        tools.click(btn);
+        tools.submit(kbpCaption);
     }
     public void editKbp(String caption)
     {
         tools.sendKeys(kbpCaption,caption);
-        tools.click(btn);
+        tools.submit(kbpCaption);
     }
 
 }

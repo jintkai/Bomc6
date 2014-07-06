@@ -38,7 +38,7 @@ public class Tools {
     public boolean isElementsExist(SearchContext d,By by)
     {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -71,14 +71,8 @@ public class Tools {
     public void sendKeys(WebElement ele,String value)
     {
 
-        try {
             ele.sendKeys(value);
-        }catch(Exception e)
-        {
-            System.out.println(e);
-            screen();
-            System.out.println("sendKeys元素失败");
-        }
+
     }
     public void clear(WebElement ele){ele.clear();}
     public void submit(WebElement ele){ele.submit();}
@@ -90,16 +84,12 @@ public class Tools {
     {
         return driver.getTitle();
     }
-    public void click(WebElement ele)
+    public String getAttribute(WebElement ele,String str)
     {
-        try {
-            ele.click();
-        }catch(Exception e)
-        {
-            System.out.println(e);
-            screen();
-            System.out.println("点击元素失败");
-        }
+        return ele.getAttribute(str);
+    }
+    public void click(WebElement ele) {
+        ele.click();
     }
     public void assertEquals(Object actual,Object expected)
     {
@@ -125,35 +115,14 @@ public class Tools {
     }
     public void switchToFrame(int index){
         driver.switchTo().defaultContent();
-        try {driver.switchTo().frame(index);}
-        catch(Exception e)
-        {
-            System.out.println("通过index跳转iframe时错误");
-            System.out.println(e);
-            screen();
-        }
+        driver.switchTo().frame(index);
     }
     public void switchToFrame(){
-        try {
             driver.switchTo().defaultContent();
-        }
-        catch(Exception e)
-        {
-            System.out.println("切换到默认frame失败");
-            System.out.println(e);
-            screen();
-        }
     }
     public void switchToFrame(String name)
     {
-        driver.switchTo().defaultContent();
-        try{driver.switchTo().frame(name);}
-        catch(Exception e)
-        {
-            System.out.println("通过name跳转iframe时错误");
-            System.out.println(e);
-            screen();
-        }
+    driver.switchTo().frame(name);
     }
     public void switchToFrame(WebElement ele)
     {

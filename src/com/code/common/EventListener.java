@@ -17,6 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EventListener implements WebDriverEventListener {
 
     Logger mylog=Logger.getLogger(this.getClass());
+    public Tools tools=new Tools();
     @Override
     public void beforeNavigateTo(String s, WebDriver webDriver) {
 
@@ -117,5 +118,6 @@ public class EventListener implements WebDriverEventListener {
     public void onException(Throwable throwable, WebDriver webDriver) {
 
         mylog.error("ERROR--------------------");
+        tools.screen();
     }
 }

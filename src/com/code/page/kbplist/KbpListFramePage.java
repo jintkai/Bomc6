@@ -52,7 +52,8 @@ public class KbpListFramePage extends Page {
         }
         else
             tools.switchToFrame("kbpListFrame");
-        kbpForm=kbpBtn.openFormByAdd();
+        kbpBtn.openFormByAdd();
+        kbpForm=new KbpFormPage();
         kbpForm.addKBP(map);
         if (!tools.getMapValue(map,"父节点").equals("0"))
         return searchKbp.searchByClass(tools.getMapValue(map,"验证"));
@@ -76,7 +77,8 @@ public class KbpListFramePage extends Page {
         gridTable=new GridPage();
         gridTable=searchKbp.searchByClass(kbpClass);
         gridTable.selectTr(0);
-        kbpForm=kbpBtn.editForm();
+        kbpBtn.editForm();
+        kbpForm=new KbpFormPage();
         caption=caption+tools.getCurrentDateTime();
         kbpForm.editKbp(caption);
         return searchKbp.searchByCaption(caption);

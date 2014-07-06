@@ -1,35 +1,32 @@
-package com.code.page.kbplist.page;
+package com.code.common;
 
-import com.code.common.Data;
-import com.code.common.Page;
+import com.code.page.kbplist.page.KbpFormPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import com.code.common.BtnPage;
+
 /**
- * Created by jinkai on 01/07/2014.
+ * Created by jinkai on 06/07/2014.
  */
-public class KbpBtnPage extends BtnPage {
-/*
+public class BtnPage extends Page {
     @FindBy(how= How.ID,using=Data.btnAdd)
     WebElement addBtn;
     @FindBy(how= How.ID,using=Data.btnEdit)
     WebElement editBtn;
     @FindBy(how= How.ID,using=Data.btnDel)
     WebElement delBtn;
-    public KbpFormPage openFormByAdd()
+    public FormPage openFormByAdd()
     {
         tools.click(addBtn);
-        return new KbpFormPage();
+        return new FormPage();
     }
     public  void  deleteForm()
     {
         tools.click(delBtn);
         tools.alertAccept();
-    } public  KbpFormPage  editForm()
+    } public  FormPage  editForm()
     {
         tools.click(editBtn);
-        return new KbpFormPage();
+        return new FormPage();
     }
-    */
 }
