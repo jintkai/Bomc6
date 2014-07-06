@@ -1,7 +1,10 @@
 package com.code.page.kbplist;
 
-import com.code.common.GridTablePage;
+import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.kbplist.page.KbpBtnPage;
+import com.code.page.kbplist.page.KbpFormPage;
+import com.code.page.kbplist.page.SearchKbpPage;
 
 /**
  * Created by jinkai on 01/07/2014.
@@ -9,21 +12,21 @@ import com.code.common.Page;
 public class KbpListPage extends Page {
 
     SearchKbpPage searchKbp=new SearchKbpPage();
-    GridTablePage gridTable=new GridTablePage();
+    GridPage gridTable=new GridPage();
     KbpFormPage kbpForm=new KbpFormPage();
     KbpBtnPage kbpBtn=new KbpBtnPage();
 
 
 
-    public GridTablePage getTableByClass(String searchClass){
+    public GridPage getTableByClass(String searchClass){
         return gridTable=searchKbp.searchByClass(searchClass);
     }
 
-    public GridTablePage getTableByCaption(String searchCaption){
+    public GridPage getTableByCaption(String searchCaption){
         return gridTable=searchKbp.searchByCaption(searchCaption);
     }
 
-    public GridTablePage getTableByMulit(String searchClass,String searchCaption)
+    public GridPage getTableByMulit(String searchClass,String searchCaption)
     {
 
         return gridTable=searchKbp.searchByMulti(searchClass, searchCaption);
@@ -34,7 +37,7 @@ public class KbpListPage extends Page {
     {
 
         kbpForm=kbpBtn.openFormByAdd();
-        kbpForm.addKBP(obj);
+        //kbpForm.addKBP(obj);
         return searchKbp.searchByCaption(obj[7]).getRowNum();
     }
 

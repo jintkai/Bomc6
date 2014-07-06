@@ -1,4 +1,4 @@
-package com.code.page.kbplist;
+package com.code.page.kbplist.page;
 
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
@@ -19,6 +19,15 @@ public class KbpBtnPage extends Page {
     public KbpFormPage openFormByAdd()
     {
         tools.click(addBtn);
+        return new KbpFormPage();
+    }
+    public  void  deleteForm()
+    {
+        tools.click(delBtn);
+        tools.alertAccept();
+    } public  KbpFormPage  editForm()
+    {
+        tools.click(editBtn);
         return new KbpFormPage();
     }
 }

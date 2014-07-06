@@ -38,7 +38,7 @@ public class Tools {
     public boolean isElementsExist(SearchContext d,By by)
     {
         try {
-            Thread.sleep(3000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -223,5 +223,9 @@ public class Tools {
     public String getMapValue(Map<String,String> map,String key)
     {
         return map.get(key);
+    }
+    public void alertAccept()
+    {
+        driver.switchTo().alert().accept();
     }
 }

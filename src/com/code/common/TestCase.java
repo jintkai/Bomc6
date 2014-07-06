@@ -82,7 +82,12 @@ public class TestCase {
     @AfterSuite
     public void afterSuite()
     {
-        //eventDriver.close();
-        //eventDriver.quit();
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        eventDriver.close();
+        eventDriver.quit();
     }
 }

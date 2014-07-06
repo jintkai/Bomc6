@@ -15,11 +15,12 @@ public interface Data {
     dataTableTrXpath表示数据区域tr的xpath。
     dataTableTdXpath表示数据区域td的xpath，在dataTableTrXpath下；
      */
-    public static String gridXpath=".//*[@id=\"gridTable\"]";
-    public static String headXpath=".//*[@id=\"gview_gridTable\"]/div[2]/div/table";
-    public static String headThXpath=".//th[@id]";
-    public static String dataTableTrXpath=".//tr[@id]";
-    public static String dataTableTdXpath=".//td";
-    public static String selectBtId="cb_gridTable";
+    public  static String gridXpath=".//*[@id=\"gridTable\"]";
+    public  static String headXpath=".//*[@id=\"gview_gridTable\"]/div[2]/div/table";
+    public  static String headThXpath=".//th[@id]";
+    public  static String dataTableTrXpath=".//tr[@id]";
+    public  static String dataTableTdXpath=".//td";
+    public  static String selectBtId="cb_gridTable";
+
 
 }

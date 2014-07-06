@@ -1,9 +1,7 @@
-package com.code.page.kbplist;
+package com.code.page.kbplist.page;
 
-import com.code.common.GridTablePage;
+import com.code.common.GridPage;
 import com.code.common.Page;
-import com.code.common.TestCase;
-import com.code.page.kpilist.SearchKpiPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -30,25 +28,26 @@ public class SearchKbpPage extends Page{
         tools.clear(kbpCaption);
     }
 
-    public GridTablePage searchByClass(String searchClass)
+    public GridPage searchByClass(String searchClass)
     {
         tools.sendKeys(kbpClass,searchClass);
         tools.click(searchBtn);
-        return new GridTablePage();
+        return new GridPage();
     }
 
-    public GridTablePage searchByCaption(String searchCaption)
+    public GridPage searchByCaption(String searchCaption)
     {
+        tools.clear(kbpClass);
         tools.sendKeys(kbpCaption,searchCaption);
         tools.click(searchBtn);
-        return new GridTablePage();
+        return new GridPage();
     }
-    public GridTablePage searchByMulti(String searchClass,String searchCaption)
+    public GridPage searchByMulti(String searchClass,String searchCaption)
     {
         tools.sendKeys(kbpCaption,searchCaption);
         tools.sendKeys(kbpClass,searchClass);
         tools.click(searchBtn);
-        return new GridTablePage();
+        return new GridPage();
     }
 
 

@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Created by jinkai on 05/07/2014.
  */
-public class GridTools  extends Page implements Data{
+public class GridPage  extends Page implements Data{
     Tools tools=new Tools();
     private int rowNum;
     private int gridCount=0;
@@ -21,7 +21,6 @@ public class GridTools  extends Page implements Data{
     /*
     table数据区域
      */
-    //@FindBy(xpath = gridXpath)
     @FindBy(xpath = gridXpath)
     WebElement grid;
 
@@ -34,13 +33,7 @@ public class GridTools  extends Page implements Data{
     Table数据区域中，tr的数组，tr表示列表中的数据
      */
     List<WebElement> dataList=null;
-    public GridTools()
-    {
-        /*
-        构造函数中可以重新定位xpath；
-         */
-        super();
-    }
+
 
     /*
 返回当前页中总行数
@@ -133,5 +126,30 @@ public class GridTools  extends Page implements Data{
             System.out.println("选择所有");
             tools.click(selectBt);
         }
+    }
+
+    /*
+    判断数组中的值是否都包含所查询的值
+     */
+    public boolean equalsSearch(String colStr,int expNum,String searchClass)
+    {
+        rowNum=getRowNum();
+        if (expNum==0 && rowNum==0) {
+            System.out.println("期望值："+expNum+"，实际值："+rowNum);
+            return true;
+        }
+        if (expNum!=rowNum) {
+            System.out.println("定位，列表中行数错误，期望值："+expNum+"，实际值："+rowNum);
+            return false;
+        }
+        String[] rows=getTdOfAllTr(colStr);
+        for (int i=0;i<rowNum;i++)
+            if(!rows[i].contains(searchClass))
+            {
+                System.out.println("通过列名："+colStr+"定位，列表中行数错误，期望值："+searchClass+"，实际值："+rows[i]);
+                return false;
+            }
+        System.out.println("期望值："+expNum+"，实际值："+rowNum);
+        return true;
     }
 }

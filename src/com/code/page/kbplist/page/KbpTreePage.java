@@ -1,5 +1,6 @@
-package com.code.page.kbplist;
+package com.code.page.kbplist.page;
 
+import com.code.common.GridPage;
 import com.code.common.GridTablePage;
 import com.code.common.Page;
 import com.code.common.TestCase;
@@ -18,7 +19,7 @@ public class KbpTreePage extends Page {
         tools.clear(fuzzy);
     }
 
-    public GridTablePage searchKpiByTree(String treeValue)
+    public GridPage searchKpiByTree(String treeValue)
     {
         //TestCase.eventDriver.switchTo().defaultContent();
         //TestCase.eventDriver.switchTo().frame("kbpTree");
@@ -65,6 +66,6 @@ public class KbpTreePage extends Page {
             e.printStackTrace();
         }
         tools.switchToFrame("kbpListFrame");
-        return new GridTablePage();
+        return new GridPage();
     }
 }
