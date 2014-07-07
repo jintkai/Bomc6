@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suite"  >
+    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
+    <test name="frame">
+        <classes>
+            <class name="com.code.test.LoginPageTest"></class>
+            <class name="com.code.test.KbpFrameTest">
+                <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
+            </class>
+            <!--class name="com.code.test.KpiFrameTest" >
+                <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
+            </class>
+            <class name="com.code.test.ResFrameTest" >
+                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action?rootId=10" />
+            </class-->
+        </classes>
+    </test>
+</suite>

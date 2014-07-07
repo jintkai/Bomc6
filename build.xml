@@ -1,59 +1,108 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<project name="123" default="init" basedir=".">
+<?xml version="1.0" encoding="UTF-8"?>
 
-     <property name="backup" value="Backup" />
-     <property name="src" value="${basedir}\srctest"/>
-     <property name="dest" value="${basedir}\dest"/>
-    <!--设置classPath-->
-    <path id="lib_classpath">
-        <fileset dir="${basedir}/lib">
+<!--默认启用Run_test任务 -->
+<project name="Test" basedir="." default="move">
+    <!--项目包位置-->
+    <property name="SRC" value="src" />
+    <!--编译包位置-->
+    <property name="class.dir" value="${basedir}/classes" />
+    <!--依赖Jar位置-->
+    <property name="lib.dir" value="${basedir}/lib" />
+    <!--测试结果输出位置-->
+    <property name="output.dir" value="${basedir}/test-output" />
+    <!--相关配置文件-->
+    <property name="config" value="${SRC}/runTestConfig" />
+    <!--编译后配置文件-->
+    <property name="configclass" value="${class.dir}/runTestConfig" />
+    <!--备份报告文件-->
+    <property name="backup" value="${basedir}/backup"/>
+
+
+
+
+    <path id="compile.path">
+        <!-- 设置加载jar 环境 -->
+        <fileset dir="${lib.dir}/">
             <include name="*.jar" />
         </fileset>
+        <pathelement location="${SRC}" />
+        <pathelement location="${class.dir}" />
     </path>
 
-    <path id="runtest">
-        <fileset dir="${dest}/">
-            <include name="*" />
-        </fileset>
-    </path>
-
-    <target name="init" depends="clean" >
-        <mkdir dir="${src}"/>
-        <mkdir dir="${dest}"/>
-        <echo message="Hello App"/>
-        <!--建立目录hello-->
+    <!-- 初始化  -->
+    <target name="init">
+        <echo message="**************init**************" />
+        <delete dir="${class.dir}" />
+        <mkdir dir="${class.dir}" />
+        <mkdir dir="${class.dir}/runTestConfig" />
     </target>
-
+    <!-- 编译  -->
     <target name="compile" depends="init">
-        <javac srcdir="${basedir}\src" destdir="${src}">
-                <classpath refid="lib_classpath"/>
+        <echo message="**************compile**************" />
+        <javac srcdir="${SRC}" destdir="${class.dir}"  encoding="UTF-8"
+               classpathref="compile.path" includeantruntime="on" >
         </javac>
-
     </target>
-    <target name="build" depends="compile">
-        <jar destfile="${dest}\bomc.jar" basedir="${src}"/>
+    <!--配置文件复制到classes下-->
+    <target name="copyFile" depends="compile">
+        <copy todir="${configclass}">
+            <fileset dir="${config}" includes="*.xml" />
+        </copy>
     </target>
-    <target name="run" depends="build">
-        <java classname="com.code.test.KbpFrameTest" classpath="${dest}\bomc.jar">
-            <classpath refid="lib_classpath"/>
-        </java>
-    </target>
+    <taskdef resource="testngtasks" classpath="${lib.dir}/testng-6.8.jar"/>
 
-    <target name="clean">
-        <delete dir="${src}" />
-        <delete dir="${dest}" />
-    </target>
-
-    <taskdef name="testng"
-             classname="com.beust.testng.TestNGAntTask"
-             classpathref="lib_classpath"/>
-
-    <target name="testng" >
-        <testng outputdir="${basedir}"
-                classpathref="runtest"
-                classpath="lib_classpath" >
-            <xmlfileset dir="${basedir}\src\com\code" includes="TestNg.xml"/> <!--在指定路径下，找文件名由testng.file-->
-        </testng>                                                           <!--定义的testng.xml文件-->
+    <!-- 开始测试 -->
+    <target name="run_tests" depends="copyFile">
+        <echo message="**************run-test**************" />
+        <!--<sshexec host="." command="/opt/firefox/firefox-bin" trust="true" />-->
+        <testng classpathref="compile.path" failureproperty="test.failed" >
+            <!--xml test suite file -->
+            <xmlfileset dir="${configclass}">
+                <include name="testng.xml" />
+            </xmlfileset>
+        </testng>
     </target>
 
+    <target name="tt" depends="run_tests">
+        <copy file="${basedir}/test-output/testng-results.xml" encoding="UTF-8" tofile="${basedir}/test-output/results.xml"></copy>
+    </target>
+
+    <target name="transform" description="report" depends="tt">
+        <echo message="**************transform**************" />
+        <xslt in="${basedir}/test-output/results.xml" style="${basedir}/test-output/testng-results.xsl"
+              out="${basedir}/test-output/Report.html" classpathref="compile.path">
+            <param name="testNgXslt.outputDir" expression="${basedir}/test-output/" />
+        </xslt>
+    </target>
+
+    <target name="backup" depends="transform">
+        <echo message="*************backup*********"/>
+        <zip destfile="${output.dir}/test-output${TODAY}.rar" basedir="${output.dir}"/>
+    </target>
+
+    <target name="move" depends="backup">
+        <echo message="*************move*********"/>
+        <move file="${output.dir}/test-output${TODAY}.rar" tofile="${backup}/test-output${TODAY}.rar"/>
+    </target>
+
+    <tstamp>
+        <format property="TODAY" pattern="yyyy-MM-dd" locale="cn"/>
+    </tstamp>
+
+
+    <target name= "transform2" >
+
+        <xslt in= "${basedir}/test-output/testng-results2.xml" style= "${basedir}/test-output/testng-results.xsl"
+
+              out= "${basedir}/test-output/ index1.html " >
+
+            <!-- you need to specify the directory here again -->
+
+            <param name= "testNgXslt.outputDir" expression= "${basedir}/test-output/" />
+
+            <classpath refid= "compile.path" />
+
+        </xslt>
+
+    </target>
 </project>
