@@ -43,7 +43,7 @@ public class KpiFormPage extends FormPage {
             tools.sendKeys(kpiId,tools.getMapValue(map,"KPI编号"));
             tools.sendKeys(kpiName,tools.getMapValue(map,"KPI名称"));
             tools.sendKeys(kbpClass,tools.getMapValue(map,"KBP编号"));
-            tools.SelectByVisibleText(kpiType,tools.getMapValue(map,"指标类型"));
+            tools.selectByVisibleText(kpiType,tools.getMapValue(map,"指标类型"));
             String s = tools.getMapValue(map, "数据类型");
             if (s.equals("字符串")) {
                 tools.click(kpiStylestring);
@@ -81,7 +81,7 @@ public class KpiFormPage extends FormPage {
             }
             tools.sendKeys(kpiId,tools.getMapValue(map,"KPI编号"));
             tools.sendKeys(kpiName,tools.getMapValue(map,"KPI名称"));
-            tools.SelectByVisibleText(kpiType,tools.getMapValue(map,"指标类型"));
+            tools.selectByVisibleText(kpiType,tools.getMapValue(map,"指标类型"));
             String s = tools.getMapValue(map, "数据类型");
             if (s.equals("字符串")) {
                 tools.click(kpiStylestring);

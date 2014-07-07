@@ -49,11 +49,7 @@ public class TestCase {
     //public static WebDriver driver;
     public static EventFiringWebDriver eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
 
-    @BeforeMethod
-    public void beforeMethod()
-    {
 
-    }
     @Parameters({"Base_URL"})
     //@BeforeClass
     public void beforeClass(String base_url)

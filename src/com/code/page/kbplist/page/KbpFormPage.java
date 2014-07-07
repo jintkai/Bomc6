@@ -36,8 +36,8 @@ public class KbpFormPage extends FormPage {
         tools.sendKeys(kbpCaption,map.get("KBP名称"));
         tools.sendKeys(kbpDesc,map.get("KBP描述"));
        //middle.sendKeys("006");
-        tools.SelectByVisibleText(viewStyle,map.get("展现样式"));
-        tools.SelectByVisibleText(enable,map.get("是否有效"));
+        tools.selectByVisibleText(viewStyle,map.get("展现样式"));
+        tools.selectByVisibleText(enable,map.get("是否有效"));
         tools.submit(kbpCaption);
     }
     public void editKbp(String caption)

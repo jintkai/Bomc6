@@ -38,7 +38,7 @@ public class Tools {
     public boolean isElementsExist(SearchContext d,By by)
     {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -76,7 +76,7 @@ public class Tools {
     }
     public void clear(WebElement ele){ele.clear();}
     public void submit(WebElement ele){ele.submit();}
-    public void SelectByVisibleText(WebElement ele,String text)
+    public void selectByVisibleText(WebElement ele,String text)
     {
         (new Select(ele)).selectByVisibleText(text);
     }

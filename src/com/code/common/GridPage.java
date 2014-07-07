@@ -89,7 +89,7 @@ public class GridPage  extends Page implements Data{
         }
         if (tdIndex==0)
         {
-            System.out.println("所查询的Table列名错误，列名不在列表中");
+            System.out.println("所查询的Table列名错误，列名（"+str+"）不在列表中");
         }
         return tdIndex;
     }

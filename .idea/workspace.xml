@@ -2,29 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="kbp完成">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case/KPI.xls" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/common/FormPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiBtnPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/KpiFrameTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/KpiListFramePage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiTreePage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/page/SearchKpiPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case/RES.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/reslist/page/ResBtnPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/ResFrameTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/reslist/ResListFramePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/reslist/page/ResTreePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/reslist/page/SearchResPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/common/TreePage.java" />
       <change type="DELETED" beforePath="D:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml.html" afterPath="" />
       <change type="DELETED" beforePath="D:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(1).html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(2).html" afterPath="" />
       <change type="DELETED" beforePath="D:\Test\Bomc6\Test Results - LoginPageTest.html" afterPath="" />
       <change type="DELETED" beforePath="D:\Test\Bomc6\Test Results - ToolsTest.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Test\Bomc6\src\com\code\common\ObjectMapTrans.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Test\Bomc6\src\com\code\common\ToolsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Test\Bomc6\src\com\code\page\kbplist\KbpListPage.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Data.java" afterPath="$PROJECT_DIR$/src/com/code/common/Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/DriverManager.java" afterPath="$PROJECT_DIR$/src/com/code/common/DriverManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/EventListener.java" afterPath="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpBtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpBtnPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/KPI.xls" afterPath="$PROJECT_DIR$/Case/KPI.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/GridPage.java" afterPath="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListFramePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(2).html" afterPath="$PROJECT_DIR$/Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(2).html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/TestCase.java" afterPath="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/TestNg.xml" afterPath="$PROJECT_DIR$/src/com/code/TestNg.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Tools.java" afterPath="$PROJECT_DIR$/src/com/code/common/Tools.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylog.txt" afterPath="$PROJECT_DIR$/mylog.txt" />
@@ -57,104 +51,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="KbpListFramePage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/KbpListFramePage.java">
+      <file leaf-file-name="build.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="798" max-vertical-offset="1377">
-              <caret line="79" column="26" selection-start-line="79" selection-start-column="26" selection-end-line="79" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.39600664" vertical-offset="0" max-vertical-offset="1088">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KbpFormPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
-              <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tools.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="929" max-vertical-offset="2873">
-              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KbpTreePage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpTreePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1156">
-              <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KpiFormPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1955">
-              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchKbpPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/SearchKbpPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="373" max-vertical-offset="952">
-              <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/login/LoginPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KpiFrameTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/KpiFrameTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1445">
-              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestNg.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/code/TestNg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2642487" vertical-offset="0" max-vertical-offset="579">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1088">
-              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -177,13 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpHomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/te.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/test/Color.java" />
-        <option value="$PROJECT_DIR$/src/test/MainTest.java" />
-        <option value="$PROJECT_DIR$/src/test/LightTest.java" />
         <option value="$PROJECT_DIR$/src/src/test/LightTest.java" />
         <option value="$PROJECT_DIR$/src/test/ColorTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpBtnPage.java" />
@@ -209,7 +104,6 @@
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpGridPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/page/SearchKbpPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiListFramePage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiTreePage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/SearchKpiPage.java" />
@@ -217,16 +111,24 @@
         <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiBtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/FormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/KbpFrameTest.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kpilist/KpiListFramePage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/KpiFrameTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/DriverManager.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpBtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListFramePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/reslist/page/ResTreePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/reslist/page/ResBtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/TreePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/Tools.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ResFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/reslist/page/SearchResPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/reslist/ResListFramePage.java" />
         <option value="$PROJECT_DIR$/src/com/code/TestNg.xml" />
       </list>
     </option>
@@ -265,6 +167,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,50 +205,8 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -561,7 +423,13 @@
       <envs />
       <properties />
       <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="10433" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -829,7 +697,8 @@
       <workItem from="1404579987626" duration="414000" />
       <workItem from="1404581038230" duration="287000" />
       <workItem from="1404612107433" duration="25115000" />
-      <workItem from="1404654506366" duration="9763000" />
+      <workItem from="1404654506366" duration="9990000" />
+      <workItem from="1404696075623" duration="11244000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -907,11 +776,15 @@
       <created>1404623015093</created>
       <updated>1404623015093</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="KPI\KBP">
+      <created>1404664469840</created>
+      <updated>1404664469840</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183727000" />
+    <option name="totallyTimeSpent" value="195198000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="748" extended-state="0" />
@@ -937,8 +810,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29833838" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46974522" sideWeight="0.7734139" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29833838" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6194267" sideWeight="0.7734139" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -972,12 +845,13 @@
     <MESSAGE value="更新数据驱动，使用Map来读取数据" />
     <MESSAGE value="完成Table的部分改造" />
     <MESSAGE value="kbp完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="kbp完成" />
+    <MESSAGE value="KPI\KBP" />
+    <option name="LAST_COMMIT_MESSAGE" value="KPI\KBP" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
+        <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java</url>
           <line>24</line>
           <properties />
@@ -987,7 +861,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="63" />
+      <option name="time" value="65" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -995,34 +869,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_39/jre/lib/rt.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27419356" vertical-offset="0" max-vertical-offset="629">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_39/src.zip!/java/util/Date.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="21352">
-          <caret line="144" column="12" selection-start-line="144" selection-start-column="11" selection-end-line="144" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.6.0_39/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4687" max-vertical-offset="15130">
-          <caret line="313" column="24" selection-start-line="313" selection-start-column="24" selection-end-line="313" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/WebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3318078" vertical-offset="399" max-vertical-offset="8364">
-          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/WebElement.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3598015" vertical-offset="110" max-vertical-offset="3332">
@@ -1094,20 +940,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3220339" vertical-offset="876" max-vertical-offset="4896">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/org/testng/internal/Invoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32286996" vertical-offset="21178" max-vertical-offset="32130">
-          <caret line="1297" column="0" selection-start-line="1297" selection-start-column="0" selection-end-line="1297" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/org/testng/internal/TestMethodWorker.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29237288" vertical-offset="1648" max-vertical-offset="4879">
@@ -1158,52 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="363" max-vertical-offset="1394">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiTreePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="850">
-          <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2017" max-vertical-offset="2686">
-          <caret line="133" column="19" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/SearchKpiPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="226" max-vertical-offset="850">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/KpiListFramePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="934" max-vertical-offset="1326">
@@ -1212,27 +998,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1547">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/LoginPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="544">
-          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="70" max-vertical-offset="459">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1240,14 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1702" max-vertical-offset="2006">
           <caret line="120" column="23" selection-start-line="120" selection-start-column="23" selection-end-line="120" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/KbpFrameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1036" max-vertical-offset="1615">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1264,9 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1282,15 +1040,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="748">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1298,14 +1047,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="1156">
           <caret line="63" column="25" selection-start-line="63" selection-start-column="25" selection-end-line="63" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/SearchKbpPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="351" max-vertical-offset="952">
-          <caret line="47" column="45" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1326,34 +1067,161 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/KpiFrameTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1129" max-vertical-offset="1445">
-          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.44771242" vertical-offset="509" max-vertical-offset="1088">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/reslist/page/ResTreePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="929" max-vertical-offset="2873">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/reslist/page/ResBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4190141" vertical-offset="0" max-vertical-offset="284">
+          <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41830066" vertical-offset="603" max-vertical-offset="1479">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/TreePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4190141" vertical-offset="306" max-vertical-offset="765">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/LoginPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.034782607" vertical-offset="281" max-vertical-offset="544">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33043477" vertical-offset="2066" max-vertical-offset="4896">
+          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.507732" vertical-offset="262" max-vertical-offset="1394">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="721" max-vertical-offset="2584">
+          <caret line="53" column="20" selection-start-line="53" selection-start-column="20" selection-end-line="53" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/SearchKpiPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49913645" vertical-offset="153" max-vertical-offset="799">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2642487" vertical-offset="0" max-vertical-offset="579">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiFormPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="1955">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.22279793" vertical-offset="534" max-vertical-offset="1955">
+          <caret line="45" column="19" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
+    <entry file="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/org/testng/internal/Invoker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="509" max-vertical-offset="1088">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.12244898" vertical-offset="20039" max-vertical-offset="32130">
+          <caret line="1230" column="0" selection-start-line="1230" selection-start-column="0" selection-end-line="1230" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/kpilist/page/KpiTreePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.314879" vertical-offset="198" max-vertical-offset="799">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/SearchKbpPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70715475" vertical-offset="306" max-vertical-offset="952">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/kbplist/page/KbpFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="169" max-vertical-offset="748">
+          <caret line="39" column="15" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3043478" vertical-offset="2517" max-vertical-offset="2975">
+          <caret line="181" column="15" selection-start-line="181" selection-start-column="15" selection-end-line="181" selection-end-column="15" />
+          <folding>
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#5199#5200#0" expanded="true" />
+            <element signature="e#5234#5235#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/reslist/page/SearchResPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49056605" vertical-offset="508" max-vertical-offset="1054">
+          <caret line="36" column="29" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/reslist/ResListFramePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="457" max-vertical-offset="1003">
+          <caret line="26" column="40" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1362,8 +1230,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/TestNg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2642487" vertical-offset="0" max-vertical-offset="579">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="476">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ResFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="593" max-vertical-offset="1513">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/KbpFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1205" max-vertical-offset="1615">
+          <caret line="92" column="16" selection-start-line="92" selection-start-column="16" selection-end-line="92" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/KpiFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1445">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39600664" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding />
         </state>
       </provider>
