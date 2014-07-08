@@ -4,15 +4,22 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.LoginPageTest"></class>
-            <class name="com.code.test.KbpFrameTest">
+            <!--class name="com.code.test.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
-            <!--class name="com.code.test.KpiFrameTest" >
+            <class name="com.code.test.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class>
+            </class-->
+
             <class name="com.code.test.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action?rootId=10" />
-            </class-->
+                <!--methods>
+                    <include name="delRes">
+
+                    </include>
+                </methods-->
+            </class>
+
         </classes>
     </test>
 </suite>

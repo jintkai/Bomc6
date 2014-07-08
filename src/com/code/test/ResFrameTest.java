@@ -77,6 +77,31 @@ public class ResFrameTest extends TestCase {
         int rowNum=gritTable.getRowNum();
         tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
     }
+    @Test(dataProvider = "resCase")
+    public void addRes(String str[] )
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        GridPage gritTable=resFrame.addRes(map);
+        int rowNum=gritTable.getRowNum();
+        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
+    }
+    @Test(dataProvider = "resCase" ,dependsOnMethods="addRes")
+    public void editRes(String str[])
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        GridPage gritTable=resFrame.editRes(map);
+        int rowNum=gritTable.getRowNum();
+        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
+    }
+    @Test(dataProvider = "resCase",dependsOnMethods="addRes")
+    public void delRes(String str[])
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        GridPage gritTable=resFrame.delRes(map);
+        int rowNum=gritTable.getRowNum();
+        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
+    }
+
     @BeforeMethod
     @Parameters({"Base_URL","Action_URL"})
     public void beforeMethod(String baseUrl,String actionUrl)

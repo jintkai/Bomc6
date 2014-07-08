@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
  * Created by jinkai on 02/07/2014.
  */
 public interface Data {
-    public static String browserType = "FIREFOX";
+    public static String browserType = "IE";
     public static String baseDir = ".";
     public static String baseUrl = "http://172.21.0.31:8084";
     /*

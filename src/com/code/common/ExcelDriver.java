@@ -70,6 +70,7 @@ public class ExcelDriver implements Iterator {
     @Override
     public Object[] next() {
         Cell[] cells=sheet.getRow(curRowNum-1);
+        //Cell[] cells=sheet.getRow(sheet.getColumns()-1);
         Object[] reslut=new Object[1];
         String[] str=new String[cells.length];
         for (int i=0;i<cells.length;i++)
