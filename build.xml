@@ -50,9 +50,12 @@
         </copy>
     </target>
     <taskdef resource="testngtasks" classpath="${lib.dir}/testng-6.8.jar"/>
-
+    <target name="initOutput" depends="copyFile">
+        <delete dir="${basedir}/test-output/" />
+        <copy file="${config}/testng-results.xsl" tofile="${basedir}/test-output/testng-results.xsl"></copy>
+    </target>
     <!-- 开始测试 -->
-    <target name="run_tests" depends="copyFile">
+    <target name="run_tests" depends="initOutput">
         <echo message="**************run-test**************" />
         <!--<sshexec host="." command="/opt/firefox/firefox-bin" trust="true" />-->
         <testng classpathref="compile.path" failureproperty="test.failed" >
@@ -62,9 +65,10 @@
             </xmlfileset>
         </testng>
     </target>
-
     <target name="tt" depends="run_tests">
-        <copy file="${basedir}/test-output/testng-results.xml" encoding="UTF-8" tofile="${basedir}/test-output/results.xml"></copy>
+        <delete file="${basedir}/test-output/results.xml"></delete>
+        <copy file="${basedir}/test-output/testng-results.xml"
+              tofile="${basedir}/test-output/results.xml" outputencoding="UTF-8"></copy>
     </target>
 
     <target name="transform" description="report" depends="tt">
@@ -90,19 +94,4 @@
     </tstamp>
 
 
-    <target name= "transform2" >
-
-        <xslt in= "${basedir}/test-output/testng-results2.xml" style= "${basedir}/test-output/testng-results.xsl"
-
-              out= "${basedir}/test-output/ index1.html " >
-
-            <!-- you need to specify the directory here again -->
-
-            <param name= "testNgXslt.outputDir" expression= "${basedir}/test-output/" />
-
-            <classpath refid= "compile.path" />
-
-        </xslt>
-
-    </target>
 </project>

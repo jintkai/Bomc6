@@ -143,7 +143,7 @@ public class Tools {
     public void screen()
     {
         String imageFormat = "jpg";// 图像文件的格式
-        String picDir="D:\\Test\\Bomc6\\pictures\\";
+        String picDir= Data.baseDir+"\\pictures\\";
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
         try {
             // 拷贝屏幕到一个BufferedImage对象screenshot

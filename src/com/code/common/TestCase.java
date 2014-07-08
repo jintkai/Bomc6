@@ -10,6 +10,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
 import java.util.Map;
+import java.util.Properties;
 
 /**
  * Created by jinkai on 2014/6/21.
@@ -20,10 +21,19 @@ public class TestCase {
     public Map<String,String> map;
     public static WebDriver 	createDriver(String BrowerType)
     {
+        Properties props=System.getProperties();
+        String pcVersion=props.getProperty("os.arch");
+        System.out.println("操作系统版本："+pcVersion);
         if(BrowerType=="IE")
         {
-            System.setProperty("webdriver.ie.driver",
-                    "D:\\eclipse\\selenium\\IEDriverServer.exe");
+            if(pcVersion.contains("64"))
+            { System.setProperty("webdriver.ie.driver",
+                    Data.baseDir+ "\\Driver\\IEDriverServer64.exe");}
+            else
+                System.setProperty("webdriver.ie.driver",
+                        Data.baseDir+ "\\Driver\\IEDriverServer32.exe");
+
+
             DesiredCapabilities ieCapabilities = DesiredCapabilities
                     .internetExplorer();
             ieCapabilities
@@ -39,7 +49,7 @@ public class TestCase {
         }
         else
         {
-            System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",  Data.baseDir+ "\\Driver\\chromedriver.exe");
             driver=new ChromeDriver();
         }
         return driver;

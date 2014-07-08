@@ -17,6 +17,7 @@
     <xsl:param name="testNgXslt.reportTitle"/>
     <xsl:param name="testNgXslt.sortTestCaseLinks"/>
     <xsl:param name="testNgXslt.chartScaleFactor"/>
+
     <!-- FAIL,PASS,SKIP,CONF,BY_CLASS-->
     <xsl:param name="testNgXslt.testDetailsFilter"/>
 
@@ -598,6 +599,9 @@
                     <xsl:for-each select="reporter-output/line">
                         <div>
                             <code>
+				<xsl:if test="contains(., 'picName')">
+				<xsl:attribute name="style">background-color:red</xsl:attribute>
+				</xsl:if>
                                 <xsl:value-of select="."/>
                             </code>
                         </div>
@@ -839,6 +843,7 @@
                     <td nowrap="true">Started</td>
                     <td nowrap="true">Duration</td>
                     <td>Exception</td>
+		    <td>ErrorScreen</td>
                 </tr>
                 <xsl:call-template name="testMethodsList">
                     <xsl:with-param name="methodList" select="$failedMethods"/>
@@ -881,6 +886,7 @@
                         <xsl:with-param name="methodList" select="./test-method"/>
                         <xsl:with-param name="category" select="'byClass'"/>
                         <xsl:with-param name="sortByStartTime" select="'true'"/>
+			<xsl:with-param name="errorScreen" select="./test-method/reporter-output"/>
                     </xsl:call-template>
                 </table>
                 <br/>
@@ -892,11 +898,15 @@
         <xsl:param name="methodList"/>
         <xsl:param name="category"/>
         <xsl:param name="sortByStartTime"/>
+	<xsl:param name="errorScreen"/>
         <xsl:for-each select="$methodList">
             <xsl:sort order="ascending" select="if (compare($sortByStartTime, 'true') = 0) then @started-at else ''"/>
             <xsl:variable name="methodId" select="concat(../@name, '_', @name, '_', $category, '_', @status, position())"/>
             <xsl:variable name="detailsId" select="concat($methodId, '_details')"/>
             <xsl:variable name="exceptionDetailsId" select="concat($methodId, '_exception')"/>
+	    <xsl:variable name="errScreenId" select="concat($methodId, '_error')"/>
+	    <xsl:variable name="picId" select="./reporter-output/line[contains(., 'picName')]"/>
+		   
             <tr id="{concat($methodId, '_row')}" class="{testng:testMethodStatus(.)}">
                 <xsl:if test="testng:isFilterSelected(@status) != 'true'">
                     <!--<xsl:attribute name="style" select="'display: none;'"/>-->
@@ -918,11 +928,24 @@
                             <xsl:value-of select="concat(exception/@class, ': ', exception/message)"/>
                         </a>
                     </xsl:if>
-                    &#160;
-                </td>
+                </td >
+		<td>
+			<xsl:if test="@status = 'FAIL'">
+			<a onclick="toggleDetailsVisibility('{$errScreenId}')">
+			<xsl:choose>
+                                <xsl:when test="$picId">
+                                    <xsl:value-of select="$picId"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="'NoErrorScreen'"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+			</a>
+			</xsl:if>
+		</td>
             </tr>
             <tr>
-                <td colspan="4" style="padding: 0; background-color: white; border-style: none; height: 0px;">
+                <td colspan="5" style="padding: 0; background-color: white; border-style: none; height: 0px;">
                     <div id="{$detailsId}" class="testMethodDetails">
                         <xsl:call-template name="formField">
                             <xsl:with-param name="label" select="'Name'"/>
@@ -978,7 +1001,7 @@
             </tr>
             <tr>
                 <xsl:if test="exception">
-                    <td colspan="4" style="padding: 0; background-color: white; border-style: none; height: 0px;">
+                    <td colspan="5" style="padding: 0; background-color: white; border-style: none; height: 0px;">
                         <div id="{$exceptionDetailsId}" class="testMethodDetails">
                             <xsl:choose>
                                 <xsl:when test="exception/full-stacktrace">
@@ -998,6 +1021,32 @@
                         </div>
                     </td>
                 </xsl:if>
+            </tr>
+	     <tr>
+                    <td colspan="5" style="padding: 0; background-color: white; border-style: none; height: 0px;">
+                        <div id="{$errScreenId}" class="testMethodDetails">
+                            <xsl:choose>
+                                <xsl:when test="$picId">
+				<xsl:for-each select="$picId">
+					<br>
+                                        <xsl:element name="img">
+						<xsl:attribute name="src">
+						<xsl:value-of select="substring(.,24,30)"/>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+						<xsl:value-of select="substring(.,24,30)"/>
+						</xsl:attribute>
+					</xsl:element>
+					</br>
+				    </xsl:for-each>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <pre style="padding: 5px; margin: 0;">&lt;No Error Screen&gt;</pre>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </div>
+                    </td>
+
             </tr>
         </xsl:for-each>
     </xsl:template>

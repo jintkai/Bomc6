@@ -118,6 +118,7 @@ public class EventListener implements WebDriverEventListener {
     public void onException(Throwable throwable, WebDriver webDriver) {
 
         mylog.error("ERROR--------------------");
+        System.out.println(throwable);
         tools.screen();
     }
 }
