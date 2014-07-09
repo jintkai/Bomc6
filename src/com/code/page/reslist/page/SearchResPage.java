@@ -5,6 +5,8 @@ import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Map;
+
 /**
  * Created by jinkai on 07/07/2014.
  */
@@ -52,5 +54,14 @@ public class SearchResPage extends Page {
         tools.selectByVisibleText(filterBzTypeKbpClass,type);
         tools.click(btnSearch);
         return new GridPage();
+    }
+    public void searchRes(Map<String,String> map)
+    {
+        tools.sendKeys(unitId,tools.getMapValue(map,"UNIT_ID"));
+        tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称"));
+        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址"));
+        if(!tools.getMapValue(map,"业务类型").equals(""))
+        tools.selectByVisibleText(filterBzTypeKbpClass,tools.getMapValue(map,"业务类型"));
+        tools.click(btnSearch);
     }
 }

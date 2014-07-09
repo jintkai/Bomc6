@@ -15,6 +15,8 @@ public class BtnPage extends Page {
     WebElement editBtn;
     @FindBy(how= How.ID,using=Data.btnDel)
     WebElement delBtn;
+    @FindBy(how=How.ID,using=Data.btnSelect)
+    WebElement selBtn;
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);
@@ -28,5 +30,9 @@ public class BtnPage extends Page {
     {
         tools.click(editBtn);
         return new FormPage();
+    }
+    public void select()
+    {
+        tools.click(selBtn);
     }
 }

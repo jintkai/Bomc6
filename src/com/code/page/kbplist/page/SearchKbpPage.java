@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
+import java.util.Map;
+
 /**
  * Created by jinkai on 01/07/2014.
  */
@@ -50,5 +52,11 @@ public class SearchKbpPage extends Page{
         return new GridPage();
     }
 
+    public void searchKbp(Map<String,String> map)
+    {
+        tools.sendKeys(kbpCaption,tools.getMapValue(map,"KBP名称"));
+        tools.sendKeys(kbpClass,tools.getMapValue(map,"KBP编号"));
+        tools.click(searchBtn);
+    }
 
 }

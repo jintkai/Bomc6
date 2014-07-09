@@ -37,46 +37,15 @@ public class ResFrameTest extends TestCase {
         tools.assertTrue(gritTable.equalsSearch(colStr,rowNum,search));
     }
     @Test(dataProvider = "resCase")
-    public void searchByUtilID(String str[])
+    public void searchRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByUnitID(tools.getMapValue(map, "UNIT_ID"));
+        resFrame.searchRes(map);
+        GridPage gritTable=new GridPage();
         int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
+        tools.assertEquals(rowNum,map,"期望值");
     }
-    @Test(dataProvider = "resCase")
-      public void searchByName(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByName(tools.getMapValue(map, "资源名称"));
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider = "resCase")
-    public void searchByIp(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByIp(tools.getMapValue(map, "IP地址"));
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider = "resCase")
-    public void searchByType(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByType(tools.getMapValue(map, "业务类型"));
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider = "resCase")
-    public void searchByMulit(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByMulit(tools.getMapValue(map, "UNIT_ID"),tools.getMapValue(map, "资源名称"),
-                tools.getMapValue(map, "IP地址"),tools.getMapValue(map, "业务类型"));
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
+
     @Test(dataProvider = "resCase")
     public void addRes(String str[] )
     {

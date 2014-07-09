@@ -103,4 +103,13 @@ public class KbpFrameTest extends TestCase {
         GridPage gridTable=kbpFrame.editKbp(tools.getMapValue(map,"KBP编号"),tools.getMapValue(map,"KBP名称"));
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")));
     }
+    @Test(dataProvider="kbpList")
+    public void searchKbp(String[] obj)
+    {
+        map=tools.changeStringToMap(excelHead,obj);
+        kbpFrame.searchKbp(map);
+        GridPage gridPage=new GridPage();
+        int count=gridPage.getRowNum();
+        tools.assertEquals(count,map,"期望值");
+    }
 }

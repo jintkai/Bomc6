@@ -21,6 +21,11 @@ public class KbpListFramePage extends Page {
     KbpFormPage kbpForm=new KbpFormPage();
     KbpBtnPage kbpBtn=new KbpBtnPage();
 
+    public void searchKbp(Map<String,String> map)
+    {
+        tools.switchToFrame("kbpListFrame");
+        searchKbp.searchKbp(map);
+    }
 
     public GridPage searchKbpByTree(String treeValue)
     {

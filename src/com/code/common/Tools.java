@@ -78,7 +78,14 @@ public class Tools {
     public void submit(WebElement ele){ele.submit();}
     public void selectByVisibleText(WebElement ele,String text)
     {
-        (new Select(ele)).selectByVisibleText(text);
+        try{(new Select(ele)).selectByVisibleText(text);}
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            System.out.println("select控件中无该值："+text);
+            Reporter.log("select控件中无该值："+text);
+            (new Select(ele)).selectByVisibleText(text);
+        }
     }
     public String getTitle(WebDriver driver)
     {
@@ -102,6 +109,18 @@ public class Tools {
             driver.close();
         }
     }
+    public void assertEquals(int actual,Map<String,String> map,String exception)
+    {
+        try {
+            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
+        }catch(AssertionError e) {
+            System.out.println(map);
+            Reporter.log("打印测试数据：" + String.valueOf(map));
+            screen();
+            System.out.println(e);
+            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
+        }
+    }
     public void assertTrue(boolean actual)
     {
         try {
@@ -112,6 +131,32 @@ public class Tools {
             System.out.println(e);
             Assert.assertTrue(actual, "执行错误");
         }
+    }
+    public String swithToWindowByTitle(String title)
+    {
+        /*
+        hand保存当前的hand
+         */
+        String hand=driver.getWindowHandle();
+        Set<String> handsSet=driver.getWindowHandles();
+        String handsStr[]=new String[handsSet.size()];
+        handsSet.toArray(handsStr);
+        for(int i=0;i<handsStr.length;i++)
+        {
+            driver.switchTo().window(handsStr[i]);
+            if (driver.getTitle().contains(title))
+                return hand;
+        }
+        Reporter.log("切换窗口失败，无法按Title切换窗口。");
+        return hand;
+    }
+    public void switchToWindowByHand(String hand)
+    {
+        driver.switchTo().window(hand);
+    }
+    public void switchToWindos()
+    {
+        driver.switchTo().defaultContent();
     }
     public void switchToFrame(int index){
         driver.switchTo().defaultContent();
@@ -142,6 +187,7 @@ public class Tools {
      */
     public void screen()
     {
+        Reporter.log("截图");
         String imageFormat = "jpg";// 图像文件的格式
         String picDir= Data.baseDir+"\\pictures\\";
         Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
@@ -191,10 +237,31 @@ public class Tools {
 
     public String getMapValue(Map<String,String> map,String key)
     {
-        return map.get(key);
+        String values=null;
+        try{
+             values=map.get(key);
+        }
+        catch(NullPointerException e)
+        {
+            Reporter.log("获取Map中key的value错误，不存在key："+key);
+            System.out.println("获取Map中key的value错误，不存在key："+key);
+            map.get(key);
+        }
+        return values;
     }
     public void alertAccept()
     {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.switchTo().alert().accept();
+    }
+    public void printMap(Map<String,String> map)
+    {
+        for (int i = 0; i <map.size() ; i++) {
+            System.out.println(map.get(i));
+        }
     }
 }

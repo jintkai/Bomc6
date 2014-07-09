@@ -19,10 +19,13 @@ public class ExcelDriver implements Iterator {
     private int curRowNum=1;
     private int colNum=0;
     public ExcelDriver(String fileName,String sheetName) throws IOException, BiffException {
+        System.out.println("SSSSSSSSSSSS");
         File dir=new File(".");
         this.book=Workbook.getWorkbook(new File(dir.getCanonicalPath()+"\\Case\\"+fileName+".xls"));
         this.sheet=book.getSheet(sheetName);
+        System.out.println(sheetName);
         rowNum=sheet.getRows();
+        System.out.println(rowNum);
         colNum=sheet.getColumns();
     }
     public int getRowNum(){

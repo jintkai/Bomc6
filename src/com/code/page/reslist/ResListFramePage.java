@@ -15,8 +15,9 @@ import java.util.Map;
 public class ResListFramePage extends Page{
     ResTreePage resTree=new ResTreePage();
     SearchResPage searchRes=new SearchResPage();
-    GridPage gridTable=new GridPage();
-    ResBtnPage resBtn=new ResBtnPage();
+    public GridPage gridTable=new GridPage();
+    public ResBtnPage resBtn=new ResBtnPage();
+
     public GridPage searchResByTree(String treeValue)
     {
         tools.switchToFrame(0);
@@ -54,6 +55,13 @@ public class ResListFramePage extends Page{
         tools.switchToFrame();
         tools.switchToFrame("resListFrame");
         return searchRes.searchByMulti(id,name,ip,type);
+    }
+    public void searchRes(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame("resListFrame");
+        searchRes.searchRes(map);
+
     }
     public GridPage addRes(Map<String,String> map)
     {

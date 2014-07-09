@@ -21,6 +21,7 @@
     <orderEntry type="library" name="selenium-java-2.40.0" level="project" />
     <orderEntry type="library" name="selenium-server-standalone-2.40.0" level="application" />
     <orderEntry type="library" name="selenium-java-2.40.0-srcs" level="project" />
+    <orderEntry type="library" name="ojdbc14" level="project" />
   </component>
 </module>
 

@@ -27,11 +27,12 @@ public interface Data {
     public static String selectBtId = "cb_gridTable";
 
     /*
-    标准的增加、删除、修改等控件
+    标准的增加、删除、修改、选择等控件
      */
     public static String btnAdd = "btn-add";
     public static String btnEdit = "btn-edit";
     public static String btnDel = "btn-del";
+    public static String btnSelect="btn-select";
     /*
     KpiPage的WebElement
      */
