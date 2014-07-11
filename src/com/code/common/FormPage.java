@@ -10,4 +10,5 @@ import org.openqa.selenium.support.How;
 public class FormPage extends  Page{
     @FindBy(how= How.ID,using="btn-submit")
     public  WebElement btnSubmit;
+
 }

@@ -13,11 +13,15 @@ import java.util.Map;
  */
 public class EnvListPage extends Page {
     public SearchEnvPage searchEnv=new SearchEnvPage();
-    EnvBtnPage envBtn=new EnvBtnPage();
+    public EnvBtnPage envBtn=new EnvBtnPage();
     EnvFormPage envForm=new EnvFormPage();
     public void searchEnv(Map<String,String> map)
     {
         searchEnv.searchEnv(map);
+    }
+    public void searchByName(String name)
+    {
+        searchEnv.searchByName(name);
     }
     public void addEnv(Map<String,String> map)
     {

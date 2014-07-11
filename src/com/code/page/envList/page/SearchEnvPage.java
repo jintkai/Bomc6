@@ -23,4 +23,9 @@ public class SearchEnvPage extends Page {
         tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称"));
         tools.click(btnSearch);
     }
+    public void searchByName(String name)
+    {
+        tools.sendKeys(deviceName,name);
+        tools.click(btnSearch);
+    }
 }

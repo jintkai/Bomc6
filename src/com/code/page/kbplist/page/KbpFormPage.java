@@ -2,14 +2,10 @@ package com.code.page.kbplist.page;
 
 import com.code.common.Data;
 import com.code.common.FormPage;
-import com.code.common.GridTablePage;
-import com.code.common.Page;
 
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.Map;
 

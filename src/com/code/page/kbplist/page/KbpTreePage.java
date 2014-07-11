@@ -1,10 +1,7 @@
 package com.code.page.kbplist.page;
 
 import com.code.common.GridPage;
-import com.code.common.GridTablePage;
 import com.code.common.Page;
-import com.code.common.TestCase;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 

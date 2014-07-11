@@ -11,6 +11,7 @@ import org.testng.annotations.*;
 
 import java.util.Map;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by jinkai on 2014/6/21.
@@ -68,7 +69,7 @@ public class TestCase {
         //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
         eventDriver.manage().window().maximize();
-        //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     //@AfterClass(alwaysRun=true)
@@ -84,6 +85,7 @@ public class TestCase {
     {
         eventDriver.get(Data.baseUrl);
         eventDriver.manage().window().maximize();
+        eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
     @AfterSuite
     public void afterSuite()

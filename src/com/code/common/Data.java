@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
  * Created by jinkai on 02/07/2014.
  */
 public interface Data {
-    public static String browserType = "IE";
+    public static String browserType = "FIREFOX";
     public static String baseDir = ".";
     public static String baseUrl = "http://172.21.0.31:8084";
     /*
@@ -57,4 +57,16 @@ public interface Data {
     public static String middleID = "kbp.middle";
     public static String viewStyleID = "kbp_viewStyle";
     public static String enableID = "kbp_enable";
+
+    /*
+    常量
+     */
+    public static String ADDBTN="增加";
+    public static String EDITBTN="修改";
+    public static String DELETEBTN="删除";
+    public static String DEPLOYBTN="部署";
+    public static String REMOVEBTN="卸载";
+    public static String STARTBTN="启用";
+    public static String SHUTDOWNBTN="停止";
+
 }

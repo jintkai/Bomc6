@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="suite"  >
-    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
+    <parameter name="Base_URL" value="http://172.21.0.31:8084" >1</parameter>
     <test name="frame">
         <classes>
             <class name="com.code.test.LoginPageTest"></class>
@@ -14,12 +14,20 @@
             <class name="com.code.test.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class >
-            <class name="com.code.test.ResFrameTest" ></class -->
+            <class name="com.code.test.ResFrameTest" ></class >
 
             <class name="com.code.test.EnvListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
-
+            <class name="com.code.test.MQListTest" >
+                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
+            </class>
+            <class name="com.code.test.WKlistTest">
+                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
+            </class-->
+            <class name="com.code.test.PFListTest">
+                <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
+            </class>
         </classes>
     </test>
 </suite>

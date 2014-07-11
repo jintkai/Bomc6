@@ -2,11 +2,9 @@ package com.code.test;
 
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
-import com.code.common.GridTablePage;
 import com.code.common.TestCase;
 import com.code.page.kbplist.KbpListFramePage;
 import jxl.read.biff.BiffException;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;

@@ -96,7 +96,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver) {
-        webElement.clear();
+
     }
 
     @Override

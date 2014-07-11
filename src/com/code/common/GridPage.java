@@ -6,10 +6,13 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 import javax.xml.crypto.*;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by jinkai on 05/07/2014.
+ * 对列表Table的处理
  */
 public class GridPage  extends Page implements Data{
     Tools tools=new Tools();
@@ -34,10 +37,13 @@ public class GridPage  extends Page implements Data{
      */
     List<WebElement> dataList=null;
 
+    int gridTable_cd=3;
+    String gridTable_cbID="gridTable_cb";
 
-    /*
-返回当前页中总行数
-*/
+    /**
+     * 返回当前页面中总行数；
+     * @return
+     */
     public int getRowNum()
     {
         dataList=tools.findElements(grid,By.xpath(dataTableTrXpath));
@@ -48,8 +54,9 @@ public class GridPage  extends Page implements Data{
         return  rowNum;
     }
 
-    /*
-    返回table的表头数组
+    /**
+     * 返回table中的表头数组
+     * @return
      */
     public String[] getHead()
     {
@@ -63,12 +70,20 @@ public class GridPage  extends Page implements Data{
         for(int i=0;i<list.size();i++)
         {
             str[i]=eles[i].getText().trim();
+            if (tools.getAttribute(eles[i],"id").contains("gridTable_cb"))
+            {
+                gridTable_cd=i+1;
+                System.out.println(gridTable_cbID);
+            }
             //System.out.println(str[i]);
         }
         return str;
     }
-    /*
-    根据参数，返回参数在数据中的下标值+1
+
+    /**
+     * 返回列名在表头中的列下标
+     * @param str 列名
+     * @return 列表str在表头中的下标，0表示该列没有在表头中
      */
     public int HeadIndex(String str)
     {
@@ -105,6 +120,12 @@ public class GridPage  extends Page implements Data{
     /*
     返回数据区域，某一列的所有数据，组成的数组
      */
+
+    /**
+     * 返回当前页中，某列组成的数据对象
+     * @param str 列名
+     * @return 返回某列组成的数组；
+     */
     public String[] getTdOfAllTr(String str)
     {
         tdIndex=this.HeadIndex(str);
@@ -119,6 +140,48 @@ public class GridPage  extends Page implements Data{
         return rowVales;
     }
 
+    /**
+     * 根据输入行号，返回当前页面中，该行的所有列元素组成的Map对象；
+     * @param index 行号
+     * @return
+     */
+    public Map<String,String> getTrOfAllTd(int index)
+    {
+        String heads[]=getHead();
+        String trXpath=this.dataTableTrXpath+"["+index+"]";
+        WebElement tr=tools.findBy(grid,By.xpath(trXpath));
+        List<WebElement> tdList=tools.findElements(tr,By.xpath(dataTableTdXpath));
+        WebElement tds[]=new WebElement[tdList.size()];
+        tdList.toArray(tds);
+        String str[]=new String[tds.length];
+        for (int i=0;i<tds.length;i++) {
+            str[i]=tds[i].getText().trim();
+        }
+        return tools.changeStringToMap(heads,str);
+    }
+
+    /**
+     * 根据输入的列名，列值，查询当前页中，该列，列值与输入值相等的行下标；
+     * @param colName 列名
+     * @param colStr 列值
+     * @return 返回相等的行下标
+     */
+    public ArrayList<Integer> getListOftr(String colName,String colStr)
+    {
+        ArrayList<Integer> list = new ArrayList();
+        String rowValues[]=getTdOfAllTr(colName);
+        for (int i=0;i<rowValues.length;i++)
+        {
+           if( rowValues[i].contains(colStr))
+            list.add(i+1);
+        }
+        return list;
+    }
+
+    /**
+     * 根据行下标，选择当前页的行
+     * @param index 行号，需要选择的行号，0表示所有行；
+     */
     public void selectTr(int index)
     {
         if (index==0)
@@ -126,10 +189,27 @@ public class GridPage  extends Page implements Data{
             System.out.println("选择所有");
             tools.click(selectBt);
         }
+        else
+        {
+            System.out.println("选择部分");
+            String trXpath=this.dataTableTrXpath+"["+(index)+"]";
+            String tdXpath=this.dataTableTdXpath+"["+gridTable_cd+"]";
+            WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
+            WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
+            tools.findBy(webTd,By.xpath("./input")).click();
+        }
     }
 
     /*
     判断数组中的值是否都包含所查询的值
+     */
+
+    /**
+     * 查询当前页中所有数据，某列的数据是否包含预期的数据，且页面的总行数是否等于预期值
+     * @param colStr 列名
+     * @param expNum 预期行数
+     * @param searchClass 列的预期值
+     * @return 若总数相等且每行都包含，则返回true
      */
     public boolean equalsSearch(String colStr,int expNum,String searchClass)
     {
