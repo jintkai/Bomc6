@@ -40,7 +40,10 @@ public class Tools {
             return true;
         }catch(NoSuchElementException e)
         {
-            System.out.println(e);
+            //System.out.println(e);
+            Reporter.log("findElement【"+by+"】失败。");
+            screen();
+            d.findElement(by);
             return false;
         }
     }
@@ -56,15 +59,18 @@ public class Tools {
     public boolean isElementsExist(SearchContext d,By by)
     {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         List<WebElement> list=d.findElements(by);
         if (list.size()>0)
             return  true;
-        else
-            return  false;
+        else {
+            screen();
+            Reporter.log("findElements【" + by + "】失败。");
+            return false;
+        }
     }
     /**
      *查找元素是否存在；
@@ -111,7 +117,17 @@ public class Tools {
         }
 
     }
-    public void clear(WebElement ele){ele.clear();}
+    public void clear(WebElement ele){
+        try {
+            ele.clear();
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+            Reporter.log("清除元素内容失败，TagName："+ele.getTagName());
+            screen();
+            ele.clear();
+        }
+    }
     public void submit(WebElement ele){ele.submit();}
     public void selectByVisibleText(WebElement ele,String text)
     {
@@ -121,9 +137,8 @@ public class Tools {
         catch(Exception e)
         {
             e.printStackTrace();
-            System.out.println("select控件中无该值："+text);
-            Reporter.log("select控件中无该值："+text);
-            if(!text.isEmpty())
+            //System.out.println("select控件中无该值："+text);
+            Reporter.log("Select控件中无法通过该值【："+text+"】进行选择");
             (new Select(ele)).selectByVisibleText(text);
         }
     }
@@ -152,7 +167,7 @@ public class Tools {
             Assert.assertEquals(actual, expected, "执行错误");
         }catch(AssertionError e){
             screen();
-            System.out.println(e);
+            e.printStackTrace();
             Assert.assertEquals(actual, expected, "执行错误");
             driver.close();
         }
@@ -171,7 +186,7 @@ public class Tools {
             System.out.println(map);
             Reporter.log("打印测试数据：" + String.valueOf(map));
             screen();
-            System.out.println(e);
+
             Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
         }
     }
@@ -205,7 +220,7 @@ public class Tools {
         }
         catch(AssertionError e){
             screen();
-            System.out.println(e);
+            e.printStackTrace();
             Assert.assertTrue(actual, "执行错误");
         }
     }
@@ -226,7 +241,7 @@ public class Tools {
             if (driver.getTitle().contains(title))
                 return hand;
         }
-        Reporter.log("切换窗口失败，无法按Title切换窗口。");
+        Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
         return hand;
     }
     /**
@@ -282,7 +297,7 @@ public class Tools {
      * @return
      */
     public String getCurrentDateTime() {
-        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyyMMdd-HHmmss");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
         dateFormat.format(new Date());
         return dateFormat.format(new Date());
     }

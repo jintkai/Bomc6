@@ -1,9 +1,9 @@
-package com.code.page.performance;
+package com.code.page.PfList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
-import com.code.page.performance.page.PfBtnPage;
-import com.code.page.performance.page.PfFormPage;
+import com.code.page.PfList.page.PfBtnPage;
+import com.code.page.PfList.page.PfFormPage;
 
 import java.util.Map;
 

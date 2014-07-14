@@ -4,7 +4,7 @@ import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
-import com.code.page.PfList.PFListPage;
+import com.code.page.agentList.AgentListPage;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -16,10 +16,10 @@ import java.lang.reflect.Method;
 import java.util.Iterator;
 
 /**
- * Created by jinkai on 2014/7/11.
+ * Created by jinkai on 2014/7/14.
  */
-public class PFListTest extends TestCase {
-    PFListPage pfList=new PFListPage();
+public class AgListTest extends TestCase {
+    public AgentListPage agList=new AgentListPage();
     @BeforeMethod
     @Parameters({"Base_URL","Action_URL"})
     public void beforeMethod(String baseUrl,String actionUrl)
@@ -27,40 +27,40 @@ public class PFListTest extends TestCase {
         TestCase.eventDriver.get(baseUrl + actionUrl);
     }
 
-    @DataProvider(name="PFlist")
+    @DataProvider(name="agList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("Performance",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("Agent",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "PFlist")
-    public void addPreformance(String[] str)
+    @Test(dataProvider = "agList")
+    public void addAgent(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         if(tools.getMapValue(map,"操作类型").equals(Data.ADDBTN))
-            pfList.addPf(map);
+            agList.addAg(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.EDITBTN))
-            pfList.editPf(map);
+            agList.editAg(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.DELETEBTN))
-            pfList.delPf(map);
+            agList.delAg(map);
         GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getListOftr("Performance名称",tools.getMapValue(map,"Performance名称")).size(),map,"期望值");
+        tools.assertEquals(gridTable.getListOftr("Agent名称",tools.getMapValue(map,"Agent名称")).size(),map,"期望值");
     }
-    @Test(dataProvider = "PFlist")
-    public void deployPf(String[] str)
+    @Test(dataProvider = "agList")
+    public void deployAgent(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         System.out.println(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.DEPLOYBTN))
-            pfList.deploy(map);
+            agList.deploy(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.REMOVEBTN))
-            pfList.remove(map);
+            agList.remove(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.STARTBTN))
-            pfList.start(map);
+            agList.start(map);
         if(tools.getMapValue(map,"操作类型").equals(Data.SHUTDOWNBTN))
-            pfList.shutdown(map);
+            agList.shutdown(map);
         GridPage gridTable=new GridPage();
-        int i=gridTable.getListOftr("Performance名称",tools.getMapValue(map,"选择名称")).get(0);
+        int i=gridTable.getListOftr("Agent名称",tools.getMapValue(map,"选择名称")).get(0);
         tools.assertEquals(gridTable.getTrOfAllTd(i).get(tools.getMapValue(map,"验证列")),tools.getMapValue(map,"期望值"));
     }
 }

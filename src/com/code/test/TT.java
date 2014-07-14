@@ -61,5 +61,19 @@ public class TT {
                 System.out.println(test);
             }
         }
+        /*
+        节点属性的可以使用getAttributes方法，返回一个NameNodeMap对象，包含了描述属性的节点对象；
+        通过getNodeName获取属性名称，getNodeValue获得属性值;
+        若知道属性名，则可使用getAttribute来获取属性名的值
+         */
+        NamedNodeMap attributes=root.getAttributes();
+        for (int i=0;i<attributes.getLength();i++)
+        {
+            Node attribute=attributes.item(i);
+            System.out.println(attribute.getNodeName()+"，"+attribute.getNodeValue());
+        }
+        System.out.println(root.getAttribute("name"));
+
+
     }
 }

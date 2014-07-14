@@ -52,18 +52,33 @@ public class BtnPage extends Page {
     {
         tools.click(remove);
         tools.alertAccept();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void unloadWK()
     {
         tools.click(unloadWK);
         tools.alertAccept();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void deploy()
     {
         tools.click(deploy);
         tools.click(startDeploy);
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 
@@ -71,11 +86,21 @@ public class BtnPage extends Page {
     {
         tools.click(shutdown);
         tools.alertAccept();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void startup()
     {
         tools.click(startup);
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 }

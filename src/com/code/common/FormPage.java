@@ -11,4 +11,5 @@ public class FormPage extends  Page{
     @FindBy(how= How.ID,using="btn-submit")
     public  WebElement btnSubmit;
 
+
 }

@@ -61,9 +61,7 @@ public class GridPage  extends Page implements Data{
     public String[] getHead()
     {
 
-        //System.out.println(headtable.getTagName());
         List<WebElement> list=tools.findElements(headtable, By.xpath(this.headThXpath));
-        //System.out.println(list.size());
         WebElement[] eles = new WebElement[list.size()];
         list.toArray(eles);
         String str[]=new String[list.size()];
@@ -75,7 +73,6 @@ public class GridPage  extends Page implements Data{
                 gridTable_cd=i+1;
                 System.out.println(gridTable_cbID);
             }
-            //System.out.println(str[i]);
         }
         return str;
     }

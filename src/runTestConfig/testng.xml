@@ -24,9 +24,12 @@
             </class>
             <class name="com.code.test.WKlistTest">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
-            </class-->
+            </class>
             <class name="com.code.test.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
+            </class-->
+            <class name="com.code.test.AgListTest">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
         </classes>
     </test>
