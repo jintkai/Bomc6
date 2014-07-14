@@ -18,11 +18,7 @@ public class KbpTreePage extends Page {
 
     public GridPage searchKpiByTree(String treeValue)
     {
-        //TestCase.eventDriver.switchTo().defaultContent();
-        //TestCase.eventDriver.switchTo().frame("kbpTree");
-        tools.switchToFrame("kbpTree");
         init();
-        //fuzzy.sendKeys(kbpClass);
         tools.sendKeys(fuzzy,treeValue);
 
         try {
@@ -38,25 +34,8 @@ public class KbpTreePage extends Page {
             e.printStackTrace();
         }
         actions.sendKeys(Keys.ENTER).perform();
-        //TestCase.eventDriver.switchTo().defaultContent();
         tools.switchToFrame();
-        /*String js="return document.getElementById(\"kbpListFrame\").contentWindow.document.readyState";
-        String str= (String) ((JavascriptExecutor)TestCase.driver).executeScript(js);
-        while(!((JavascriptExecutor)TestCase.driver).executeScript(js).equals("complete"))
-        {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        */
-        //TestCase.eventDriver.switchTo().frame("kbpListFrame");
+
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

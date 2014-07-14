@@ -12,24 +12,24 @@ public class KpiTreePage extends Page {
     WebElement fuzzy;
     public void init()
     {
-        tools.clear(fuzzy);
+        //tools.clear(fuzzy);
     }
 
-    public GridPage searchKbpByTree(String treeValue)
+    public GridPage searchByTree(String treeValue)
     {
+        tools.switchToFrame();
         tools.switchToFrame(0);
-        init();
         tools.sendKeys(fuzzy,treeValue);
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -37,7 +37,7 @@ public class KpiTreePage extends Page {
         tools.switchToFrame();
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

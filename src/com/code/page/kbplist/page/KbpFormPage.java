@@ -4,6 +4,7 @@ import com.code.common.Data;
 import com.code.common.FormPage;
 
 
+import com.code.common.GridPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,20 +27,19 @@ public class KbpFormPage extends FormPage {
     @FindBy(id= Data.enableID)
     WebElement enable;
 
-    public void addKBP(Map<String,String> map)
+    public GridPage addKBP(Map<String,String> map)
     {
-        tools.sendKeys(classAfter,map.get("KBP编号"));
-        tools.sendKeys(kbpCaption,map.get("KBP名称"));
+        inputForm(map);
+        return new GridPage();
+    }
+
+    public void inputForm(Map<String,String> map)
+    {
+        tools.sendKeys(classAfter,map.get("编号"));
+        tools.sendKeys(kbpCaption,map.get("名称"));
         tools.sendKeys(kbpDesc,map.get("KBP描述"));
-       //middle.sendKeys("006");
         tools.selectByVisibleText(viewStyle,map.get("展现样式"));
         tools.selectByVisibleText(enable,map.get("是否有效"));
         tools.submit(kbpCaption);
     }
-    public void editKbp(String caption)
-    {
-        tools.sendKeys(kbpCaption,caption);
-        tools.submit(kbpCaption);
-    }
-
 }

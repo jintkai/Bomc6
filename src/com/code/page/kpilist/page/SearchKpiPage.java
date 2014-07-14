@@ -5,6 +5,8 @@ import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.Map;
+
 /**
  * Created by jinkai on 06/07/2014.
  */
@@ -37,6 +39,13 @@ public class SearchKpiPage extends Page {
         tools.sendKeys(kpiId,id);
         tools.sendKeys(kpiName,name);
         //tools.submit(kpiId);
+        tools.click(btnSearch);
+        return new GridPage();
+    }
+    public GridPage search(Map<String,String> map)
+    {
+        tools.sendKeys(kpiId,tools.getMapValue(map,"指标编号"));
+        tools.sendKeys(kpiName,tools.getMapValue(map,"指标名称"));
         tools.click(btnSearch);
         return new GridPage();
     }

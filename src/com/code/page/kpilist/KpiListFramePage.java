@@ -17,10 +17,11 @@ public class KpiListFramePage extends Page{
     SearchKpiPage searchKpi=new SearchKpiPage();
     GridPage gridTable=new GridPage();
     KpiBtnPage kpiBtn=new KpiBtnPage();
-    public GridPage searchKpiByTree(String str)
+    KpiFormPage kpiForm=new KpiFormPage();
+    /*public GridPage searchKpiByTree(String str)
     {
         tools.switchToFrame(0);
-        gridTable=kpiTree.searchKbpByTree(str);
+        gridTable=kpiTree.searchByTree(str);
         return  gridTable;
     }
     public GridPage searchKpiById(String id)
@@ -48,7 +49,7 @@ public class KpiListFramePage extends Page{
         tools.switchToFrame();
         if(!tools.getMapValue(map, "父节点").equals("0"))
         {
-            kpiTree.searchKbpByTree(tools.getMapValue(map, "父节点"));
+            kpiTree.searchByTree(tools.getMapValue(map, "父节点"));
             tools.switchToFrame();
         }
         tools.switchToFrame("kpiListFrame");
@@ -75,5 +76,45 @@ public class KpiListFramePage extends Page{
         KpiFormPage kpiForm= new KpiFormPage();
         kpiForm.editKpi(map);
         return searchKpi.searchByName(tools.getMapValue(map,"KPI名称"));
+    }*/
+    public GridPage search(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame("kpiListFrame");
+        return searchKpi.search(map);
+    }
+    public GridPage searchByTree(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(0);
+        kpiTree.searchByTree(tools.getMapValue(map,"KBP"));
+        return new GridPage();
+    }
+    public GridPage add(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(0);
+        this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
+        kpiBtn.add();
+        kpiForm.add(map);
+        return  new GridPage();
+    }
+    public GridPage edit(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame("kpiListFrame");
+        gridTable.selectTrs(gridTable.getListOftr("指标名称",tools.getMapValue(map,"选择名称")));
+        kpiBtn.edit();
+        kpiForm.edit(map);
+        return  new GridPage();
+    }
+    public GridPage delete(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame("kpiListFrame");
+        searchKpi.search(map);
+        gridTable.selectAllTr();
+        kpiBtn.delete();
+        return  new GridPage();
     }
 }

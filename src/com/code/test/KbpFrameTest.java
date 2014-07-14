@@ -28,86 +28,42 @@ public class KbpFrameTest extends TestCase {
     }
 
     @DataProvider(name="kbpList")
-    public Iterator dataForKbp(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("KBP",method.getName());
+    public Iterator dataDriver(Method method) throws IOException, BiffException {
+        ExcelDriver excelDriver=new ExcelDriver("KBP_NEW",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-
     @Test(dataProvider = "kbpList")
-    public void searchKbpByTreeCaption(String[] obj)
+    public void search(String str[])
     {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.searchKbpByTree(tools.getMapValue(map,"KBP名称"));
-        tools.assertTrue(gridTable.equalsSearch("KBP编号",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP编号")));
-    }
-
-    @Test(dataProvider = "kbpList")
-    public void searchKbpByTreeClass(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.searchKbpByTree(tools.getMapValue(map,"KBP编号"));
-        tools.assertTrue(gridTable.equalsSearch("KBP编号",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP编号")));
-    }
-
-    @Test(dataProvider = "kbpList")
-    public void searchByClass(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.searchByClass(tools.getMapValue(map,"KBP编号"));
-        tools.assertTrue(gridTable.equalsSearch("KBP编号",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP编号")));
-    }
-
-    @Test(dataProvider = "kbpList")
-    public void searchByCaption(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.searchByCaption(tools.getMapValue(map,"KBP名称"));
-        tools.assertTrue(gridTable.equalsSearch("KBP名称",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP名称")));
-    }
-
-    @Test(dataProvider = "kbpList")
-    public void searchByMulti(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.searchByMulti(tools.getMapValue(map,"KBP编号"),tools.getMapValue(map,"KBP名称"));
-        tools.assertTrue(gridTable.equalsSearch("KBP编号",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP编号")));
-        tools.assertTrue(gridTable.equalsSearch("KBP名称",Integer.parseInt(tools.getMapValue(map,"期望值")),
-                tools.getMapValue(map,"KBP名称")));
+        map=tools.changeStringToMap(excelHead,str);
+        GridPage gritTable=kbpFrame.search(map);
+        tools.assertEquals(gritTable.getRowNum(),map,"期望值");
     }
     @Test(dataProvider = "kbpList")
-    public void addKbp(String[] obj)
+    public void searchByTree(String str[])
     {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.addKbp(map);
-        tools.assertEquals(gridTable.getRowNum(), Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider="kbpList",dependsOnMethods = "addKbp")
-    public void delKbp(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.delKbp(tools.getMapValue(map,"KBP名称"));
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")));
+        map=tools.changeStringToMap(excelHead,str);
+        GridPage gritTable=kbpFrame.searchByTree(map);
+        tools.assertEquals(gritTable.getRowNum(),map,"期望值");
     }
     @Test(dataProvider="kbpList")
-    public void editKbp(String[] obj)
+    public void addKBP(String str[])
     {
-        map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kbpFrame.editKbp(tools.getMapValue(map,"KBP编号"),tools.getMapValue(map,"KBP名称"));
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider="kbpList")
-    public void searchKbp(String[] obj)
-    {
-        map=tools.changeStringToMap(excelHead,obj);
-        kbpFrame.searchKbp(map);
-        GridPage gridPage=new GridPage();
-        int count=gridPage.getRowNum();
-        tools.assertEquals(count,map,"期望值");
+        map=tools.changeStringToMap(excelHead,str);
+        String option=tools.getMapValue(map,"操作类型");
+        if(option.equals("增加")) {
+            kbpFrame.add(map);
+        }
+        if (option.equals("修改"))
+        {
+            kbpFrame.edit(map);
+        }
+        if (option.equals("删除"))
+        {
+            kbpFrame.delete(map);
+        }
+        GridPage gridTable=kbpFrame.search(map);
+        tools.assertEquals(gridTable.getRowNum(),map,"期望值");
     }
 }

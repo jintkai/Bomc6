@@ -4,6 +4,7 @@ import jxl.Cell;
 import jxl.Sheet;
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
+import org.testng.Reporter;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,12 +19,18 @@ public class ExcelDriver implements Iterator {
     private int rowNum=0;
     private int curRowNum=1;
     private int colNum=0;
-    public ExcelDriver(String fileName,String sheetName) throws IOException, BiffException {
-        File dir=new File(".");
-        this.book=Workbook.getWorkbook(new File(dir.getCanonicalPath()+"\\Case\\"+fileName+".xls"));
-        this.sheet=book.getSheet(sheetName);
-        rowNum=sheet.getRows();
-        colNum=sheet.getColumns();
+    public ExcelDriver(String fileName,String sheetName) {
+        try {
+            File dir = new File(".");
+            this.book = Workbook.getWorkbook(new File(dir.getCanonicalPath() + "\\Case\\" + fileName + ".xls"));
+            this.sheet = book.getSheet(sheetName);
+            rowNum = sheet.getRows();
+            colNum = sheet.getColumns();
+        }catch(Exception e)
+        {
+            e.printStackTrace();
+            Reporter.log("读取Sheel文件失败，检查文件名称！");
+        }
     }
     public int getRowNum(){
         return rowNum;

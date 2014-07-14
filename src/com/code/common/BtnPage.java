@@ -35,6 +35,21 @@ public class BtnPage extends Page {
         tools.click(addBtn);
         return new FormPage();
     }
+    public FormPage add()
+    {
+        tools.click(addBtn);
+        return  new FormPage();
+    }
+    public FormPage edit()
+    {
+        tools.click(editBtn);
+        return  new FormPage();
+    }
+    public  void  delete()
+    {
+        tools.click(delBtn);
+        tools.alertAccept();
+    }
     public  void  deleteForm()
     {
         tools.click(delBtn);

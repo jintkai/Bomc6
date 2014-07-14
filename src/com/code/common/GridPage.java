@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.testng.Reporter;
 
 import javax.xml.crypto.*;
 import java.util.ArrayList;
@@ -194,6 +195,27 @@ public class GridPage  extends Page implements Data{
             WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
             tools.findBy(webTd,By.xpath("./input")).click();
+        }
+    }
+    public void selectAllTr()
+    {
+        tools.click(selectBt);
+    }
+    /**
+     * 根据行下标，选择当前页的行
+     * @param list 保存行号的数组；
+     */
+    public void selectTrs(ArrayList<Integer> list)
+    {
+        if (list.size()>=0)
+            Reporter.log("请选择数据");
+        for (int i=0;i<list.size();i++) {
+            System.out.println("选择部分");
+            String trXpath = this.dataTableTrXpath + "[" + list.get(i) + "]";
+            String tdXpath = this.dataTableTdXpath + "[" + gridTable_cd + "]";
+            WebElement webTr = tools.findBy(grid, By.xpath(trXpath));
+            WebElement webTd = tools.findBy(webTr, By.xpath(tdXpath));
+            tools.findBy(webTd, By.xpath("./input")).click();
         }
     }
 

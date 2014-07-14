@@ -10,11 +10,11 @@
                   <include name="searchKbp">
                   </include>
               </methods>
-            </class>
+            </class-->
             <class name="com.code.test.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class >
-            <class name="com.code.test.ResFrameTest" ></class >
+            <!--class name="com.code.test.ResFrameTest" ></class >
 
             <class name="com.code.test.EnvListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
@@ -27,10 +27,10 @@
             </class>
             <class name="com.code.test.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class-->
+            </class>
             <class name="com.code.test.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-            </class>
+            </class-->
         </classes>
     </test>
 </suite>
