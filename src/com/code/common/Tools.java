@@ -107,6 +107,11 @@ public class Tools {
      */
     public void sendKeys(WebElement ele,String value)
     {
+        if (value==null)
+        {
+            return;
+        }
+
         if(! value.isEmpty()) {
             ele.clear();
             ele.sendKeys(value);
@@ -131,6 +136,8 @@ public class Tools {
     public void submit(WebElement ele){ele.submit();}
     public void selectByVisibleText(WebElement ele,String text)
     {
+        if(text==null)
+            return;
         try{
             if(!text.isEmpty())
             (new Select(ele)).selectByVisibleText(text);}
@@ -370,7 +377,7 @@ public class Tools {
      */
     public String getMapValue(Map<String,String> map,String key)
     {
-        String values=null;
+        String values="";
         try{
              values=map.get(key);
         }
@@ -378,7 +385,8 @@ public class Tools {
         {
             Reporter.log("获取Map中key的value错误，不存在key："+key);
             System.out.println("获取Map中key的value错误，不存在key："+key);
-            map.get(key);
+            //map.get(key);
+            values="";
         }
         return values;
     }

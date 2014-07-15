@@ -1,6 +1,6 @@
 package com.code.common;
 
-import com.code.page.kbplist.page.KbpFormPage;
+import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -29,7 +29,7 @@ public class BtnPage extends Page {
     WebElement startDeploy;
     WebElement deploy_ok;
     @FindBy(id="btn-unload")
-    WebElement unloadWK;
+    WebElement unload;
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);
@@ -74,9 +74,9 @@ public class BtnPage extends Page {
         }
         tools.click(deploy_ok);
     }
-    public void unloadWK()
+    public void unload()
     {
-        tools.click(unloadWK);
+        tools.click(unload);
         tools.alertAccept();
         try {
             Thread.sleep(10000);
@@ -90,7 +90,7 @@ public class BtnPage extends Page {
         tools.click(deploy);
         tools.click(startDeploy);
         try {
-            Thread.sleep(10000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

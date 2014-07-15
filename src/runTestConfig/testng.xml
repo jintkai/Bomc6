@@ -3,34 +3,36 @@
     <parameter name="Base_URL" value="http://172.21.0.31:8084" >1</parameter>
     <test name="frame">
         <classes>
-            <class name="com.code.test.LoginPageTest"></class>
-            <!--class name="com.code.test.KbpFrameTest">
+            <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
+            <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
                 <methods>
                   <include name="searchKbp">
                   </include>
               </methods>
-            </class-->
-            <class name="com.code.test.KpiFrameTest" >
+            </class>
+            <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class >
-            <!--class name="com.code.test.ResFrameTest" ></class >
-
-            <class name="com.code.test.EnvListTest" >
-                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+            <class name="com.code.test.ibnmsConfig.ResFrameTest" >
+                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
             </class>
-            <class name="com.code.test.MQListTest" >
+
+            <class name="com.code.test.ibnmsConfig.EnvListTest" >
+                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+            </class >
+            <class name="com.code.test.ibnmsConfig.MQListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
             </class>
-            <class name="com.code.test.WKlistTest">
+            <class name="com.code.test.ibnmsConfig.WKlistTest">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
-            <class name="com.code.test.PFListTest">
+            <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class>
-            <class name="com.code.test.AgListTest">
-                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class-->
+            <class name="com.code.test.ibnmsConfig.AgListTest">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class>
         </classes>
     </test>
 </suite>

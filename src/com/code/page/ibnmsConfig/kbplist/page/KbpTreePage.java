@@ -1,4 +1,4 @@
-package com.code.common;
+package com.code.page.ibnmsConfig.kbplist.page;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
@@ -6,19 +6,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 /**
- * Created by jinkai on 06/07/2014.
+ * Created by jinkai on 01/07/2014.
  */
-public class TreePage extends Page {
+public class KbpTreePage extends Page {
+
     WebElement fuzzy;
     public void init()
     {
         tools.clear(fuzzy);
     }
 
-    public void searchByTree(String treeValue)
+    public GridPage searchKpiByTree(String treeValue)
     {
-        tools.switchToFrame();
-        tools.switchToFrame(0);
         init();
         tools.sendKeys(fuzzy,treeValue);
 
@@ -42,5 +41,7 @@ public class TreePage extends Page {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        tools.switchToFrame("kbpListFrame");
+        return new GridPage();
     }
 }

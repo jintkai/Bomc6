@@ -1,4 +1,4 @@
-package com.code.common;
+package com.code.page.ibnmsConfig.kpilist.page;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
@@ -8,29 +8,28 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by jinkai on 06/07/2014.
  */
-public class TreePage extends Page {
+public class KpiTreePage extends Page {
     WebElement fuzzy;
     public void init()
     {
-        tools.clear(fuzzy);
+        //tools.clear(fuzzy);
     }
 
-    public void searchByTree(String treeValue)
+    public GridPage searchByTree(String treeValue)
     {
         tools.switchToFrame();
         tools.switchToFrame(0);
-        init();
         tools.sendKeys(fuzzy,treeValue);
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -38,9 +37,11 @@ public class TreePage extends Page {
         tools.switchToFrame();
 
         try {
-            Thread.sleep(2000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        tools.switchToFrame("kpiListFrame");
+        return new GridPage();
     }
 }
