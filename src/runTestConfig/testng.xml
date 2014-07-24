@@ -29,10 +29,21 @@
             </class>
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class-->
+            <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
+                <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
             </class>
+            <!--class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
+            </class-->
+
+            <!--集中控制>
+            <class name="com.code.test.C3P.CfgInstrFrameTest">
+                <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />
+            </class-->
         </classes>
     </test>
 </suite>

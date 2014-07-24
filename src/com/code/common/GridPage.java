@@ -21,7 +21,7 @@ public class GridPage  extends Page implements Data{
     private int gridCount=0;
     int tdIndex=0;
     @FindBy(id=selectBtId)
-    WebElement selectBt;
+    public WebElement selectBt;
     /*
     table数据区域
      */
@@ -205,10 +205,11 @@ public class GridPage  extends Page implements Data{
      * 根据行下标，选择当前页的行
      * @param list 保存行号的数组；
      */
-    public void selectTrs(ArrayList<Integer> list)
+    public int selectTrs(ArrayList<Integer> list)
     {
         if (list.size()>=0)
-            Reporter.log("请选择数据");
+        {Reporter.log("请选择数据");
+            return 0;}
         for (int i=0;i<list.size();i++) {
             System.out.println("选择部分");
             String trXpath = this.dataTableTrXpath + "[" + list.get(i) + "]";
@@ -217,6 +218,7 @@ public class GridPage  extends Page implements Data{
             WebElement webTd = tools.findBy(webTr, By.xpath(tdXpath));
             tools.findBy(webTd, By.xpath("./input")).click();
         }
+        return list.size();
     }
 
     /*

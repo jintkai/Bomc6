@@ -50,15 +50,15 @@ public class SearchKbpPage extends Page {
     }
 
     public void searchKbp(Map<String, String> map) {
-        tools.sendKeys(kbpCaption, tools.getMapValue(map, "KBP名称"));
-        tools.sendKeys(kbpClass, tools.getMapValue(map, "KBP编号"));
+        tools.sendKeys(kbpCaption, tools.getMapValue(map, "KBP名称_KBP"));
+        tools.sendKeys(kbpClass, tools.getMapValue(map, "KBP编号_KBP"));
         tools.click(searchBtn);
     }
 
     public GridPage search(Map<String, String> map)
     {
-        tools.sendKeys(kbpCaption,tools.getMapValue(map,"KBP名称"));
-        tools.sendKeys(kbpClass,tools.getMapValue(map,"KBP编号"));
+        tools.sendKeys(kbpCaption, tools.getMapValue(map, "KBP名称_KBP"));
+        tools.sendKeys(kbpClass, tools.getMapValue(map, "KBP编号_KBP"));
         tools.click(searchBtn);
         return new GridPage();
     }

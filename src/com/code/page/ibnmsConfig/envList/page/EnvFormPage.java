@@ -36,6 +36,7 @@ public class EnvFormPage  extends FormPage{
         String hand=tools.swithToWindowByTitle("资源列表");
         ResListFramePage resList=new ResListFramePage();
         resList.searchResByName(tools.getMapValue(map,"主机名称"));
+        //resList.search(map);
         //resList.searchRes(map);
         resList.gridTable.selectTr(0);
         resList.resBtn.select();

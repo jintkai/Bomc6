@@ -31,8 +31,8 @@ public class SearchEnvPage extends Page {
     }
     public GridPage search(Map<String,String> map)
     {
-        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址"));
-        tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称"));
+        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_ENV"));
+        tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称_ENV"));
         tools.click(btnSearch);
         return new GridPage();
     }

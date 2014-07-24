@@ -3,6 +3,7 @@ package com.code.common;
 import junit.framework.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.internal.WrapsDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -171,12 +172,32 @@ public class Tools {
     public void assertEquals(Object actual,Object expected)
     {
         try {
-            Assert.assertEquals(actual, expected, "执行错误");
+            Assert.assertEquals(actual, expected, "assertEquals错误");
         }catch(AssertionError e){
             screen();
             e.printStackTrace();
-            Assert.assertEquals(actual, expected, "执行错误");
+            Assert.assertEquals(actual, expected, "assertEquals错误");
             driver.close();
+        }
+    }
+    public void assertEquals(Object actual,Object expected,String str)
+    {
+        try {
+            Assert.assertEquals(actual, expected, str);
+        }catch(AssertionError e){
+            screen();
+            e.printStackTrace();
+            Assert.assertEquals(actual, expected, str);
+            driver.close();
+        }
+    }
+    public void assertNotEquals(Object actual,Object expected) {
+        try {
+            Assert.assertNotEquals(actual, expected, "assertNotEquals错误");
+        } catch (AssertionError e) {
+            screen();
+            e.printStackTrace();
+            Assert.assertNotEquals(actual, expected, "assertNotEquals错误");
         }
     }
     /**
@@ -413,10 +434,6 @@ public class Tools {
 
 
 
-
-
-
-
     public static void highlightElement(WebElement element){
         for (int i = 0; i < 3; i++) {
             WrapsDriver wrappedElement = (WrapsDriver) element;
@@ -459,5 +476,38 @@ public class Tools {
             e.printStackTrace();
         }
     }
+    public void moveToElement(WebElement element)
+    {
+        Actions builder=new Actions(driver);
+        builder.moveToElement(element).perform();
+    }
 
+    public  void setScroll(int height){
+
+        try {
+            String setscroll = "document.documentElement.scrollTop=" + height;
+            JavascriptExecutor jse=(JavascriptExecutor) driver;
+            jse.executeScript(setscroll);
+        }
+        catch (Exception e) {
+            System.out.println("Fail to set the scroll.");
+            Reporter.log("Fail to set the scroll.");
+        }
+    }
+    public void  execJS(String js)
+    {
+        try {
+            Thread.sleep(2000);
+            JavascriptExecutor exec = (JavascriptExecutor) driver;
+            exec.executeScript(js);
+
+        }
+        catch(Exception e)
+        {
+            System.out.println("执行JavaScript脚本失败");
+            Reporter.log("执行JavaScript脚本失败");
+            JavascriptExecutor exec = (JavascriptExecutor) driver;
+            exec.executeScript(js);
+        }
+    }
 }

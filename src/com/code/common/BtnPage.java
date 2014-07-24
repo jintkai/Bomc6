@@ -10,26 +10,26 @@ import org.openqa.selenium.support.How;
  */
 public class BtnPage extends Page {
     @FindBy(how= How.ID,using=Data.btnAdd)
-    WebElement addBtn;
+    public WebElement addBtn;
     @FindBy(how= How.ID,using="btn-edit")
-    WebElement editBtn;
+    public WebElement editBtn;
     @FindBy(how= How.ID,using=Data.btnDel)
-    WebElement delBtn;
+    public WebElement delBtn;
     @FindBy(how=How.ID,using=Data.btnSelect)
-    WebElement selBtn;
+    public WebElement selBtn;
     @FindBy(how=How.ID,using="btn-deploy")
-    WebElement deploy;
+    public WebElement deploy;
     @FindBy(how=How.ID,using="btn-remove")
-    WebElement remove;
+    public WebElement remove;
     @FindBy(id="btn-startup")
-    WebElement startup;
+    public WebElement startup;
     @FindBy(id="btn-shutdown")
-    WebElement shutdown;
+    public WebElement shutdown;
     @FindBy(id = "btn-startDeploy")
-    WebElement startDeploy;
-    WebElement deploy_ok;
+    public WebElement startDeploy;
+    public WebElement deploy_ok;
     @FindBy(id="btn-unload")
-    WebElement unload;
+    public WebElement unload;
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
  * Created by jinkai on 02/07/2014.
  */
 public interface Data {
-    public static String browserType = "IE";
+    public static String browserType = "FIREFOX";
     public static String baseDir = "D:\\Test\\Bomc6";
     public static String baseUrl = "http://172.21.0.31:8084";
     /*
@@ -25,7 +25,6 @@ public interface Data {
     public static String dataTableTrXpath = ".//tr[@id]";
     public static String dataTableTdXpath = ".//td";
     public static String selectBtId = "cb_gridTable";
-
     /*
     标准的增加、删除、修改、选择等控件
      */

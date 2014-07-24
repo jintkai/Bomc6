@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.kbplist.page;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.common.TreePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 

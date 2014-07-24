@@ -66,10 +66,10 @@ public class SearchResPage extends Page {
     }
     public GridPage search(Map<String,String> map)
     {
-        tools.sendKeys(unitId,tools.getMapValue(map,"资源UNIT_ID"));
-        tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称"));
-        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址"));
-        tools.selectByVisibleText(filterBzTypeKbpClass,tools.getMapValue(map,"业务类型"));
+        tools.sendKeys(unitId,tools.getMapValue(map,"资源UNIT_ID_RES"));
+        tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称_RES"));
+        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_RES"));
+        tools.selectByVisibleText(filterBzTypeKbpClass,tools.getMapValue(map,"业务类型_RES"));
         tools.click(btnSearch);
         return  new GridPage();
     }

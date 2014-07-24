@@ -44,8 +44,8 @@ public class SearchKpiPage extends Page {
     }
     public GridPage search(Map<String,String> map)
     {
-        tools.sendKeys(kpiId,tools.getMapValue(map,"指标编号"));
-        tools.sendKeys(kpiName,tools.getMapValue(map,"指标名称"));
+        tools.sendKeys(kpiId,tools.getMapValue(map,"指标编号_KPI"));
+        tools.sendKeys(kpiName,tools.getMapValue(map,"指标名称_KPI"));
         tools.click(btnSearch);
         return new GridPage();
     }

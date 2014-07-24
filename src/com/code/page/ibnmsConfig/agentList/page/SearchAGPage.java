@@ -19,8 +19,8 @@ public class SearchAGPage extends Page {
     WebElement btnSearch;
     public GridPage search(Map<String,String> map)
     {
-        tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称"));
-        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址"));
+        tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称_AG"));
+        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_AG"));
         tools.click(btnSearch);
         return new GridPage();
     }
