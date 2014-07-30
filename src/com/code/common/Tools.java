@@ -27,6 +27,10 @@ import java.util.List;
 public class Tools {
 
     WebDriver driver= TestCase.eventDriver;
+    public WebDriver getDriver()
+    {
+        return driver;
+    }
     /**
     *描述判断元素是否存在；
      * 根据传入的父节点，以及待定位节点的定位方式，返回节点是否存在；
@@ -150,6 +154,11 @@ public class Tools {
             (new Select(ele)).selectByVisibleText(text);
         }
     }
+
+    public List<WebElement> getOptions(WebElement ele)
+    {
+        return new Select(ele).getOptions();
+    }
     public String getTitle(WebDriver driver)
     {
         return driver.getTitle();
@@ -200,6 +209,15 @@ public class Tools {
             Assert.assertNotEquals(actual, expected, "assertNotEquals错误");
         }
     }
+    public void assertNotEquals(Object actual,Object expected,String msg) {
+        try {
+            Assert.assertNotEquals(actual, expected, msg);
+        } catch (AssertionError e) {
+            screen();
+            e.printStackTrace();
+            Assert.assertNotEquals(actual, expected, msg);
+        }
+    }
     /**
      *封装Testng的AssertEquals方法；
      * @param  actual 实际值
@@ -216,6 +234,18 @@ public class Tools {
             screen();
 
             Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
+        }
+    }
+    public void assertEquals(int actual,Map<String,String> map,String exception,String info)
+    {
+        try {
+            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), info);
+        }catch(AssertionError e) {
+            System.out.println(map);
+            Reporter.log("打印测试数据：" + String.valueOf(map));
+            screen();
+
+            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), info);
         }
     }
     /**
@@ -252,6 +282,17 @@ public class Tools {
             Assert.assertTrue(actual, "执行错误");
         }
     }
+    public void assertTrue(boolean actual,String str)
+    {
+        try {
+            Assert.assertTrue(actual,str);
+        }
+        catch(AssertionError e){
+            screen();
+            e.printStackTrace();
+            Assert.assertTrue(actual, str);
+        }
+    }
     /**
      * 通过窗口title来跳转窗口
      * @param title windows的title
@@ -270,7 +311,7 @@ public class Tools {
                 return hand;
         }
         Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
-        return hand;
+        return "FALSE";
     }
     /**
      * 通过窗口句柄来切换窗口
@@ -404,7 +445,7 @@ public class Tools {
         }
         catch(NullPointerException e)
         {
-            Reporter.log("获取Map中key的value错误，不存在key："+key);
+            //Reporter.log("获取Map中key的value错误，不存在key："+key);
             System.out.println("获取Map中key的value错误，不存在key："+key);
             //map.get(key);
             values="";
@@ -424,7 +465,11 @@ public class Tools {
         }
         driver.switchTo().alert().accept();
     }
-
+    public void alertSetText(String str)
+    {
+        driver.switchTo().alert().sendKeys(str);
+        driver.switchTo().alert().accept();
+    }
     public void printMap(Map<String,String> map)
     {
         for (int i = 0; i <map.size() ; i++) {
@@ -480,6 +525,11 @@ public class Tools {
     {
         Actions builder=new Actions(driver);
         builder.moveToElement(element).perform();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public  void setScroll(int height){
@@ -509,5 +559,9 @@ public class Tools {
             JavascriptExecutor exec = (JavascriptExecutor) driver;
             exec.executeScript(js);
         }
+    }
+    public void closeWindow()
+    {
+        driver.close();
     }
 }

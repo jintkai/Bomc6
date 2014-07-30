@@ -4,6 +4,7 @@ import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.alarmConfUpdate.AlarmConfUpdateList;
+import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -15,10 +16,10 @@ import java.lang.reflect.Method;
 import java.util.Iterator;
 
 /**
- * Created by jinkai on 2014/7/23.
+ * Created by Jin on 2014/7/30.
  */
-public class AlarmConfUpdateListTest extends TestCase {
-    public AlarmConfUpdateList alarmConfUpdate=new AlarmConfUpdateList();
+public class AlarmPolicyTest extends TestCase {
+    public AlarmPolicyList alarmPlicy=new AlarmPolicyList();
     @BeforeMethod
     @Parameters({"Base_URL","Action_URL"})
     public void beforeMethod(String baseUrl,String actionUrl)
@@ -26,36 +27,23 @@ public class AlarmConfUpdateListTest extends TestCase {
         TestCase.eventDriver.get(baseUrl + actionUrl);
     }
 
-    @DataProvider(name="alarmFrame")
+    @DataProvider(name="alarmpolicy")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMCONFUPDATA_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("ALARMPOLICY_NEW",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "alarmFrame",description = "查询更新列表")
+    @Test(dataProvider = "alarmpolicy",description = "告警策略维护查询")
     public void search(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmConfUpdate.search(map);
+        GridPage gridTable=alarmPlicy.search(map);
         tools.assertEquals(gridTable.getRowNum(),map,"期望值","更新列表数据与预期值不一致");
     }
-    @Test
-    public void update()
+    @Test(dataProvider = "alarmpolicy",description = "新增告警策略")
+    public void add(String str[])
     {
-        alarmConfUpdate.update();
-    }
-    @Test
-    public void startTask()
-    {
-        String url=alarmConfUpdate.startTask();
-        System.out.println(url);
-        tools.assertTrue(url.contains("newTask"));
-    }
-    @Test
-    public void delete()
-    {
-        alarmConfUpdate.delete();
-        int row=new GridPage().getRowNum();
-        tools.assertEquals(1,row,"删除列表数据错误：");
+        map=tools.changeStringToMap(excelHead,str);
+        alarmPlicy.addGenerat(map);
     }
 }

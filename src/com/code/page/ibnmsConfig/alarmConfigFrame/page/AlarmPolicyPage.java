@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 2014/7/16.
+ * 告警描述策略
  */
 public class AlarmPolicyPage extends Page {
     //告警描述策略

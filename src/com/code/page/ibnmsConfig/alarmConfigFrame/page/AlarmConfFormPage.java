@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 2014/7/16.
+ * 告警集中配置增加页面
  */
 public class AlarmConfFormPage extends Page {
     public AlarmPolicyPage alarmPolicy=new AlarmPolicyPage();

@@ -38,7 +38,8 @@ public class GridPage  extends Page implements Data{
      */
     List<WebElement> dataList=null;
 
-    int gridTable_cd=3;
+    //int gridTable_cd=3;
+    int gridTable_cd=1;
     String gridTable_cbID="gridTable_cb";
 
     /**
@@ -191,10 +192,14 @@ public class GridPage  extends Page implements Data{
         {
             System.out.println("选择部分");
             String trXpath=this.dataTableTrXpath+"["+(index)+"]";
+
             String tdXpath=this.dataTableTdXpath+"["+gridTable_cd+"]";
+            System.out.println(trXpath);
+            System.out.println(tdXpath);
             WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
             tools.findBy(webTd,By.xpath("./input")).click();
+            System.out.println(tools.findBy(webTd,By.xpath("./input")).isSelected());
         }
     }
     public void selectAllTr()
@@ -253,4 +258,12 @@ public class GridPage  extends Page implements Data{
         System.out.println("期望值："+expNum+"，实际值："+rowNum);
         return true;
     }
+    public WebElement getWebElementTr(int index)
+    {
+        WebElement element;
+        //grid.findElement(By.cssSelector("tr[id="+index+"]"));
+        return grid.findElement(By.cssSelector("tr[id='"+index+"']"));
+
+    }
+
 }

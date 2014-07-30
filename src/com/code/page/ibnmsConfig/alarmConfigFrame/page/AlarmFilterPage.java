@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 2014/7/16.
+ * 告警过滤策略
  */
 public class AlarmFilterPage extends Page {
     @FindBy(className = "bnms-btn-edit")

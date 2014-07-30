@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by jinkai on 2014/7/23.
  */
-public class SearchUpdataPage extends Page {
+public class SearchUpdatePage extends Page {
     @FindBy(name="filter.UNIT_ID")
     WebElement UNIT_ID;
     @FindBy(name="filter.KPI_ID")

@@ -6,7 +6,10 @@ import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfBtnPage;
 import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfFormPage;
 import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfTreePage;
 import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmSearchHeadPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -65,4 +68,44 @@ public class AlarmConfigFrame extends Page {
         tools.switchToFrame(1);
         return searchHead.searchByHead(map);
     }
+    public void exportExcel()
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        confBtn.exportExcel();
+    }
+    public void openEditedList()
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        confBtn.openEditedList();
+    }
+    public void openFilteredList()
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        confBtn.openFilteredList();
+    }
+    public int addFilter()
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        GridPage gridTable=new GridPage();
+        System.out.println(gridTable.getWebElementTr(1));
+        gridTable.selectTr(1);
+        confBtn.addfilter();
+        List<WebElement> list=gridTable.getWebElementTr(1).findElements(By.cssSelector("span[title*='待过滤']"));
+        return  list.size();
+    }
+    public  void  queryFilterAdd(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        searchByHead(map);
+        if(tools.getMapValue(map,"操作类型").equals("增加"))
+            confBtn.queryFilterAdd(tools.getMapValue(map,"过滤器名称"));
+        if(tools.getMapValue(map,"操作类型").equals("删除"))
+            confBtn.queryFilterRemove(tools.getMapValue(map,"过滤器名称"));
+    }
+
 }

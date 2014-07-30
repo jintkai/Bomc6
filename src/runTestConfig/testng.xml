@@ -32,14 +32,23 @@
             </class>
             <class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
             </class>
-            <!--class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
+            <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
+                <methods>
+                    <include name="openFilteredList"></include>
+                    <include name="queryFilterAdd"></include>
+                </methods>
             </class-->
-
+            <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
+                <methods>
+                    <include name="add" ></include>
+                </methods>
+            </class>
             <!--集中控制>
             <class name="com.code.test.C3P.CfgInstrFrameTest">
                 <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />

@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 2014/7/17.
+ * 告警清除表达式
  */
 public class AlarmClearPage extends Page {
     @FindBy(name="clearWay")
