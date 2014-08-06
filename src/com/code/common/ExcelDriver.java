@@ -37,6 +37,12 @@ public class ExcelDriver implements Iterator {
     }
     public int getColNum()
     {return colNum;}
+
+    /**
+     * 返回table的表头数组，一般rowNum从0开始；
+     * @param rowNum
+     * @return
+     */
     public String[] getHead(int rowNum)
     {
         String head[]=new String[colNum];

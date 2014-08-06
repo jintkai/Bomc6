@@ -11,6 +11,7 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 01/07/2014.
+ * Kbp的Frame页面；
  */
 public class KbpListFramePage extends Page {
 
@@ -19,47 +20,57 @@ public class KbpListFramePage extends Page {
     public SearchKbpPage searchKbp=new SearchKbpPage();
     KbpFormPage kbpForm=new KbpFormPage();
     KbpBtnPage kbpBtn=new KbpBtnPage();
+    public String title="Kbp列表";
+    public String kbpTreeIFrame="kbpTree";
+    public String kbpListIFrame="kbpListFrame";
 
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame();
-        tools.switchToFrame("kbpListFrame");
+        tools.switchToFrame(kbpListIFrame);
         return this.searchKbp.search(map);
     }
     public GridPage searchByTree(Map<String,String> map)
     {
         tools.switchToFrame();
-        tools.switchToFrame("kbpTree");
-        return kbpTree.searchKpiByTree(tools.getMapValue(map, "KBP"));
-    }
-    public GridPage add(Map<String,String> map)
-    {
+        tools.switchToFrame(kbpTreeIFrame);
+        kbpTree.searchByTree(tools.getMapValue(map, "KBP"));
         tools.switchToFrame();
-        tools.switchToFrame(0);
-        kbpTree.searchKpiByTree(tools.getMapValue(map,"KBP编号前缀"));
-        kbpBtn.add();
-        kbpForm=new KbpFormPage();
-        return kbpForm.addKBP(map);
+        tools.switchToFrame(kbpListIFrame);
+        return new GridPage();
     }
-    public GridPage edit(Map<String,String > map)
-    {
-        tools.switchToFrame();
-        tools.switchToFrame("kbpListFrame");
-        gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
-        kbpBtn.edit();
-        kbpForm=new KbpFormPage();
-        return  kbpForm.addKBP(map);
+    public GridPage operateKbp(Map<String,String> map) {
+        String operation = tools.getMapValue(map, "操作类型");
+        if (operation.contains("增加")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpTreeIFrame);
+            kbpTree.searchByTree(tools.getMapValue(map, "KBP编号前缀"));
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            kbpBtn.add();
+            kbpForm = new KbpFormPage();
+            return kbpForm.operateKbp(map);
+        }
+        if (operation.contains("修改")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            gridTable = new GridPage();
+            gridTable = searchKbp.search(map);
+            gridTable.selectTr(0);
+            //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
+            kbpBtn.edit();
+            kbpForm = new KbpFormPage();
+            return kbpForm.operateKbp(map);
+        } else if (operation.contains("删除")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            gridTable = new GridPage();
+            gridTable = searchKbp.search(map);
+            gridTable.selectTr(0);
+            //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
+            kbpBtn.delete();
+            return new GridPage();
+        }
+        return new GridPage();
     }
-    public GridPage delete(Map<String,String > map)
-    {
-        tools.switchToFrame();
-        tools.switchToFrame("kbpListFrame");
-        searchKbp.search(map);
-        gridTable=new GridPage();
-        gridTable.selectAllTr();
-        kbpBtn.delete();
-        return  new GridPage();
-    }
-
 }

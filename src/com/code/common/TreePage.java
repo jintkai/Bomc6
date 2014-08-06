@@ -10,24 +10,14 @@ import org.openqa.selenium.WebElement;
  */
 public class TreePage extends Page {
     WebElement fuzzy;
-    public void init()
-    {
-        tools.clear(fuzzy);
-    }
-
     public void searchByTree(String treeValue)
     {
-        tools.switchToFrame();
-        tools.switchToFrame(0);
-        init();
         tools.sendKeys(fuzzy,treeValue);
-
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         try {
             Thread.sleep(2000);
@@ -35,8 +25,6 @@ public class TreePage extends Page {
             e.printStackTrace();
         }
         actions.sendKeys(Keys.ENTER).perform();
-        tools.switchToFrame();
-
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {

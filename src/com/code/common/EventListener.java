@@ -2,10 +2,7 @@ package com.code.common;
 
 import org.apache.bcel.ExceptionConstants;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.Wait;
@@ -22,6 +19,7 @@ public class EventListener implements WebDriverEventListener {
     public void beforeNavigateTo(String s, WebDriver webDriver) {
 
         mylog.info("beforeNavigateTo:"+s);
+
     }
 
     @Override
@@ -50,38 +48,26 @@ public class EventListener implements WebDriverEventListener {
     }
 
     @Override
-    public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
-
-        /*mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
-        */
-        /*ExpectedCondition<Boolean> expection=new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver webDriver) {
-                return ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-
-        //document.getElementById("kbpListFrame").contentWindow.document.readyState
-        while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
-        {
-            try {
-                Thread.sleep(1000);
-                mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        try {
+            WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+                @Override
+                public WebElement apply(WebDriver webDriver) {
+                    return webDriver.findElement(by);
+                }
+            });
         }
-
-        Wait<WebDriver> wait=new WebDriverWait(webDriver,30);
-        wait.until(
-                expection
-        );
-*/
-
+        catch(TimeoutException e)
+        {
+            //e.printStackTrace();
+            System.out.println("定位元素超时");
+        }
     }
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
+
     }
 
     @Override
@@ -117,8 +103,6 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
 
-        mylog.error("ERROR--------------------");
-        System.out.println(throwable);
-        tools.screen();
+
     }
 }

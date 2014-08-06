@@ -42,6 +42,7 @@ public class SearchAlarmPolicyPage extends Page{
         }
         actions.sendKeys(Keys.ENTER).perform();
         tools.selectByVisibleText(policyType, tools.getMapValue(map, "策略类型_ALARMPOLICY"));
+        //tools.getMapValue(map,"应用指标_ALARMPOLICY");
         String str=tools.getMapValue(map,"应用指标_ALARMPOLICY");
         if (!str.isEmpty())
         {

@@ -1,6 +1,7 @@
 package com.code.common;
 
 import junit.framework.Test;
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
@@ -47,7 +48,8 @@ public class Tools {
         {
             //System.out.println(e);
             Reporter.log("findElement【"+by+"】失败。");
-            screen();
+            //screen();
+            takesScreenshot("WebElement不存在:"+by);
             d.findElement(by);
             return false;
         }
@@ -63,17 +65,17 @@ public class Tools {
      */
     public boolean isElementsExist(SearchContext d,By by)
     {
-        try {
+        /*try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         List<WebElement> list=d.findElements(by);
         if (list.size()>0)
             return  true;
         else {
-            screen();
-            Reporter.log("findElements【" + by + "】失败。");
+            System.out.println("无法定位元素集，通过："+by);
+
             return false;
         }
     }
@@ -112,18 +114,13 @@ public class Tools {
      */
     public void sendKeys(WebElement ele,String value)
     {
-        if (value==null)
-        {
-            return;
-        }
-
         if(! value.isEmpty()) {
-            ele.clear();
+            clear(ele);
             ele.sendKeys(value);
         }
         else
         {
-            System.out.println("不处理");
+            System.out.println("未输入值，不用处理");
         }
 
     }
@@ -133,8 +130,8 @@ public class Tools {
         }catch(Exception e)
         {
             e.printStackTrace();
-            Reporter.log("清除元素内容失败，TagName："+ele.getTagName());
-            screen();
+            Reporter.log("清除元素内容失败");
+            takesScreenshot("调用WebElement.clear()方法失败");
             ele.clear();
         }
     }
@@ -150,7 +147,8 @@ public class Tools {
         {
             e.printStackTrace();
             //System.out.println("select控件中无该值："+text);
-            Reporter.log("Select控件中无法通过该值【："+text+"】进行选择");
+            Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
+            takesScreenshot("Select控件中无法通过该值：【"+text+"】进行选择");
             (new Select(ele)).selectByVisibleText(text);
         }
     }
@@ -175,124 +173,83 @@ public class Tools {
         return ele.getAttribute(str);
     }
     public void click(WebElement ele) {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         ele.click();
     }
 
-    public void assertEquals(Object actual,Object expected)
+    public void assertEquals(Object actual,Object expected,Map<String,String> map)
     {
         try {
-            Assert.assertEquals(actual, expected, "assertEquals错误");
+            Assert.assertEquals(actual, expected, map.toString());
         }catch(AssertionError e){
-            screen();
             e.printStackTrace();
-            Assert.assertEquals(actual, expected, "assertEquals错误");
-            driver.close();
+            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
+            Assert.assertEquals(actual, expected, map.toString());
+
         }
     }
-    public void assertEquals(Object actual,Object expected,String str)
-    {
+
+    public void assertNotEquals(Object actual,Object expected,Map<String,String> map) {
         try {
-            Assert.assertEquals(actual, expected, str);
-        }catch(AssertionError e){
-            screen();
-            e.printStackTrace();
-            Assert.assertEquals(actual, expected, str);
-            driver.close();
-        }
-    }
-    public void assertNotEquals(Object actual,Object expected) {
-        try {
-            Assert.assertNotEquals(actual, expected, "assertNotEquals错误");
+            Assert.assertNotEquals(actual, expected, map.toString());
         } catch (AssertionError e) {
-            screen();
+            //screen();
+            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
             e.printStackTrace();
-            Assert.assertNotEquals(actual, expected, "assertNotEquals错误");
-        }
-    }
-    public void assertNotEquals(Object actual,Object expected,String msg) {
-        try {
-            Assert.assertNotEquals(actual, expected, msg);
-        } catch (AssertionError e) {
-            screen();
-            e.printStackTrace();
-            Assert.assertNotEquals(actual, expected, msg);
+            Assert.assertNotEquals(actual, expected, map.toString());
         }
     }
     /**
      *封装Testng的AssertEquals方法；
      * @param  actual 实际值
-     * @param  map Map对象
+     * @param  msg 提示信息
      * @param exception map中的key，通过map，exception来返回预期值；
      */
-    public void assertEquals(int actual,Map<String,String> map,String exception)
+
+    public void assertEquals(int actual,String exception,String msg)
     {
         try {
-            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
+            Assert.assertEquals(actual, Integer.parseInt( exception), msg);
         }catch(AssertionError e) {
-            System.out.println(map);
-            Reporter.log("打印测试数据：" + String.valueOf(map));
-            screen();
 
-            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), "执行错误");
-        }
-    }
-    public void assertEquals(int actual,Map<String,String> map,String exception,String info)
-    {
-        try {
-            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), info);
-        }catch(AssertionError e) {
-            System.out.println(map);
-            Reporter.log("打印测试数据：" + String.valueOf(map));
-            screen();
-
-            Assert.assertEquals(actual, Integer.parseInt(this.getMapValue(map, exception)), info);
+            takesScreenshot(msg);
+            Assert.assertEquals(actual, Integer.parseInt( exception), msg);
         }
     }
     /**
      *封装Testng的AssertEquals方法；
      * @param  actual 实际值
-     * @param  map Map对象
+     * @param  msg 错误提示信息
      * @param exception map中的key，通过map，exception来返回预期值；
      */
-    public void assertEquals(String actual,Map<String,String> map,String exception)
+    public void assertEquals(String actual,String exception,String msg)
     {
         try {
-            Assert.assertEquals(actual, this.getMapValue(map, exception), "执行错误");
+            Assert.assertEquals(actual, exception, msg);
         }catch(AssertionError e) {
-            System.out.println(map);
-            Reporter.log("打印测试数据：" + String.valueOf(map));
-            screen();
+
+            takesScreenshot(msg);
             System.out.println(e);
-            Assert.assertEquals(actual, this.getMapValue(map, exception), "执行错误");
+            Assert.assertEquals(actual, exception, msg);
+        }
+    }
+    public void assertTrue(boolean actual,String msg)
+    {
+        try {
+            Assert.assertTrue(actual,msg);
+        }
+        catch(AssertionError e)
+        {
+            takesScreenshot(msg);
+            System.out.println(e);
+            Assert.assertTrue(actual,msg);
         }
     }
 
-    /**
-     * 方法被替代
-     * @param actual
-     */
-    public void assertTrue(boolean actual)
-    {
-        try {
-            Assert.assertTrue(actual, "执行错误");
-        }
-        catch(AssertionError e){
-            screen();
-            e.printStackTrace();
-            Assert.assertTrue(actual, "执行错误");
-        }
-    }
-    public void assertTrue(boolean actual,String str)
-    {
-        try {
-            Assert.assertTrue(actual,str);
-        }
-        catch(AssertionError e){
-            screen();
-            e.printStackTrace();
-            Assert.assertTrue(actual, str);
-        }
-    }
     /**
      * 通过窗口title来跳转窗口
      * @param title windows的title
@@ -300,6 +257,11 @@ public class Tools {
      */
     public String swithToWindowByTitle(String title)
     {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         String hand=driver.getWindowHandle();
         Set<String> handsSet=driver.getWindowHandles();
         String handsStr[]=new String[handsSet.size()];
@@ -311,6 +273,7 @@ public class Tools {
                 return hand;
         }
         Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
         return "FALSE";
     }
     /**
@@ -318,6 +281,11 @@ public class Tools {
      */
     public void switchToWindowByHand(String hand)
     {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         driver.switchTo().window(hand);
     }
     /**
@@ -348,7 +316,14 @@ public class Tools {
      */
     public void switchToFrame(String name)
     {
-    driver.switchTo().frame(name);
+        try{
+            driver.switchTo().frame(name);
+        }
+        catch(NoSuchFrameException e)
+        {
+            Reporter.log("无法切换IFrame："+name);
+            takesScreenshot("无法切换IFrame："+name);
+        }
     }
     /**
      * 根据WebElement来切换Frame
@@ -392,6 +367,50 @@ public class Tools {
         }
         catch (Exception ex) {
             System.out.println(ex);
+        }
+    }
+    /**
+     * 截图
+     */
+    public void takesScreenshot()
+    {
+        Reporter.log("TakesScreenshot截图");
+        String imageFormat = "png";// 图像文件的格式
+        String picDir= Data.baseDir+"\\pictures\\";
+        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
+        try {
+            FileUtils.copyFile(srcFile,new File(filename));
+            System.out.print("TakesScreenshot Save File:"+filename+"....Finished!\n");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public void takesScreenshot(String str)
+    {
+        Reporter.log("TakesScreenshot截图");
+        String imageFormat = "png";// 图像文件的格式
+        String picDir= Data.baseDir+"\\pictures\\";
+        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(srcFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Graphics g = image.getGraphics();
+        g.setFont(new Font("Serif",Font.BOLD,15));
+        g.setColor(Color.red);
+        g.drawString(str, 10, 15);
+
+
+        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
+        try {
+            ImageIO.write(image, "png", new File(filename));
+            System.out.print("TakesScreenshot Save File:"+filename+"....Finished!\n");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     /**
@@ -439,18 +458,23 @@ public class Tools {
      */
     public String getMapValue(Map<String,String> map,String key)
     {
-        String values="";
+        String value="";
+        boolean isExeist=false;
+        isExeist=map.containsKey(key);
+        if(!isExeist)
+        {
+            System.out.println("Key("+key+")不存在");
+            return  value;
+        }
         try{
-             values=map.get(key);
+             value=map.get(key);
         }
         catch(NullPointerException e)
         {
-            //Reporter.log("获取Map中key的value错误，不存在key："+key);
-            System.out.println("获取Map中key的value错误，不存在key："+key);
-            //map.get(key);
-            values="";
+            System.out.println("获取value失败，key："+key);
+            value="";
         }
-        return values;
+        return value;
     }
 
     /**
@@ -459,11 +483,20 @@ public class Tools {
     public void alertAccept()
     {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         driver.switchTo().alert().accept();
+    }
+    public void alarmDismiss()
+    {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        driver.switchTo().alert().dismiss();
     }
     public void alertSetText(String str)
     {

@@ -2,47 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730160206.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730161611.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730161750.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730162335.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730162517.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730162917.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730163114.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730163548.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730163930.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213845.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213849.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213900.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213910.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213921.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730213931.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214020.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214028.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214402.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214451.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214508.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214641.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730214826.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730215007.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730215119.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730221241.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730221445.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730221526.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730221627.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730221829.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730222440.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730233215.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730233720.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730234322.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730234425.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730234602.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140730234816.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140731000245.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140731001019.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140731001755.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140731002153.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case/ALARMPOLICY_NEW.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807012537.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013532.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013626.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013707.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013750.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013832.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013909.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807013951.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20140807014034.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case/ALARMTEMPLATE_NEW.xls" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgBtnPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgFormPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AgListTest.class" />
@@ -57,9 +26,15 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmPolicyTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSubscripsPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateList.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmTemplateTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmUpgradeFrame.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/BtnInstrPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/BtnPage.class" />
@@ -75,13 +50,17 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvFramePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvListPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/EnvListTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener$1.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/ExcelDriver.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/FormPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/GridPage$1.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/GridPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/GroupTreePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/HomePage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/JqueryTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KbpFrameTest.class" />
@@ -92,6 +71,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KpiFrameTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Case/LOGIN_NEW.xls" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Login.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/login/LoginPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/LoginPageTest.class" />
@@ -112,14 +92,17 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResTreePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SQLFormPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SearchInstrPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/SearchResPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SheelFormPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/TT.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/TestCase.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Tools.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/TreePage.class" />
@@ -130,25 +113,26 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/WKlistTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/bullet_point.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/collapseall.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/download.au3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/download.exe" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/failed.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/passed.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/skipped.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-07-26.rar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-07-30.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-08-06.rar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-08-07.rar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrLoge/test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmTemplateTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/JqueryTest.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/Report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.AlarmConFrameTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KbpFrameTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KpiFrameTest.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.LoginPageTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.ResFrameTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.java" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/classes.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite/frame.html" />
@@ -158,6 +142,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/index.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/jquery-1.11.1.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/main.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/main.js" />
@@ -174,8 +159,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite_frame.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite_groups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite/testng-failed.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.css" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
@@ -184,27 +167,59 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/testng.xml.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/runTestConfig/testng.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/toc.html" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\Case\KBP_NEW.xls" afterPath="" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\Case\KPI_NEW.xls" afterPath="" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\Case\Login.xls" afterPath="" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\Case\RES_NEW.xls" afterPath="" />
       <change type="DELETED" beforePath="C:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(1).html" afterPath="" />
       <change type="DELETED" beforePath="C:\Test\Bomc6\Test Results - D__Test_Bomc6_src_com_code_TestNg_xml_(2).html" afterPath="" />
       <change type="DELETED" beforePath="C:\Test\Bomc6\Test Results - LoginPageTest.html" afterPath="" />
       <change type="DELETED" beforePath="C:\Test\Bomc6\Test Results - ToolsTest.html" afterPath="" />
-      <change type="MOVED" beforePath="C:\Test\Bomc6\src\com\code\page\ibnmsConfig\alarmConfUpdate\page\SearchUpdataPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/ALARMCONFUPDATA_NEW.xls" afterPath="$PROJECT_DIR$/Case/ALARMCONFUPDATA_NEW.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/ALARMCONF_NEW.xls" afterPath="$PROJECT_DIR$/Case/ALARMCONF_NEW.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/ALARMPOLICY_NEW.xls" afterPath="$PROJECT_DIR$/Case/ALARMPOLICY_NEW.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/KBP.xls" afterPath="$PROJECT_DIR$/Case/KBP.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/KPI.xls" afterPath="$PROJECT_DIR$/Case/KPI.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/RES.xls" afterPath="$PROJECT_DIR$/Case/RES.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/BtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/C3P/CfgInstrFrameTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/C3P/CfgInstrFrameTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Data.java" afterPath="$PROJECT_DIR$/src/com/code/common/Data.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/EventListener.java" afterPath="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/ExcelDriver.java" afterPath="$PROJECT_DIR$/src/com/code/common/ExcelDriver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/GridPage.java" afterPath="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/LoginPageTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/LoginPageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/TestCase.java" afterPath="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Tools.java" afterPath="$PROJECT_DIR$/src/com/code/common/Tools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/TreePage.java" afterPath="$PROJECT_DIR$/src/com/code/common/TreePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylog.txt" afterPath="$PROJECT_DIR$/mylog.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/runTestConfig/testng.xml" afterPath="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -231,50 +246,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AlarmPolicyList.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java">
+      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="714">
-              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1088">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneratFormPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java">
+      <file leaf-file-name="ResFrameTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="510">
-              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="350" max-vertical-offset="1598">
+              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AlarmPolicyBtnPage.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java">
+      <file leaf-file-name="ResListFramePage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.76831347" vertical-offset="25" max-vertical-offset="612">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlarmPolicyTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="884">
-              <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-1.2021661" vertical-offset="758" max-vertical-offset="1105">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -282,8 +279,18 @@
       <file leaf-file-name="Tools.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1736" max-vertical-offset="8959">
-              <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1527" max-vertical-offset="9639">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TreePage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/TreePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="629">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -307,57 +314,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpFromPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpFormPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpBtnPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/KbpListTest2.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListPage2.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/SearchBasePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/KpiListPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/SearchKpiPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/KpiListTest.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/KbpHomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/KbpListTest.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kpilist/KbpTreePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpHomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/Page.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/te.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/TestNg.xml" />
-        <option value="$PROJECT_DIR$/src/com/code/common/GridTablePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpListFramePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/KbpTreePage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/kbplist/SearchKbpPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/KbpFrameTest.java" />
-        <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdataBtnPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdataPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyBage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyFormPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/Tools.java" />
-        <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateList.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/JqueryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/login/LoginPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/ExcelDriver.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmTemplateTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/LoginPageTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/C3P/CfgInstrFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/Tools.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/TreePage.java" />
+        <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java" />
       </list>
     </option>
   </component>
@@ -704,7 +711,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>Abstraction issues</id>
+            <id>ConstantConditions</id>
           </State>
         </selected-state>
       </profile-state>
@@ -738,8 +745,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -758,340 +765,6 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="runTestConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kpilist" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kbplist" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alarmPolicy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alarmPolicy" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alarmConfigFrame" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="alarmConfigFrame" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -1104,7 +777,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/" />
+    <property name="last_opened_file_path" value="E:/SVN/_Docs/设计/06集中控制自动巡检/01 概要设计/数据库/CccpDb.erm" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -1138,73 +811,7 @@
       <recent name="C:\Test\Bomc6\Case" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml">
-    <configuration default="false" name="$PROJECT_DIR$/src/com/code/TestNg.xml (2)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Bomc6" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/com/code/TestNg.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="39565" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="$PROJECT_DIR$/src/com/code/TestNg.xml (3)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Bomc6" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/com/code/TestNg.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml (1)">
     <configuration default="false" name="HomePage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1303,6 +910,83 @@
       <listeners />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="58565" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JqueryTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.code.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Bomc6" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.code.test" />
+      <option name="MAIN_CLASS_NAME" value="com.code.test.JqueryTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="21662" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="$PROJECT_DIR$/src/runTestConfig/testng.xml (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Bomc6" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="30370" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -1525,17 +1209,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/com/code/TestNg.xml (2)" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/com/code/TestNg.xml (3)" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.HomePage" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.HomePage" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG.JqueryTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml (1)" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.HomePage" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml (1)" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.JqueryTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.HomePage" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1585,7 +1271,20 @@
       <workItem from="1406691060209" duration="948000" />
       <workItem from="1406706601701" duration="4376000" />
       <workItem from="1406711820713" duration="1146000" />
-      <workItem from="1406725936817" duration="11415000" />
+      <workItem from="1406725936817" duration="11494000" />
+      <workItem from="1406770014864" duration="3594000" />
+      <workItem from="1406787295384" duration="621000" />
+      <workItem from="1406813313492" duration="799000" />
+      <workItem from="1406815183231" duration="6774000" />
+      <workItem from="1406857204691" duration="3383000" />
+      <workItem from="1406881330955" duration="643000" />
+      <workItem from="1407037231412" duration="8859000" />
+      <workItem from="1407119379914" duration="12963000" />
+      <workItem from="1407150750689" duration="8740000" />
+      <workItem from="1407201530430" duration="13440000" />
+      <workItem from="1407245755183" duration="10365000" />
+      <workItem from="1407290148355" duration="18329000" />
+      <workItem from="1407329279543" duration="16462000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -1627,11 +1326,15 @@
       <created>1404235073381</created>
       <updated>1404235073381</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="告警策略">
+      <created>1406738057246</created>
+      <updated>1406738057246</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118134000" />
+    <option name="totallyTimeSpent" value="223185000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1641,59 +1344,30 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27687296" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.51954395" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5602606" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60596544" sideWeight="0.460972" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.078175895" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06840391" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29380664" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31758958" sideWeight="0.539028" order="9" side_tool="false" content_ui="tabs" x="43" y="211" width="1324" height="310" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29380664" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.50651467" sideWeight="0.539028" order="9" side_tool="false" content_ui="tabs" x="43" y="211" width="1324" height="310" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32899022" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49348533" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.55254775" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28700906" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43312103" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2245223" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49044585" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2356688" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1715,19 +1389,23 @@
     <MESSAGE value="重新定义了page类" />
     <MESSAGE value="完成KpiListTest类的工作" />
     <MESSAGE value="初步完成KbpFrame的改造" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步完成KbpFrame的改造" />
+    <MESSAGE value="告警策略" />
+    <option name="LAST_COMMIT_MESSAGE" value="告警策略" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java</url>
-          <line>24</line>
+          <url>file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java</url>
+          <line>44</line>
           <properties />
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="46" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1747,397 +1425,410 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/DriverManager.java">
+    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/internal/MethodInvocationHelper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35111877" vertical-offset="0" max-vertical-offset="581">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/HomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6502732" vertical-offset="0" max-vertical-offset="374">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/selenium-server-standalone-2.40.0.jar!/org/openqa/selenium/support/events/EventFiringWebDriver.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33854166" vertical-offset="683" max-vertical-offset="3604">
-          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/internal/TestMethodWorker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.24" vertical-offset="318" max-vertical-offset="799">
-          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/TestRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.24" vertical-offset="3497" max-vertical-offset="4369">
-          <caret line="210" column="17" selection-start-line="210" selection-start-column="17" selection-end-line="210" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/SuiteRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.24" vertical-offset="1100" max-vertical-offset="2601">
-          <caret line="69" column="17" selection-start-line="69" selection-start-column="17" selection-end-line="69" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/SuiteRunnerWorker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.24" vertical-offset="199" max-vertical-offset="544">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/TestNG.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.24" vertical-offset="3157" max-vertical-offset="6086">
-          <caret line="190" column="17" selection-start-line="190" selection-start-column="17" selection-end-line="190" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/remote/RemoteTestNG.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33854166" vertical-offset="377" max-vertical-offset="1156">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="595" max-vertical-offset="1938">
-          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1105">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="947" max-vertical-offset="1938">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="595">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="1054">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="134" max-vertical-offset="1258">
-          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.329806" vertical-offset="0" max-vertical-offset="567">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/Alert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45639536" vertical-offset="64" max-vertical-offset="408">
-          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/WebDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33139536" vertical-offset="5904" max-vertical-offset="8364">
-          <caret line="375" column="6" selection-start-line="375" selection-start-column="6" selection-end-line="375" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1649">
-          <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.034883723" vertical-offset="175" max-vertical-offset="578">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39772728" vertical-offset="1459" max-vertical-offset="9690">
-          <caret line="97" column="22" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/internal/Invoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25056946" vertical-offset="876" max-vertical-offset="2516">
-          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/support/ui/Select.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="5151">
-          <caret line="67" column="36" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/LoginPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="544">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
+        <state vertical-scroll-proportion="0.66019416" vertical-offset="0" max-vertical-offset="459">
+          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="306">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/DriverManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7389771" vertical-offset="538" max-vertical-offset="1105">
+        <state vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="588">
           <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/support/events/WebDriverEventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17913043" vertical-offset="679" max-vertical-offset="1870">
+          <caret line="62" column="91" selection-start-line="62" selection-start-column="79" selection-end-line="62" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/FormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20238096" vertical-offset="0" max-vertical-offset="588">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java">
+    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="833">
-          <caret line="40" column="5" selection-start-line="20" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2711" max-vertical-offset="7701">
+          <caret line="176" column="6" selection-start-line="176" selection-start-column="6" selection-end-line="176" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java">
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/WebDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1037">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2733686" vertical-offset="5030" max-vertical-offset="8364">
+          <caret line="326" column="35" selection-start-line="326" selection-start-column="15" selection-end-line="326" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java">
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/By.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="385" max-vertical-offset="952">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1466" max-vertical-offset="6766">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="569" max-vertical-offset="2074">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.1244019" vertical-offset="278" max-vertical-offset="901">
+          <caret line="60" column="30" selection-start-line="60" selection-start-column="30" selection-end-line="60" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmTemplateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="513" max-vertical-offset="1037">
+          <caret line="67" column="77" selection-start-line="67" selection-start-column="77" selection-end-line="67" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/LoginPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="32" column="132" selection-start-line="32" selection-start-column="132" selection-end-line="32" selection-end-column="132" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="799">
-          <caret line="30" column="49" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="49" />
+        <state vertical-scroll-proportion="0.25084746" vertical-offset="175" max-vertical-offset="765">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3905" max-vertical-offset="4420">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.5677966" vertical-offset="175" max-vertical-offset="765">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/MonitorPointPage.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="646">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.46101695" vertical-offset="0" max-vertical-offset="590">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1785">
-          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="849" max-vertical-offset="2057">
-          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1819">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="29" max-vertical-offset="595">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="1547">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="833">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23248407" vertical-offset="29" max-vertical-offset="578">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfTreePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27070063" vertical-offset="0" max-vertical-offset="314">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27242523" vertical-offset="88" max-vertical-offset="1156">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7876712" vertical-offset="586" max-vertical-offset="1071">
-          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.33128834" vertical-offset="810" max-vertical-offset="1615">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3312102" vertical-offset="593" max-vertical-offset="918">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratFormPage.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConFrameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="196" max-vertical-offset="510">
-          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1260" max-vertical-offset="1836">
+          <caret line="101" column="10" selection-start-line="101" selection-start-column="10" selection-end-line="101" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/C3P/CfgInstrFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="398" max-vertical-offset="952">
+          <caret line="56" column="81" selection-start-line="56" selection-start-column="81" selection-end-line="56" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="918">
+          <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1054">
+          <caret line="69" column="95" selection-start-line="69" selection-start-column="95" selection-end-line="69" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="833">
+          <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="334" max-vertical-offset="901">
+          <caret line="60" column="49" selection-start-line="60" selection-start-column="49" selection-end-line="60" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="918">
+          <caret line="61" column="95" selection-start-line="61" selection-start-column="95" selection-end-line="61" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.94814813" vertical-offset="602" max-vertical-offset="1156">
+          <caret line="76" column="95" selection-start-line="76" selection-start-column="95" selection-end-line="76" selection-end-column="95" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0574163" vertical-offset="255" max-vertical-offset="850">
+          <caret line="57" column="99" selection-start-line="57" selection-start-column="99" selection-end-line="57" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/TakesScreenshot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39013454" vertical-offset="610" max-vertical-offset="833">
+          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5119617" vertical-offset="92" max-vertical-offset="680">
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.040669855" vertical-offset="493" max-vertical-offset="1258">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="918">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14455782" vertical-offset="0" max-vertical-offset="588">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/awt/Font.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3371212" vertical-offset="8513" max-vertical-offset="42228">
+          <caret line="523" column="52" selection-start-line="523" selection-start-column="45" selection-end-line="523" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="962" max-vertical-offset="5049">
+          <caret line="80" column="60" selection-start-line="80" selection-start-column="60" selection-end-line="80" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="299" max-vertical-offset="1037">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55741626" vertical-offset="243" max-vertical-offset="1156">
+          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/EventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.41866028" vertical-offset="675" max-vertical-offset="1836">
+          <caret line="56" column="53" selection-start-line="56" selection-start-column="53" selection-end-line="56" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1316#1528#0" expanded="false" />
+            <element signature="e#1513#1514#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="637" max-vertical-offset="1258">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0.jar!/org/openqa/selenium/support/ui/Select.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75598085" vertical-offset="330" max-vertical-offset="748">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/eclipse/selenium/testng-6.8/testng-6.8.jar!/org/testng/internal/Invoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18421052" vertical-offset="916" max-vertical-offset="2516">
+          <caret line="59" column="35" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/support/ui/Select.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1770335" vertical-offset="300" max-vertical-offset="5151">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5561224" vertical-offset="615" max-vertical-offset="1156">
+          <caret line="55" column="41" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1088">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="1598">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResTreePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4296029" vertical-offset="0" max-vertical-offset="277">
+          <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1583" max-vertical-offset="8959">
-          <caret line="120" column="0" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1534" max-vertical-offset="9639">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/TreePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13265306" vertical-offset="713" max-vertical-offset="1105">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="95" max-vertical-offset="629">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AlarmPolicyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="492" max-vertical-offset="884">
-          <caret line="46" column="26" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="244" max-vertical-offset="714">
-          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76831347" vertical-offset="25" max-vertical-offset="612">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-1.2021661" vertical-offset="758" max-vertical-offset="1105">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

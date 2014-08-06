@@ -45,7 +45,7 @@ public class WKlistTest extends TestCase {
         if(tools.getMapValue(map,"操作类型").equals("删除"))
             wkList.delete(map);
         GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getListOftr("名称",tools.getMapValue(map,"名称")).size(),map,"期望值");
+        tools.assertEquals(gridTable.getListOftr("名称",tools.getMapValue(map,"名称")).size(),tools.getMapValue(map,"期望值"),map);
     }
     @Test(dataProvider="WKlist")
     public void deployWK(String[] str)
@@ -56,10 +56,10 @@ public class WKlistTest extends TestCase {
         GridPage gridTable=new GridPage();
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("名称", tools.getMapValue(map, "选择名称")).get(0));
         if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
         }
         if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
         }
     }
 }

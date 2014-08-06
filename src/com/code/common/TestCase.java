@@ -69,7 +69,8 @@ public class TestCase {
         //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
         eventDriver.manage().window().maximize();
-        eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        //设置隐式等待时间
+       // eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     //@AfterClass(alwaysRun=true)

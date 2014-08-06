@@ -20,7 +20,7 @@ public class LoginPageTest  extends TestCase{
 
     @DataProvider(name="Login")
     public Iterator test(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("Login",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("LOGIN_NEW",method.getName());
         excelHead=excelDriver.getHead(0);
         return  excelDriver;
     }
@@ -30,6 +30,6 @@ public class LoginPageTest  extends TestCase{
     {
         map=tools.changeStringToMap(excelHead, obj);
         loginPage.login(tools.getMapValue(map,"用户名"), tools.getMapValue(map, "密码"));
-        tools.assertTrue(tools.getTitle(TestCase.eventDriver).contains(tools.getMapValue(map, "期望值")));
+        tools.assertTrue(tools.getTitle(TestCase.eventDriver).contains(tools.getMapValue(map, "期望值")), tools.getMapValue(map,"用例描述"));
     }
 }

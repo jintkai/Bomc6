@@ -8,18 +8,13 @@ import org.openqa.selenium.WebElement;
 
 /**
  * Created by jinkai on 01/07/2014.
+ * Kbp查询树
  */
 public class KbpTreePage extends Page {
 
     WebElement fuzzy;
-    public void init()
+    public void searchByTree(String treeValue)
     {
-        tools.clear(fuzzy);
-    }
-
-    public GridPage searchKpiByTree(String treeValue)
-    {
-        init();
         tools.sendKeys(fuzzy,treeValue);
 
         try {
@@ -35,14 +30,10 @@ public class KbpTreePage extends Page {
             e.printStackTrace();
         }
         actions.sendKeys(Keys.ENTER).perform();
-        tools.switchToFrame();
-
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        tools.switchToFrame("kbpListFrame");
-        return new GridPage();
     }
 }

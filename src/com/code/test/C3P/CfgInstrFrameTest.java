@@ -47,14 +47,14 @@ public class CfgInstrFrameTest extends TestCase {
         if (option.equals("删除"))
             instrFrame.deleteGroup(map);
         eventDriver.navigate().refresh();
-        tools.assertEquals(instrFrame.getListOfGroups(tools.getMapValue(map,"TREE")).size(),map,"期望值");
+        tools.assertEquals(instrFrame.getListOfGroups(tools.getMapValue(map,"TREE")).size(),tools.getMapValue(map,"期望值"),map);
     }
     @Test(dataProvider = "instrFrame")
     public void searchByTree(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=instrFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getRowNum(),map,"期望值");
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
     @Test
     public void getAttribute()

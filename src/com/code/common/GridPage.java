@@ -1,9 +1,12 @@
 package com.code.common;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import javax.xml.crypto.*;
@@ -20,8 +23,12 @@ public class GridPage  extends Page implements Data{
     private int rowNum;
     private int gridCount=0;
     int tdIndex=0;
+    private WebDriverWait wait;
     @FindBy(id=selectBtId)
     public WebElement selectBt;
+    //读取中....
+    @FindBy(id="load_gridTable")
+    WebElement loadGrid;
     /*
     table数据区域
      */
@@ -41,13 +48,36 @@ public class GridPage  extends Page implements Data{
     //int gridTable_cd=3;
     int gridTable_cd=1;
     String gridTable_cbID="gridTable_cb";
-
+    public void setWait()
+    {
+        wait=new WebDriverWait(tools.getDriver(),20);
+    }
+    public void loadGridUnDisplay()
+    {
+        setWait();
+        Boolean isdisplay=wait.until(
+                new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(WebDriver webDriver) {
+                        System.out.println(tools.getAttribute(loadGrid,"style"));
+                        System.out.println(tools.getAttribute(loadGrid,"style").toLowerCase());
+                        return tools.getAttribute(loadGrid,"style").toLowerCase().contains("display: none");
+                    }
+                }
+        );
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
     /**
      * 返回当前页面中总行数；
      * @return
      */
     public int getRowNum()
     {
+        loadGridUnDisplay();
         dataList=tools.findElements(grid,By.xpath(dataTableTrXpath));
         if (dataList==null)
             rowNum=0;
@@ -62,7 +92,7 @@ public class GridPage  extends Page implements Data{
      */
     public String[] getHead()
     {
-
+        loadGridUnDisplay();
         List<WebElement> list=tools.findElements(headtable, By.xpath(this.headThXpath));
         WebElement[] eles = new WebElement[list.size()];
         list.toArray(eles);
@@ -86,6 +116,7 @@ public class GridPage  extends Page implements Data{
      */
     public int HeadIndex(String str)
     {
+        loadGridUnDisplay();
         tdIndex=0;
         /*if(str=="")
         {
@@ -113,6 +144,7 @@ public class GridPage  extends Page implements Data{
      */
     public String getTdOfTr(int index,String str)
     {
+        loadGridUnDisplay();
         return getTdOfAllTr(str)[index-1];
     }
 
@@ -127,6 +159,7 @@ public class GridPage  extends Page implements Data{
      */
     public String[] getTdOfAllTr(String str)
     {
+        loadGridUnDisplay();
         tdIndex=this.HeadIndex(str);
         String[] rowVales=new String[getRowNum()];
          for (int i=0;i<rowNum;i++) {
@@ -146,6 +179,7 @@ public class GridPage  extends Page implements Data{
      */
     public Map<String,String> getTrOfAllTd(int index)
     {
+        loadGridUnDisplay();
         String heads[]=getHead();
         String trXpath=this.dataTableTrXpath+"["+index+"]";
         WebElement tr=tools.findBy(grid,By.xpath(trXpath));
@@ -167,6 +201,7 @@ public class GridPage  extends Page implements Data{
      */
     public ArrayList<Integer> getListOftr(String colName,String colStr)
     {
+        loadGridUnDisplay();
         ArrayList<Integer> list = new ArrayList();
         String rowValues[]=getTdOfAllTr(colName);
         for (int i=0;i<rowValues.length;i++)
@@ -183,6 +218,11 @@ public class GridPage  extends Page implements Data{
      */
     public void selectTr(int index)
     {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         if (index==0)
         {
             System.out.println("选择所有");
@@ -212,6 +252,7 @@ public class GridPage  extends Page implements Data{
      */
     public int selectTrs(ArrayList<Integer> list)
     {
+        loadGridUnDisplay();
         if (list.size()>=0)
         {Reporter.log("请选择数据");
             return 0;}
@@ -239,6 +280,7 @@ public class GridPage  extends Page implements Data{
      */
     public boolean equalsSearch(String colStr,int expNum,String searchClass)
     {
+        loadGridUnDisplay();
         rowNum=getRowNum();
         if (expNum==0 && rowNum==0) {
             System.out.println("期望值："+expNum+"，实际值："+rowNum);
@@ -260,6 +302,7 @@ public class GridPage  extends Page implements Data{
     }
     public WebElement getWebElementTr(int index)
     {
+        loadGridUnDisplay();
         WebElement element;
         //grid.findElement(By.cssSelector("tr[id="+index+"]"));
         return grid.findElement(By.cssSelector("tr[id='"+index+"']"));

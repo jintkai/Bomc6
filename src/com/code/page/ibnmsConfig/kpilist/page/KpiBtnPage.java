@@ -8,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 /**
  * Created by jinkai on 06/07/2014.
+ * Kpi页面的操作类
  */
 public class KpiBtnPage extends BtnPage{
 

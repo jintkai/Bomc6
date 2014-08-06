@@ -5,6 +5,7 @@ import com.code.common.FormPage;
 
 
 import com.code.common.GridPage;
+import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -12,22 +13,19 @@ import java.util.Map;
 
 /**
  * Created by jinkai on 2014/6/22.
+ * Kbp编辑页面
  */
-public class KbpFormPage extends FormPage {
-    @FindBy(id= Data.classAfterID)
+public class KbpFormPage extends Page {
     WebElement classAfter;
-    @FindBy(id= Data.kbpCaptionID)
+    @FindBy(id="kbp.kbpCaption")
     WebElement kbpCaption;
-    @FindBy(name=Data.kbpDescName)
+    @FindBy(name="kbp.kbpDesc")
     WebElement kbpDesc;
-    @FindBy(id= Data.middleID)
+    @FindBy(id= "kbp.middle")
     WebElement middle;
-    @FindBy(id= Data.viewStyleID)
-    WebElement viewStyle;
-    @FindBy(id= Data.enableID)
-    WebElement enable;
-
-    public GridPage addKBP(Map<String,String> map)
+    WebElement kbp_viewStyle;
+    WebElement kbp_enable;
+    public GridPage operateKbp(Map<String,String> map)
     {
         inputForm(map);
         return new GridPage();
@@ -35,11 +33,11 @@ public class KbpFormPage extends FormPage {
 
     public void inputForm(Map<String,String> map)
     {
-        tools.sendKeys(classAfter,map.get("编号"));
-        tools.sendKeys(kbpCaption,map.get("名称"));
-        tools.sendKeys(kbpDesc,map.get("KBP描述"));
-        tools.selectByVisibleText(viewStyle,map.get("展现样式"));
-        tools.selectByVisibleText(enable,map.get("是否有效"));
+        tools.sendKeys(classAfter,tools.getMapValue(map,"编号"));
+        tools.sendKeys(kbpCaption,tools.getMapValue(map,"名称"));
+        tools.sendKeys(kbpDesc,tools.getMapValue(map,"KBP描述"));
+        tools.selectByVisibleText(kbp_viewStyle,tools.getMapValue(map,"展现样式"));
+        tools.selectByVisibleText(kbp_enable,tools.getMapValue(map,"是否有效"));
         tools.submit(kbpCaption);
     }
 }

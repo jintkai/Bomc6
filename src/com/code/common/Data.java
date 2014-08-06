@@ -10,7 +10,8 @@ import org.openqa.selenium.support.How;
 public interface Data {
     public static String browserType = "IE";
     public static String baseDir = "c:\\Test\\Bomc6";
-    public static String baseUrl = "http://172.21.0.31:8084";
+    //public static String baseUrl = "http://172.21.149.132";
+    public static String baseUrl = "http://192.168.1.105";
     /*
     KbpList，KBP列表对应的tableXpath，td，tr。
     gridXpath表示data区域的数据table，
@@ -32,21 +33,7 @@ public interface Data {
     public static String btnEdit = "btn-edit";
     public static String btnDel = "btn-del";
     public static String btnSelect="btn-select";
-    /*
-    KpiPage的WebElement
-     */
-    public static String kpiIdID = "kpi.kpiId";
-    public static String kpiNameID = "kpi.kpiName";
-    public static String kbpClassID = "kpi.kbpClass";
-    public static String kpiTypeID = "kpi.kpiType";
-    public static String kpiStylestringID = "kpi.kpiStylestring";
-    public static String kpiStylenumberID = "kpi.kpiStylenumber";
-    public static String kpiStyledatetimeID = "kpi.kpiStyledatetime";
-    public static String kpiMeasureID = "kpi.kpiMeasure";
-    public static String kpiDescID = "kpi.kpiDesc";
-    public static String trendFlagName = "kpi.trendFlag";
-    public static String baseLineFlagName = "kpi.baseLineFlag";
-    public static String kpiMngTypeXpath = "";
+
     /*
     KBPPage定位WebElement
      */

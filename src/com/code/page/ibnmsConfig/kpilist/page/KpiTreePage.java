@@ -10,26 +10,20 @@ import org.openqa.selenium.WebElement;
  */
 public class KpiTreePage extends Page {
     WebElement fuzzy;
-    public void init()
-    {
-        //tools.clear(fuzzy);
-    }
 
-    public GridPage searchByTree(String treeValue)
+    public void searchByTree(String treeValue)
     {
-        tools.switchToFrame();
-        tools.switchToFrame(0);
         tools.sendKeys(fuzzy,treeValue);
 
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
         actions.sendKeys(Keys.ARROW_DOWN).perform();
         try {
-            Thread.sleep(3000);
+            Thread.sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -41,7 +35,5 @@ public class KpiTreePage extends Page {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        tools.switchToFrame("kpiListFrame");
-        return new GridPage();
     }
 }

@@ -13,6 +13,9 @@ import java.util.Map;
  * Created by jinkai on 06/07/2014.
  */
 public class KpiListFramePage extends Page{
+    public String title="Kpi列表";
+    public String kpiListIFrame="kpiListFrame";
+
     KpiTreePage kpiTree=new KpiTreePage();
     SearchKpiPage searchKpi=new SearchKpiPage();
     GridPage gridTable=new GridPage();
@@ -21,7 +24,7 @@ public class KpiListFramePage extends Page{
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame();
-        tools.switchToFrame("kpiListFrame");
+        tools.switchToFrame(kpiListIFrame);
         return searchKpi.search(map);
     }
     public GridPage searchByTree(Map<String,String> map)
@@ -29,34 +32,40 @@ public class KpiListFramePage extends Page{
         tools.switchToFrame();
         tools.switchToFrame(0);
         kpiTree.searchByTree(tools.getMapValue(map,"KBP"));
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
         return new GridPage();
     }
-    public GridPage add(Map<String,String> map)
+
+    public GridPage operateKpi(Map<String,String> map)
     {
-        tools.switchToFrame();
-        tools.switchToFrame(0);
-        this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
-        kpiBtn.add();
-        kpiForm.add(map);
-        return  new GridPage();
-    }
-    public GridPage edit(Map<String,String> map)
-    {
-        tools.switchToFrame();
-        tools.switchToFrame("kpiListFrame");
-        int row=gridTable.selectTrs(gridTable.getListOftr("指标名称",tools.getMapValue(map,"选择名称")));
-        tools.assertEquals(row,0);
-        kpiBtn.edit();
-        kpiForm.edit(map);
-        return  new GridPage();
-    }
-    public GridPage delete(Map<String,String> map)
-    {
-        tools.switchToFrame();
-        tools.switchToFrame("kpiListFrame");
-        searchKpi.search(map);
-        gridTable.selectAllTr();
-        kpiBtn.delete();
-        return  new GridPage();
+        String operation=tools.getMapValue(map,"操作类型");
+        if (operation.contains("增加"))
+        {
+            tools.switchToFrame();
+            tools.switchToFrame(0);
+            this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            kpiBtn.add();
+            return kpiForm.operateKpi(map);
+        }
+        if (operation.contains("修改"))
+        {
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            searchKpi.search(map);
+            gridTable.selectTr(0);
+            kpiBtn.edit();
+            return kpiForm.operateKpi(map);
+        }
+        else {
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            searchKpi.search(map);
+            gridTable.selectTr(0);
+            kpiBtn.delete();
+            return new GridPage();
+        }
     }
 }

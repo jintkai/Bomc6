@@ -7,6 +7,7 @@ import org.openqa.selenium.support.How;
 
 /**
  * Created by jinkai on 06/07/2014.
+ * 包含一些通用的按钮，
  */
 public class BtnPage extends Page {
     @FindBy(how= How.ID,using=Data.btnAdd)

@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -21,15 +22,15 @@ public class KbpFrameTest extends TestCase {
     KbpListFramePage kbpFrame=new KbpListFramePage();
 
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="kbpList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("KBP_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("KBP",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
@@ -37,33 +38,23 @@ public class KbpFrameTest extends TestCase {
     public void search(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=kbpFrame.search(map);
-        tools.assertEquals(gritTable.getRowNum(),map,"期望值");
+        GridPage gridTable=kbpFrame.search(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "kbpList")
     public void searchByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=kbpFrame.searchByTree(map);
-        tools.assertEquals(gritTable.getRowNum(),map,"期望值");
+        GridPage gridTable=kbpFrame.searchByTree(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider="kbpList")
-    public void addKBP(String str[])
+    public void operateKbp(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         String option=tools.getMapValue(map,"操作类型");
-        if(option.equals("增加")) {
-            kbpFrame.add(map);
-        }
-        if (option.equals("修改"))
-        {
-            kbpFrame.edit(map);
-        }
-        if (option.equals("删除"))
-        {
-            kbpFrame.delete(map);
-        }
+        kbpFrame.operateKbp(map);
         GridPage gridTable=kbpFrame.search(map);
-        tools.assertEquals(gridTable.getRowNum(),map,"期望值");
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 }

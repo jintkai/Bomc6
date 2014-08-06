@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="suite"  >
-    <parameter name="Base_URL" value="http://172.21.0.31:8084" >1</parameter>
+    <!--parameter name="Base_URL" value="http://192.168.1.105" ></parameter-->
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
             <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
-                <methods>
-                  <include name="searchKbp">
-                  </include>
-              </methods>
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class >
+            </class -->
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
+                <methods>
+                    <include name="searchByTree"></include>
+                </methods>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.EnvListTest" >
+            <!--class name="com.code.test.ibnmsConfig.EnvListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class >
             <class name="com.code.test.ibnmsConfig.MQListTest" >
@@ -38,17 +37,19 @@
             </class>
             <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
-                <methods>
-                    <include name="openFilteredList"></include>
-                    <include name="queryFilterAdd"></include>
-                </methods>
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
                 <methods>
                     <include name="add" ></include>
                 </methods>
             </class>
+            <class name="com.code.test.ibnmsConfig.AlarmTemplateTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/alarmTemplateList.action" />
+                <methods>
+                    <include name="add" ></include>
+                </methods>
+            </class-->
             <!--集中控制>
             <class name="com.code.test.C3P.CfgInstrFrameTest">
                 <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />

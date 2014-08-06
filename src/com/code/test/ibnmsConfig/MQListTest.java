@@ -52,7 +52,7 @@ public class MQListTest extends TestCase {
         }
         GridPage gridTable=new GridPage();
         ArrayList list=gridTable.getListOftr("MQ名称",tools.getMapValue(map,"MQ名称"));
-        tools.assertEquals(list.size(),map,"期望值");
+        tools.assertEquals(list.size(),tools.getMapValue(map,"期望值"),map);
     }
 
     @Test(dataProvider="mqList")
@@ -64,10 +64,10 @@ public class MQListTest extends TestCase {
         GridPage gridTable=new GridPage();
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("MQ名称", tools.getMapValue(map, "选择名称")).get(0));
         if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
         }
         if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
         }
     }
 }

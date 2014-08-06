@@ -45,7 +45,7 @@ public class PFListTest extends TestCase {
         if(tools.getMapValue(map,"操作类型").equals("删除"))
             pfList.delete(map);
         GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getListOftr("Performance名称",tools.getMapValue(map,"Performance名称")).size(),map,"期望值");
+        tools.assertEquals(gridTable.getListOftr("Performance名称",tools.getMapValue(map,"Performance名称")).size(),tools.getMapValue(map,"期望值"),map);
     }
     @Test(dataProvider = "PFlist")
     public void deployPF(String[] str)
@@ -56,10 +56,10 @@ public class PFListTest extends TestCase {
         GridPage gridTable=new GridPage();
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("Performance名称", tools.getMapValue(map, "选择名称")).get(0));
         if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
         }
         if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),map,"期望值");
+            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
         }
     }
 }

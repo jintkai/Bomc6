@@ -23,8 +23,24 @@ public class AlarmPolicyBtnPage extends Page {
     {
         tools.moveToElement(addBtn);
         //tools.selectByVisibleText(addSelectBtn,"告警生成策略");
+        //无法处理模态对话框。
         actions.sendKeys(Keys.ARROW_DOWN);
         actions.sendKeys(Keys.ENTER).perform();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
-
+    public void delete()
+    {
+        tools.click(delBtn);
+        tools.alertAccept();
+        tools.alertAccept();
+    }
+    public void edit()
+    {
+        //tools.click(editBtn);
+        tools.openModelDialog(editBtn);
+    }
 }

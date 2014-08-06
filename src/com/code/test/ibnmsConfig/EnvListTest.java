@@ -39,7 +39,7 @@ public class EnvListTest  extends TestCase{
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.search(map);
         GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getRowNum(),map,"期望值");
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
     @Test(dataProvider="envList")
     public void addENV(String[] str)
@@ -58,6 +58,6 @@ public class EnvListTest  extends TestCase{
             envList.delete(map);
         }
         GridPage gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),map,"期望值");
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
 }

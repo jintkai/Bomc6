@@ -38,12 +38,26 @@ public class AlarmPolicyTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=alarmPlicy.search(map);
-        tools.assertEquals(gridTable.getRowNum(),map,"期望值","更新列表数据与预期值不一致");
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),"更新列表数据与预期值不一致");
     }
     @Test(dataProvider = "alarmpolicy",description = "新增告警策略")
     public void add(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        alarmPlicy.addGenerat(map);
+        String option=tools.getMapValue(map, "操作类型");
+        if (option.contains("增加")) {
+            alarmPlicy.addGenerat(map);
+        }
+        if (option.contains("删除"))
+        {
+            alarmPlicy.delete(map);
+        }
+        if (option.contains("修改"))
+        {
+            alarmPlicy.edit(map);
+        }
+        alarmPlicy.search(map);
+        int row = new GridPage().getRowNum();
+        tools.assertEquals(row,tools.getMapValue(map,"期望值"), "增加告警策略失败，查询结果错误！");
     }
 }
