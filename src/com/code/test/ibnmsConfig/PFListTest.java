@@ -23,7 +23,7 @@ public class PFListTest extends TestCase {
     PFListPage pfList=new PFListPage();
     @BeforeMethod
     @Parameters({"Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    public void beforeMethod(String actionUrl)
     {
         TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
@@ -34,8 +34,8 @@ public class PFListTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "PFlist")
-    public void addPF(String[] str)
+    @Test(dataProvider = "PFlist",priority = 0)
+    public void operatePF(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
 
@@ -43,7 +43,7 @@ public class PFListTest extends TestCase {
         tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
                 Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "PFlist")
+    @Test(dataProvider = "PFlist",priority = 1)
     public void deployPF(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
