@@ -8,7 +8,7 @@ import org.openqa.selenium.support.How;
  * Created by jinkai on 02/07/2014.
  */
 public interface Data {
-    public static String browserType = "IE";
+    public static String browserType = "chorme";
     public static String baseDir = "c:\\Test\\Bomc6";
     public static String baseUrl = "http://172.21.149.132";
     //public static String baseUrl = "http://192.168.1.105";
