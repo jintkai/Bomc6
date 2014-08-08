@@ -10,8 +10,8 @@ import org.openqa.selenium.support.How;
 public interface Data {
     public static String browserType = "IE";
     public static String baseDir = "c:\\Test\\Bomc6";
-    //public static String baseUrl = "http://172.21.149.132";
-    public static String baseUrl = "http://192.168.1.105";
+    public static String baseUrl = "http://172.21.149.132";
+    //public static String baseUrl = "http://192.168.1.105";
     /*
     KbpList，KBP列表对应的tableXpath，td，tr。
     gridXpath表示data区域的数据table，
