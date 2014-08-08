@@ -31,6 +31,7 @@ public class BtnPage extends Page {
     public WebElement deploy_ok;
     @FindBy(id="btn-unload")
     public WebElement unload;
+
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);
@@ -67,34 +68,18 @@ public class BtnPage extends Page {
     public void remove()
     {
         tools.click(remove);
-        tools.alertAccept();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         tools.click(deploy_ok);
     }
     public void unload()
     {
         tools.click(unload);
         tools.alertAccept();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         tools.click(deploy_ok);
     }
     public void deploy()
     {
         tools.click(deploy);
         tools.click(startDeploy);
-        try {
-            Thread.sleep(15000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         tools.click(deploy_ok);
     }
 
@@ -102,21 +87,11 @@ public class BtnPage extends Page {
     {
         tools.click(shutdown);
         tools.alertAccept();
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         tools.click(deploy_ok);
     }
     public void startup()
     {
         tools.click(startup);
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         tools.click(deploy_ok);
     }
 }

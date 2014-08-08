@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -21,15 +22,15 @@ import java.util.Map;
 public class EnvListTest  extends TestCase{
     EnvListPage envList=new EnvListPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="envList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ENV_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("ENV",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
@@ -39,25 +40,14 @@ public class EnvListTest  extends TestCase{
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.search(map);
         GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider="envList")
-    public void addENV(String[] str)
+    public void operateEnv(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        if(option.equals("增加")) {
-            envList.add(map);
-        }
-        if (option.equals("修改"))
-        {
-            envList.edit(map);
-        }
-        if (option.equals("删除"))
-        {
-            envList.delete(map);
-        }
+        envList.operateRes(map);
         GridPage gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 }

@@ -22,44 +22,33 @@ import java.util.Map;
 public class WKlistTest extends TestCase {
     WKlistPage wkList=new WKlistPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="WKlist")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("WK_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("WORKSTATION",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "WKlist")
-    public void addWK(String[] str)
+    @Test(dataProvider = "WKlist",priority = 0)
+    public void operateWK(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        if(tools.getMapValue(map,"操作类型").equals("增加"))
-            wkList.add(map);
-        if(tools.getMapValue(map,"操作类型").equals("修改"))
-            wkList.edit(map);
-        if(tools.getMapValue(map,"操作类型").equals("删除"))
-            wkList.delete(map);
-        GridPage gridTable=new GridPage();
-        tools.assertEquals(gridTable.getListOftr("名称",tools.getMapValue(map,"名称")).size(),tools.getMapValue(map,"期望值"),map);
+        GridPage gridTable=wkList.operateWK(map);
+        tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
+                Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="WKlist")
+    @Test(dataProvider="WKlist",priority = 1 )
     public void deployWK(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        wkList.deploy(map);
+        wkList.deployWK(map);
         GridPage gridTable=new GridPage();
-        Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("名称", tools.getMapValue(map, "选择名称")).get(0));
-        if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
-        }
-        if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
-        }
+        Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
     }
 }

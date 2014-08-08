@@ -24,46 +24,29 @@ public class EnvFormPage  extends FormPage{
     WebElement protocolPort;
     WebElement form_protocol;
 
-    public void addEnv(Map<String,String> map)
-    {
-        tools.sendKeys(userName,tools.getMapValue(map,"用户名"));
-        tools.sendKeys(password,tools.getMapValue(map,"密码"));
-        tools.sendKeys(javaHome,tools.getMapValue(map,"JDK路径"));
-        tools.selectByVisibleText(form_protocol, tools.getMapValue(map, "连接协议"));
-        tools.sendKeys(ftpPort,tools.getMapValue(map,"FTP端口"));
-        tools.sendKeys(protocolPort,tools.getMapValue(map,"协议端口"));
-        tools.click(selectHostBtn);
-        String hand=tools.swithToWindowByTitle("资源列表");
-        ResListFramePage resList=new ResListFramePage();
-        //resList.searchResByName(tools.getMapValue(map,"主机名称"));
-        //resList.search(map);
-        //resList.searchRes(map);
-        resList.gridTable.selectTr(0);
-        resList.resBtn.select();
-        tools.switchToWindowByHand(hand);
-        tools.click(btnSubmit);
-        tools.alertAccept();
-    }
+
     public void inputForm(Map<String,String> map)
     {
+        if (!tools.getMapValue(map,"资源名称").isEmpty()){
+            tools.click(selectHostBtn);
+            ResListFramePage resList=new ResListFramePage();
+            String hand=tools.swithToWindowByTitle(resList.title);
+            resList.search(map);
+            resList.gridTable.selectTr(0);
+            resList.resBtn.select();
+            tools.switchToWindowByHand(hand);
+        }
         tools.sendKeys(userName,tools.getMapValue(map,"用户名"));
         tools.sendKeys(password,tools.getMapValue(map,"密码"));
         tools.sendKeys(javaHome,tools.getMapValue(map,"JDK路径"));
         tools.selectByVisibleText(form_protocol, tools.getMapValue(map, "连接协议"));
         tools.sendKeys(ftpPort,tools.getMapValue(map,"FTP端口"));
         tools.sendKeys(protocolPort,tools.getMapValue(map,"协议端口"));
-        if (!tools.getMapValue(map,"资源名称").isEmpty()){
-        tools.click(selectHostBtn);
-        String hand=tools.swithToWindowByTitle("资源列表");
-        ResListFramePage resList=new ResListFramePage();
-        resList.search(map);
-        resList.gridTable.selectAllTr();
-        resList.resBtn.select();
-        tools.switchToWindowByHand(hand);}
+
         tools.click(btnSubmit);
         tools.alertAccept();
     }
-    public GridPage add(Map<String,String> map)
+    public GridPage operateEnv(Map<String,String> map)
     {
         inputForm(map);
         return  new GridPage();

@@ -35,18 +35,18 @@ public class WKFormPage  extends FormPage{
         tools.sendKeys(processKey, tools.getMapValue(map, "进程关键字"));
         tools.sendKeys(installPath, tools.getMapValue(map, "安装路径"));
         tools.selectByVisibleText(mqId, tools.getMapValue(map, "ActiveMQ"));
-        if(!tools.getMapValue(map,"主机名称").isEmpty()){
+        if(!tools.getMapValue(map,"部署主机").isEmpty()){
             tools.openModelDialog(selectHostBtn);
-            String hand = tools.swithToWindowByTitle("监控指标列表");
             EnvFramePage envFrame=new EnvFramePage();
-            envFrame.search(map).selectAllTr();
+            String hand = tools.swithToWindowByTitle(envFrame.title);
+            envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
         }
         tools.click(this.btnSubmit);
         tools.alertAccept();
     }
-    public GridPage add(Map<String,String> map)
+    public GridPage operateWK(Map<String,String> map)
     {
         inputForm(map);
         return  new GridPage();

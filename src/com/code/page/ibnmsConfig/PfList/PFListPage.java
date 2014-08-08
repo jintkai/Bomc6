@@ -14,10 +14,10 @@ public class PFListPage extends Page {
     public PfBtnPage pfBtn=new PfBtnPage();
     public PfFormPage pfForm=new PfFormPage();
 
-    public GridPage deploy(Map<String,String> map)
+    public GridPage deployPF(Map<String,String> map)
     {
         GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("Performance名称",tools.getMapValue(map,"选择名称")));
+        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (tools.getMapValue(map,"操作类型").equals("部署"))
             pfBtn.deploy();
         if (tools.getMapValue(map,"操作类型").equals("卸载"))
@@ -28,23 +28,28 @@ public class PFListPage extends Page {
             pfBtn.shutdown();
         return new GridPage();
     }
-    public GridPage add(Map<String,String> map)
-    {
-        pfBtn.add();
-        return pfForm.add(map);
-    }
-    public GridPage edit(Map<String,String> map)
+
+    public GridPage operatePF(Map<String,String> map)
     {
         GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("Performance名称", tools.getMapValue(map, "选择名称")));
-        pfBtn.edit();
-        return pfForm.add(map);
-    }
-    public GridPage delete(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("Performance名称", tools.getMapValue(map, "选择名称")));
-        pfBtn.delete();
-        return new GridPage();
+        String operation=tools.getMapValue(map, "操作类型");
+
+        if (operation.equals("增加"))
+        {
+            pfBtn.add();
+            return  pfForm.operatePF(map);
+        }
+        if (operation.equals("修改"))
+        {
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            pfBtn.edit();
+            return  pfForm.operatePF(map);
+        }
+        else
+        {
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            pfBtn.delete();
+            return new GridPage();
+        }
     }
 }

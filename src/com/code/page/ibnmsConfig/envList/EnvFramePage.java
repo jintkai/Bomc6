@@ -11,10 +11,12 @@ import java.util.Map;
  */
 public class EnvFramePage extends Page {
     KbpTreePage kbpTree=new KbpTreePage();
+    String entityQueryFrame="entityQueryFrame";
+    public String title="监控指标列表";
     public EnvListPage listPage=new EnvListPage();
     public GridPage search(Map<String,String> map)
     {
-        tools.switchToFrame("entityQueryFrame");
+        tools.switchToFrame(entityQueryFrame);
         return listPage.search(map);
     }
 }

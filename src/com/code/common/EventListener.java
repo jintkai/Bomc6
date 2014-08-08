@@ -1,11 +1,9 @@
 package com.code.common;
 
-import org.apache.bcel.ExceptionConstants;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -50,18 +48,37 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,10);
-        try {
-            WebElement element = wait.until(new ExpectedCondition<WebElement>() {
-                @Override
-                public WebElement apply(WebDriver webDriver) {
-                    return webDriver.findElement(by);
-                }
-            });
-        }
-        catch(TimeoutException e)
+        if(webElement!=null)
         {
-            //e.printStackTrace();
-            System.out.println("定位元素超时");
+            try {
+                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+                    @Override
+                    public WebElement apply(WebDriver webDriver) {
+                        return webElement.findElement(by);
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("定位元素超时");
+            }
+        }
+        else
+        {
+            try {
+                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+                    @Override
+                    public WebElement apply(WebDriver webDriver) {
+                        return webDriver.findElement(by);
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("定位元素超时");
+            }
         }
     }
 
@@ -71,7 +88,25 @@ public class EventListener implements WebDriverEventListener {
     }
 
     @Override
-    public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
+    public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,60);
+        if(webElement!=null)
+        {
+            System.out.println(webElement.getTagName());
+            try {
+                Boolean element = wait.until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(WebDriver webDriver) {
+                        return webElement.isDisplayed();
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("点击元素失败");
+            }
+        }
 
     }
 

@@ -28,25 +28,26 @@ public class PfFormPage extends FormPage {
     WebElement lang;
     public void inputForm(Map<String,String> map)
     {
-        tools.sendKeys(instanceName,tools.getMapValue(map,"名称"));
+        tools.sendKeys(instanceName,tools.getMapValue(map,"PERFORMANCE名称"));
         tools.sendKeys(installPath,tools.getMapValue(map,"安装路径"));
         tools.selectByVisibleText(pmMqId,tools.getMapValue(map,"ActiveMQ"));
         tools.sendKeys(processKey,tools.getMapValue(map,"进程关键字"));
         tools.sendKeys(lang,tools.getMapValue(map,"LANG"));
-        if(!tools.getMapValue(map,"主机名称").isEmpty()){
+        if(!tools.getMapValue(map,"部署主机").isEmpty()){
             tools.openModelDialog(selectHostBtn);
-            String hand = tools.swithToWindowByTitle("监控指标列表");
             EnvFramePage envFrame=new EnvFramePage();
-            envFrame.search(map).selectAllTr();
+            String hand = tools.swithToWindowByTitle(envFrame.title);
+            envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
         }
         tools.click(this.btnSubmit);
         tools.alertAccept();
     }
-    public GridPage add(Map<String,String> map)
+    public GridPage operatePF(Map<String,String> map)
     {
         inputForm(map);
         return  new GridPage();
     }
+
 }

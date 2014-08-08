@@ -18,17 +18,7 @@ public class SearchEnvPage extends Page {
     WebElement deviceName;
     @FindBy(how=How.ID,using="btn-search")
     WebElement btnSearch;
-    public void searchEnv(Map<String,String> map)
-    {
-        tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址"));
-        tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称"));
-        tools.click(btnSearch);
-    }
-    public void searchByName(String name)
-    {
-        tools.sendKeys(deviceName,name);
-        tools.click(btnSearch);
-    }
+
     public GridPage search(Map<String,String> map)
     {
         tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_ENV"));

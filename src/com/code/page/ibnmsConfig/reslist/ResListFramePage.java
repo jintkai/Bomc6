@@ -19,6 +19,7 @@ public class ResListFramePage extends Page{
     public ResBtnPage resBtn=new ResBtnPage();
     ResFormPage resForm=new ResFormPage();
     public String resListFrame="resListFrame";
+    public String title="资源列表";
     public int treeIFrame=0;
 
     public GridPage search(Map<String,String> map)

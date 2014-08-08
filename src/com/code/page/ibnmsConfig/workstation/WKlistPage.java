@@ -14,31 +14,11 @@ public class WKlistPage extends Page {
     WKFormPage wkForm=new WKFormPage();
     WKBtnPage wkBtn=new WKBtnPage();
 
-    public GridPage add(Map<String,String> map)
-    {
-        wkBtn.add();
-        return  new WKFormPage().add(map);
-    }
-    public GridPage edit(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("名称",tools.getMapValue(map,"选择名称")));
-        wkBtn.edit();
-        new WKFormPage().add(map);
-        return  new GridPage();
-    }
-    public GridPage delete(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("名称",tools.getMapValue(map,"选择名称")));
-        wkBtn.delete();
-        return  new GridPage();
-    }
-    public void deploy(Map<String,String> map)
+    public void deployWK(Map<String,String> map)
     {
         String option=tools.getMapValue(map,"操作类型");
         GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("名称",tools.getMapValue(map,"选择名称")));
+        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (option.equals("部署"))
             wkBtn.deploy();
         if(option.equals("卸载"))
@@ -47,5 +27,29 @@ public class WKlistPage extends Page {
             wkBtn.startup();
         if (option.equals("停止"))
             wkBtn.shutdown();
+    }
+    public GridPage operateWK(Map<String,String> map)
+    {
+        String operation=tools.getMapValue(map,"操作类型");
+        if (operation.equals("增加"))
+        {
+            wkBtn.add();
+            return wkForm.operateWK(map);
+        }
+        if (operation.equals("修改"))
+        {
+            GridPage gridTable=new GridPage();
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            wkBtn.edit();
+            return wkForm.operateWK(map);
+        }
+        else
+        {
+            GridPage gridTable=new GridPage();
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            wkBtn.delete();
+            return new GridPage();
+        }
+
     }
 }

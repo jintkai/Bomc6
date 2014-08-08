@@ -15,31 +15,34 @@ public class MQListPage extends Page {
     MQFormPage mqForm=new MQFormPage();
     GridPage gridTable=new GridPage();
 
-    public GridPage add(Map<String,String> map)
+    public GridPage operateMQ(Map<String,String> map)
     {
-        mqBtn.add();
-        return mqForm.add(map);
-    }
-    public GridPage edit(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("MQ名称",tools.getMapValue(map,"选择名称")));
-        mqBtn.edit();
-        tools.alertAccept();
-        tools.alertAccept();
-        return mqForm.add(map);
-    }
-    public GridPage delete(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("MQ名称", tools.getMapValue(map, "选择名称")));
-        mqBtn.delete();
-        return gridTable;
+        String operation=tools.getMapValue(map,"操作类型");
+        if (operation.equals("增加"))
+        {
+            mqBtn.add();
+            return mqForm.operateMQ(map);
+        }
+        if (operation.equals("修改"))
+        {
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            mqBtn.edit();
+            tools.alertAccept();
+            tools.alertAccept();
+            return mqForm.operateMQ(map);
+        }
+        else
+        {
+            //删除
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            mqBtn.delete();
+            return new GridPage();
+        }
     }
     public GridPage deploy(Map<String,String> map)
     {
         GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("MQ名称",tools.getMapValue(map,"选择名称")));
+        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (tools.getMapValue(map,"操作类型").equals("部署"))
             mqBtn.deploy();
         if (tools.getMapValue(map,"操作类型").equals("卸载"))

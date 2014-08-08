@@ -50,7 +50,7 @@ public class GridPage  extends Page implements Data{
     String gridTable_cbID="gridTable_cb";
     public void setWait()
     {
-        wait=new WebDriverWait(tools.getDriver(),20);
+        wait=new WebDriverWait(tools.getDriver(),10);
     }
     public void loadGridUnDisplay()
     {
@@ -118,11 +118,6 @@ public class GridPage  extends Page implements Data{
     {
         loadGridUnDisplay();
         tdIndex=0;
-        /*if(str=="")
-        {
-            System.out.println("所查询的Table列名错误,列名不能为空");
-            return tdIndex;
-        }*/
         String head[]=this.getHead();
         for (int i=0;i<head.length;i++)
         {
@@ -218,11 +213,7 @@ public class GridPage  extends Page implements Data{
      */
     public void selectTr(int index)
     {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         if (index==0)
         {
             System.out.println("选择所有");
@@ -253,7 +244,7 @@ public class GridPage  extends Page implements Data{
     public int selectTrs(ArrayList<Integer> list)
     {
         loadGridUnDisplay();
-        if (list.size()>=0)
+        if (list.size()==0)
         {Reporter.log("请选择数据");
             return 0;}
         for (int i=0;i<list.size();i++) {
@@ -262,7 +253,8 @@ public class GridPage  extends Page implements Data{
             String tdXpath = this.dataTableTdXpath + "[" + gridTable_cd + "]";
             WebElement webTr = tools.findBy(grid, By.xpath(trXpath));
             WebElement webTd = tools.findBy(webTr, By.xpath(tdXpath));
-            tools.findBy(webTd, By.xpath("./input")).click();
+            WebElement selectTd=tools.findBy(webTd, By.xpath("./input"));
+            tools.click(selectTd);
         }
         return list.size();
     }

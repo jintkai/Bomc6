@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -22,52 +23,39 @@ import java.util.Map;
 public class MQListTest extends TestCase {
     MQListPage mqList=new MQListPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="mqList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("MQ_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("MQ",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider="mqList")
-    public void addMQ(String[] str)
+    @Test(dataProvider="mqList", priority = 1)
+    public void operateMQ(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        if(option.equals("增加")) {
-            mqList.add(map);
-        }
-        if (option.equals("修改"))
-        {
-            mqList.edit(map);
-        }
-        if (option.equals("删除"))
-        {
-            mqList.delete(map);
-        }
-        GridPage gridTable=new GridPage();
-        ArrayList list=gridTable.getListOftr("MQ名称",tools.getMapValue(map,"MQ名称"));
-        tools.assertEquals(list.size(),tools.getMapValue(map,"期望值"),map);
+
+        GridPage gridTable=mqList.operateMQ(map);
+        ArrayList list=gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据"));
+        tools.assertEquals(list.size(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 
-    @Test(dataProvider="mqList")
+    @Test(dataProvider="mqList",priority = 2)
     public void deployMQ(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
+
         mqList.deploy(map);
         GridPage gridTable=new GridPage();
-        Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("MQ名称", tools.getMapValue(map, "选择名称")).get(0));
-        if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
-        }
-        if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
-        }
+        Map<String, String> MqMap = gridTable.getTrOfAllTd(
+                gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
+
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
+
     }
 }

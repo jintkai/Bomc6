@@ -9,27 +9,24 @@
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class -->
+            </class >
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
-                <methods>
-                    <include name="searchByTree"></include>
-                </methods>
             </class>
 
-            <!--class name="com.code.test.ibnmsConfig.EnvListTest" >
+            <class name="com.code.test.ibnmsConfig.EnvListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
-            </class >
+            </class>
             <class name="com.code.test.ibnmsConfig.MQListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
-            </class>
+            </class >
             <class name="com.code.test.ibnmsConfig.WKlistTest">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
-            </class>
+            </class-->
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
             </class>
-            <class name="com.code.test.ibnmsConfig.AgListTest">
+            <!--class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
             <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
