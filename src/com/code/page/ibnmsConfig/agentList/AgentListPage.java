@@ -15,45 +15,50 @@ public class AgentListPage extends Page {
     AgBtnPage agBtn=new AgBtnPage();
     SearchAGPage agSearch=new SearchAGPage();
     GridPage gridTable=new GridPage();
-    public GridPage add(Map<String,String> map)
-    {
-        agBtn.add();
-        return new AgFormPage().add(map);
-    }
-    public GridPage edit(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTr(gridTable.getListOftr("Agent名称",tools.getMapValue(map,"选择名称")).get(0));
-        agBtn.editForm();
-        new AgFormPage().add(map);
-        return  new GridPage();
-    }
-    public GridPage delete(Map<String,String> map)
-    {
-        GridPage gridTable=new GridPage();
-        gridTable.selectTr(gridTable.getListOftr("Agent名称", tools.getMapValue(map, "选择名称")).get(0));
-        agBtn.delete();
-        tools.alertAccept();
-        return new GridPage();
-    }
+    AgFormPage agForm=new AgFormPage();
+
     public GridPage search(Map<String,String> map)
     {
         return agSearch.search(map);
     }
 
-    public GridPage deploy(Map<String,String> map)
+    public GridPage deployAG(Map<String,String> map)
     {
         GridPage gridTable=new GridPage();
-        gridTable.selectTrs(gridTable.getListOftr("Agent名称",tools.getMapValue(map,"选择名称")));
-        if (tools.getMapValue(map,"操作类型").equals("部署"))
+        gridTable=agSearch.search(map);
+        gridTable.selectTr(0);
+        String operation=tools.getMapValue(map,"操作类型");
+        if (operation.equals("部署"))
             agBtn.deploy();
-        if (tools.getMapValue(map,"操作类型").equals("卸载"))
-            agBtn.remove();
-        if (tools.getMapValue(map,"操作类型").equals("启动"))
+        if (operation.equals("卸载"))
+        {agBtn.remove();
+        tools.alertAccept();}
+        if (operation.equals("启动"))
             agBtn.startup();
-        if (tools.getMapValue(map,"操作类型").equals("停止"))
+        if (operation.equals("停止"))
             agBtn.shutdown();
         return new GridPage();
     }
+    public GridPage operateAG(Map<String,String> map)
+    {
+        String operation=tools.getMapValue(map,"操作类型");
 
+        if (operation.equals("增加"))
+        {
+            agBtn.add();
+            return agForm.operateAG(map);
+        }
+        if (operation.equals("修改"))
+        {
+            agSearch.search(map).selectTr(0);
+            agBtn.edit();
+            return agForm.operateAG(map);
+        }
+        else
+        {
+            agSearch.search(map).selectTr(0);
+            agBtn.delete();
+            return  new GridPage();
+        }
+    }
 }

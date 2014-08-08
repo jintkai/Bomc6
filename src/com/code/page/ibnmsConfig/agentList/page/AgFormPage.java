@@ -25,7 +25,7 @@ public class AgFormPage extends FormPage {
     WebElement hsqldbPort;
     WebElement jmxPort;
     WebElement lang;
-    public GridPage add(Map<String,String> map)
+    public GridPage operateAG(Map<String,String> map)
     {
 
         inputForm(map);
@@ -41,12 +41,12 @@ public class AgFormPage extends FormPage {
         tools.sendKeys(hsqldbPort,tools.getMapValue(map,"HSQLDB端口"));
         tools.sendKeys(jmxPort,tools.getMapValue(map,"JMX端口"));
         tools.sendKeys(lang,tools.getMapValue(map,"LANG"));
-        if (!tools.getMapValue(map,"主机名称").isEmpty())
+        if (!tools.getMapValue(map,"部署主机").isEmpty())
         {
             tools.click(selectHostBtn);
-            String hand=tools.swithToWindowByTitle("监控指标列表");
             EnvFramePage envFrame=new EnvFramePage();
-            envFrame.search(map).selectAllTr();
+            String hand=tools.swithToWindowByTitle(envFrame.title);
+            envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
         }

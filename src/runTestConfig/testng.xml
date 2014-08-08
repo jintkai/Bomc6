@@ -26,10 +26,10 @@
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
             </class>
-            <!--class name="com.code.test.ibnmsConfig.AgListTest">
+            <class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-            <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
+            <!--class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">

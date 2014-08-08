@@ -23,58 +23,42 @@ import java.util.Map;
 public class AgListTest extends TestCase {
     public AgentListPage agList=new AgentListPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="agList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("AG_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("AGENT",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "agList")
+    @Test(dataProvider = "agList",priority = 0)
     public void search(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=agList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="agList")
-    public void addAG(String[] str)
+    @Test(dataProvider="agList",priority = 1)
+    public void operateAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        if(option.equals("增加")) {
-            agList.add(map);
-        }
-        if (option.equals("修改"))
-        {
-            agList.edit(map);
-        }
-        if (option.equals("删除"))
-        {
-            agList.delete(map);
-        }
-        GridPage gridTable=new GridPage();
-        ArrayList list=gridTable.getListOftr("Agent名称",tools.getMapValue(map,"Agent"));
-        tools.assertEquals(list.size(),tools.getMapValue(map,"期望值"),map);
+        GridPage gridTable=agList.operateAG(map);
+        gridTable=agList.search(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="agList")
+    @Test(dataProvider="agList",priority = 2)
     public void deployAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        agList.deploy(map);
+
+        agList.deployAG(map);
         GridPage gridTable=new GridPage();
-        Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("Agent名称", tools.getMapValue(map, "选择名称")).get(0));
-        if (option.equals("部署") || option.equals("卸载")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),tools.getMapValue(map,"期望值"),map);
-        }
-        if (option.equals("启动") || option.equals("停止")) {
-            tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),tools.getMapValue(map,"期望值"),map);
-        }
+        agList.search(map);
+        Map<String, String> MqMap = gridTable.getTrOfAllTd(1);
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
     }
 }

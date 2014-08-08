@@ -21,7 +21,10 @@ public class PFListPage extends Page {
         if (tools.getMapValue(map,"操作类型").equals("部署"))
             pfBtn.deploy();
         if (tools.getMapValue(map,"操作类型").equals("卸载"))
+        {
             pfBtn.remove();
+            tools.alertAccept();
+        }
         if (tools.getMapValue(map,"操作类型").equals("启动"))
             pfBtn.startup();
         if (tools.getMapValue(map,"操作类型").equals("停止"))
