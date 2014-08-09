@@ -4,7 +4,7 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
-            <class name="com.code.test.ibnmsConfig.KbpFrameTest">
+            <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
@@ -25,9 +25,12 @@
             </class>
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class>
+            </class-->
             <class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+                <methods>
+                    <include name="deployAG" ></include>
+                </methods>
             </class>
             <!--class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />

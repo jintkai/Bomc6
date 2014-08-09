@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Test\Bomc6\.idea\libraries\testng_6_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/commons_io_1_4.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bomc6.iml" afterPath="$PROJECT_DIR$/Bomc6.iml" />
+    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="修改依赖类">
+      <change type="MOVED" beforePath="C:\Test\Bomc6\Case\Agent.xls" afterPath="$PROJECT_DIR$/Case/AGENT.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/BtnPage.java" afterPath="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/runTestConfig/testng.xml" afterPath="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bomc6.iws" />
@@ -31,16 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="jdbc.properties" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/jdbc.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MQFormPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -66,8 +55,8 @@
       <file leaf-file-name="BtnPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1666">
-              <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -77,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="986">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,12 +92,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgentListPage.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AgentListPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8712121" vertical-offset="195" max-vertical-offset="1037">
-              <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1037">
+              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testng.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5150685" vertical-offset="339" max-vertical-offset="1088">
+              <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgListTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="884">
+              <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pattern.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/regex/Pattern.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="13706" max-vertical-offset="87346">
+              <caret line="822" column="0" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+              <folding>
+                <element signature="e#39327#39328#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -179,14 +200,14 @@
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/page/PfFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/page/AgFormPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/JqueryTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
-        <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
+        <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
       </list>
     </option>
   </component>
@@ -848,20 +869,8 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="Case" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BtnPage" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -1426,7 +1435,7 @@
       <workItem from="1407568934163" duration="44000" />
       <workItem from="1407569466911" duration="921000" />
       <workItem from="1407573247979" duration="448000" />
-      <workItem from="1407573787314" duration="2941000" />
+      <workItem from="1407573787314" duration="5496000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -1536,23 +1545,27 @@
       <created>1407575247507</created>
       <updated>1407575247507</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="修改依赖类">
+      <created>1407576751686</created>
+      <updated>1407576751686</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275662000" />
+    <option name="totallyTimeSpent" value="278217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32899022" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6563518" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49348533" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49348533" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5602606" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1626,13 +1639,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="500" max-vertical-offset="918">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
@@ -1822,13 +1828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="503" max-vertical-offset="884">
-          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="627" max-vertical-offset="1666">
@@ -1920,14 +1919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29876977" vertical-offset="255" max-vertical-offset="1037">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="423">
@@ -1954,26 +1945,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="1666">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/MQListPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.8846154" vertical-offset="639" max-vertical-offset="969">
           <caret line="47" column="50" selection-start-line="47" selection-start-column="50" selection-end-line="47" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="986">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1986,10 +1961,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13706" max-vertical-offset="87346">
+          <caret line="822" column="0" selection-start-line="822" selection-start-column="0" selection-end-line="822" selection-end-column="0" />
+          <folding>
+            <element signature="e#39327#39328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="514" max-vertical-offset="884">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8712121" vertical-offset="195" max-vertical-offset="1037">
-          <caret line="34" column="9" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1037">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="986">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5150685" vertical-offset="339" max-vertical-offset="1088">
+          <caret line="31" column="45" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding />
         </state>
       </provider>

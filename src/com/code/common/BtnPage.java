@@ -7,7 +7,7 @@ import org.openqa.selenium.support.How;
 
 /**
  * Created by jinkai on 06/07/2014.
- * 包含一些通用的按钮，
+ * 包含一些通用的按钮，增删、部署卸载等按钮
  */
 public class BtnPage extends Page {
     @FindBy(how= How.ID,using=Data.btnAdd)
@@ -67,8 +67,8 @@ public class BtnPage extends Page {
     }
     public void remove()
     {
-        tools.alertAccept();
         tools.click(remove);
+        tools.alertAccept();
         tools.click(deploy_ok);
     }
     public void unload()

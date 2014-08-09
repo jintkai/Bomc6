@@ -54,9 +54,9 @@ public class AgListTest extends TestCase {
     public void deployAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-
-        agList.deployAG(map);
         GridPage gridTable=new GridPage();
+        agList.deployAG(map);
+
         agList.search(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(1);
         tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
