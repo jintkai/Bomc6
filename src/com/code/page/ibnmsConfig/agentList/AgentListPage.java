@@ -32,7 +32,7 @@ public class AgentListPage extends Page {
             agBtn.deploy();
         if (operation.equals("卸载"))
         {agBtn.remove();
-        tools.alertAccept();}
+        }
         if (operation.equals("启动"))
             agBtn.startup();
         if (operation.equals("停止"))

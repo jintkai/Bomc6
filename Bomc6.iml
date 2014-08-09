@@ -16,7 +16,7 @@
     </content>
     <orderEntry type="jdk" jdkName="1.6" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="testng-6.8" level="project" />
+    <orderEntry type="library" name="commons-io-1.4" level="project" />
   </component>
 </module>
 

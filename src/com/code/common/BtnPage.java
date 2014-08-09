@@ -67,6 +67,7 @@ public class BtnPage extends Page {
     }
     public void remove()
     {
+        tools.alertAccept();
         tools.click(remove);
         tools.click(deploy_ok);
     }
