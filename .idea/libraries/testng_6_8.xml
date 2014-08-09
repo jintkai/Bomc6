@@ -2,8 +2,23 @@
   <library name="testng-6.8">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/lib/testng-6.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/selenium-server-standalone-2.42.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/selenium-java-2.40.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/saxon-8.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ojdbc14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-io-1.4.jar!/" />
+      <root url="file://$PROJECT_DIR$" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/selenium-java-2.40.0-srcs.jar!/" />
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-xslt-1.1.zip!/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-xslt-1.1.zip!/test/maven/src/main/java" />
+      <root url="jar://$PROJECT_DIR$/lib/testng-xslt-1.1.zip!/test/maven/src/test/java" />
+    </SOURCES>
   </library>
 </component>
