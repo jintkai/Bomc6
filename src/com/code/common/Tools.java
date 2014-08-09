@@ -188,6 +188,7 @@ public class Tools {
         }catch(AssertionError e){
             e.printStackTrace();
             takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
+            Reporter.log(map.toString());
             Assert.assertEquals(actual, expected, map.toString());
 
         }
@@ -200,6 +201,7 @@ public class Tools {
             //screen();
             takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
             e.printStackTrace();
+            Reporter.log(map.toString());
             Assert.assertNotEquals(actual, expected, map.toString());
         }
     }
