@@ -4,7 +4,7 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
-            <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
+            <class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
@@ -22,7 +22,7 @@
             </class >
             <class name="com.code.test.ibnmsConfig.WKlistTest">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
             </class>
