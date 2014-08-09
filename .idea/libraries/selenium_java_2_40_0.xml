@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="selenium-java-2.40.0">
     <CLASSES>
-      <root url="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/selenium-java-2.40.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

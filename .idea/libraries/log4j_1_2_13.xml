@@ -1,14 +1,9 @@
 <component name="libraryTable">
   <library name="log4j-1.2.13">
     <CLASSES>
-      <root url="jar://D:/eclipse/selenium/log4j-1.2.13.jar!/" />
-      <root url="jar://D:/eclipse/selenium/jxl.jar!/" />
-      <root url="jar://D:/eclipse/selenium/selenium-server-standalone-2.40.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.13.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/" />
-      <root url="jar://$PROJECT_DIR$/lib/testng-6.8.8-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

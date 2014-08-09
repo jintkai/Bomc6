@@ -104,9 +104,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/WKlistTest.class" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/bullet_point.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/collapseall.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/commons-io-1.4.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/failed.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/org.apache.commons.zip" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/passed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/selenium-java-2.40.0-srcs.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/selenium-server-standalone-2.42.2.jar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/skipped.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-07-26.rar" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/backup/test-output2014-07-30.rar" />
@@ -152,7 +156,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/testng.xml.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/runTestConfig/testng.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/toc.html" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\selenium_java_2_40_0_srcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\selenium_server_standalone_2_40_0.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bomc6.iml" afterPath="$PROJECT_DIR$/Bomc6.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_13.xml" afterPath="$PROJECT_DIR$/.idea/libraries/log4j_1_2_13.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylog.txt" afterPath="$PROJECT_DIR$/mylog.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/selenium_java_2_40_0.xml" afterPath="$PROJECT_DIR$/.idea/libraries/selenium_java_2_40_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/testng_6_8.xml" afterPath="$PROJECT_DIR$/.idea/libraries/testng_6_8.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Bomc6.iws" />
@@ -177,92 +187,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="testng.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.71704745" vertical-offset="51" max-vertical-offset="1037">
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PFListPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java">
+      <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1088">
-              <caret line="25" column="32" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+              <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PFListTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java">
+      <file leaf-file-name="JqueryTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/JqueryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="833" max-vertical-offset="1020">
-              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1513">
+              <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgListTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java">
+      <file leaf-file-name="EventListener.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/EventListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="969" max-vertical-offset="1190">
-              <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.4516129" vertical-offset="952" max-vertical-offset="2533">
+              <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1276#1509#0" expanded="true" />
+                <element signature="e#1490#1491#0" expanded="true" />
+                <element signature="e#1989#1990#0" expanded="true" />
+                <element signature="e#2611#2836#0" expanded="true" />
+                <element signature="e#2817#2818#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExpectedCondition.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$PROJECT_DIR$/lib/selenium-java-2.40.0.jar!/org/openqa/selenium/support/ui/ExpectedCondition.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="204">
+              <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AgentListPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java">
+      <file leaf-file-name="ExcelDriver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="1190">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCase.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
+      <file leaf-file-name="HomePage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/HomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="986" max-vertical-offset="1836">
-              <caret line="58" column="66" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="66" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KbpFrameTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest.java">
+      <file leaf-file-name="GridPage.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1122">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="4964">
+              <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+              <folding>
+                <element signature="e#1830#1831#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WKFormPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/workstation/page/WKFormPage.java">
+      <file leaf-file-name="Tools.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1020">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FormPage.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/FormPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="374">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6034" max-vertical-offset="9962">
+              <caret line="382" column="12" selection-start-line="382" selection-start-column="12" selection-end-line="382" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -296,7 +319,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateList.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/JqueryTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/login/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/ExcelDriver.java" />
@@ -332,7 +354,6 @@
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/MQListPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/workstation/page/WKFormPage.java" />
@@ -340,12 +361,14 @@
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/page/PfFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PFListTest.java" />
-        <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/page/AgFormPage.java" />
         <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/PFListPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/AgentListPage.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/Data.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/JqueryTest.java" />
+        <option value="$PROJECT_DIR$/src/com/code/common/EventListener.java" />
       </list>
     </option>
   </component>
@@ -712,6 +735,12 @@
   </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectStructureProblems">
+    <ignored-problems>
+      <problem id="unused-library(library:project:selenium-java-2.40.0-srcs)" />
+      <problem id="unused-library(library:project:selenium-server-standalone-2.40.0)" />
+    </ignored-problems>
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -1130,8 +1159,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/SVN/_Docs/设计/06集中控制自动巡检/01 概要设计/数据库/CccpDb.erm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/selenium-server-standalone-2.42.2.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -1645,7 +1674,7 @@
       <workItem from="1407417497006" duration="13722000" />
       <workItem from="1407461845573" duration="12620000" />
       <workItem from="1407485863341" duration="1707000" />
-      <workItem from="1407554523274" duration="851000" />
+      <workItem from="1407554523274" duration="4205000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -1719,11 +1748,23 @@
       <created>1407475960833</created>
       <updated>1407475960833</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="完成KBP\KPI、资源的调整">
+      <created>1407555419045</created>
+      <updated>1407555419045</updated>
+    </task>
+    <task id="LOCAL-00020" summary="完成KBP\KPI、资源的调整">
+      <created>1407556372351</created>
+      <updated>1407556372351</updated>
+    </task>
+    <task id="LOCAL-00021" summary="完成KBP\KPI、资源的调整">
+      <created>1407558076415</created>
+      <updated>1407558076415</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="264706000" />
+    <option name="totallyTimeSpent" value="268060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="6" />
@@ -1743,6 +1784,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.60596544" sideWeight="0.460972" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.06514658" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1754,7 +1796,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49348533" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.06514658" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1787,7 +1828,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="58" />
+      <option name="time" value="59" />
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
@@ -1807,27 +1848,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/eclipse/selenium/selenium-2.40.0/selenium-java-2.40.0-srcs.jar!/org/openqa/selenium/TakesScreenshot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39013454" vertical-offset="610" max-vertical-offset="833">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5119617" vertical-offset="92" max-vertical-offset="680">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.040669855" vertical-offset="493" max-vertical-offset="1258">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1190">
@@ -1996,13 +2016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5513126" vertical-offset="1350" max-vertical-offset="2465">
-          <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6819728" vertical-offset="245" max-vertical-offset="833">
@@ -2028,13 +2041,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3180272" vertical-offset="0" max-vertical-offset="952">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33212996" vertical-offset="826" max-vertical-offset="1615">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2052,13 +2059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="612" max-vertical-offset="1037">
-          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65914786" vertical-offset="77" max-vertical-offset="476">
@@ -2073,24 +2073,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2456" max-vertical-offset="4913">
-          <caret line="174" column="50" selection-start-line="174" selection-start-column="50" selection-end-line="174" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2543" max-vertical-offset="9639">
-          <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="945" max-vertical-offset="1649">
           <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2168,9 +2155,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71704745" vertical-offset="51" max-vertical-offset="1037">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1037">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
+          <caret line="14" column="61" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/ExcelDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1615">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="357">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/JqueryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="1513">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="573" max-vertical-offset="4964">
+          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
+          <folding>
+            <element signature="e#1830#1831#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6034" max-vertical-offset="9962">
+          <caret line="382" column="12" selection-start-line="382" selection-start-column="12" selection-end-line="382" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/selenium-java-2.40.0.jar!/org/openqa/selenium/support/ui/ExpectedCondition.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="0" max-vertical-offset="204">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/EventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4516129" vertical-offset="952" max-vertical-offset="2533">
+          <caret line="70" column="29" selection-start-line="70" selection-start-column="29" selection-end-line="70" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1276#1509#0" expanded="true" />
+            <element signature="e#1490#1491#0" expanded="true" />
+            <element signature="e#1989#1990#0" expanded="true" />
+            <element signature="e#2611#2836#0" expanded="true" />
+            <element signature="e#2817#2818#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2232,7 +2296,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
