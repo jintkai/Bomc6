@@ -23,8 +23,8 @@ public class AlarmPolicyList extends Page {
     public void addGenerat(Map<String,String> map)
     {
         policyBtn.addGenerat();
-        //String hand=tools.swithToWindowByTitle("告警生成");
-        String hand=tools.swithToWindowByTitle("告警生成");
+        //String hand=tools.switchToWindowByTitle("告警生成");
+        String hand=tools.switchToWindowByTitle("告警生成");
         System.out.println(tools.getDriver().getCurrentUrl());
         new GeneratFormPage().add(map);
         tools.switchToWindowByHand(hand);
@@ -34,7 +34,7 @@ public class AlarmPolicyList extends Page {
         search(map);
         new GridPage().selectAllTr();
         policyBtn.edit();
-        String hand=tools.swithToWindowByTitle("告警生成");
+        String hand=tools.switchToWindowByTitle("告警生成");
         System.out.println(tools.getDriver().getCurrentUrl());
         new GeneratFormPage().add(map);
         tools.switchToWindowByHand(hand);

@@ -46,7 +46,7 @@ public class GeneratFormPage extends Page {
         {
             //tools.click(selectKpiBtn);
             tools.openModelDialog(selectKpiBtn);
-            String hand=tools.swithToWindowByTitle(kpiList.title);
+            String hand=tools.switchToWindowByTitle(kpiList.title);
             kpiList.search(map);
             new GridPage().selectTr(1);
             kpiList.kpiBtn.select();
@@ -57,7 +57,7 @@ public class GeneratFormPage extends Page {
     {
         inputForm(map);
         tools.openModelDialog(submitBtn);
-        String hand=tools.swithToWindowByTitle(expressAssert.title);
+        String hand=tools.switchToWindowByTitle(expressAssert.title);
         expressAssert.submit();
         try {
             Thread.sleep(2000);

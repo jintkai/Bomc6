@@ -28,6 +28,7 @@ public class BtnPage extends Page {
     public WebElement shutdown;
     @FindBy(id = "btn-startDeploy")
     public WebElement startDeploy;
+    @FindBy(id="deploy_ok")
     public WebElement deploy_ok;
     @FindBy(id="btn-unload")
     public WebElement unload;

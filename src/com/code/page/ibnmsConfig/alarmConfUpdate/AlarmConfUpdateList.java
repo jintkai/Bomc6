@@ -47,7 +47,7 @@ public class AlarmConfUpdateList extends Page {
             if (!str.contains("告警变更配置项"))
                 break;
         }
-        //tools.swithToWindowByTitle("itil");
+        //tools.switchToWindowByTitle("itil");
         return tools.getDriver().getCurrentUrl();
     }
     public void delete()

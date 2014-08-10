@@ -46,7 +46,7 @@ public class MQFormPage extends FormPage {
         {
             tools.click(selHostBtn);
             EnvFramePage envFrame=new EnvFramePage();
-            String hand=tools.swithToWindowByTitle(envFrame.title);
+            String hand=tools.switchToWindowByTitle(envFrame.title);
             envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);

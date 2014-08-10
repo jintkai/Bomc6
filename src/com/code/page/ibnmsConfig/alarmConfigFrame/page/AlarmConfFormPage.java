@@ -53,7 +53,7 @@ public class AlarmConfFormPage extends Page {
             tools.click(save);
         if (type==2)
             tools.click(saveEdit);
-        String hand=tools.swithToWindowByTitle("表达式验证");
+        String hand=tools.switchToWindowByTitle("表达式验证");
         new ExpressionAssertPage().submit();
         tools.switchToWindowByHand(hand);
         tools.alertAccept();

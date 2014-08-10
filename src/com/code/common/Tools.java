@@ -173,12 +173,14 @@ public class Tools {
         return ele.getAttribute(str);
     }
     public void click(WebElement ele) {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
+        try{ele.click();}
+        catch(Exception e)
+        {
             e.printStackTrace();
+            Reporter.log("点击元素失败！");
+            takesScreenshot("点击元素失败!");
+            ele.click();
         }
-        ele.click();
     }
 
     public void assertEquals(Object actual,Object expected,Map<String,String> map)
@@ -187,7 +189,7 @@ public class Tools {
             Assert.assertEquals(actual, expected, map.toString());
         }catch(AssertionError e){
             e.printStackTrace();
-            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
+            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
             Reporter.log(map.toString());
             Assert.assertEquals(actual, expected, map.toString());
 
@@ -199,7 +201,7 @@ public class Tools {
             Assert.assertNotEquals(actual, expected, map.toString());
         } catch (AssertionError e) {
             //screen();
-            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述"));
+            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
             e.printStackTrace();
             Reporter.log(map.toString());
             Assert.assertNotEquals(actual, expected, map.toString());
@@ -257,7 +259,7 @@ public class Tools {
      * @param title windows的title
      * @return 返回跳转前的窗口句柄
      */
-    public String swithToWindowByTitle(String title)
+    public String switchToWindowByTitle(String title)
     {
         try {
             Thread.sleep(1000);

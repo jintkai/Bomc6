@@ -47,7 +47,7 @@ public class SearchAlarmPolicyPage extends Page{
         if (!str.isEmpty())
         {
             tools.click(kpiName);
-            String hand=tools.swithToWindowByTitle("Kpi列表");
+            String hand=tools.switchToWindowByTitle("Kpi列表");
             KpiListFramePage kpiFrame=new KpiListFramePage();
             GridPage gridPage=kpiFrame.search(map);
             gridPage.selectTr(1);

@@ -36,7 +36,7 @@ public class AgListTest extends TestCase {
         return excelDriver;
     }
     @Test(dataProvider = "agList",priority = 0)
-    public void search(String[] str)
+    public void searchAG(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=agList.search(map);

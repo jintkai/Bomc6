@@ -30,7 +30,7 @@ public class EnvFormPage  extends FormPage{
         if (!tools.getMapValue(map,"资源名称").isEmpty()){
             tools.click(selectHostBtn);
             ResListFramePage resList=new ResListFramePage();
-            String hand=tools.swithToWindowByTitle(resList.title);
+            String hand=tools.switchToWindowByTitle(resList.title);
             resList.search(map);
             resList.gridTable.selectTr(0);
             resList.resBtn.select();

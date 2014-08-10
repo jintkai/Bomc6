@@ -80,7 +80,7 @@ public class AlarmConFrameTest extends TestCase {
     public void openEditedList()
     {
         alarmFrame.openEditedList();
-        String hand=tools.swithToWindowByTitle("变更");
+        String hand=tools.switchToWindowByTitle("变更");
         //tools.assertNotEquals("FALSE",hand,"通过窗口Title切换窗口失败，窗口Title可能错误",map);
         tools.closeWindow();
         tools.switchToWindowByHand(hand);
@@ -90,7 +90,7 @@ public class AlarmConFrameTest extends TestCase {
     public void openFilteredList()
     {
         alarmFrame.openFilteredList();
-        String hand=tools.swithToWindowByTitle("过滤");
+        String hand=tools.switchToWindowByTitle("过滤");
         //tools.assertNotEquals("FALSE",hand,"通过窗口Title切换窗口失败，窗口Title可能错误");
         tools.closeWindow();
         tools.switchToWindowByHand(hand);

@@ -25,12 +25,15 @@
             </class>
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.AgListTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-                <methods>
-                    <include name="deployAG" ></include>
-                </methods>
+            </class>
+            <class name="com.code.test.ibnmsConfig.PmAlarmListTest">
+                <parameter name="Action_URL" value="/cfgColl/listPmAlarm.action?type=1"></parameter>
+            </class-->
+            <class name="com.code.test.ibnmsConfig.AppServerListTest">
+                <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
             </class>
             <!--class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
