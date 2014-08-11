@@ -33,14 +33,14 @@ public class ResFrameTest extends TestCase {
         this.eventDriver.get(Data.baseUrl+actionUrl);
     }
     @Test(dataProvider = "resCase")
-    public void search(String str[])
+    public void searchRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gritTable=resFrame.search(map);
         tools.assertEquals(gritTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "resCase")
-    public void searchByTree(String str[])
+    public void searchResByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gritTable=resFrame.searchByTree(map);
@@ -54,51 +54,6 @@ public class ResFrameTest extends TestCase {
         GridPage gridTable=resFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    /*@Test(dataProvider = "resCase")
-    public void searchByTree(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchResByTree(tools.getMapValue(map, "TREE值"));
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-        String colStr=tools.getMapValue(map,"验证字段");
-        String search=tools.getMapValue(map,"TREE值");
-        tools.assertTrue(gritTable.equalsSearch(colStr,rowNum,search));
-    }
-    @Test(dataProvider = "resCase")
-    public void searchRes(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        resFrame.searchRes(map);
-        GridPage gritTable=new GridPage();
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,map,"期望值");
-    }
-
-    @Test(dataProvider = "resCase")
-    public void addRes(String str[] )
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.addRes(map);
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider = "resCase" ,dependsOnMethods="addRes")
-    public void editRes(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.editRes(map);
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }
-    @Test(dataProvider = "resCase",dependsOnMethods="addRes")
-    public void delRes(String str[])
-    {
-        map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.delRes(map);
-        int rowNum=gritTable.getRowNum();
-        tools.assertEquals(rowNum,Integer.parseInt(tools.getMapValue(map,"期望值")));
-    }*/
 
 
 }

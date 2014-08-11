@@ -31,9 +31,9 @@ public class KpiFormPage extends FormPage {
     WebElement kpiMeasure;
     @FindBy(id="kpi.kpiDesc")
     WebElement kpiDesc;
-    @FindBy(id= "kpi_trendFlag")
+    @FindBy(name= "kpi.baseLineFlag")
     WebElement trendFlag;
-    @FindBy(id="kpi_baseLineFlag")
+    @FindBy(name="kpi.baseLineFlag")
     WebElement baseLineFlag;
 
     public void inputForm(Map<String,String> map)

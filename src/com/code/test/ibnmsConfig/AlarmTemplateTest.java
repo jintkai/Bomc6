@@ -3,7 +3,7 @@ package com.code.test.ibnmsConfig;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
-import com.code.page.ibnmsConfig.alarmTemplate.AlarmTemplateList;
+import com.code.page.ibnmsConfig.alarmTemplate.AlarmTemplateListPage;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -18,7 +18,7 @@ import java.util.Iterator;
  * Created by Jin on 2014/8/4.
  */
 public class AlarmTemplateTest extends TestCase {
-    AlarmTemplateList alarmTemplate=new AlarmTemplateList();
+    AlarmTemplateListPage alarmTemplate=new AlarmTemplateListPage();
     @BeforeMethod
     @Parameters({"Base_URL","Action_URL"})
     public void beforeMethod(String baseUrl,String actionUrl)

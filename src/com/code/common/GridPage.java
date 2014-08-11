@@ -166,6 +166,21 @@ public class GridPage  extends Page implements Data{
         }
         return rowVales;
     }
+    /**
+     * 返回当前页中，某列组成的数据对象
+     * @param td 列号
+     * @param tr 行号,0表示第一行数据，从0开始
+     * @return 返回某列某行的WebElement元素td；
+     */
+    public WebElement getTdEleOfTr(int td,int tr)
+    {
+        loadGridUnDisplay();
+        String trXpath=this.dataTableTrXpath+"["+(tr+1)+"]";
+        String tdXpath=this.dataTableTdXpath+"["+td+"]";
+        WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
+        WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
+        return webTd;
+    }
 
     /**
      * 根据输入行号，返回当前页面中，该行的所有列元素组成的Map对象；

@@ -35,7 +35,7 @@ public class KpiFrameTest extends TestCase {
         return excelDriver;
     }
     @Test(dataProvider="kpiList")
-    public void search(String[] obj)
+    public void searchKPI(String[] obj)
     {
         map=tools.changeStringToMap(excelHead,obj);
         GridPage gridTable=kpiFrame.search(map);
@@ -44,7 +44,7 @@ public class KpiFrameTest extends TestCase {
                 map);
     }
     @Test(dataProvider="kpiList")
-    public void searchByTree(String[] obj)
+    public void searchKPIByTree(String[] obj)
     {
         map=tools.changeStringToMap(excelHead,obj);
         GridPage gridTable=kpiFrame.searchByTree(map);
@@ -52,7 +52,7 @@ public class KpiFrameTest extends TestCase {
                 map);
     }
     @Test(dataProvider = "kpiList")
-    public void operateKpi(String[] obj)
+    public void operateKPI(String[] obj)
     {
         map=tools.changeStringToMap(excelHead,obj);
         kpiFrame.operateKpi(map);

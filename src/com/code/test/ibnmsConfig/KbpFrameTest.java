@@ -35,21 +35,21 @@ public class KbpFrameTest extends TestCase {
         return excelDriver;
     }
     @Test(dataProvider = "kbpList")
-    public void search(String str[])
+    public void searchKBP(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=kbpFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "kbpList")
-    public void searchByTree(String str[])
+    public void searchKBPByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=kbpFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider="kbpList")
-    public void operateKbp(String str[])
+    public void operateKBP(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         String option=tools.getMapValue(map,"操作类型");

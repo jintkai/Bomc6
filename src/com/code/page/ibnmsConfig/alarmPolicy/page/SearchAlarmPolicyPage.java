@@ -24,10 +24,9 @@ public class SearchAlarmPolicyPage extends Page{
     WebElement kpiName;
     @FindBy(id="btn-search")
     WebElement searchBtn;
-    public void search(Map<String,String> map)
+    public GridPage search(Map<String,String> map)
     {
         tools.sendKeys(policyName,tools.getMapValue(map,"策略名称_ALAARMPOLICY"));
-
         tools.sendKeys(unitNamePrefix, tools.getMapValue(map, "应用范围_ALARMPOLICY"));
         try {
             Thread.sleep(2000);
@@ -42,19 +41,18 @@ public class SearchAlarmPolicyPage extends Page{
         }
         actions.sendKeys(Keys.ENTER).perform();
         tools.selectByVisibleText(policyType, tools.getMapValue(map, "策略类型_ALARMPOLICY"));
-        //tools.getMapValue(map,"应用指标_ALARMPOLICY");
         String str=tools.getMapValue(map,"应用指标_ALARMPOLICY");
         if (!str.isEmpty())
         {
             tools.click(kpiName);
-            String hand=tools.switchToWindowByTitle("Kpi列表");
             KpiListFramePage kpiFrame=new KpiListFramePage();
+            String hand=tools.switchToWindowByTitle(kpiFrame.title);
             GridPage gridPage=kpiFrame.search(map);
             gridPage.selectTr(1);
-            //gridPage.selectBt.click();
             kpiFrame.kpiBtn.select();
             tools.switchToWindowByHand(hand);
         }
         tools.click(searchBtn);
+        return new GridPage();
     }
 }

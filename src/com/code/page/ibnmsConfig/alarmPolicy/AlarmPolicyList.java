@@ -2,9 +2,13 @@ package com.code.page.ibnmsConfig.alarmPolicy;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfListPage;
 import com.code.page.ibnmsConfig.alarmPolicy.page.AlarmPolicyBtnPage;
 import com.code.page.ibnmsConfig.alarmPolicy.page.GeneratFormPage;
 import com.code.page.ibnmsConfig.alarmPolicy.page.SearchAlarmPolicyPage;
+import com.code.page.ibnmsConfig.alarmTemplate.AlarmTemplateListPage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.Map;
 
@@ -19,6 +23,34 @@ public class AlarmPolicyList extends Page {
     {
         searchPolicy.search(map);
         return new GridPage();
+    }
+
+    /**
+     * 绑定数
+     * @param map
+     */
+    public int bind(Map<String,String> map)
+    {
+        GridPage gridTable=searchPolicy.search(map);
+        int td=gridTable.HeadIndex(tools.getMapValue(map,"可点击列名"));
+        WebElement tdElement=gridTable.getTdEleOfTr(td, 0);
+        tools.click(tools.findBy(tdElement, By.tagName("a")));
+        String hand="";
+        if (tools.getMapValue(map,"可点击列表").contains("模板"))
+        {
+           AlarmTemplateListPage alarmTemplateList=new AlarmTemplateListPage();
+           hand=tools.switchToWindowByTitle(alarmTemplateList.title);
+
+        }
+        else
+        {
+            AlarmConfListPage alarmConfList=new AlarmConfListPage();
+            hand=tools.switchToWindowByTitle(alarmConfList.title);
+        }
+        int row=new GridPage().getRowNum();
+        tools.closeWindow();
+        tools.switchToWindowByHand(hand);
+        return row;
     }
     public void addGenerat(Map<String,String> map)
     {
