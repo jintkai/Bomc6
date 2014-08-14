@@ -32,21 +32,21 @@ public class ResFrameTest extends TestCase {
     {
         this.eventDriver.get(Data.baseUrl+actionUrl);
     }
-    @Test(dataProvider = "resCase")
+    @Test(dataProvider = "resCase",priority = 0)
     public void searchRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gritTable=resFrame.search(map);
         tools.assertEquals(gritTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "resCase")
+    @Test(dataProvider = "resCase",priority = 1)
     public void searchResByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gritTable=resFrame.searchByTree(map);
         tools.assertEquals(gritTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "resCase")
+    @Test(dataProvider = "resCase",priority = 2)
     public void operateRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);

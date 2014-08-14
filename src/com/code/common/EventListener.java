@@ -89,7 +89,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,60);
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
         if(webElement!=null)
         {
             System.out.println(webElement.getTagName());
@@ -116,8 +116,25 @@ public class EventListener implements WebDriverEventListener {
     }
 
     @Override
-    public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver) {
-
+    public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        if(webElement!=null)
+        {
+            System.out.println("beforeChangeValueOf:"+webElement.getTagName()+Math.random());
+            try {
+                Boolean element = wait.until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(WebDriver webDriver) {
+                        return webElement.isDisplayed();
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("BeforeChangeValueOf失败");
+            }
+        }
     }
 
     @Override

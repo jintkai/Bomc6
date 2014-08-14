@@ -35,7 +35,7 @@ public class MQListTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider="mqList", priority = 1)
+    @Test(dataProvider="mqList", priority = 0)
     public void operateMQ(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
@@ -45,7 +45,7 @@ public class MQListTest extends TestCase {
         tools.assertEquals(list.size(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 
-    @Test(dataProvider="mqList",priority = 2)
+    @Test(dataProvider="mqList",priority = 1)
     public void deployMQ(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);

@@ -290,7 +290,13 @@ public class Tools {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.switchTo().window(hand);
+        try {
+            driver.switchTo().window(hand);
+        }catch(NoSuchWindowException e)
+        {
+            Reporter.log("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
+            takesScreenshot("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
+        }
     }
     /**
      * 切换到默认的窗口
@@ -600,5 +606,10 @@ public class Tools {
     public void closeWindow()
     {
         driver.close();
+    }
+    public void closeModelDialog()
+    {
+        String js="window.open(\"\", \"_self\");window.close();";
+        execJS(js);
     }
 }

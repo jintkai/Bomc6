@@ -34,12 +34,12 @@ public class AlarmPolicyTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    //@Test(dataProvider = "alarmpolicy",priority = 0,description = "告警策略维护查询")
+    @Test(dataProvider = "alarmpolicy",priority = 0,description = "告警策略维护查询")
     public void searchAlarmPolicy(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=alarmPlicy.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),"更新列表数据与预期值不一致");
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "alarmpolicy",priority = 1,description = "告警策略绑定数量")
     public void bind(String[] str)
@@ -48,24 +48,21 @@ public class AlarmPolicyTest extends TestCase {
         int row=alarmPlicy.bind(map);
         tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    //@Test(dataProvider = "alarmpolicy",description = "新增告警策略")
-    public void add(String str[])
+
+    @Test(dataProvider = "alarmpolicy",description = "新增告警预警生成策略")
+    public void operateGenAlarmPolicy(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map, "操作类型");
-        if (option.contains("增加")) {
-            alarmPlicy.addGenerat(map);
-        }
-        if (option.contains("删除"))
-        {
-            alarmPlicy.delete(map);
-        }
-        if (option.contains("修改"))
-        {
-            alarmPlicy.edit(map);
-        }
-        alarmPlicy.search(map);
-        int row = new GridPage().getRowNum();
-        tools.assertEquals(row,tools.getMapValue(map,"期望值"), "增加告警策略失败，查询结果错误！");
+        alarmPlicy.addPolicy(map);
+        int row=alarmPlicy.search(map).getRowNum();
+        tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+    }
+    @Test(dataProvider = "alarmpolicy",description = "新增告警升级策略")
+    public void operateUpdatePolicy(String str[])
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        alarmPlicy.addPolicy(map);
+        int row=alarmPlicy.search(map).getRowNum();
+        tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 }

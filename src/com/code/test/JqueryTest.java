@@ -3,8 +3,11 @@ package com.code.test;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.os.WindowsUtils;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -17,67 +20,41 @@ import static org.testng.Assert.assertEquals;
  * Created by Jin on 2014/8/4.
  */
 public class JqueryTest {
-        WebDriver driver=new FirefoxDriver();
-        JavascriptExecutor jse=(JavascriptExecutor)driver;
+        //WebDriver driver=new FirefoxDriver();
+        //JavascriptExecutor jse=(JavascriptExecutor)driver;
+
         //@Test
-        public void jQueryTest()
-        {
-            driver.get("http://www.jquery.com/");
-            List<WebElement> elements=(List<WebElement>)jse.executeScript("return jQuery.find"+
-                    "('.menu-item a:even')");
-            assertEquals(3,elements.size());
-            assertEquals("Download",elements.get(0).getText());
-            assertEquals("Blog",elements.get(1).getText());
-            assertEquals("Browser Support",elements.get(2).getText());
-            driver.close();
-        }
 
-        public boolean jQueryLoaded(){
-            boolean loaded;
-            try {
-                loaded = (Boolean) jse.executeScript("return jQuery()!=null");
-            }catch(WebDriverException e)
-            {
-                loaded=false;
-            }
-            return loaded;
-        }
-        public void injectjQuery()
-        {
-            jse.executeScript(
-                    "var headID=document.getElementsByTagName('head')[0];"
-            +"var newScript=document.createElement('script');"
-            +"newScript.type='text/javascript';"
-            +"newScript.src='http://code.jquery.com/jquery-1.11.1.min.js';"
-            +"headID.appendChild(newScript);");
-        }
-        public void injectjQueryIfNeeded()
-        {
-            if(!jQueryLoaded())
-                injectjQuery();
-        }
-//        @Test
-        public void test()
-        {
-            driver.get("http://www.dsrj.com.cn/");
-            injectjQueryIfNeeded();
-            List<WebElement> element=(List<WebElement>)jse.executeScript("return jQuery.find(\".nav3\")");
-            System.out.println(element.get(0).getTagName());
-            element.get(0).findElement(By.xpath(".//a")).click();
-            driver.close();
-        }
-     @Test
-        public void testTakesScreenshot()
-        {
-            WindowsUtils.tryToKillByName("firefox.exe");
-            driver.get("http://172.21.0.31:8084");
-            File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-            try {
-                FileUtils.copyFile(srcFile,new File("C:\\screenshot2.png"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            //driver.close();
+    @Test
+    public void download()
+    {
+        //driver.get("http://eip.teamshub.com/t/1283566?ticket=ST-447328-e3ydFHZCAZJhMZMQyNGn-cas01.example.org");
 
-        }
+        FirefoxProfile fxProfile = new FirefoxProfile();
+        fxProfile.setPreference("browser.download.folderList",2);
+        fxProfile.setPreference("browser.download.manager.showWhenStarting",false);
+        fxProfile.setPreference("browser.download.dir","C:\\");
+        fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/xls");
+        fxProfile.setPreference("browser.helperApps.neverAsk.saveToDisk","text/xls");
+        fxProfile.setEnableNativeEvents(true);
+        WebDriver driverf = new FirefoxDriver(fxProfile);
+        driverf.get("http://172.21.214.75/redmine/issues/1735");
+
+
+
+        driverf.findElement(By.name("username")).sendKeys("jinkai");
+        driverf.findElement(By.name("password")).sendKeys("12345678");
+
+        driverf.findElement(By.name("login")).click();
+        WebElement link=driverf.findElement(By.partialLinkText("重庆联通综合代维管理系统需求跟踪矩阵.xls"));
+        String href=link.getAttribute("href");
+        driverf.navigate().to(href);
+        //driver.get(href);
+
+
+
+
+
+
+    }
 }

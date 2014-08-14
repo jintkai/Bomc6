@@ -34,7 +34,7 @@ public class EnvListTest  extends TestCase{
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider="envList")
+    @Test(dataProvider="envList",priority = 0)
     public void search(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
@@ -42,7 +42,7 @@ public class EnvListTest  extends TestCase{
         GridPage gridTable=new GridPage();
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="envList")
+    @Test(dataProvider="envList",priority = 1)
     public void operateEnv(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
