@@ -82,6 +82,11 @@ public class BtnPage extends Page {
     {
         tools.click(deploy);
         tools.click(startDeploy);
+        try {
+            Thread.sleep(8000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 
