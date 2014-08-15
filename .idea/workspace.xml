@@ -1,175 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="">
-<<<<<<< HEAD
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AgListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/AgentListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmConFrameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfTreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmExpressionPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmGenerationFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmPolicyTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSubscripsPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmTemplateTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmUpgradeFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppSearchPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/AppServerListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AppServerListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/BtnInstrPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/BtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/CfgInstrFrame.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/C3P/CfgInstrFrameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/ClearAlarmFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/collModelList/page/CollModelForm.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/collModelList/CollModelListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/DBcon.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Data.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/DriverManager.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/EnvBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/EnvFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvFramePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/EnvListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener$2.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener$3.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener$4.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/EventListener.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/ExcelDriver.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/FilterAlarmFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/FormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratAlarmFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/GridPage$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/GridPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/GroupTreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/HomePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/JqueryTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KbpFrameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KpiFrameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Login.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/login/LoginPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/LoginPageTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/MQListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/MQListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/MonitorPointPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/PFListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/PFListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/page/PaBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/page/PaFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Page.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/page/PfBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/page/PfFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/PmAlarmListTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/PmalarmListPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/PreGeneratAlarmFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/ResFrameTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/ResListFramePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResTreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SQLFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SearchInstrPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/SearchResPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SheelFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/TT.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/TestCase.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/Tools.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/common/TreePage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/UpAlarmFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/page/WKBtnPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/page/WKFormPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/WKlistPage.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/WKlistTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/bullet_point.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/collapseall.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/failed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/passed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/skipped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/com/code/page/C3P/instrLoge/test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.AgListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.AppServerListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.EnvListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KbpFrameTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KpiFrameTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.LoginPageTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.MQListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.PFListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.PmAlarmListTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.ResFrameTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.WKlistTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/classes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite/frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/frame.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite/frame.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/groups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/methods-alphabetical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/methods-not-run.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/methods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/reporter-output.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/suite/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-results.xsl" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/testng.xml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/runTestConfig/testng.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/suite/toc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/trans.xml" />
-      <change type="MOVED" beforePath="C:\Test\Bomc6\Case\Agent.xls" afterPath="$PROJECT_DIR$/Case/AGENT.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Tools.java" afterPath="$PROJECT_DIR$/src/com/code/common/Tools.java" />
->>>>>>> bomc6.1
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="" />
     <ignored path="Bomc6.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -192,18 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-<<<<<<< HEAD
-      <file leaf-file-name="Tools.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8429752" vertical-offset="0" max-vertical-offset="238">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-=======
       <file leaf-file-name="testng.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
+            <state vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1216">
               <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppBtnPage.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.5163044" vertical-offset="38" max-vertical-offset="779">
+              <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -212,7 +47,7 @@
       <file leaf-file-name="BtnPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1445" max-vertical-offset="1870">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2090">
               <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
               <folding />
             </state>
@@ -222,19 +57,18 @@
       <file leaf-file-name="KpiFormPage.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1377">
+            <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1539">
               <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tools.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tools.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79376084" vertical-offset="9334" max-vertical-offset="9945">
-              <caret line="615" column="0" selection-start-line="615" selection-start-column="0" selection-end-line="615" selection-end-column="0" />
->>>>>>> bomc6.1
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11077">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -272,7 +106,6 @@
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/PmAlarmListTest.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/pmalarmList/PmalarmListPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/appServerList.java" />
-        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/appBtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/appServerListPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/AppSearchPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/BmcFormPage.java" />
@@ -314,13 +147,12 @@
         <option value="$PROJECT_DIR$/src/com/code/common/BtnPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/Tools.java" />
+        <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/appBtnPage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1374" />
+    <option name="width" value="1366" />
     <option name="height" value="732" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -702,7 +534,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -749,7 +580,7 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
+              <option name="myItemId" value="runTestConfig" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -770,39 +601,6 @@
               <option name="myItemId" value="code" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-<<<<<<< HEAD
-=======
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ibnmsConfig" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Bomc6" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
->>>>>>> bomc6.1
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -826,8 +624,6 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
-=======
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Bomc6" />
@@ -838,23 +634,10 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="code" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tools" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ClassTreeNode" />
             </PATH_ELEMENT>
           </PATH>
->>>>>>> bomc6.1
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -885,6 +668,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -895,7 +679,7 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/testng-6.8.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -928,22 +712,44 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-<<<<<<< HEAD
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\testback\Bomc6\src\runTestConfig" />
       <recent name="C:\Test\Bomc6\Case" />
     </key>
   </component>
-=======
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Test\Bomc6\Case" />
-    </key>
-  </component>
->>>>>>> bomc6.1
   <component name="RunManager" selected="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml">
+    <configuration default="false" name="$PROJECT_DIR$/src/runTestConfig/testng1.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="Bomc6" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/runTestConfig/testng1.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="HomePage" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1014,42 +820,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="$PROJECT_DIR$/src/runTestConfig/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Bomc6" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="58565" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="JqueryTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1091,7 +861,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="$PROJECT_DIR$/src/runTestConfig/testng.xml (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="$PROJECT_DIR$/src/runTestConfig/testng.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Bomc6" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -1117,13 +887,7 @@
       <envs />
       <properties />
       <listeners />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="30370" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -1341,19 +1105,18 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="TestNG.HomePage" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
+      <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng1.xml" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG.HomePage" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.JqueryTest" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml (1)" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
     </list>
     <recent_temporary>
-      <list size="5">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml" />
         <item index="1" class="java.lang.String" itemvalue="TestNG.JqueryTest" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.C:/Test/Bomc6/src/runTestConfig/testng.xml (1)" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.HomePage" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.KbpFrameTest" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.HomePage" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1443,11 +1206,10 @@
       <workItem from="1407994253585" duration="3234000" />
       <workItem from="1408005442323" duration="646000" />
       <workItem from="1408006415732" duration="911000" />
-<<<<<<< HEAD
-      <workItem from="1408077103601" duration="2633000" />
-=======
       <workItem from="1408077103601" duration="53000" />
->>>>>>> bomc6.1
+      <workItem from="1408077867072" duration="622000" />
+      <workItem from="1408082833744" duration="821000" />
+      <workItem from="1408083796791" duration="453000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -1585,30 +1347,14 @@
       <created>1407996187369</created>
       <updated>1407996187369</updated>
     </task>
-<<<<<<< HEAD
-    <task id="LOCAL-00035" summary="分支合并，整理分支">
-      <created>1408077209611</created>
-      <updated>1408077209611</updated>
-    </task>
-    <task id="LOCAL-00036" summary="整理master">
-      <created>1408079379409</created>
-      <updated>1408079379409</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
-    <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383706000" />
-=======
     <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381126000" />
->>>>>>> bomc6.1
+    <option name="totallyTimeSpent" value="383022000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
+    <frame x="0" y="0" width="1366" height="732" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1616,42 +1362,27 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JavaEE:App" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7605863" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2980456" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
->>>>>>> bomc6.1
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.65522873" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.52443" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5162867" sideWeight="0.11329305" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.267101" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> bomc6.1
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4869281" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.423716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-=======
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.423716" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> bomc6.1
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41205212" sideWeight="0.88670695" order="2" side_tool="false" content_ui="tabs" x="43" y="211" width="1324" height="310" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4262918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4101307" sideWeight="0.88670695" order="2" side_tool="false" content_ui="tabs" x="43" y="211" width="1324" height="310" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49348533" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-=======
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.267101" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
->>>>>>> bomc6.1
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.49346405" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1681,13 +1412,7 @@
     <MESSAGE value="appserver部署" />
     <MESSAGE value="告警策略" />
     <MESSAGE value="基本配置" />
-<<<<<<< HEAD
-    <MESSAGE value="分支合并，整理分支" />
-    <MESSAGE value="整理master" />
-    <option name="LAST_COMMIT_MESSAGE" value="整理master" />
-=======
     <option name="LAST_COMMIT_MESSAGE" value="基本配置" />
->>>>>>> bomc6.1
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1714,19 +1439,14 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/TestCase.java">
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44217688" vertical-offset="63" max-vertical-offset="1666">
-          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="11685" max-vertical-offset="11932">
+          <caret line="615" column="0" selection-start-line="615" selection-start-column="0" selection-end-line="615" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="1054">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-=======
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33246753" vertical-offset="144" max-vertical-offset="1190">
@@ -1811,13 +1531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="6638" max-vertical-offset="9690">
-          <caret line="407" column="6" selection-start-line="407" selection-start-column="6" selection-end-line="407" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.026455026" vertical-offset="321" max-vertical-offset="952">
@@ -1878,23 +1591,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0867347" vertical-offset="255" max-vertical-offset="1037">
           <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
->>>>>>> bomc6.1
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/alarmPolicy/page/PreGeneratAlarmFormPage.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="0.0" vertical-offset="35" max-vertical-offset="306">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="6638" max-vertical-offset="9690">
-          <caret line="407" column="6" selection-start-line="407" selection-start-column="6" selection-end-line="407" selection-end-column="6" />
-=======
         <state vertical-scroll-proportion="0.14455782" vertical-offset="0" max-vertical-offset="588">
           <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
         </state>
@@ -1911,13 +1612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2601" max-vertical-offset="8364">
           <caret line="184" column="15" selection-start-line="184" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313433" vertical-offset="3272" max-vertical-offset="7701">
-          <caret line="204" column="6" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -2023,23 +1717,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="215" max-vertical-offset="850">
           <caret line="50" column="41" selection-start-line="50" selection-start-column="33" selection-end-line="50" selection-end-column="41" />
->>>>>>> bomc6.1
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="-0.292517" vertical-offset="1600" max-vertical-offset="2550">
-          <caret line="94" column="0" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk1.6.0_39/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3313433" vertical-offset="3272" max-vertical-offset="7701">
-          <caret line="204" column="6" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
-=======
         <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="918">
           <caret line="53" column="47" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
         </state>
@@ -2080,21 +1762,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding />
->>>>>>> bomc6.1
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="0.8429752" vertical-offset="0" max-vertical-offset="238">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-=======
         <state vertical-scroll-proportion="0.0" vertical-offset="1079" max-vertical-offset="1768">
           <caret line="85" column="29" selection-start-line="85" selection-start-column="29" selection-end-line="85" selection-end-column="29" />
           <folding />
@@ -2111,9 +1780,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/Tools.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79376084" vertical-offset="9334" max-vertical-offset="9945">
-          <caret line="615" column="0" selection-start-line="615" selection-start-column="0" selection-end-line="615" selection-end-column="0" />
->>>>>>> bomc6.1
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11077">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="1088">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5163044" vertical-offset="38" max-vertical-offset="779">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
