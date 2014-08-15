@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_io_1_4.xml" />
-      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\log4j_1_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\selenium_java_2_40_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\selenium_server_standalone_2_40_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\Test\Bomc6\.idea\libraries\testng_6_8.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9f4f869f-cad5-4181-a173-f9c39e8ab4cc" name="Default" comment="" />
     <ignored path="Bomc6.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -1177,7 +1170,7 @@
       <workItem from="1407994253585" duration="3234000" />
       <workItem from="1408005442323" duration="646000" />
       <workItem from="1408006415732" duration="911000" />
-      <workItem from="1408077103601" duration="2239000" />
+      <workItem from="1408077103601" duration="2325000" />
     </task>
     <task id="LOCAL-00001" summary="dfaasdfafdsf">
       <created>1404111186164</created>
@@ -1319,11 +1312,15 @@
       <created>1408077209611</created>
       <updated>1408077209611</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="整理master">
+      <created>1408079379409</created>
+      <updated>1408079379409</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383312000" />
+    <option name="totallyTimeSpent" value="383398000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1374" height="732" extended-state="0" />
@@ -1385,7 +1382,8 @@
     <MESSAGE value="告警策略" />
     <MESSAGE value="基本配置" />
     <MESSAGE value="分支合并，整理分支" />
-    <option name="LAST_COMMIT_MESSAGE" value="分支合并，整理分支" />
+    <MESSAGE value="整理master" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理master" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
