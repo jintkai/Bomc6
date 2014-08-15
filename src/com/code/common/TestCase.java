@@ -9,16 +9,32 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by jinkai on 2014/6/21.
  */
 public class TestCase {
+    public Tools tools=new Tools();
+    public String[] excelHead;
+    public Map<String,String> map;
     public static WebDriver 	createDriver(String BrowerType)
     {
+        Properties props=System.getProperties();
+        String pcVersion=props.getProperty("os.arch");
+        System.out.println("æ“ä½œç³»ç»Ÿç‰ˆæœ¬ï¼š"+pcVersion);
         if(BrowerType=="IE")
         {
-            System.setProperty("webdriver.ie.driver",
-                    "D:\\eclipse\\selenium\\IEDriverServer.exe");//×¢ÒâÕâÀïIEDriverServer.exeµÄÎÄ¼ş´æ·ÅÂ·¾¶
+            if(pcVersion.contains("64"))
+            { System.setProperty("webdriver.ie.driver",
+                    Data.baseDir+ "\\Driver\\IEDriverServer64.exe");}
+            else
+                System.setProperty("webdriver.ie.driver",
+                        Data.baseDir+ "\\Driver\\IEDriverServer32.exe");
+
+
             DesiredCapabilities ieCapabilities = DesiredCapabilities
                     .internetExplorer();
             ieCapabilities
@@ -34,37 +50,53 @@ public class TestCase {
         }
         else
         {
-            System.setProperty("webdriver.chrome.driver", "c:\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver",  Data.baseDir+ "\\Driver\\chromedriver.exe");
             driver=new ChromeDriver();
         }
         return driver;
     }
 
-    public static WebDriver driver=createDriver("IE");
+    public static WebDriver driver=createDriver(Data.browserType);
     //public static WebDriver driver;
     public static EventFiringWebDriver eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
 
-    @BeforeMethod
-    public void beforeMethod()
-    {
 
-    }
     @Parameters({"Base_URL"})
-    @BeforeClass
+    //@BeforeClass
     public void beforeClass(String base_url)
     {
         //driver=createDriver("IE");
         //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
-        //eventDriver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        new LoginPage().login();
+        eventDriver.manage().window().maximize();
+        //è®¾ç½®éšå¼ç­‰å¾…æ—¶é—´
+       // eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    @AfterClass(alwaysRun=true)
+
+    //@AfterClass(alwaysRun=true)
     public  void afterClass()
     {
-        //eventDriver.close();
-       // eventDriver.quit();
+        eventDriver.close();
+        eventDriver.quit();
 
     }
-
+    //@Parameters({"Base_URL"})
+    @BeforeSuite
+    public void beforeSuite()
+    {
+        eventDriver.get(Data.baseUrl);
+        eventDriver.manage().window().maximize();
+        eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+    }
+    @AfterSuite
+    public void afterSuite()
+    {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        eventDriver.close();
+        eventDriver.quit();
+    }
 }

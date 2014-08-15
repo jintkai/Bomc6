@@ -1,5 +1,7 @@
 package com.code.common;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
@@ -8,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
  */
 public class Page {
     public Actions actions=new Actions(TestCase.eventDriver);
+    public Tools tools=new Tools();
     public Page()
     {
         PageFactory.initElements(TestCase.eventDriver,this);

@@ -15,6 +15,7 @@ public class DriverManager {
     public static WebDriver driver;
     public static EventFiringWebDriver eventDriver;
     public static EventListener logListener=new EventListener();
+
     public static void setDriver(int BrowerType)
     {
         driver=new FirefoxDriver();

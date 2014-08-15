@@ -1,14 +1,9 @@
 package com.code.common;
 
-import org.apache.bcel.ExceptionConstants;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -17,9 +12,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EventListener implements WebDriverEventListener {
 
     Logger mylog=Logger.getLogger(this.getClass());
+    public Tools tools=new Tools();
     @Override
     public void beforeNavigateTo(String s, WebDriver webDriver) {
+
         mylog.info("beforeNavigateTo:"+s);
+
     }
 
     @Override
@@ -48,52 +46,95 @@ public class EventListener implements WebDriverEventListener {
     }
 
     @Override
-    public void beforeFindBy(By by, WebElement webElement, WebDriver webDriver) {
-
-        /*mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
-        */
-        ExpectedCondition<Boolean> expection=new ExpectedCondition<Boolean>() {
-            @Override
-            public Boolean apply(WebDriver webDriver) {
-                return ((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete");
-            }
-        };
-
-        //document.getElementById("kbpListFrame").contentWindow.document.readyState
-        while(!((JavascriptExecutor)webDriver).executeScript("return document.readyState").equals("complete"))
+    public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        if(webElement!=null)
         {
             try {
-                Thread.sleep(1000);
-                mylog.error(((JavascriptExecutor)webDriver).executeScript("return document.readyState"));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+                    @Override
+                    public WebElement apply(WebDriver webDriver) {
+                        return webElement.findElement(by);
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("定位元素超时");
             }
         }
-
-        Wait<WebDriver> wait=new WebDriverWait(webDriver,30);
-        wait.until(
-                expection
-        );
-
+        else
+        {
+            try {
+                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+                    @Override
+                    public WebElement apply(WebDriver webDriver) {
+                        return webDriver.findElement(by);
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("定位元素超时");
+            }
+        }
     }
 
     @Override
     public void afterFindBy(By by, WebElement webElement, WebDriver webDriver) {
+
     }
 
     @Override
-    public void beforeClickOn(WebElement webElement, WebDriver webDriver) {
+    public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        if(webElement!=null)
+        {
+            System.out.println(webElement.getTagName());
+            try {
+                Boolean element = wait.until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(WebDriver webDriver) {
+                        return webElement.isDisplayed();
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("点击元素失败");
+            }
+        }
 
     }
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        mylog.info("AfterClickOn"+webElement.getTagName());
+       // mylog.info("AfterClickOn"+webElement.getTagName());
     }
 
     @Override
-    public void beforeChangeValueOf(WebElement webElement, WebDriver webDriver) {
-
+    public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
+        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        if(webElement!=null)
+        {
+            System.out.println("beforeChangeValueOf:"+webElement.getTagName()+Math.random());
+            try {
+                Boolean element = wait.until(new ExpectedCondition<Boolean>() {
+                    @Override
+                    public Boolean apply(WebDriver webDriver) {
+                        return webElement.isDisplayed();
+                    }
+                });
+            }
+            catch(TimeoutException e)
+            {
+                //e.printStackTrace();
+                System.out.println("BeforeChangeValueOf失败");
+            }
+        }
     }
 
     @Override
@@ -114,6 +155,6 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
 
-        mylog.error("ERROR--------------------");
+
     }
 }

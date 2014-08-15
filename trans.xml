@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--默认启用Run_test任务 -->
+<project name="Test" basedir="." default="transform">
+    <!--项目包位置-->
+    <property name="SRC" value="src" />
+    <!--编译包位置-->
+    <property name="class.dir" value="${basedir}/classes" />
+    <!--依赖Jar位置-->
+    <property name="lib.dir" value="${basedir}/lib" />
+    <!--测试结果输出位置-->
+    <property name="output.dir" value="${basedir}/test-output" />
+    <!--相关配置文件-->
+    <property name="config" value="${SRC}/runTestConfig" />
+    <!--编译后配置文件-->
+    <property name="configclass" value="${class.dir}/runTestConfig" />
+    <!--备份报告文件-->
+    <property name="backup" value="${basedir}/backup"/>
+
+
+
+
+    <path id="compile.path">
+        <!-- 设置加载jar 环境 -->
+        <fileset dir="${lib.dir}/">
+            <include name="*.jar" />
+        </fileset>
+        <pathelement location="${SRC}" />
+        <pathelement location="${class.dir}" />
+    </path>
+
+    <!-- 初始化  -->
+    <target name="init">
+        <echo message="**************init**************" />
+        <delete dir="${class.dir}" />
+        <mkdir dir="${class.dir}" />
+        <mkdir dir="${class.dir}/runTestConfig" />
+    </target>
+    <!-- 编译  -->
+    <target name="compile" depends="init">
+        <echo message="**************compile**************" />
+        <javac srcdir="${SRC}" destdir="${class.dir}"  encoding="UTF-8"
+               classpathref="compile.path" includeantruntime="on" >
+        </javac>
+    </target>
+    <!--配置文件复制到classes下-->
+    <target name="copyFile" depends="compile">
+        <copy todir="${configclass}">
+            <fileset dir="${config}" includes="*.xml" />
+        </copy>
+    </target>
+    <taskdef resource="testngtasks" classpath="${lib.dir}/testng-6.8.jar"/>
+    <target name="initOutput" depends="copyFile">
+        <delete dir="${basedir}/test-output/" />
+        <copy file="${config}/testng-results.xsl" tofile="${basedir}/test-output/testng-results.xsl"></copy>
+    </target>
+    <!-- 开始测试 -->
+    <target name="run_tests" depends="initOutput">
+        <echo message="**************run-test**************" />
+        <!--<sshexec host="." command="/opt/firefox/firefox-bin" trust="true" />-->
+        <testng classpathref="compile.path" failureproperty="test.failed" >
+            <!--xml test suite file -->
+            <xmlfileset dir="${configclass}">
+                <include name="testng.xml" />
+            </xmlfileset>
+        </testng>
+    </target>
+    <target name="tt">
+        <delete file="${basedir}/test-output/results.xml"></delete>
+        <copy file="${basedir}/test-output/testng-results.xml"
+              tofile="${basedir}/test-output/results.xml" outputencoding="UTF-8"></copy>
+    </target>
+
+    <target name="transform" description="report"  depends="tt">
+        <echo message="**************transform**************" />
+        <copy file="${config}/testng-results.xsl" tofile="${basedir}/test-output/testng-results.xsl"></copy>
+        <xslt in="${basedir}/test-output/results.xml" style="${basedir}/test-output/testng-results.xsl"
+              out="${basedir}/test-output/Report.html" classpathref="compile.path">
+            <param name="testNgXslt.outputDir" expression="${basedir}/test-output/" />
+        </xslt>
+    </target>
+
+    <target name="backup" depends="transform">
+        <echo message="*************backup*********"/>
+        <zip destfile="${output.dir}/test-output${TODAY}.rar" basedir="${output.dir}"/>
+    </target>
+
+    <target name="move" depends="backup">
+        <echo message="*************move*********"/>
+        <move file="${output.dir}/test-output${TODAY}.rar" tofile="${backup}/test-output${TODAY}.rar"/>
+    </target>
+
+    <tstamp>
+        <format property="TODAY" pattern="yyyy-MM-dd" locale="cn"/>
+    </tstamp>
+
+
+</project>
