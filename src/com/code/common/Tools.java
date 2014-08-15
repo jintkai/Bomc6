@@ -612,4 +612,7 @@ public class Tools {
         String js="window.open(\"\", \"_self\");window.close();";
         execJS(js);
     }
+
+
+
 }
