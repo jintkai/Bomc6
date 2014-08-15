@@ -50,7 +50,7 @@ public class GridPage  extends Page implements Data{
     String gridTable_cbID="gridTable_cb";
     public void setWait()
     {
-        wait=new WebDriverWait(tools.getDriver(),10);
+        wait=new WebDriverWait(tools.getDriver(),10,500);
     }
     public void loadGridUnDisplay()
     {
@@ -59,17 +59,12 @@ public class GridPage  extends Page implements Data{
                 new ExpectedCondition<Boolean>() {
                     @Override
                     public Boolean apply(WebDriver webDriver) {
-                        System.out.println(tools.getAttribute(loadGrid,"style"));
-                        System.out.println(tools.getAttribute(loadGrid,"style").toLowerCase());
+                        //System.out.println("GridPage>>>loadGridUnDisplay>>>>>"+tools.getCurrentDateTime());
                         return tools.getAttribute(loadGrid,"style").toLowerCase().contains("display: none");
                     }
                 }
         );
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
     }
     /**
      * 返回当前页面中总行数；
@@ -92,7 +87,6 @@ public class GridPage  extends Page implements Data{
      */
     public String[] getHead()
     {
-        loadGridUnDisplay();
         List<WebElement> list=tools.findElements(headtable, By.xpath(this.headThXpath));
         WebElement[] eles = new WebElement[list.size()];
         list.toArray(eles);
@@ -116,7 +110,6 @@ public class GridPage  extends Page implements Data{
      */
     public int HeadIndex(String str)
     {
-        loadGridUnDisplay();
         tdIndex=0;
         String head[]=this.getHead();
         for (int i=0;i<head.length;i++)
@@ -155,15 +148,20 @@ public class GridPage  extends Page implements Data{
     public String[] getTdOfAllTr(String str)
     {
         loadGridUnDisplay();
+        System.out.println("开始执行headIndex函数"+tools.getCurrentDateTime());
         tdIndex=this.HeadIndex(str);
+        System.out.println("结束执行headIndex函数"+tools.getCurrentDateTime());
         String[] rowVales=new String[getRowNum()];
          for (int i=0;i<rowNum;i++) {
              String trXpath=this.dataTableTrXpath+"["+(i+1)+"]";
              String tdXpath=this.dataTableTdXpath+"["+tdIndex+"]";
              WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
              WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
+             System.out.println(trXpath+tdXpath);
+            // WebElement webTd=tools.findBy(grid,By.xpath(trXpath+tdXpath));
             rowVales[i]=webTd.getText().trim();
         }
+        System.out.println("结束执行headIndex的for循环函数"+tools.getCurrentDateTime());
         return rowVales;
     }
     /**

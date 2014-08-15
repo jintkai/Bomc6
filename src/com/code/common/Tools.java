@@ -355,7 +355,11 @@ public class Tools {
         dateFormat.format(new Date());
         return dateFormat.format(new Date());
     }
-
+    public static String getTime() {
+        SimpleDateFormat dateFormat=new SimpleDateFormat("yyyyMMddHHmmss");
+        dateFormat.format(new Date());
+        return dateFormat.format(new Date());
+    }
     /**
      *对当前屏幕进行截图
      */

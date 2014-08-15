@@ -12,6 +12,8 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
@@ -25,7 +27,7 @@ public class JqueryTest {
 
         //@Test
 
-    @Test
+    //@Test
     public void download()
     {
         //driver.get("http://eip.teamshub.com/t/1283566?ticket=ST-447328-e3ydFHZCAZJhMZMQyNGn-cas01.example.org");
@@ -39,9 +41,6 @@ public class JqueryTest {
         fxProfile.setEnableNativeEvents(true);
         WebDriver driverf = new FirefoxDriver(fxProfile);
         driverf.get("http://172.21.214.75/redmine/issues/1735");
-
-
-
         driverf.findElement(By.name("username")).sendKeys("jinkai");
         driverf.findElement(By.name("password")).sendKeys("12345678");
 
@@ -50,11 +49,6 @@ public class JqueryTest {
         String href=link.getAttribute("href");
         driverf.navigate().to(href);
         //driver.get(href);
-
-
-
-
-
-
     }
+
 }

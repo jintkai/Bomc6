@@ -1,9 +1,6 @@
 package com.code.test.ibnmsConfig;
 
-import com.code.common.Data;
-import com.code.common.ExcelDriver;
-import com.code.common.GridPage;
-import com.code.common.TestCase;
+import com.code.common.*;
 import com.code.page.ibnmsConfig.MQList.MQListPage;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
@@ -49,12 +46,13 @@ public class MQListTest extends TestCase {
     public void deployMQ(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-
+        System.out.println("Begin deploy");
         mqList.deploy(map);
+        System.out.println("<<<<<<<<<<<<<<<Begin Assert>>>>>>>>>>>>>>>>"+ Tools.getTime());
         GridPage gridTable=new GridPage();
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
-
+        System.out.println("<<<<<<<<<<<<<<<End Assert>>>>>>>>>>>>>>>>>>>"+ Tools.getTime());
         tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
 
     }

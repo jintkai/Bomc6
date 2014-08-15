@@ -47,13 +47,14 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        WebDriverWait wait=new WebDriverWait(webDriver,10,500);
         if(webElement!=null)
         {
             try {
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
                     public WebElement apply(WebDriver webDriver) {
+                        //System.out.println("beforeFindBy:>>>>>>"+webElement.getTagName()+">>>>>>"+Tools.getTime());
                         return webElement.findElement(by);
                     }
                 });
@@ -70,6 +71,8 @@ public class EventListener implements WebDriverEventListener {
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
                     public WebElement apply(WebDriver webDriver) {
+
+                        //System.out.println("beforeFindBy:>>>>>>"+">>>>>>"+tools.getCurrentDateTime());
                         return webDriver.findElement(by);
                     }
                 });
@@ -80,6 +83,7 @@ public class EventListener implements WebDriverEventListener {
                 System.out.println("定位元素超时");
             }
         }
+
     }
 
     @Override
@@ -89,7 +93,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        WebDriverWait wait=new WebDriverWait(webDriver,10,500);
         if(webElement!=null)
         {
             System.out.println(webElement.getTagName());
@@ -117,10 +121,10 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,10);
+        WebDriverWait wait=new WebDriverWait(webDriver,500);
         if(webElement!=null)
         {
-            System.out.println("beforeChangeValueOf:"+webElement.getTagName()+Math.random());
+
             try {
                 Boolean element = wait.until(new ExpectedCondition<Boolean>() {
                     @Override
@@ -131,7 +135,6 @@ public class EventListener implements WebDriverEventListener {
             }
             catch(TimeoutException e)
             {
-                //e.printStackTrace();
                 System.out.println("BeforeChangeValueOf失败");
             }
         }
