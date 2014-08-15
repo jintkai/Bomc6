@@ -26,9 +26,6 @@ import java.util.List;
  * 该类主要对selenium等方法进行了封装，并且封装了一些常用的方法；
  */
 public class Tools {
-<<<<<<< HEAD
-    int a;
-=======
 
     WebDriver driver= TestCase.eventDriver;
     public WebDriver getDriver()
@@ -616,7 +613,4 @@ public class Tools {
         execJS(js);
     }
 
-
-
->>>>>>> bomc6.1
 }
