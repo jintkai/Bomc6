@@ -47,7 +47,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,10,500);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
             try {
@@ -93,7 +93,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,10,500);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
             System.out.println(webElement.getTagName());
@@ -121,7 +121,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,500);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
 

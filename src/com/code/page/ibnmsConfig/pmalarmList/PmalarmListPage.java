@@ -13,6 +13,7 @@ import java.util.Map;
 public class PmalarmListPage extends Page {
     PaBtnPage paBtn=new PaBtnPage();
     PaFormPage paForm=new PaFormPage();
+    GridPage gridTable=new GridPage();
     public GridPage operatePA(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
@@ -23,17 +24,15 @@ public class PmalarmListPage extends Page {
         }
         if(operation.equals("修改"))
         {
-            GridPage gridTable=new GridPage();
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             paBtn.edit();
             return  paForm.operatePA(map);
         }
         else
         {
-            GridPage gridTable=new GridPage();
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             paBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
     }
 
@@ -44,7 +43,6 @@ public class PmalarmListPage extends Page {
      */
     public GridPage deployPA(Map<String,String> map)
     {
-        GridPage gridTable=new GridPage();
         gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (tools.getMapValue(map,"操作类型").equals("部署"))
             paBtn.deploy();
@@ -56,6 +54,6 @@ public class PmalarmListPage extends Page {
             paBtn.startup();
         if (tools.getMapValue(map,"操作类型").equals("停止"))
             paBtn.shutdown();
-        return new GridPage();
+        return gridTable;
     }
 }

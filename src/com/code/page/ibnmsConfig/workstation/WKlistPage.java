@@ -13,11 +13,11 @@ import java.util.Map;
 public class WKlistPage extends Page {
     WKFormPage wkForm=new WKFormPage();
     WKBtnPage wkBtn=new WKBtnPage();
+    GridPage gridTable=new GridPage();
 
-    public void deployWK(Map<String,String> map)
+    public GridPage deployWK(Map<String,String> map)
     {
         String option=tools.getMapValue(map,"操作类型");
-        GridPage gridTable=new GridPage();
         gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (option.equals("部署"))
             wkBtn.deploy();
@@ -27,6 +27,7 @@ public class WKlistPage extends Page {
             wkBtn.startup();
         if (option.equals("停止"))
             wkBtn.shutdown();
+        return gridTable;
     }
     public GridPage operateWK(Map<String,String> map)
     {
@@ -48,7 +49,7 @@ public class WKlistPage extends Page {
             GridPage gridTable=new GridPage();
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             wkBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
 
     }

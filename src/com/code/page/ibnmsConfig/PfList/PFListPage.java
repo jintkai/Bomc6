@@ -13,10 +13,10 @@ import java.util.Map;
 public class PFListPage extends Page {
     public PfBtnPage pfBtn=new PfBtnPage();
     public PfFormPage pfForm=new PfFormPage();
+    GridPage gridTable=new GridPage();
 
     public GridPage deployPF(Map<String,String> map)
     {
-        GridPage gridTable=new GridPage();
         gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (tools.getMapValue(map,"操作类型").equals("部署"))
             pfBtn.deploy();
@@ -28,12 +28,11 @@ public class PFListPage extends Page {
             pfBtn.startup();
         if (tools.getMapValue(map,"操作类型").equals("停止"))
             pfBtn.shutdown();
-        return new GridPage();
+        return gridTable;
     }
 
     public GridPage operatePF(Map<String,String> map)
     {
-        GridPage gridTable=new GridPage();
         String operation=tools.getMapValue(map, "操作类型");
 
         if (operation.equals("增加"))
@@ -51,7 +50,7 @@ public class PFListPage extends Page {
         {
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             pfBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
     }
 }

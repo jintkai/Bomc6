@@ -39,7 +39,6 @@ public class KpiFrameTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,obj);
         GridPage gridTable=kpiFrame.search(map);
-        System.out.println(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
                 map);
     }

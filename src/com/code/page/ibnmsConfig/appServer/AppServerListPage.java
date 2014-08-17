@@ -15,6 +15,7 @@ public class AppServerListPage extends Page {
     AppBtnPage appBtn=new AppBtnPage();
     AppSearchPage appSearch=new AppSearchPage();
     AppFormPage appForm=new AppFormPage();
+    GridPage gridTable=new GridPage();
     public GridPage operateApp(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
@@ -26,23 +27,20 @@ public class AppServerListPage extends Page {
         }
         if (operation.equals("修改"))
         {
-            GridPage gridTable=new GridPage();
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             appBtn.edit();
             return  appForm.operateApp(map);
         }
         else
         {
-            GridPage gridTable=new GridPage();
             gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
             appBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
     }
     public GridPage deployApp(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
-        GridPage gridTable=new GridPage();
         gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
         if (operation.equals("部署"))
         {
@@ -61,6 +59,6 @@ public class AppServerListPage extends Page {
         {
             appBtn.shutdown();
         }
-        return  new GridPage();
+        return  gridTable;
     }
 }

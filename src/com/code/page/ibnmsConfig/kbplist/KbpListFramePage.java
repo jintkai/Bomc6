@@ -54,7 +54,6 @@ public class KbpListFramePage extends Page {
         if (operation.contains("修改")) {
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
-            gridTable = new GridPage();
             gridTable = searchKbp.search(map);
             gridTable.selectTr(0);
             //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
@@ -64,13 +63,12 @@ public class KbpListFramePage extends Page {
         } else if (operation.contains("删除")) {
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
-            gridTable = new GridPage();
             gridTable = searchKbp.search(map);
             gridTable.selectTr(0);
             //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
             kbpBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
-        return new GridPage();
+        return gridTable;
     }
 }

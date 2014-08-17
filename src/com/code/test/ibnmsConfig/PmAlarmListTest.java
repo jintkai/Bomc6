@@ -43,7 +43,7 @@ public class PmAlarmListTest extends TestCase {
         tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
                 Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    //@Test(dataProvider = "PmAlarmList",priority = 1)
+    @Test(dataProvider = "PmAlarmList",priority = 1)
     public void deployPA(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);

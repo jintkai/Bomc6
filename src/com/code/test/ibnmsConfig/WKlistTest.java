@@ -46,8 +46,7 @@ public class WKlistTest extends TestCase {
     public void deployWK(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        wkList.deployWK(map);
-        GridPage gridTable=new GridPage();
+        GridPage gridTable=wkList.deployWK(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
     }

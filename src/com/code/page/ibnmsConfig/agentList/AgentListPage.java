@@ -16,7 +16,6 @@ public class AgentListPage extends Page {
     SearchAGPage agSearch=new SearchAGPage();
     GridPage gridTable=new GridPage();
     AgFormPage agForm=new AgFormPage();
-
     public GridPage search(Map<String,String> map)
     {
         return agSearch.search(map);
@@ -24,7 +23,6 @@ public class AgentListPage extends Page {
 
     public GridPage deployAG(Map<String,String> map)
     {
-        GridPage gridTable=new GridPage();
         gridTable=agSearch.search(map);
         gridTable.selectTr(0);
         String operation=tools.getMapValue(map,"操作类型");
@@ -37,7 +35,7 @@ public class AgentListPage extends Page {
             agBtn.startup();
         if (operation.equals("停止"))
             agBtn.shutdown();
-        return new GridPage();
+        return gridTable;
     }
     public GridPage operateAG(Map<String,String> map)
     {
@@ -58,7 +56,7 @@ public class AgentListPage extends Page {
         {
             agSearch.search(map).selectTr(0);
             agBtn.delete();
-            return  new GridPage();
+            return gridTable;
         }
     }
 }

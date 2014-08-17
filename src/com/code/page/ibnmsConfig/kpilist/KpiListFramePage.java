@@ -65,7 +65,7 @@ public class KpiListFramePage extends Page{
             searchKpi.search(map);
             gridTable.selectTr(0);
             kpiBtn.delete();
-            return new GridPage();
+            return gridTable;
         }
     }
 }

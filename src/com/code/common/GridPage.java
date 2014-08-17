@@ -30,27 +30,43 @@ public class GridPage  extends Page implements Data{
     @FindBy(id="load_gridTable")
     WebElement loadGrid;
     /*
-    table数据区域
+    table数据区域,>>>>>>>>>>>>>>>>>数据区，不包含表头
      */
-    @FindBy(xpath = gridXpath)
+    @FindBy(id ="gridTable")
     WebElement grid;
 
     /*
-    表头xpath
+    表头xpath，>>>>>>>>>>>>>>>>>>>>表头的xpath，通过className来定位，表头的table
      */
-    @FindBy(how=How.XPATH,using=headXpath)
+    //@FindBy(how=How.XPATH,using=".//*[@id=\"gview_gridTable\"]/div[2]/div/table")
+    //@FindBy(className= "ui-jqgrid-labels ui-sortable")
+    @FindBy(className = "ui-jqgrid-htable")
     WebElement headtable;
+
+    public  String heads[];
+    //@FindBy(xpath = "//*[@class='ui-jqgrid-htable']//tr")
+    //WebElement headth;
+    /*
+    表头的th>>>>>>>>>>>>>>>>>>>>表头th
+     */
+    String headth= "//*[@class='ui-jqgrid-htable']//tr/th";
     /*
     Table数据区域中，tr的数组，tr表示列表中的数据
      */
     List<WebElement> dataList=null;
 
     //int gridTable_cd=3;
+    //选择按钮在table中，第几个td中。
     int gridTable_cd=1;
     String gridTable_cbID="gridTable_cb";
+    public GridPage()
+    {
+        super();
+        //heads=this.getHead();
+    }
     public void setWait()
     {
-        wait=new WebDriverWait(tools.getDriver(),10,500);
+        wait=new WebDriverWait(tools.getDriver(),Data.timeOut,Data.sleepTime);
     }
     public void loadGridUnDisplay()
     {
@@ -73,7 +89,8 @@ public class GridPage  extends Page implements Data{
     public int getRowNum()
     {
         loadGridUnDisplay();
-        dataList=tools.findElements(grid,By.xpath(dataTableTrXpath));
+        //dataList=tools.findElements(grid,By.xpath(dataTableTrXpath));
+        dataList=tools.findElements(tools.getDriver(),By.xpath("//tr[@role='row' and @id]"));
         if (dataList==null)
             rowNum=0;
         else
@@ -87,19 +104,26 @@ public class GridPage  extends Page implements Data{
      */
     public String[] getHead()
     {
-        List<WebElement> list=tools.findElements(headtable, By.xpath(this.headThXpath));
+        if (heads!=null)
+            return  heads;
+        //List<WebElement> list=tools.findElements(headtable, By.xpath(this.headThXpath));
+        //List<WebElement> list=tools.findElements(tools.getDriver(), By.xpath(headth));
+        List<WebElement> list=tools.findElements(tools.getDriver(),By.xpath("//div[starts-with(@id,'jqgh_gridTable_')]"));
+        String str[]=new String[list.size()];
         WebElement[] eles = new WebElement[list.size()];
         list.toArray(eles);
-        String str[]=new String[list.size()];
+
         for(int i=0;i<list.size();i++)
         {
             str[i]=eles[i].getText().trim();
-            if (tools.getAttribute(eles[i],"id").contains("gridTable_cb"))
+            /*if (tools.getAttribute(eles[i],"id").contains("gridTable_cb"))
             {
                 gridTable_cd=i+1;
                 System.out.println(gridTable_cbID);
-            }
+            }*/
         }
+
+        heads=str;
         return str;
     }
 
@@ -111,10 +135,10 @@ public class GridPage  extends Page implements Data{
     public int HeadIndex(String str)
     {
         tdIndex=0;
-        String head[]=this.getHead();
-        for (int i=0;i<head.length;i++)
+        String heads[]=this.getHead();
+        for (int i=0;i<heads.length;i++)
         {
-            if (head[i].equals(str))
+            if (heads[i].equals(str))
             {
                 tdIndex=i+1;
                 break;
@@ -155,9 +179,12 @@ public class GridPage  extends Page implements Data{
          for (int i=0;i<rowNum;i++) {
              String trXpath=this.dataTableTrXpath+"["+(i+1)+"]";
              String tdXpath=this.dataTableTdXpath+"["+tdIndex+"]";
-             WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
-             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
-             System.out.println(trXpath+tdXpath);
+             tdXpath=trXpath+"/td["+(tdIndex)+"]";
+             WebElement webTd;
+             /*WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
+             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));*/
+             System.out.println(tdXpath);
+             webTd=tools.findBy(tools.getDriver(),By.xpath(tdXpath));
             // WebElement webTd=tools.findBy(grid,By.xpath(trXpath+tdXpath));
             rowVales[i]=webTd.getText().trim();
         }
@@ -175,8 +202,9 @@ public class GridPage  extends Page implements Data{
         loadGridUnDisplay();
         String trXpath=this.dataTableTrXpath+"["+(tr+1)+"]";
         String tdXpath=this.dataTableTdXpath+"["+td+"]";
-        WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
-        WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
+        tdXpath=trXpath+"/td["+td+"]";
+        //WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
+        WebElement webTd=tools.findBy(tools.getDriver(),By.xpath(tdXpath));
         return webTd;
     }
 
@@ -190,8 +218,10 @@ public class GridPage  extends Page implements Data{
         loadGridUnDisplay();
         String heads[]=getHead();
         String trXpath=this.dataTableTrXpath+"["+index+"]";
-        WebElement tr=tools.findBy(grid,By.xpath(trXpath));
-        List<WebElement> tdList=tools.findElements(tr,By.xpath(dataTableTdXpath));
+        //WebElement tr=tools.findBy(grid,By.xpath(trXpath));
+        String tdsXpath=trXpath+"/td";
+        //List<WebElement> tdList=tools.findElements(tr,By.xpath(dataTableTdXpath));
+        List<WebElement> tdList=tools.findElements(tools.getDriver(),By.xpath(tdsXpath));
         WebElement tds[]=new WebElement[tdList.size()];
         tdList.toArray(tds);
         String str[]=new String[tds.length];
@@ -211,6 +241,7 @@ public class GridPage  extends Page implements Data{
     {
         loadGridUnDisplay();
         ArrayList<Integer> list = new ArrayList();
+        int row=list.size();
         String rowValues[]=getTdOfAllTr(colName);
         for (int i=0;i<rowValues.length;i++)
         {
@@ -238,12 +269,16 @@ public class GridPage  extends Page implements Data{
             String trXpath=this.dataTableTrXpath+"["+(index)+"]";
 
             String tdXpath=this.dataTableTdXpath+"["+gridTable_cd+"]";
+            tdXpath=trXpath+"/td["+gridTable_cd+"]/input";
             System.out.println(trXpath);
             System.out.println(tdXpath);
-            WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
+
+            /*WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
             tools.findBy(webTd,By.xpath("./input")).click();
-            System.out.println(tools.findBy(webTd,By.xpath("./input")).isSelected());
+            System.out.println(tools.findBy(webTd,By.xpath("./input")).isSelected());*/
+            tools.findBy(tools.getDriver(),By.xpath(tdXpath)).click();
+
         }
     }
     public void selectAllTr()
@@ -264,10 +299,13 @@ public class GridPage  extends Page implements Data{
             System.out.println("选择部分");
             String trXpath = this.dataTableTrXpath + "[" + list.get(i) + "]";
             String tdXpath = this.dataTableTdXpath + "[" + gridTable_cd + "]";
-            WebElement webTr = tools.findBy(grid, By.xpath(trXpath));
+            tdXpath=trXpath+"/td["+gridTable_cd+"]/input";
+            /*WebElement webTr = tools.findBy(grid, By.xpath(trXpath));
             WebElement webTd = tools.findBy(webTr, By.xpath(tdXpath));
             WebElement selectTd=tools.findBy(webTd, By.xpath("./input"));
             tools.click(selectTd);
+            */
+            tools.findBy(tools.getDriver(),By.xpath(tdXpath)).click();
         }
         return list.size();
     }
