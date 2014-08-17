@@ -16,12 +16,15 @@ import java.util.Map;
  * Created by Jin on 2014/7/30.
  */
 public class GeneratAlarmFormPage extends Page {
+
     public String title="告警生成策略配置";
+    @FindBy(name="policyName")
     WebElement policyName;
+    @FindBy(name="policyDesc")
     WebElement policyDesc;
 
     AlarmExpressionPage alarmExpression=new AlarmExpressionPage();
-
+    @FindBy(name="unitNamePrefix")
     WebElement unitNamePrefix;
     @FindBy(id = "btn-select-kpi")
     WebElement selectKpiBtn;

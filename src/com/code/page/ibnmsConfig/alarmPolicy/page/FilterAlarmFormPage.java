@@ -17,11 +17,13 @@ import java.util.Map;
  */
 public class FilterAlarmFormPage extends Page {
     public String title="告警过滤策略配置";
+    @FindBy(name="policyName")
     WebElement policyName;
+    @FindBy(name="policyDesc")
     WebElement policyDesc;
 
     AlarmFilterPage alarmFilter=new AlarmFilterPage();
-
+    @FindBy(name="unitNamePrefix")
     WebElement unitNamePrefix;
     @FindBy(id = "btn-select-kpi")
     WebElement selectKpiBtn;

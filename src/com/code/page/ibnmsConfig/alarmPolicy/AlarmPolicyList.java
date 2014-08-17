@@ -22,10 +22,11 @@ public class AlarmPolicyList extends Page {
     UpAlarmFormPage upAlarm=new UpAlarmFormPage();
     FilterAlarmFormPage filterAlarm=new FilterAlarmFormPage();
     ClearAlarmFormPage clearAlarm=new ClearAlarmFormPage();
+    GridPage gridTable=new GridPage();
     public GridPage search(Map<String,String> map)
     {
         searchPolicy.search(map);
-        return new GridPage();
+        return gridTable;
     }
 
     /**
@@ -34,7 +35,7 @@ public class AlarmPolicyList extends Page {
      */
     public int bind(Map<String,String> map)
     {
-        GridPage gridTable=searchPolicy.search(map);
+        gridTable=searchPolicy.search(map);
         int td=gridTable.HeadIndex(tools.getMapValue(map,"可点击列名"));
         WebElement tdElement=gridTable.getTdEleOfTr(td, 0);
         WebElement a=tools.findBy(tdElement, By.tagName("a"));
@@ -61,6 +62,7 @@ public class AlarmPolicyList extends Page {
         tools.switchToWindowByHand(hand);
         return row;
     }
+    /**
     public void addGenerat(Map<String,String> map)
     {
         policyBtn.openAddForm(map);
@@ -83,9 +85,10 @@ public class AlarmPolicyList extends Page {
     public void delete(Map<String,String> map)
     {
         search(map);
-        new GridPage().selectAllTr();
+        gridTable.selectAllTr();
         policyBtn.delete();
-    }
+    }*/
+
     public void addPolicy(Map<String,String> map)
     {
         policyBtn.openAddForm(map);

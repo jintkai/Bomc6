@@ -17,11 +17,13 @@ import java.util.Map;
  */
 public class UpAlarmFormPage extends Page {
     public String title="告警升级策略配置";
+    @FindBy(name="policyName")
     WebElement policyName;
+    @FindBy(name="policyDesc")
     WebElement policyDesc;
 
     AlarmUpgradeFrame alarmUpgrade=new AlarmUpgradeFrame();
-
+    @FindBy(id="unitNamePrefix")
     WebElement unitNamePrefix;
     @FindBy(id = "btn-select-kpi")
     WebElement selectKpiBtn;
