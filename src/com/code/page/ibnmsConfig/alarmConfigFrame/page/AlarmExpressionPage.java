@@ -88,7 +88,8 @@ public class AlarmExpressionPage extends Page {
     public void operate(Map<String,String> map)
     {
         initWebElements();
-
+        if(tools.getMapValue(map,"告警描述表达式泛函数").isEmpty())
+            return;
         tools.click(expressionDescBtn);
         tools.selectByVisibleText(funFormUrl,tools.getMapValue(map,"告警描述表达式泛函数"));
         tools.click(funAddBtn.get(0));

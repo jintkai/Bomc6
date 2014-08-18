@@ -49,7 +49,7 @@ public class AlarmPolicyTest extends TestCase {
         tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 
-    @Test(dataProvider = "alarmpolicy",priority = 1,description = "新增告警预警生成策略")
+    @Test(dataProvider = "alarmpolicy",priority = 2,description = "新增告警预警生成策略")
     public void operateGenAlarmPolicy(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -57,7 +57,7 @@ public class AlarmPolicyTest extends TestCase {
         int row=alarmPlicy.search(map).getRowNum();
         tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "alarmpolicy",priority = 1,description = "新增告警升级策略")
+    @Test(dataProvider = "alarmpolicy",priority = 2,description = "新增告警升级策略")
     public void operateUpdatePolicy(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);

@@ -53,7 +53,6 @@ public class AlarmPolicyBtnPage extends Page {
     }
     public void edit()
     {
-        //tools.click(editBtn);
         tools.openModelDialog(editBtn);
     }
 }

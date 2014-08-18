@@ -91,7 +91,22 @@ public class AlarmPolicyList extends Page {
 
     public void addPolicy(Map<String,String> map)
     {
-        policyBtn.openAddForm(map);
+        String operation=tools.getMapValue(map,"操作类型");
+        if(operation.equals("增加"))
+            policyBtn.openAddForm(map);
+        if(operation.equals("修改"))
+        {
+            search(map);
+            gridTable.selectTr(1);
+            policyBtn.edit();
+        }
+        if (operation.equals("删除"))
+        {
+            search(map);
+            gridTable.selectTr(1);
+            policyBtn.delete();
+            return;
+        }
         String addType=tools.getMapValue(map,"策略类型");
         String hand="";
         if (addType.equals("告警生成策略")) {
