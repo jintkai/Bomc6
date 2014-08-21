@@ -1,5 +1,8 @@
 package com.code.page.ibnmsConfig.alarmPolicy.page;
 
+import com.code.common.BtnPage;
+import com.code.common.FormPage;
+import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
@@ -10,7 +13,7 @@ import java.util.Map;
 /**
  * Created by Jin on 2014/7/30.
  */
-public class AlarmPolicyBtnPage extends Page {
+public class AlarmPolicyBtnPage extends BtnPage {
     @FindBy(id="btn-add")
     WebElement addBtn;
     @FindBy(id="btn-add-select")
@@ -51,8 +54,19 @@ public class AlarmPolicyBtnPage extends Page {
         tools.alertAccept();
         tools.alertAccept();
     }
-    public void edit()
+    @Override
+    public FormPage edit()
     {
         tools.openModelDialog(editBtn);
+        return new FormPage();
+    }
+    public void sysAlarm()
+    {
+        //tools.click(syncBtn);
+        tools.openModelDialog(syncBtn);
+    }
+    public void view()
+    {
+        tools.openModelDialog(this.viewBtn);
     }
 }

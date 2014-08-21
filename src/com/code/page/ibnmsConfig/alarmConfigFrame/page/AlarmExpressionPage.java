@@ -1,6 +1,7 @@
 package com.code.page.ibnmsConfig.alarmConfigFrame.page;
 
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +12,16 @@ import java.util.Map;
 /**
  * Created by Jin on 2014/8/12.
  */
-public class AlarmExpressionPage extends Page {
+public class AlarmExpressionPage extends AlarmFormPage {
+    //重新定义父类的元素；
+    //@FindBy(xpath = "//div[@type='event']")
+    //WebElement policy;
+    String policyStr="//div[@type='event']";
+    public AlarmExpressionPage()
+    {
+        super();
+        policy=tools.findBy(tools.getDriver(),By.xpath(policyStr));
+    }
     //告警描述表达式-编辑，按钮
     @FindBy(className = "expression-desc-btn")
     WebElement expressionDescBtn;
@@ -114,7 +124,6 @@ public class AlarmExpressionPage extends Page {
             tools.click(funAddBtn.get(i+1));
             tools.click(expressionLevelBtn.get(i));
         }
-
-
     }
+
 }

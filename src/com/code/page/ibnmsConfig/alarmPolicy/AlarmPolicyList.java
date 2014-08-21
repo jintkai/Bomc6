@@ -15,14 +15,17 @@ import java.util.Map;
  * 告警策略维护列表
  */
 public class AlarmPolicyList extends Page {
+    public String title="策略维护列表";
     SearchAlarmPolicyPage searchPolicy=new SearchAlarmPolicyPage();
-    AlarmPolicyBtnPage policyBtn=new AlarmPolicyBtnPage();
+    public AlarmPolicyBtnPage policyBtn=new AlarmPolicyBtnPage();
     GeneratAlarmFormPage generatAlarm=new GeneratAlarmFormPage();
     PreGeneratAlarmFormPage preGeneratAlarm=new PreGeneratAlarmFormPage();
     UpAlarmFormPage upAlarm=new UpAlarmFormPage();
     FilterAlarmFormPage filterAlarm=new FilterAlarmFormPage();
     ClearAlarmFormPage clearAlarm=new ClearAlarmFormPage();
     GridPage gridTable=new GridPage();
+    //告警集中配置列表
+    AlarmConfListPage alaremConfList=new AlarmConfListPage();
     public GridPage search(Map<String,String> map)
     {
         searchPolicy.search(map);
@@ -62,32 +65,6 @@ public class AlarmPolicyList extends Page {
         tools.switchToWindowByHand(hand);
         return row;
     }
-    /**
-    public void addGenerat(Map<String,String> map)
-    {
-        policyBtn.openAddForm(map);
-        //String hand=tools.switchToWindowByTitle("告警生成");
-        String hand=tools.switchToWindowByTitle("告警生成");
-        System.out.println(tools.getDriver().getCurrentUrl());
-        //new GeneratFormPage().add(map);
-        tools.switchToWindowByHand(hand);
-    }
-    public void edit(Map<String,String> map)
-    {
-        search(map);
-        new GridPage().selectAllTr();
-        policyBtn.edit();
-        String hand=tools.switchToWindowByTitle("告警生成");
-        System.out.println(tools.getDriver().getCurrentUrl());
-        //new GeneratFormPage().add(map);
-        tools.switchToWindowByHand(hand);
-    }
-    public void delete(Map<String,String> map)
-    {
-        search(map);
-        gridTable.selectAllTr();
-        policyBtn.delete();
-    }*/
 
     public void addPolicy(Map<String,String> map)
     {
@@ -133,6 +110,37 @@ public class AlarmPolicyList extends Page {
             clearAlarm.operate(map);
         }
         tools.switchToWindowByHand(hand);
-
+    }
+    public GridPage sysAlarm(Map<String,String> map)
+    {
+        search(map);
+        gridTable.selectTr(1);
+        policyBtn.sysAlarm();
+        String hand=tools.switchToWindowByTitle(alaremConfList.title);
+        new GridPage().selectTr(0);
+        alaremConfList.btnPage.select();
+        tools.alertAccept();
+        tools.alertAccept();
+        tools.click(alaremConfList.btnPage.closeBtn);
+        tools.switchToWindowByHand(hand);
+        search(map);
+        //gridTable.getTrOfAllTd(1);
+        return gridTable;
+    }
+    public String  viewAlarm(Map<String,String> map)
+    {
+        search(map);
+        gridTable.selectTr(1);
+        policyBtn.view();
+        String policyName="";
+        String hand=tools.switchToWindowByTitle("警");
+        if (tools.getMapValue(map,"策略类").contains("订阅"))
+           // policyName=tools.getAttribute(generatAlarm.policyName,"value");
+            System.out.println("无法查看订阅人策略");
+        else
+            policyName=tools.getAttribute(generatAlarm.policyName,"value");
+        generatAlarm.cancel();
+        tools.switchToWindowByHand(hand);
+        return policyName;
     }
 }

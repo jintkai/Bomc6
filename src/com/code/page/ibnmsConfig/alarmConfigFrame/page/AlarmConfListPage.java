@@ -7,4 +7,5 @@ import com.code.common.Page;
  */
 public class AlarmConfListPage extends Page {
     public String title="告警配置列表";
+    public AlarmConfBtnPage btnPage=new AlarmConfBtnPage();
 }

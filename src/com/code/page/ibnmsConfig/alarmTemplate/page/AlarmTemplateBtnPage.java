@@ -1,5 +1,7 @@
 package com.code.page.ibnmsConfig.alarmTemplate.page;
 
+import com.code.common.BtnPage;
+import com.code.common.FormPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,20 +9,28 @@ import org.openqa.selenium.support.FindBy;
 /**
  * Created by Jin on 2014/8/4.
  */
-public class AlarmTemplateBtnPage extends Page{
+public class AlarmTemplateBtnPage extends BtnPage{
     @FindBy(id="btn-add")
     WebElement addBtn;
     @FindBy(id="btn-edit")
     WebElement editBtn;
     @FindBy(id="btn-del")
     WebElement delBtn;
-    public void add()
+    @FindBy(id = "btn-save")
+    WebElement saveBtn;
+    public com.code.common.FormPage add()
     {
         tools.click(addBtn);
+        return new FormPage();
     }
     public void delte()
     {
         tools.click(delBtn);
+        tools.alertAccept();
+    }
+    public void save()
+    {
+        tools.click(saveBtn);
         tools.alertAccept();
     }
 }

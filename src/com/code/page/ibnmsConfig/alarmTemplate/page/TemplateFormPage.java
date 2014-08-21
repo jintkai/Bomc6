@@ -1,5 +1,6 @@
 package com.code.page.ibnmsConfig.alarmTemplate.page;
 
+import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,16 +19,28 @@ public class TemplateFormPage extends Page {
     WebElement templateDesc;
     @FindBy(id="btn-save")
     WebElement saveBtn;
+    @FindBy(id="btn-add-s")
+    WebElement addKpiBtn;
+
+    GridPage gridTable=new GridPage();
+
     public void inputForm(Map<String,String> map)
     {
         tools.sendKeys(templateName,tools.getMapValue(map,"模板名称"));
         tools.sendKeys(templateDesc,tools.getMapValue(map,"模板描述"));
         tools.selectByVisibleText(templateType,tools.getMapValue(map,"模板类型"));
+
+    }
+    public void operate(Map<String,String> map)
+    {
+        inputForm(map);
         tools.click(saveBtn);
         tools.alarmDismiss();
     }
-    public void add(Map<String,String> map)
+    public void operateKPI(Map<String,String> map)
     {
-        inputForm(map);
+        tools.click(addKpiBtn);
+        eventTemplateKpiForm templateKpi=new eventTemplateKpiForm();
+        templateKpi.operate(map);
     }
 }

@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -19,52 +20,39 @@ import java.util.Iterator;
  */
 public class AlarmTemplateTest extends TestCase {
     AlarmTemplateListPage alarmTemplate=new AlarmTemplateListPage();
+    GridPage gridTable=new GridPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmTemplate")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMTEMPLATE_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("ALARMTEMPLATE",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
     @Test(dataProvider = "alarmTemplate",description = "告警模板查询")
-    public void search(String[] str)
+    public void searchAlarmTemplate(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmTemplate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),"更新列表数据与预期值不一致");
+        gridTable=alarmTemplate.search(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
     }
     @Test(dataProvider = "alarmTemplate",description = "告警模板增加")
-    public void add(String[] str)
+    public void operateAlarmTemplate(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        String option=tools.getMapValue(map,"操作类型");
-        GridPage gridTable=new GridPage();
-        if (option.equals("增加"))
-        {
-            gridTable=alarmTemplate.add(map);
-        }
-        if (option.equals("修改"))
-        {
-            gridTable=alarmTemplate.add(map);
-        }
-        if (option.equals("删除"))
-        {
-            gridTable=alarmTemplate.search(map);
-            gridTable.selectTr(1);
-            gridTable=alarmTemplate.delete();
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+        alarmTemplate.operate(map);
         gridTable=alarmTemplate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),"增加成功，但列表中数据错误");
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+    }
+    @Test(dataProvider = "alarmTemplate",description = "告警模板增加")
+    public void operateTemplateKPI(String[] str)
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        alarmTemplate.operateTemplateKPI(map);
     }
 }

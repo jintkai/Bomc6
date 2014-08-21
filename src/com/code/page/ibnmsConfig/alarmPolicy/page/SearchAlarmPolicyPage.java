@@ -27,19 +27,22 @@ public class SearchAlarmPolicyPage extends Page{
     public GridPage search(Map<String,String> map)
     {
         tools.sendKeys(policyName,tools.getMapValue(map,"策略名称_ALAARMPOLICY"));
-        tools.sendKeys(unitNamePrefix, tools.getMapValue(map, "应用范围_ALARMPOLICY"));
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        String unitName=tools.getMapValue(map, "应用范围_ALARMPOLICY");
+        tools.sendKeys(unitNamePrefix, unitName);
+        if (!unitName.isEmpty()) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            actions.sendKeys(Keys.ARROW_DOWN);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+          actions.sendKeys(Keys.ENTER).perform();
         }
-        actions.sendKeys(Keys.ARROW_DOWN);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        actions.sendKeys(Keys.ENTER).perform();
         tools.selectByVisibleText(policyType, tools.getMapValue(map, "策略类型_ALARMPOLICY"));
         String str=tools.getMapValue(map,"应用指标_ALARMPOLICY");
         if (!str.isEmpty())

@@ -18,6 +18,12 @@ public class BtnPage extends Page {
     public WebElement delBtn;
     @FindBy(how=How.ID,using=Data.btnSelect)
     public WebElement selBtn;
+    @FindBy(id = "btn-save")
+    public WebElement saveBtn;
+    @FindBy(how=How.ID,using="btn-close")
+    public WebElement closeBtn;
+    @FindBy(id = "btn-cancel")
+    WebElement cancelBtn;
     @FindBy(how=How.ID,using="btn-deploy")
     public WebElement deploy;
     @FindBy(how=How.ID,using="btn-remove")
@@ -32,7 +38,8 @@ public class BtnPage extends Page {
     public WebElement deploy_ok;
     @FindBy(id="btn-unload")
     public WebElement unload;
-
+    @FindBy(id="btn-view")
+    public WebElement viewBtn;
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);
@@ -66,6 +73,11 @@ public class BtnPage extends Page {
     {
         tools.click(selBtn);
     }
+    public void save(){tools.click(saveBtn);}
+    public void close(){tools.click(closeBtn);}
+    public void cancel(){tools.click(cancelBtn);}
+
+
     public void remove()
     {
         tools.click(remove);
@@ -83,7 +95,7 @@ public class BtnPage extends Page {
         tools.click(deploy);
         tools.click(startDeploy);
         try {
-            Thread.sleep(8000);
+            Thread.sleep(15000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

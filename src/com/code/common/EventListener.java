@@ -47,7 +47,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
         if(webElement!=null)
         {
             try {
@@ -71,8 +71,6 @@ public class EventListener implements WebDriverEventListener {
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
                     public WebElement apply(WebDriver webDriver) {
-
-                        //System.out.println("beforeFindBy:>>>>>>"+">>>>>>"+tools.getCurrentDateTime());
                         return webDriver.findElement(by);
                     }
                 });

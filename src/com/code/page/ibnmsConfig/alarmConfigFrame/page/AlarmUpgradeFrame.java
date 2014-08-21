@@ -1,6 +1,8 @@
 package com.code.page.ibnmsConfig.alarmConfigFrame.page;
 
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -9,7 +11,15 @@ import java.util.Map;
 /**
  * Created by jinkai on 2014/7/16.
  */
-public class AlarmUpgradeFrame extends Page {
+public class AlarmUpgradeFrame extends AlarmFormPage {
+    //@FindBy(id = "upgrade_expression")
+    String policyId="upgrade_expression";
+    public AlarmUpgradeFrame()
+    {
+        super();
+        policy=tools.findBy(tools.getDriver(),By.id(policyId));
+    }
+
     @FindBy(id="policy_upLevel")
     WebElement policy_upLevel;
     @FindBy(className = "expression-up-btn")
@@ -70,5 +80,6 @@ public class AlarmUpgradeFrame extends Page {
         tools.click(expressionUpBtn);
     }
     public void operate(Map<String,String>map){inputForm(map);}
+
 }
 

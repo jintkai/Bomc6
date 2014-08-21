@@ -103,10 +103,11 @@ public class Tools {
     public java.util.List<WebElement> findElements(SearchContext d,By by)
     {
         List<WebElement> eles=null;
-        if(isElementsExist(d,by))
+        /*if(isElementsExist(d,by))
         {
             eles=d.findElements(by);
-        }
+        }*/
+        eles=d.findElements(by);
         return  eles;
     }
     /**
@@ -239,6 +240,16 @@ public class Tools {
             takesScreenshot(msg);
             System.out.println(e);
             Assert.assertEquals(actual, exception, msg);
+        }
+    }
+    public void assertEquals(String actual,String expected,Map<String,String> map)
+    {
+        try {
+            Assert.assertEquals(actual, expected, map.toString());
+        }catch(AssertionError e) {
+            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
+
+            Assert.assertEquals(actual, expected, map.toString());
         }
     }
     public void assertTrue(boolean actual,String msg)
@@ -579,10 +590,14 @@ public class Tools {
         }
     }
 
+    /**
+     * 移动滚动条
+     * @param height
+     */
     public  void setScroll(int height){
 
         try {
-            String setscroll = "document.documentElement.scrollTop=" + height;
+            String setscroll = "document.documentElement.scrollTop=" + height; //支持IE
             JavascriptExecutor jse=(JavascriptExecutor) driver;
             jse.executeScript(setscroll);
         }

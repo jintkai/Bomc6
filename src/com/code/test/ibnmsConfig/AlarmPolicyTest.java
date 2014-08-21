@@ -15,12 +15,14 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by Jin on 2014/7/30.
  */
 public class AlarmPolicyTest extends TestCase {
     public AlarmPolicyList alarmPlicy=new AlarmPolicyList();
+    GridPage gridTable=new GridPage();
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
@@ -38,7 +40,7 @@ public class AlarmPolicyTest extends TestCase {
     public void searchAlarmPolicy(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmPlicy.search(map);
+        gridTable=alarmPlicy.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "alarmpolicy",priority = 1,description = "告警策略绑定数量")
@@ -64,5 +66,20 @@ public class AlarmPolicyTest extends TestCase {
         alarmPlicy.addPolicy(map);
         int row=alarmPlicy.search(map).getRowNum();
         tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+    }
+    @Test(dataProvider = "alarmpolicy",priority = 2,description = "同步告警")
+    public void sysAlarm(String[] str)
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        gridTable=alarmPlicy.sysAlarm(map);
+        Map<String,String> policyMap=gridTable.getTrOfAllTd(1);
+        tools.assertEquals(Integer.parseInt(tools.getMapValue(policyMap,"未同步告警配置数")),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+    }
+    @Test(dataProvider = "alarmpolicy",priority = 2,description = "同步告警")
+    public void viewAlarm(String[] str)
+    {
+        map=tools.changeStringToMap(excelHead,str);
+        String alarmName=alarmPlicy.viewAlarm(map);
+        tools.assertEquals(alarmName,tools.getMapValue(map,"策略名称_ALAARMPOLICY"),map);
     }
 }

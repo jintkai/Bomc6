@@ -19,7 +19,7 @@ public class GeneratAlarmFormPage extends Page {
 
     public String title="告警生成策略配置";
     @FindBy(name="policyName")
-    WebElement policyName;
+    public WebElement policyName;
     @FindBy(name="policyDesc")
     WebElement policyDesc;
 
@@ -30,8 +30,11 @@ public class GeneratAlarmFormPage extends Page {
     WebElement selectKpiBtn;
     @FindBy(id="btn-submit")
     WebElement submitBtn;
+    @FindBy(id="btn-cancel")
+    WebElement cancelBtn;
     ExpressionAssertPage expressAssert=new ExpressionAssertPage();
     KpiListFramePage kpiList=new KpiListFramePage();
+
 
 
     public void operate(Map<String,String> map)
@@ -64,5 +67,9 @@ public class GeneratAlarmFormPage extends Page {
         expressAssert.submit();
         tools.switchToWindowByHand(hand);
         tools.alertAccept();
+    }
+    public void cancel()
+    {
+        tools.click(cancelBtn);
     }
 }
