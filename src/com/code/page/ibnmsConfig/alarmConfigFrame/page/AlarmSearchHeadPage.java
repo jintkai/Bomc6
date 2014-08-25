@@ -27,7 +27,6 @@ public class AlarmSearchHeadPage extends Page {
         tools.sendKeys(KPI_ID,tools.getMapValue(map,"指标ID_ALAREM"));
         tools.sendKeys(KPI_NAME,tools.getMapValue(map,"指标名称_ALAREM"));
         tools.sendKeys(ALARM_TYPE,tools.getMapValue(map,"指标类型_ALAREM"));
-
         actions.sendKeys(Keys.ENTER).perform();
         return new GridPage();
     }

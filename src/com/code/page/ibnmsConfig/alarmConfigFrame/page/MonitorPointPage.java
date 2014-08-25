@@ -31,8 +31,8 @@ public class MonitorPointPage extends Page {
         if(tools.getMapValue(map,"指标名称").isEmpty())
             return;
         tools.click(btnSelectKpi);
-        String hand=tools.switchToWindowByTitle("Kpi列表");
         KpiListFramePage kpiList=new KpiListFramePage();
+        String hand=tools.switchToWindowByTitle(kpiList.title);
         kpiList.search(map).selectAllTr();
         kpiList.kpiBtn.select();
         tools.switchToWindowByHand(hand);

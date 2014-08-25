@@ -20,6 +20,8 @@ public class AlarmConfigFrame extends Page {
     public AlarmConfTreePage confTree=new AlarmConfTreePage();
     public AlarmConfBtnPage confBtn=new AlarmConfBtnPage();
     public AlarmSearchHeadPage searchHead=new AlarmSearchHeadPage();
+    public GridPage gridTable=new GridPage();
+    AlarmConfFormPage alarmConfForm=new AlarmConfFormPage();
     public GridPage searchByTree(Map<String,String> map)
     {
         tools.switchToFrame();
@@ -27,14 +29,22 @@ public class AlarmConfigFrame extends Page {
         confTree.searchByTree(tools.getMapValue(map,"TREE"));
         tools.switchToFrame();
         tools.switchToFrame(1);
-        return new GridPage();
+        return gridTable;
     }
+    public GridPage searchByHead(Map<String,String> map)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(1);
+        return gridTable=searchHead.searchByHead(map);
+    }
+
     public void addConf(Map<String,String> map,int type)
     {
         searchByTree(map);
         AlarmConfFormPage alarmConfForm=confBtn.addConf(tools.getMapValue(map, "告警类型"));
         alarmConfForm.add(map,type);
     }
+
     public void edit(Map<String,String> map,int type)
     {
         GridPage gridTable=searchByHead(map);
@@ -62,12 +72,7 @@ public class AlarmConfigFrame extends Page {
         confBtn.delete();
         tools.alertAccept();
     }
-    public GridPage searchByHead(Map<String,String> map)
-    {
-        tools.switchToFrame();
-        tools.switchToFrame(1);
-        return searchHead.searchByHead(map);
-    }
+
     public void exportExcel()
     {
         tools.switchToFrame();

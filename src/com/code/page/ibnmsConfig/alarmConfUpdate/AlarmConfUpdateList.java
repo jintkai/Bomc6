@@ -22,6 +22,8 @@ public class AlarmConfUpdateList extends Page {
     {
         return searchUpdata.search(map);
     }
+    public String title=" 告警变更配置项";
+
     public String update()
     {
         updateBtn.updata();

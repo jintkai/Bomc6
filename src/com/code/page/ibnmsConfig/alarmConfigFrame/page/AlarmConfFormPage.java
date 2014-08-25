@@ -11,6 +11,7 @@ import java.util.Map;
  * 告警集中配置增加页面
  */
 public class AlarmConfFormPage extends Page {
+    public String mainFrame="alarmConfigFrame";
     public AlarmPolicyPage alarmPolicy=new AlarmPolicyPage();
     public MonitorPointPage monitorPoint=new MonitorPointPage();
     public AlarmUpgradeFrame upgrade=new AlarmUpgradeFrame();
@@ -24,14 +25,14 @@ public class AlarmConfFormPage extends Page {
     {
 
         tools.switchToFrame();
-        tools.switchToFrame("alarmConfigFrame");
+        tools.switchToFrame(mainFrame);
         monitorPoint.add(map);
         tools.switchToFrame();
-        tools.switchToFrame("alarmConfigFrame");
-        tools.switchToFrame("generationFrame");
+        tools.switchToFrame(mainFrame);
+        tools.switchToFrame(alarmPolicy.frame);
         alarmPolicy.add(map);
         tools.switchToFrame();
-        tools.switchToFrame("alarmConfigFrame");
+        tools.switchToFrame(mainFrame);
         tools.switchToFrame("upgradeFrame");
         upgrade.add(map);
         tools.switchToFrame();
@@ -42,13 +43,13 @@ public class AlarmConfFormPage extends Page {
         filter.add(map);
         tools.switchToFrame();
         tools.execJS(" var a=document.getElementsByTagName(\"iframe\")[1].contentWindow.document.documentElement.scrollTop=600;return a;");
-        tools.switchToFrame("alarmConfigFrame");
+        tools.switchToFrame(mainFrame);
         tools.switchToFrame("clearFrame");
         clear.add(map);
         tools.switchToFrame();
         tools.execJS(" var a=document.getElementsByTagName(\"iframe\")[1].contentWindow.document.documentElement.scrollTop=600;return a;");
         tools.switchToFrame();
-        tools.switchToFrame("alarmConfigFrame");
+        tools.switchToFrame(mainFrame);
         if (type==1)
             tools.click(save);
         if (type==2)

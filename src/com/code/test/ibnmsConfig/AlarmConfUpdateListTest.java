@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -19,16 +20,17 @@ import java.util.Iterator;
  */
 public class AlarmConfUpdateListTest extends TestCase {
     public AlarmConfUpdateList alarmConfUpdate=new AlarmConfUpdateList();
+    GridPage gridTable=new GridPage();
     @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmFrame")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMCONFUPDATA_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("ALARMCONFUPDATA",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
@@ -36,8 +38,8 @@ public class AlarmConfUpdateListTest extends TestCase {
     public void search(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmConfUpdate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),"更新列表数据与预期值不一致");
+        gridTable=alarmConfUpdate.search(map);
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
     @Test
     public void update()
@@ -55,7 +57,7 @@ public class AlarmConfUpdateListTest extends TestCase {
     public void delete()
     {
         alarmConfUpdate.delete();
-        int row=new GridPage().getRowNum();
+        int row=gridTable.getRowNum();
         //tools.assertEquals(1,row,"删除列表数据错误：");
     }
 }

@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -21,11 +22,12 @@ import java.util.List;
  */
 public class AlarmConFrameTest extends TestCase {
     public AlarmConfigFrame alarmFrame=new AlarmConfigFrame();
+    GridPage gridTable=new GridPage();
     @BeforeMethod
-     @Parameters({"Base_URL","Action_URL"})
-     public void beforeMethod(String baseUrl,String actionUrl)
+     @Parameters({"Action_URL"})
+     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmFrame")
@@ -38,14 +40,14 @@ public class AlarmConFrameTest extends TestCase {
     public void searchByTree(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmFrame.searchByTree(map);
+        gridTable=alarmFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
     @Test(dataProvider = "alarmFrame",description = "通过告警配置表头查询告警集中配置")
     public void searchByHead(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=alarmFrame.searchByHead(map);
+        gridTable=alarmFrame.searchByHead(map);
         tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
 

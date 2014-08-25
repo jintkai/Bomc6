@@ -27,6 +27,8 @@ public class AlarmPolicyPage extends Page {
     WebElement number;
     @FindBy(xpath = "//table[2]//button[@class=\"btn-add-fun\"]")
     WebElement btnAddFun2;
+
+    public String frame="generationFrame";
     public void add(Map<String,String> map)
     {
         inputForm(map);

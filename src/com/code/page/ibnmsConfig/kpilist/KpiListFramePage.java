@@ -68,4 +68,10 @@ public class KpiListFramePage extends Page{
             return gridTable;
         }
     }
+    public void select()
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
+        kpiBtn.select();
+    }
 }

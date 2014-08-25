@@ -284,7 +284,8 @@ public class Tools {
         for(int i=0;i<handsStr.length;i++)
         {
             driver.switchTo().window(handsStr[i]);
-            if (driver.getTitle().contains(title))
+            String str=driver.getTitle();
+            if (str.contains(title))
                 return hand;
         }
         Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
@@ -632,4 +633,18 @@ public class Tools {
         execJS(js);
     }
 
+    public void inputSubscripLogin(WebElement element,String loginStr)
+    {
+        String login[]=loginStr.split(",");
+        for (int i=0;i<login.length;i++)
+        {
+            element.sendKeys(login[i]);
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            element.sendKeys(",");
+        }
+    }
 }

@@ -6,6 +6,8 @@ import com.code.page.ibnmsConfig.kbplist.page.KbpBtnPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpTreePage;
 import com.code.page.ibnmsConfig.kbplist.page.SearchKbpPage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import java.util.Map;
 
@@ -19,10 +21,12 @@ public class KbpListFramePage extends Page {
     GridPage gridTable=new GridPage();
     public SearchKbpPage searchKbp=new SearchKbpPage();
     KbpFormPage kbpForm=new KbpFormPage();
-    KbpBtnPage kbpBtn=new KbpBtnPage();
+    public KbpBtnPage kbpBtn=new KbpBtnPage();
     public String title="Kbp列表";
     public String kbpTreeIFrame="kbpTree";
     public String kbpListIFrame="kbpListFrame";
+
+
 
     public GridPage search(Map<String,String> map)
     {

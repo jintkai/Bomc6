@@ -11,5 +11,10 @@ import com.code.common.BtnPage;
  * 操作按钮的控件，继承BtnPage，若有特殊的按钮，则可在此类中声明
  */
 public class KbpBtnPage extends BtnPage {
-
+    @FindBy(id = "btn-cite")
+    public WebElement citeBtn;
+    public void cite()
+    {
+        tools.click(citeBtn);
+    }
 }
