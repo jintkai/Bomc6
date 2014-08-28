@@ -1,10 +1,12 @@
 package com.code.page.ibnmsConfig.alarmConfigFrame.page;
 
 import com.code.common.Page;
+import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.Map;
 
@@ -14,10 +16,12 @@ import java.util.Map;
 public class AlarmUpgradeFrame extends AlarmFormPage {
     //@FindBy(id = "upgrade_expression")
     String policyId="upgrade_expression";
+    WebElement policy1;
     public AlarmUpgradeFrame()
     {
         super();
-        policy=tools.findBy(tools.getDriver(),By.id(policyId));
+        policy1 = tools.findBy(tools.getDriver(), By.id(policyId));
+        setPolicy(policy1);
     }
 
     @FindBy(id="policy_upLevel")

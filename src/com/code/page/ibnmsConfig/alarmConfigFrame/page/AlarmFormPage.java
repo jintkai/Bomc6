@@ -13,7 +13,6 @@ import java.util.Map;
  */
 public class AlarmFormPage extends Page {
     //引用策略
-    //@FindBy(id = "policy_expression")
     WebElement policy;
     String policyStr;
     //@FindBy(className = "select-1c")
@@ -27,6 +26,7 @@ public class AlarmFormPage extends Page {
     WebElement useTemplate;
     @FindBy(id="cancelEdit")
     WebElement cancelEdit;
+
 
     public void selectPolicy(Map<String,String> map)
     {
@@ -43,5 +43,9 @@ public class AlarmFormPage extends Page {
             alarmPolicy.policyBtn.select();
             tools.switchToWindowByHand(hand);
         }
+    }
+    public void setPolicy(WebElement ele)
+    {
+        this.policy=ele;
     }
 }

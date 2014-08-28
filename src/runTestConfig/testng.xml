@@ -3,6 +3,9 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
+            <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
+            </class>
             <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
@@ -33,23 +36,21 @@
             </class>
             <class name="com.code.test.ibnmsConfig.AppServerListTest">
                 <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
-            </class>
-            <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
-                <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
-            </class>
-            <class name="com.code.test.ibnmsConfig.AlarmTemplateTest">
+            </class-->
+
+            <!--class name="com.code.test.ibnmsConfig.AlarmTemplateTest">
             <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/alarmTemplateList.action" />
             <methods>
                 <include name="operateTemplateKPI" ></include>
             </methods>
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.TemplateDevListTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/templateDevList.action" />
-                <methods>
-                    <include name="operateTemplateDev" ></include>
-                </methods>
             </class>
-            <!--class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
+            <class name="com.code.test.ibnmsConfig.SubscripFilterListTest">
+                <parameter name="Action_URL" value="/ibnms/config/subscripFilterList.action" />
+            </class>
+            <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">

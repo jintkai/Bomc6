@@ -32,7 +32,7 @@ public class AlarmConFrameTest extends TestCase {
 
     @DataProvider(name="alarmFrame")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMCONF_NEW",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("ALARMCONF",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
@@ -51,7 +51,7 @@ public class AlarmConFrameTest extends TestCase {
         tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
 
-    @Test(dataProvider = "alarmFrame",description = "增加、修改")
+    //@Test(dataProvider = "alarmFrame",description = "增加、修改")
     public void addAlarm(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

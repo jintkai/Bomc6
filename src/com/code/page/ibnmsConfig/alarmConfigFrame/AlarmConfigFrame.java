@@ -21,7 +21,7 @@ public class AlarmConfigFrame extends Page {
     public AlarmConfBtnPage confBtn=new AlarmConfBtnPage();
     public AlarmSearchHeadPage searchHead=new AlarmSearchHeadPage();
     public GridPage gridTable=new GridPage();
-    AlarmConfFormPage alarmConfForm=new AlarmConfFormPage();
+    public AlarmConfFormPage alarmConfForm=new AlarmConfFormPage();
     public GridPage searchByTree(Map<String,String> map)
     {
         tools.switchToFrame();
@@ -41,7 +41,7 @@ public class AlarmConfigFrame extends Page {
     public void addConf(Map<String,String> map,int type)
     {
         searchByTree(map);
-        AlarmConfFormPage alarmConfForm=confBtn.addConf(tools.getMapValue(map, "告警类型"));
+        confBtn.addConf(tools.getMapValue(map, "告警类型"));
         alarmConfForm.add(map,type);
     }
 

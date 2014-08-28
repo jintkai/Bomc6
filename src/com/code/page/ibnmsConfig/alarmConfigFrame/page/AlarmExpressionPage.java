@@ -1,10 +1,14 @@
 package com.code.page.ibnmsConfig.alarmConfigFrame.page;
 
 import com.code.common.Page;
+import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 import java.util.Map;
@@ -17,10 +21,13 @@ public class AlarmExpressionPage extends AlarmFormPage {
     //@FindBy(xpath = "//div[@type='event']")
     //WebElement policy;
     String policyStr="//div[@type='event']";
+    WebElement policy1;
     public AlarmExpressionPage()
     {
         super();
-        policy=tools.findBy(tools.getDriver(),By.xpath(policyStr));
+        policy1=tools.findBy(tools.getDriver(),By.xpath(policyStr));
+        setPolicy(policy1);
+
     }
     //告警描述表达式-编辑，按钮
     @FindBy(className = "expression-desc-btn")

@@ -21,6 +21,8 @@ public class AlarmConfFormPage extends Page {
     WebElement save;
     @FindBy(xpath="//button[@data-type=\"saveas\"]")
     WebElement saveEdit;
+    AlarmExpressionPage expressionPage=new AlarmExpressionPage();
+
     public void add(Map<String,String> map,int type)
     {
 
@@ -30,7 +32,8 @@ public class AlarmConfFormPage extends Page {
         tools.switchToFrame();
         tools.switchToFrame(mainFrame);
         tools.switchToFrame(alarmPolicy.frame);
-        alarmPolicy.add(map);
+        //alarmPolicy.add(map);
+        expressionPage.operate(map);
         tools.switchToFrame();
         tools.switchToFrame(mainFrame);
         tools.switchToFrame("upgradeFrame");
