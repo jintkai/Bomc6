@@ -16,19 +16,13 @@ import java.util.Map;
 /**
  * Created by Jin on 2014/8/12.
  */
-public class AlarmExpressionPage extends AlarmFormPage {
+public class AlarmExpressionPage extends Page {
     //重新定义父类的元素；
     //@FindBy(xpath = "//div[@type='event']")
     //WebElement policy;
     String policyStr="//div[@type='event']";
-    WebElement policy1;
-    public AlarmExpressionPage()
-    {
-        super();
-        policy1=tools.findBy(tools.getDriver(),By.xpath(policyStr));
-        setPolicy(policy1);
-
-    }
+    //告警策略的引用控件
+    AlarmFormPage alarmForm=new AlarmFormPage();
     //告警描述表达式-编辑，按钮
     @FindBy(className = "expression-desc-btn")
     WebElement expressionDescBtn;
@@ -43,32 +37,7 @@ public class AlarmExpressionPage extends AlarmFormPage {
 
     //告警等级表达式，编辑，按钮
     List<WebElement> expressionLevelBtn;
-    /*@FindBy(className = "expression-level-btn")
-    WebElement expressionLevelBtn;*/
-    //条件设置，类型；
-    /*@FindBy(className = "conditionType")
-    WebElement conditionType;
-    //条件值，数字
-    @FindBy(name="number")
-    WebElement number;
-    //区间值
-    @FindBy(name="minimum")
-    WebElement minimum;
-    @FindBy(name="maximum")
-    WebElement maximum;
-    //关键值
-    @FindBy(name="keyword")
-    WebElement keyword;
-    //包含
-    @FindBy(name="equalsStr")
-    WebElement equalsStr;
-    //时间段
-    @FindBy(name = "beginTime")
-    WebElement beginTime;
-    @FindBy(name = "endTime")
-    WebElement endTime;
-*/
-    //@FindBy(className = "conditionType")
+
     List<WebElement> conditionType;
     //条件值，数字
     //@FindBy(name="number")
@@ -92,6 +61,7 @@ public class AlarmExpressionPage extends AlarmFormPage {
 
     public void initWebElements()
     {
+
         funAddBtn= tools.findElements(tools.getDriver(), By.className("btn-add-fun"));
         expressionLevelBtn=tools.findElements(tools.getDriver(),By.className("expression-level-btn"));
         conditionType=tools.findElements(tools.getDriver(),By.className("conditionType"));
@@ -104,32 +74,39 @@ public class AlarmExpressionPage extends AlarmFormPage {
     }
     public void operate(Map<String,String> map)
     {
-        initWebElements();
-        if(tools.getMapValue(map,"告警描述表达式泛函数").isEmpty())
-            return;
-        tools.click(expressionDescBtn);
-        tools.selectByVisibleText(funFormUrl,tools.getMapValue(map,"告警描述表达式泛函数"));
-        tools.click(funAddBtn.get(0));
-        tools.click(expressionDescBtn);
-        for(int i=0;i<3;i++) {
-            String str="";
-            if (i==0)
-                str="严重告警";
-            if (i==1)
-                str="重要告警";
-            if (i==2)
-                str="一般告警";
-            if (tools.getMapValue(map,"条件设置_"+str).isEmpty())
-                continue;
-            tools.click(expressionLevelBtn.get(i));
-            tools.selectByVisibleText(conditionType.get(i), tools.getMapValue(map, "条件设置_"+str));
-            tools.sendKeys(number.get(i), tools.getMapValue(map, "NUMBER_"+str));
-            tools.sendKeys(minimum.get(i),tools.getMapValue(map,"MINIMUM_"+str));
-            tools.sendKeys(maximum.get(i),tools.getMapValue(map,"MAXIMUM_"+str));
-            tools.sendKeys(equalsStr.get(i),tools.getMapValue(map,"EQUALSSTR_"+str));
-            tools.sendKeys(keyword.get(i),tools.getMapValue(map,"KEYWORD_"+str));
-            tools.click(funAddBtn.get(i+1));
-            tools.click(expressionLevelBtn.get(i));
+
+        if (!tools.getMapValue(map,"使用策略或模板").isEmpty()) {
+            alarmForm.setPolicy(tools.findBy(tools.getDriver(), By.xpath(policyStr)));
+            alarmForm.selectPolicy(map);
+        }
+        else{
+            initWebElements();
+            if(tools.getMapValue(map,"告警描述表达式泛函数").isEmpty())
+                return;
+            tools.click(expressionDescBtn);
+            tools.selectByVisibleText(funFormUrl,tools.getMapValue(map,"告警描述表达式泛函数"));
+            tools.click(funAddBtn.get(0));
+            tools.click(expressionDescBtn);
+            for(int i=0;i<3;i++) {
+                String str="";
+                if (i==0)
+                    str="严重告警";
+                if (i==1)
+                    str="重要告警";
+                if (i==2)
+                    str="一般告警";
+                if (tools.getMapValue(map,"条件设置_"+str).isEmpty())
+                    continue;
+                tools.click(expressionLevelBtn.get(i));
+                tools.selectByVisibleText(conditionType.get(i), tools.getMapValue(map, "条件设置_"+str));
+                tools.sendKeys(number.get(i), tools.getMapValue(map, "NUMBER_"+str));
+                tools.sendKeys(minimum.get(i),tools.getMapValue(map,"MINIMUM_"+str));
+                tools.sendKeys(maximum.get(i),tools.getMapValue(map,"MAXIMUM_"+str));
+                tools.sendKeys(equalsStr.get(i),tools.getMapValue(map,"EQUALSSTR_"+str));
+                tools.sendKeys(keyword.get(i),tools.getMapValue(map,"KEYWORD_"+str));
+                tools.click(funAddBtn.get(i+1));
+                tools.click(expressionLevelBtn.get(i));
+            }
         }
     }
 

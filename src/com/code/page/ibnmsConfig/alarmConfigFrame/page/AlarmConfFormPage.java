@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class AlarmConfFormPage extends Page {
     public String mainFrame="alarmConfigFrame";
-    public AlarmPolicyPage alarmPolicy=new AlarmPolicyPage();
+    //public AlarmPolicyPage alarmPolicy=new AlarmPolicyPage();
     public MonitorPointPage monitorPoint=new MonitorPointPage();
     public AlarmUpgradeFrame upgrade=new AlarmUpgradeFrame();
     public AlarmFilterPage filter=new AlarmFilterPage();
@@ -26,33 +26,59 @@ public class AlarmConfFormPage extends Page {
     public void add(Map<String,String> map,int type)
     {
 
-        tools.switchToFrame();
-        tools.switchToFrame(mainFrame);
+
         monitorPoint.add(map);
+        String policyStr=tools.getMapValue(map,"使用策略或模板_告警生成");
+        Map<String,String> tempMap=map;
+        tempMap.put("使用策略或模板",policyStr);
+        tempMap.put("策略名称_ALAARMPOLICY",tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警生成"));
+        if (policyStr.isEmpty()) {
+            tools.switchToFrame("generationFrame");
+        }
+        expressionPage.alarmForm.setUseOtherID("useOther");
+        expressionPage.operate(tempMap);
         tools.switchToFrame();
         tools.switchToFrame(mainFrame);
-        tools.switchToFrame(alarmPolicy.frame);
-        //alarmPolicy.add(map);
-        expressionPage.operate(map);
-        tools.switchToFrame();
-        tools.switchToFrame(mainFrame);
-        tools.switchToFrame("upgradeFrame");
-        upgrade.add(map);
+
+        tempMap=map;
+        tempMap.put("使用策略或模板",tools.getMapValue(map,"使用策略或模板_告警升级"));
+        tempMap.put("策略名称_ALAARMPOLICY",tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警升级"));
+        policyStr=tools.getMapValue(map,"使用策略或模板_告警升级");
+        if(policyStr.isEmpty())
+            tools.switchToFrame("upgradeFrame");
+        upgrade.alarmForm.setUseOtherID("useOther");
+        upgrade.setPolicyId("upgrade");
+        upgrade.add(tempMap);
         tools.switchToFrame();
         String str="var a =window.top.document.getElementById(\"alarmConfigFrame\").contentWindow.document.body.scrollTop=600";
         tools.execJS(" var a=document.getElementsByTagName(\"iframe\")[1].contentWindow.document.documentElement.scrollTop=600;return a;");
-        tools.switchToFrame("alarmConfigFrame");
-        tools.switchToFrame("filterFrame");
+        tools.switchToFrame(mainFrame);
+
+        tempMap=map;
+        tempMap.put("使用策略或模板",tools.getMapValue(map,"使用策略或模板_告警过滤"));
+        tempMap.put("策略名称_ALAARMPOLICY",tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警过滤"));
+        policyStr=tools.getMapValue(map,"使用策略或模板_告警过滤");
+        if(policyStr.isEmpty())
+            tools.switchToFrame("filterFrame");
+        filter.alarmForm.setUseOtherID("useOther");
+        filter.setPolicyId("filter");
         filter.add(map);
         tools.switchToFrame();
+        str="var a =window.top.document.getElementById(\"alarmConfigFrame\").contentWindow.document.body.scrollTop=600";
         tools.execJS(" var a=document.getElementsByTagName(\"iframe\")[1].contentWindow.document.documentElement.scrollTop=600;return a;");
         tools.switchToFrame(mainFrame);
-        tools.switchToFrame("clearFrame");
+
+        tempMap=map;
+        tempMap.put("使用策略或模板",tools.getMapValue(map,"使用策略或模板_告警清除"));
+        tempMap.put("策略名称_ALAARMPOLICY",tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警清除"));
+        policyStr=tools.getMapValue(map,"使用策略或模板_告警清楚");
+        if(policyStr.isEmpty())
+            tools.switchToFrame("clearFrame");
+        clear.alarmForm.setUseOtherID("useOther");
+        clear.setPolicyId("clear");
         clear.add(map);
         tools.switchToFrame();
-        tools.execJS(" var a=document.getElementsByTagName(\"iframe\")[1].contentWindow.document.documentElement.scrollTop=600;return a;");
-        tools.switchToFrame();
-        tools.switchToFrame(mainFrame);
+
         if (type==1)
             tools.click(save);
         if (type==2)

@@ -16,6 +16,7 @@ import java.util.Map;
 
 /**
  * Created by Jin on 2014/8/19.
+ * 单指标配置页面，告警模板中，增加KPI的页面
  */
 public class eventTemplateKpiForm extends Page {
 
@@ -28,6 +29,7 @@ public class eventTemplateKpiForm extends Page {
     @FindBy(className = "btn-select-kpi")
     WebElement selectKpiBtn;
 
+    //告警类型：告警、趋势预警、异动预警
     String confTypeName="eventTemplateKpiForm.configType";
 
     @FindBy(id = "btn-submit")
@@ -56,27 +58,27 @@ public class eventTemplateKpiForm extends Page {
         tempMap.put("使用策略或模板",temp);
         temp=tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警生成");
         tempMap.put("策略名称_ALAARMPOLICY",temp);
-        alarmExpression.selectPolicy(tempMap);
+        alarmExpression.operate(tempMap);
 
         temp=tools.getMapValue(map,"使用策略或模板_告警升级");
         tempMap.put("使用策略或模板",temp);
         temp=tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警升级");
         tempMap.put("策略名称_ALAARMPOLICY",temp);
-        alarmUpgrade.selectPolicy(tempMap);
+        alarmUpgrade.operate(tempMap);
 
         tools.setScroll(500);
         temp=tools.getMapValue(map,"使用策略或模板_告警过滤");
         tempMap.put("使用策略或模板",temp);
         temp=tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警过滤");
         tempMap.put("策略名称_ALAARMPOLICY",temp);
-        alarmFilter.selectPolicy(tempMap);
-
+        alarmFilter.operate(tempMap);
+        tools.setScroll(800);
         temp=tools.getMapValue(map,"使用策略或模板_告警清除");
         tempMap.put("使用策略或模板",temp);
         temp=tools.getMapValue(map,"策略名称_ALAARMPOLICY_告警清除");
         tempMap.put("策略名称_ALAARMPOLICY", temp);
-        alarmClear.selectPolicy(tempMap);
-
+        alarmClear.operate(tempMap);
+        tools.setScroll(800);
         tools.click(savaBtn);
 
     }

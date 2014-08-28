@@ -12,16 +12,11 @@ import java.util.Map;
  * Created by jinkai on 2014/7/17.
  * 告警清除表达式
  */
-public class AlarmClearPage extends AlarmFormPage {
+public class AlarmClearPage extends Page {
     //@FindBy(id = "clear_expression")
     //WebElement policy;
     String policyId="clear_expression";
-    public AlarmClearPage()
-    {
-        super();
-        policy=tools.findBy(tools.getDriver(),By.id(policyId));
-    }
-
+    public AlarmFormPage alarmForm=new AlarmFormPage();
     @FindBy(name="clearWay")
     WebElement clearWay;
 
@@ -60,28 +55,39 @@ public class AlarmClearPage extends AlarmFormPage {
 
     public void inputForm(Map<String,String> map)
     {
-        tools.selectByVisibleText(clearWay,tools.getMapValue(map,"清除方式"));
+        if (!tools.getMapValue(map,"使用策略或模板").isEmpty()) {
+            alarmForm.setPolicy(tools.findBy(tools.getDriver(), By.id(policyId)));
+            alarmForm.selectPolicy(map);
+        }
+        else {
+            tools.selectByVisibleText(clearWay, tools.getMapValue(map, "清除方式"));
 
-        if (tools.getMapValue(map,"泛函数").isEmpty())
-            return;
-        tools.click(expressionUpBtn);
-        tools.selectByVisibleText(funFormUrl,tools.getMapValue(map,"泛函数"));
+            if (tools.getMapValue(map, "泛函数").isEmpty())
+                return;
 
-        tools.click(btnAddFun);
 
-        tools.sendKeys(isInMonth_month,tools.getMapValue(map,"isInMonth_month"));
+            tools.click(expressionUpBtn);
+            tools.selectByVisibleText(funFormUrl, tools.getMapValue(map, "泛函数"));
 
-        tools.sendKeys(compareKpiValueByUK_unitId,tools.getMapValue(map,"compareKpiValueByUK_unitId"));
-        tools.sendKeys(compareKpiValueByUK_kpiId,tools.getMapValue(map,"compareKpiValueByUK_kpiId"));
-        tools.selectByVisibleText(compareKpiValueByUK_compare_type,tools.getMapValue(map,"compareKpiValueByUK_compare_type"));
-        tools.sendKeys(compareKpiValueByUK_compare_value,tools.getMapValue(map,"compareKpiValueByUK_compare_value"));
+            tools.click(btnAddFun);
 
-        tools.sendKeys(overByTimes_m,tools.getMapValue(map,"overByTimes_m"));
-        tools.sendKeys(overByTimes_n,tools.getMapValue(map,"overByTimes_n"));
-        tools.sendKeys(overByTimes_threshold,tools.getMapValue(map,"overByTimes_threshold"));
+            tools.sendKeys(isInMonth_month, tools.getMapValue(map, "isInMonth_month"));
 
-        tools.click(expressionUpBtn);
+            tools.sendKeys(compareKpiValueByUK_unitId, tools.getMapValue(map, "compareKpiValueByUK_unitId"));
+            tools.sendKeys(compareKpiValueByUK_kpiId, tools.getMapValue(map, "compareKpiValueByUK_kpiId"));
+            tools.selectByVisibleText(compareKpiValueByUK_compare_type, tools.getMapValue(map, "compareKpiValueByUK_compare_type"));
+            tools.sendKeys(compareKpiValueByUK_compare_value, tools.getMapValue(map, "compareKpiValueByUK_compare_value"));
+
+            tools.sendKeys(overByTimes_m, tools.getMapValue(map, "overByTimes_m"));
+            tools.sendKeys(overByTimes_n, tools.getMapValue(map, "overByTimes_n"));
+            tools.sendKeys(overByTimes_threshold, tools.getMapValue(map, "overByTimes_threshold"));
+
+            tools.click(expressionUpBtn);
+        }
     }
     public void operate(Map<String,String>map){inputForm(map);}
-
+    public void setPolicyId(String str)
+    {
+        policyId=str;
+    }
 }

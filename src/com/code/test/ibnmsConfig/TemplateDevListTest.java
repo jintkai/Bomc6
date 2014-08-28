@@ -31,7 +31,7 @@ public class TemplateDevListTest extends TestCase {
 
     @DataProvider(name="TemplateDev")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("TEMPLATEDEVLIST",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("告警模板关联",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

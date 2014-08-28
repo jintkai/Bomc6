@@ -11,6 +11,7 @@ import java.util.Map;
  * Created by jinkai on 2014/7/16.
  */
 public class MonitorPointPage extends Page {
+    String frame="alarmConfigFrame";
     @FindBy(name="event.unitName")
     WebElement unitName;
     @FindBy(id="kbpId")
@@ -26,15 +27,20 @@ public class MonitorPointPage extends Page {
     }
     public void inputForm(Map<String,String> map)
     {
-        tools.selectByVisibleText(kbpId,tools.getMapValue(map,"业务系统"));
-        tools.selectByVisibleText(subUnitId,tools.getMapValue(map,"子实体"));
+
+
         if(tools.getMapValue(map,"指标名称").isEmpty())
             return;
-        tools.click(btnSelectKpi);
+//        tools.click(btnSelectKpi);
+        tools.openModelDialog(btnSelectKpi);
         KpiListFramePage kpiList=new KpiListFramePage();
         String hand=tools.switchToWindowByTitle(kpiList.title);
         kpiList.search(map).selectAllTr();
         kpiList.kpiBtn.select();
         tools.switchToWindowByHand(hand);
+        tools.switchToFrame(frame);
+
+        tools.selectByVisibleText(kbpId,tools.getMapValue(map,"业务系统"));
+        tools.selectByVisibleText(subUnitId,tools.getMapValue(map,"子实体"));
     }
 }

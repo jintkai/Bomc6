@@ -32,18 +32,18 @@ public class AlarmConFrameTest extends TestCase {
 
     @DataProvider(name="alarmFrame")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMCONF",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("告警集中配置",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "alarmFrame",description = "通过Tree查询告警集中配置")
+    //@Test(dataProvider = "alarmFrame",description = "通过Tree查询告警集中配置")
     public void searchByTree(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=alarmFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
-    @Test(dataProvider = "alarmFrame",description = "通过告警配置表头查询告警集中配置")
+    //@Test(dataProvider = "alarmFrame",description = "通过告警配置表头查询告警集中配置")
     public void searchByHead(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -51,7 +51,7 @@ public class AlarmConFrameTest extends TestCase {
         tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
     }
 
-    //@Test(dataProvider = "alarmFrame",description = "增加、修改")
+    @Test(dataProvider = "alarmFrame",description = "增加、修改")
     public void addAlarm(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -63,9 +63,9 @@ public class AlarmConFrameTest extends TestCase {
         if(option.equals("删除"))
             alarmFrame.delete(map);
         GridPage gridTable=alarmFrame.searchByHead(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "alarmFrame",description="增加变更项")
+    //@Test(dataProvider = "alarmFrame",description="增加变更项")
     public void addEdit(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -78,7 +78,7 @@ public class AlarmConFrameTest extends TestCase {
     {
         alarmFrame.exportExcel();
     }
-    @Test
+    //@Test
     public void openEditedList()
     {
         alarmFrame.openEditedList();
@@ -88,7 +88,7 @@ public class AlarmConFrameTest extends TestCase {
         tools.switchToWindowByHand(hand);
 
     }
-    @Test
+    //@Test
     public void openFilteredList()
     {
         alarmFrame.openFilteredList();

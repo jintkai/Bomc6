@@ -49,6 +49,7 @@ public class ClearAlarmFormPage extends Page {
             }
             actions.sendKeys(Keys.ENTER).perform();
         }
+
         if (!tools.getMapValue(map,"指标编号_KPI").isEmpty())
         {
             tools.openModelDialog(selectKpiBtn);

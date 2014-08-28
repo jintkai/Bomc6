@@ -11,6 +11,7 @@ import java.util.Map;
  * Created by Jin on 2014/8/4.
  */
 public class TemplateFormPage extends Page {
+
     @FindBy(name="alarmTemplateForm.templateName")
     WebElement templateName;
     @FindBy(name="alarmTemplateForm.templateType")
