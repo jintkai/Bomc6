@@ -65,7 +65,7 @@ public class AlarmFilterPage extends Page {
             alarmForm.selectPolicy(map);
         }
         else {
-            tools.selectByVisibleText(policy_upLevel, tools.getMapValue(map, "级别增量"));
+            //tools.selectByVisibleText(policy_upLevel, tools.getMapValue(map, "级别增量"));
 
             if (tools.getMapValue(map, "泛函数").isEmpty())
                 return;

@@ -30,7 +30,7 @@ public class KpiFrameTest extends TestCase {
 
     @DataProvider(name="kpiList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("KPI",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("KPI管理",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

@@ -42,7 +42,11 @@ public class TemplateDevListPage extends Page{
         devBtn.devSet();
         TemplateDevSetPage devSet=new TemplateDevSetPage();
         String hand=tools.switchToWindowByTitle(devSet.title);
-        gridTable=devSet.search(map);
+        Map<String,String> tempMap=map;
+        tempMap.put("资源UNIT_ID_TEMPLATEDEV",tools.getMapValue(map,"资源UNIT_ID_TEMPLATEDEV_SET"));
+        tempMap.put("资源名称_TEMPLATEDEV",tools.getMapValue(map,"资源名称_TEMPLATEDEV_SET"));
+        tempMap.put("IP_TEMPLATEDEV",tools.getMapValue(map,"IP_TEMPLATEDEV_SET"));
+        gridTable=devSet.search(tempMap);
         gridTable.selectTr(0);
         devSet.btn.save();
         tools.alertAccept();
@@ -59,4 +63,5 @@ public class TemplateDevListPage extends Page{
         tools.switchToWindowByHand(hand);
         return row;
     }
+
 }

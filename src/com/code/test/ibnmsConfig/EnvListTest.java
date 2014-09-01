@@ -30,7 +30,7 @@ public class EnvListTest  extends TestCase{
 
     @DataProvider(name="envList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ENV",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("部署环境",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

@@ -10,6 +10,11 @@ public class AppBtnPage extends BtnPage {
     {
         tools.click(remove);
         tools.alertAccept();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 
@@ -17,6 +22,11 @@ public class AppBtnPage extends BtnPage {
     {
         tools.click(deploy);
         tools.alertAccept();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 
@@ -24,12 +34,22 @@ public class AppBtnPage extends BtnPage {
     {
         tools.click(shutdown);
         tools.alertAccept();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void startup()
     {
         tools.click(startup);
         tools.alertAccept();
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 }

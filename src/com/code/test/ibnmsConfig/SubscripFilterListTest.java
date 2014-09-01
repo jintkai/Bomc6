@@ -30,7 +30,7 @@ public class SubscripFilterListTest extends TestCase {
 
     @DataProvider(name="SubscripFilter")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("SUBSCRIPFILTER",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("订阅过滤器配置",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

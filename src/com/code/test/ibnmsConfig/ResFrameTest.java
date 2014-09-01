@@ -22,7 +22,7 @@ public class ResFrameTest extends TestCase {
     ResListFramePage resFrame=new ResListFramePage();
     @DataProvider(name="resCase")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("RES",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("资源基础配置",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

@@ -82,12 +82,22 @@ public class BtnPage extends Page {
     {
         tools.click(remove);
         tools.alertAccept();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void unload()
     {
         tools.click(unload);
         tools.alertAccept();
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
     public void deploy()
@@ -95,7 +105,7 @@ public class BtnPage extends Page {
         tools.click(deploy);
         tools.click(startDeploy);
         try {
-            Thread.sleep(15000);
+            Thread.sleep(25000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -105,12 +115,22 @@ public class BtnPage extends Page {
     public void shutdown()
     {
         tools.click(shutdown);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.alertAccept();
         tools.click(deploy_ok);
     }
     public void startup()
     {
         tools.click(startup);
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         tools.click(deploy_ok);
     }
 }

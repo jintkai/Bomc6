@@ -513,7 +513,11 @@ public class Tools {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.switchTo().alert().accept();
+        try{driver.switchTo().alert().accept();}
+        catch (NoAlertPresentException e)
+        {
+            System.out.println("Alert对话框不存在！");
+        }
     }
     public void alarmDismiss()
     {

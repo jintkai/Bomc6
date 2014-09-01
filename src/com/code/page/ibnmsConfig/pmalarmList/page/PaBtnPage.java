@@ -14,5 +14,24 @@ import java.util.Map;
  */
 public class PaBtnPage extends BtnPage {
 
-
+    public void deploy()
+    {
+        tools.click(deploy);
+        try {
+            Thread.sleep(20000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        tools.click(deploy_ok);
+    }
+    public void remove()
+    {
+        tools.click(remove);
+        try {
+            Thread.sleep(15000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        tools.click(deploy_ok);
+    }
 }

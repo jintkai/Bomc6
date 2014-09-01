@@ -114,7 +114,11 @@ public class AlarmPolicyList extends Page {
     public GridPage sysAlarm(Map<String,String> map)
     {
         search(map);
-        gridTable.selectTr(1);
+
+        if(tools.getMapValue(map,"同步条数").equals("全部"))
+            gridTable.selectTr(0);
+        else
+            gridTable.selectTr(1);
         policyBtn.sysAlarm();
         String hand=tools.switchToWindowByTitle(alaremConfList.title);
         new GridPage().selectTr(0);

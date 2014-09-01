@@ -32,7 +32,7 @@ public class AlarmPolicyTest extends TestCase {
 
     @DataProvider(name="alarmpolicy")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("ALARMPOLICY",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("告警策略维护",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }

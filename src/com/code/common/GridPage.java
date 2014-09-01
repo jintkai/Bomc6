@@ -245,7 +245,7 @@ public class GridPage  extends Page implements Data{
         String rowValues[]=getTdOfAllTr(colName);
         for (int i=0;i<rowValues.length;i++)
         {
-           if( rowValues[i].contains(colStr))
+           if( rowValues[i].equals(colStr))
             list.add(i+1);
         }
         return list;

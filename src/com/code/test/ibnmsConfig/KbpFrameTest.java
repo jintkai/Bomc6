@@ -30,7 +30,7 @@ public class KbpFrameTest extends TestCase {
 
     @DataProvider(name="kbpList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("KBP",method.getName());
+        ExcelDriver excelDriver=new ExcelDriver("KBP管理",method.getName());
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
