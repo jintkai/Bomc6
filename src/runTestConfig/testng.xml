@@ -3,12 +3,12 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
-            <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
+            <class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class-->
+            </class>
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
             </class>
