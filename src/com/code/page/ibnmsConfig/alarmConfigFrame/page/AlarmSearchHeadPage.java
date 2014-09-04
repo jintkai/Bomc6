@@ -20,13 +20,24 @@ public class AlarmSearchHeadPage extends Page {
     WebElement KPI_NAME;
     @FindBy(name="ALARM_TYPE")
     WebElement ALARM_TYPE;
-
+    @FindBy(name="TEMPLATE_ID")
+    WebElement TEMPLATE_ID;
     public GridPage searchByHead(Map<String,String> map)
     {
         tools.sendKeys(UNIT_ID,tools.getMapValue(map,"UNIT_ID_ALAREM"));
         tools.sendKeys(KPI_ID,tools.getMapValue(map,"指标ID_ALAREM"));
         tools.sendKeys(KPI_NAME,tools.getMapValue(map,"指标名称_ALAREM"));
-        tools.sendKeys(ALARM_TYPE,tools.getMapValue(map,"指标类型_ALAREM"));
+        String type=tools.getMapValue(map,"指标类型_ALAREM");
+        if (!type.isEmpty()) {
+            tools.sendKeys(ALARM_TYPE, type);
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+        }
+        type=tools.getMapValue(map,"配置类型_ALARM");
+        if (!type.isEmpty())
+        {
+            tools.sendKeys(TEMPLATE_ID, type);
+            actions.sendKeys(Keys.ARROW_DOWN).perform();
+        }
         actions.sendKeys(Keys.ENTER).perform();
         return new GridPage();
     }

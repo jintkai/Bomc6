@@ -115,13 +115,15 @@ public class AlarmPolicyList extends Page {
     {
         search(map);
 
-        if(tools.getMapValue(map,"同步条数").equals("全部"))
-            gridTable.selectTr(0);
-        else
-            gridTable.selectTr(1);
+        gridTable.selectTr(0);
+
         policyBtn.sysAlarm();
         String hand=tools.switchToWindowByTitle(alaremConfList.title);
-        new GridPage().selectTr(0);
+        if(tools.getMapValue(map,"同步条数").equals("全部"))
+            new GridPage().selectTr(0);
+        else
+            new GridPage().selectTr(1);
+
         alaremConfList.btnPage.select();
         tools.alertAccept();
         tools.alertAccept();

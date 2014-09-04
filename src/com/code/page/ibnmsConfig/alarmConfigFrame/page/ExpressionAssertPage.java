@@ -11,7 +11,6 @@ import org.openqa.selenium.support.FindBy;
 public class ExpressionAssertPage extends Page {
     public String title="表达式验证";
     @FindBy(id="btn-submit")
-
     WebElement sumbitBtn;
     WebElement unitIdPrefix;
     WebElement kpiId;
