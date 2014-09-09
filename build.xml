@@ -89,6 +89,20 @@
         <move file="${output.dir}/test-output${TODAY}.rar" tofile="${backup}/test-output${TODAY}.rar"/>
     </target>
 
+	
+	<target name="test" depends="run_tests">
+        <delete file="${basedir}/test-output/results.xml"></delete>
+        <copy file="${basedir}/test-output/testng-results.xml"
+              tofile="${basedir}/test-output/results.xml" outputencoding="UTF-8"></copy>
+    </target>
+	<target name="trans" description="report" depends="test" >
+        <echo message="**************transform**************" />
+        <xslt in="${basedir}/test-output/results.xml" style="${basedir}/test-output/testng-results.xsl"
+              out="${basedir}/test-output/Report.html" classpathref="compile.path">
+            <param name="testNgXslt.outputDir" expression="${basedir}/test-output/" />
+        </xslt>
+    </target>
+	
     <tstamp>
         <format property="TODAY" pattern="yyyy-MM-dd" locale="cn"/>
     </tstamp>
