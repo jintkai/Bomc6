@@ -640,6 +640,7 @@ public class Tools {
     public void inputSubscripLogin(WebElement element,String loginStr)
     {
         String login[]=loginStr.split(",");
+        element.clear();
         for (int i=0;i<login.length;i++)
         {
             element.sendKeys(login[i]);

@@ -13,9 +13,9 @@ public interface Data {
     //public static String baseUrl = "http://172.21.149.132";
     //public static String baseUrl = "http://192.168.1.105";
     //public static String baseUrl = "http://192.168.220.1:8080";
-    public static String baseUrl = "http://172.21.0.31:8084";
+    //public static String baseUrl = "http://172.21.0.31:8084";
     //public static String baseUrl = "http://192.168.1.106";
-
+    public static String baseUrl = "http://localhost:8080";
     public static int timeOut=8;       //wait超时时间，单位秒
     public static int sleepTime=250;    //调度频率，单位毫秒
     /*

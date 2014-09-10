@@ -3,7 +3,7 @@
     <test name="frame">
         <classes>
             <class name="com.code.test.ibnmsConfig.LoginPageTest"></class>
-            <class name="com.code.test.ibnmsConfig.KbpFrameTest">
+            <!--class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
             <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
@@ -52,8 +52,11 @@
 
             <class name="com.code.test.ibnmsConfig.AlarmShieldCfgTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmShieldCfgList.action" />
-            </class>
+            </class-->
 
+            <class name="com.code.test.ibnmsConfig.AlarmShieldCfgTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmCorrelationCfgList.action?type=database" />
+            </class>
             <!--class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
                 <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
             </class-->
@@ -61,6 +64,9 @@
             <!--集中控制>
             <class name="com.code.test.C3P.CfgInstrFrameTest">
                 <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />
+                 <methods>
+                    <include name="searchAlarmShield"></include>
+                </methods>
             </class-->
         </classes>
     </test>

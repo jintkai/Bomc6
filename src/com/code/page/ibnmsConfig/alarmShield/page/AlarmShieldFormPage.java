@@ -1,7 +1,9 @@
 package com.code.page.ibnmsConfig.alarmShield.page;
 
 import com.code.common.FormPage;
+import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.monitorPoints.MonitorPointsFramePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,6 +28,8 @@ public class AlarmShieldFormPage extends Page {
     WebElement grantBeginTime;
     @FindBy(id = "alarmShieldCfg.grantEndTime")
     WebElement grantEndTime;
+    @FindBy(id = "btn-add")
+    WebElement btnAdd;
     @FindBy(className = "bnms-btn-save")
     WebElement savaBtn;
     public void opearete(Map<String,String> map)
@@ -49,6 +53,25 @@ public class AlarmShieldFormPage extends Page {
         js="document.getElementById(\""+tools.getAttribute(grantEndTime,"id")+"\").removeAttribute(\"readOnly\");";
         js=js+"document.getElementById(\""+tools.getAttribute(grantEndTime,"id")+"\").value=\""+tools.getMapValue(map,"授权有效结束")+"\";";
         tools.execJS(js);
+
+        String selectMoniter=tools.getMapValue(map,"监控点增加");
+        if (!selectMoniter.isEmpty() && Integer.parseInt(selectMoniter)!=0)
+        {
+            MonitorPointsFramePage monitorFrame=new MonitorPointsFramePage();
+            Map<String,String> tempMap=map;
+            for (int i=0;i<Integer.parseInt(selectMoniter);i++)
+            {
+                tools.openModelDialog(btnAdd);
+                String hand=tools.switchToWindowByTitle(monitorFrame.title);
+                tempMap.put("监控点名称_MONITORPOINT",tools.getMapValue(map,"监控点名称_MONITORPOINT"+(i+1)));
+                tempMap.put("指标名称_MONITORPOINT",tools.getMapValue(map,"指标名称_MONITORPOINT"+(i+1)));
+                tempMap.put("监控点KBP_MONITORPOINT",tools.getMapValue(map,"监控点KBP_MONITORPOINT"+(i+1)));
+                tempMap.put("指标ID_MONITORPOINT",tools.getMapValue(map,"指标ID_MONITORPOINT"+(i+1)));
+                monitorFrame.selectMonitorPoints(tempMap);
+                tools.switchToWindowByHand(hand);
+            }
+        }
+
         tools.click(savaBtn);
         tools.alertAccept();
     }

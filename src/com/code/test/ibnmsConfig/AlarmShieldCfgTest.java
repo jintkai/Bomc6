@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by Jin on 2014/9/4.
@@ -36,15 +37,17 @@ public class AlarmShieldCfgTest extends TestCase{
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "AlarmShield",priority =0)
+    @Test(dataProvider = "AlarmShield",priority =0,description = "告警屏蔽过滤器查询功能")
     public void searchAlarmShield(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=shieldCfg.search(map);
         tools.assertEquals(gridTable.getRowNum(),
                 Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        Map<String, String> resultMap=gridTable.getTrOfAllTd(1);
+        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map);
     }
-    @Test(dataProvider = "AlarmShield",priority = 1)
+    @Test(dataProvider = "AlarmShield",priority = 1,description = "告警屏蔽过滤器操作功能：增、删、改")
     public void operateAlarmShield(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -52,6 +55,10 @@ public class AlarmShieldCfgTest extends TestCase{
         gridTable=shieldCfg.opearte(map);
         gridTable=shieldCfg.search(map);
         tools.assertEquals(gridTable.getRowNum(),
-                Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+                Integer.parseInt(tools.getMapValue(map, "期望值")), map);
+        if (!tools.getMapValue(map,"操作类型").equals("删除"))
+        {
+        Map<String, String> resultMap=gridTable.getTrOfAllTd(1);
+        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map);}
     }
 }
