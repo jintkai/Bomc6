@@ -292,6 +292,28 @@ public class Tools {
         takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
         return "FALSE";
     }
+    public String switchToWindowByTitle2(String title)
+    {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        String hand=driver.getWindowHandle();
+        Set<String> handsSet=driver.getWindowHandles();
+        String handsStr[]=new String[handsSet.size()];
+        handsSet.toArray(handsStr);
+        for(int i=0;i<handsStr.length;i++)
+        {
+            driver.switchTo().window(handsStr[i]);
+            String str=driver.getTitle();
+            if (str.equals(title))
+                return hand;
+        }
+        Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        return "FALSE";
+    }
     /**
      * 通过窗口句柄来切换窗口
      */
