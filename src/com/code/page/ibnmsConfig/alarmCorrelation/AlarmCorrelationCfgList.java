@@ -26,6 +26,20 @@ public class AlarmCorrelationCfgList extends Page {
             correlationPage.operate(map);
             tools.switchToWindowByHand(hand);
         }
+        if (operation.equals("修改")) {
+            gridTable.selectTr(gridTable.getListOftr(tools.getMapValue(map,"验证列"),tools.getMapValue(map,"目标UNITID")).get(0));
+            tools.openModelDialog(btnPage.editBtn);
+            //btnPage.add();
+            String hand=tools.switchToWindowByTitle2(correlationPage.title);
+            correlationPage.operate(map);
+            tools.switchToWindowByHand(hand);
+        }
+        if (operation.equals("删除")) {
+            gridTable.selectTr(gridTable.getListOftr(tools.getMapValue(map,"验证列"),tools.getMapValue(map,"目标UNITID")).get(0));
+            btnPage.delete();
+            tools.alertAccept();
+
+        }
         gridTable=new GridPage();
         return  gridTable;
     }
