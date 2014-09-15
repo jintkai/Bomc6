@@ -42,7 +42,7 @@ public class SubscripFilterListTest extends TestCase {
         gridTable=subscriptList.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
     }
-    @Test(dataProvider = "SubscripFilter",priority = 0,description = "订阅过滤器查询")
+    @Test(dataProvider = "SubscripFilter",priority = 0,description = "订阅过滤器操作")
     public void operateSubscripFilter(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

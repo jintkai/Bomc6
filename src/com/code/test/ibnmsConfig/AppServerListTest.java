@@ -35,7 +35,7 @@ public class AppServerListTest extends TestCase {
         return excelDriver;
     }
 
-    @Test(dataProvider = "AppServerList",priority = 0)
+    @Test(dataProvider = "AppServerList",priority = 0,description = "增加、修改、删除appserver")
     public void operateAPP(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -44,7 +44,7 @@ public class AppServerListTest extends TestCase {
                 Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 
-    @Test(dataProvider = "AppServerList",priority = 1)
+    @Test(dataProvider = "AppServerList",priority = 1,description = "部署、启动、停止、卸载appserver")
     public void deployAPP(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

@@ -36,7 +36,7 @@ public class TemplateDevListTest extends TestCase {
         return excelDriver;
     }
 
-    @Test(dataProvider = "TemplateDev",priority = 0,description = "告警模板关联")
+    @Test(dataProvider = "TemplateDev",priority = 0,description = "告警模板关联查询")
     public void searchTemplateDev(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -44,7 +44,7 @@ public class TemplateDevListTest extends TestCase {
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
     }
 
-    @Test(dataProvider = "TemplateDev",priority = 1,description = "告警模板关联")
+    @Test(dataProvider = "TemplateDev",priority = 1,description = "告警模板关联资源查询")
     public void searchTemplateDevSet(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

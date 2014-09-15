@@ -35,14 +35,14 @@ public class AgListTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "agList",priority = 0)
+    @Test(dataProvider = "agList",priority = 0,description = "查询Agent")
     public void searchAG(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=agList.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="agList",priority = 1)
+    @Test(dataProvider="agList",priority = 1,description = "增加、修改、删除Agent")
     public void operateAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
@@ -50,7 +50,7 @@ public class AgListTest extends TestCase {
         gridTable=agList.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="agList",priority = 2)
+    @Test(dataProvider="agList",priority = 2,description = "部署、启动、停止、卸载Agent")
     public void deployAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);

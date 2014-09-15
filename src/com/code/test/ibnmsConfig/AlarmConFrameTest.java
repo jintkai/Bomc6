@@ -51,7 +51,7 @@ public class AlarmConFrameTest extends TestCase {
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 
-    @Test(dataProvider = "alarmFrame",priority = 2,description = "增加、修改")
+    @Test(dataProvider = "alarmFrame",priority = 2,description = "增加、修改、删除告警集中配置")
     public void addAlarm(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

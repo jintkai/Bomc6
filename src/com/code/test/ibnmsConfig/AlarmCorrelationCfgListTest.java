@@ -37,7 +37,7 @@ public class AlarmCorrelationCfgListTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "AlarmCorrelation",priority =0,description = "数据库宕告警关联配置")
+    @Test(dataProvider = "AlarmCorrelation",priority =0,description = "数据库宕告警关联配置、增加、修改、删除；")
     public void operateAlarmCorrelation(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

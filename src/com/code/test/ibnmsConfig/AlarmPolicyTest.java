@@ -75,7 +75,7 @@ public class AlarmPolicyTest extends TestCase {
         Map<String,String> policyMap=gridTable.getTrOfAllTd(1);
         tools.assertEquals(Integer.parseInt(tools.getMapValue(policyMap,"未同步告警配置数")),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider = "alarmpolicy",priority = 3,description = "同步告警")
+    @Test(dataProvider = "alarmpolicy",priority = 3,description = "浏览策略")
     public void viewAlarm(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);

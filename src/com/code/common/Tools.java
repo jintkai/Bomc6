@@ -456,7 +456,7 @@ public class Tools {
         String filename=picDir+getCurrentDateTime()+"."+imageFormat;
         try {
             ImageIO.write(image, "png", new File(filename));
-            System.out.print("TakesScreenshot Save File:"+filename+"....Finished!\n");
+            Reporter.log("TakesScreenshot Save File:"+filename+"....Finished!\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

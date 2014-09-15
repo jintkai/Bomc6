@@ -25,7 +25,7 @@ public class LoginPageTest  extends TestCase{
         return  excelDriver;
     }
 
-    @Test(dataProvider="Login")
+    @Test(dataProvider="Login",description = "登录方法")
     public void login(String[] obj)
     {
         map=tools.changeStringToMap(excelHead, obj);

@@ -34,7 +34,7 @@ public class WKlistTest extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(dataProvider = "WKlist",priority = 0)
+    @Test(dataProvider = "WKlist",priority = 0,description = "增加、修改、删除WORKSTATION")
     public void operateWK(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
@@ -42,7 +42,7 @@ public class WKlistTest extends TestCase {
         tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
                 Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
-    @Test(dataProvider="WKlist",priority = 1 )
+    @Test(dataProvider="WKlist",priority = 1,description = "部署、启动、停止、卸载WORKSTATION")
     public void deployWK(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
