@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.subscripFilter.page;
 
 import com.code.common.BtnPage;
 import com.code.common.FormPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -16,6 +17,10 @@ public class SubscripFilterBtn extends BtnPage {
     public FormPage add(Map<String,String> map) {
         tools.moveToElement(addBtn);
         tools.selectByVisibleText(filterAddBtn,tools.getMapValue(map,"过滤器类型"));
+        return new FormPage();
+    }
+    public FormPage edit() {
+        tools.openModelDialog(editBtn);
         return new FormPage();
     }
 }

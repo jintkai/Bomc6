@@ -25,7 +25,7 @@ public class TestCase {
         Properties props=System.getProperties();
         String pcVersion=props.getProperty("os.arch");
         System.out.println("操作系统版本："+pcVersion);
-        if(BrowerType=="IE")
+        if(BrowerType.equals("IE"))
         {
             if(pcVersion.contains("64"))
             { System.setProperty("webdriver.ie.driver",
@@ -44,7 +44,7 @@ public class TestCase {
             driver = new InternetExplorerDriver(ieCapabilities);
         }
         else
-        if(BrowerType=="FIREFOX")
+        if(BrowerType.equals("FIREFOX"))
         {
             driver=new FirefoxDriver();
         }

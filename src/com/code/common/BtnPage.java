@@ -53,6 +53,7 @@ public class BtnPage extends Page {
     public FormPage edit()
     {
         tools.click(editBtn);
+
         return  new FormPage();
     }
     public  void  delete()
