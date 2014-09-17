@@ -22,6 +22,6 @@ public class SearchAGPage extends Page {
         tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称_AG"));
         tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_AG"));
         tools.click(btnSearch);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

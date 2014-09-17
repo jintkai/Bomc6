@@ -5,6 +5,7 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.agentList.page.AgBtnPage;
 import com.code.page.ibnmsConfig.agentList.page.AgFormPage;
 import com.code.page.ibnmsConfig.agentList.page.SearchAGPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -12,10 +13,14 @@ import java.util.Map;
  * Created by jinkai on 2014/7/14.
  */
 public class AgentListPage extends Page {
-    AgBtnPage agBtn=new AgBtnPage();
+    public AgentListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    AgBtnPage agBtn=new AgBtnPage(eventDriver);
     SearchAGPage agSearch=new SearchAGPage();
-    GridPage gridTable=new GridPage();
-    AgFormPage agForm=new AgFormPage();
+    GridPage gridTable=new GridPage(eventDriver);
+    AgFormPage agForm=new AgFormPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         return agSearch.search(map);

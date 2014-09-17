@@ -48,7 +48,7 @@ public class SearchAlarmPolicyPage extends Page{
         if (!str.isEmpty())
         {
             tools.click(kpiName);
-            KpiListFramePage kpiFrame=new KpiListFramePage();
+            KpiListFramePage kpiFrame=new KpiListFramePage(eventDriver);
             String hand=tools.switchToWindowByTitle(kpiFrame.title);
             GridPage gridPage=kpiFrame.search(map);
             gridPage.selectTr(1);
@@ -56,6 +56,6 @@ public class SearchAlarmPolicyPage extends Page{
             tools.switchToWindowByHand(hand);
         }
         tools.click(searchBtn);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

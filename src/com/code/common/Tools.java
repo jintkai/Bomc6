@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.internal.WrapsDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -27,7 +28,11 @@ import java.util.List;
  */
 public class Tools {
 
-    WebDriver driver= TestCase.eventDriver;
+    WebDriver driver;
+    public Tools(EventFiringWebDriver eventDriver)
+    {
+        driver=eventDriver;
+    }
     public WebDriver getDriver()
     {
         return driver;

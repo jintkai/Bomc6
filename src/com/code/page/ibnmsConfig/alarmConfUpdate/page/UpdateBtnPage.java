@@ -3,11 +3,16 @@ package com.code.page.ibnmsConfig.alarmConfUpdate.page;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
  * Created by Jin on 2014/7/26.
  */
 public class UpdateBtnPage extends Page {
+    public UpdateBtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id="btn-update")
     WebElement updateBtn;
     @FindBy(id="btn-start-task")

@@ -6,6 +6,7 @@ import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -13,6 +14,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/11.
  */
 public class PfFormPage extends FormPage {
+    public PfFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
 
     @FindBy(id="btn-select-host")
     WebElement selectHostBtn;
@@ -47,7 +52,7 @@ public class PfFormPage extends FormPage {
     public GridPage operatePF(Map<String,String> map)
     {
         inputForm(map);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 
 }

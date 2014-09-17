@@ -5,7 +5,9 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.alarmShield.page.AlarmShieldBtnPage;
 import com.code.page.ibnmsConfig.alarmShield.page.AlarmShieldFormPage;
 import com.code.page.ibnmsConfig.alarmShield.page.SearchAlarmShieldPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.awt.*;
 import java.util.Map;
 
 /**
@@ -13,8 +15,12 @@ import java.util.Map;
  * 告警屏蔽过滤器
  */
 public class AlarmShieldCfgPage extends Page {
-    GridPage gridTable=new GridPage();
-    AlarmShieldBtnPage shieldBtn=new AlarmShieldBtnPage();
+    public AlarmShieldCfgPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    GridPage gridTable=new GridPage(eventDriver);
+    AlarmShieldBtnPage shieldBtn=new AlarmShieldBtnPage(eventDriver);
     SearchAlarmShieldPage searchShield=new SearchAlarmShieldPage();
     AlarmShieldFormPage shieldForm=new AlarmShieldFormPage();
 

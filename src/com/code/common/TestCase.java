@@ -1,14 +1,18 @@
 package com.code.common;
 
 
+import com.code.page.ibnmsConfig.login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
@@ -17,10 +21,14 @@ import java.util.concurrent.TimeUnit;
  * Created by jinkai on 2014/6/21.
  */
 public class TestCase {
-    public Tools tools=new Tools();
+
+    public  WebDriver driver;//=createDriver("IE","http://192.168.1.102:5555/wd/hub");
+
+    public  EventFiringWebDriver eventDriver;//=new EventFiringWebDriver(driver).register(new EventListener());
+    public Tools tools;//=new Tools(eventDriver);
     public String[] excelHead;
     public Map<String,String> map;
-    public static WebDriver 	createDriver(String BrowerType)
+    public WebDriver 	createDriver(String BrowerType,String nodeURL)
     {
         Properties props=System.getProperties();
         String pcVersion=props.getProperty("os.arch");
@@ -34,19 +42,34 @@ public class TestCase {
                 System.setProperty("webdriver.ie.driver",
                         Data.baseDir+ "\\Driver\\IEDriverServer32.exe");
 
-
+            /*如果IE浏览器设置安全性较高，在“Internet Options”中都不要选择“Enable Protected Mode”（保护模式），否则可能遇到如下的错误提示。
+            解决方法：
+            一种是修改掉IE的设置，不要在任何情况下使用保护模式（protected mode），另一种即是前面代码中如下片段在运行时设置IE的Capabilities。
+            第二种方法应该是在运行时设置IE的部分参数。鉴于代码健壮性考虑，使用第二种方法，继续修改代码。
+            */
             DesiredCapabilities ieCapabilities = DesiredCapabilities
                     .internetExplorer();
             ieCapabilities
                     .setCapability(
                             InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS,
                             true);
-            driver = new InternetExplorerDriver(ieCapabilities);
+            //driver = new InternetExplorerDriver(ieCapabilities);
+            DesiredCapabilities test=DesiredCapabilities.internetExplorer();
+            try {
+                driver = new RemoteWebDriver(new URL(nodeURL),ieCapabilities);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
         else
         if(BrowerType.equals("FIREFOX"))
         {
-            driver=new FirefoxDriver();
+            DesiredCapabilities test = DesiredCapabilities.firefox();
+            try {
+                driver = new RemoteWebDriver(new URL(nodeURL),test);
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
         }
         else
         {
@@ -56,39 +79,53 @@ public class TestCase {
         return driver;
     }
 
-    public static WebDriver driver=createDriver(Data.browserType);
-    //public static WebDriver driver;
-    public static EventFiringWebDriver eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
 
+    public EventFiringWebDriver getEventDriver(){return  eventDriver;}
 
     @Parameters({"Base_URL"})
-    //@BeforeClass
+    @BeforeClass(alwaysRun=true)
     public void beforeClass(String base_url)
     {
-        //driver=createDriver("IE");
+        //driver=createDriver("IE","http://192.168.1.102:5555/wd/hub");
         //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
         eventDriver.manage().window().maximize();
-        //设置隐式等待时间
-       // eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        LoginPage login=new LoginPage(eventDriver);
+        login.login("admin","123456");
     }
 
-    //@AfterClass(alwaysRun=true)
+    public TestCase(String node)
+    {
+        //driver=createDriver("IE","http://172.21.148.174:5555/wd/hub");
+        driver=createDriver("IE",node);
+        eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
+        tools=new Tools(eventDriver);
+    }
+
+    @AfterClass(alwaysRun=true)
     public  void afterClass()
     {
         eventDriver.close();
         eventDriver.quit();
 
     }
-    //@Parameters({"Base_URL"})
-    @BeforeSuite
+    @Parameters({"Base_URL"})
+    //@BeforeSuite
     public void beforeSuite()
     {
-        eventDriver.get(Data.baseUrl);
+        /*eventDriver.get(Data.baseUrl);
         eventDriver.manage().window().maximize();
         eventDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        */
+       // driver=createDriver("IE","http://192.168.1.104:5555/wd/hub");
+        //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
+        //eventDriver.get(base_url);
+        eventDriver.manage().window().maximize();
+        eventDriver.get("http://172.21.0.31:8084");
+        LoginPage login=new LoginPage(eventDriver);
+        login.login("admin","123456");
     }
-    @AfterSuite
+    //@AfterSuite
     public void afterSuite()
     {
         try {

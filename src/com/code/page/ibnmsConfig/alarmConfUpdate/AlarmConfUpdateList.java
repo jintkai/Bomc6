@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.page.ibnmsConfig.alarmConfUpdate.page.SearchUpdatePage;
 import com.code.page.ibnmsConfig.alarmConfUpdate.page.UpdateBtnPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 import java.util.Set;
@@ -16,8 +17,12 @@ import java.util.Set;
  * 告警变更配置信息；http://172.21.0.31:8084/ibnms/config/inputEventUpdateInfoList.action
  */
 public class AlarmConfUpdateList extends Page {
-    SearchUpdatePage searchUpdata=new SearchUpdatePage();
-    UpdateBtnPage updateBtn=new UpdateBtnPage();
+    public AlarmConfUpdateList(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    SearchUpdatePage searchUpdata=new SearchUpdatePage(eventDriver);
+    UpdateBtnPage updateBtn=new UpdateBtnPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         return searchUpdata.search(map);
@@ -31,7 +36,7 @@ public class AlarmConfUpdateList extends Page {
     }
     public String startTask()
     {
-        GridPage gridTable=new GridPage();
+        GridPage gridTable=new GridPage(eventDriver);
         gridTable.selectTr(1);
         updateBtn.startTask();
         try {
@@ -54,7 +59,7 @@ public class AlarmConfUpdateList extends Page {
     }
     public void delete()
     {
-        GridPage gridTable=new GridPage();
+        GridPage gridTable=new GridPage(eventDriver);
         gridTable.selectTr(1);
         updateBtn.delete();
     }

@@ -10,10 +10,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/15.
  */
 public class EnvFramePage extends Page {
-    KbpTreePage kbpTree=new KbpTreePage();
+    KbpTreePage kbpTree=new KbpTreePage(eventDriver);
     String entityQueryFrame="entityQueryFrame";
     public String title="监控指标列表";
-    public EnvListPage listPage=new EnvListPage();
+    public EnvListPage listPage=new EnvListPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame(entityQueryFrame);

@@ -20,12 +20,18 @@ import java.util.Map;
  * Created by jinkai on 2014/7/11.
  */
 public class WKlistTest extends TestCase {
-    WKlistPage wkList=new WKlistPage();
+    WKlistPage wkList;
+    @Parameters({"node"})
+    public WKlistTest(String node)
+    {
+        super(node);
+        wkList=new WKlistPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="WKlist")

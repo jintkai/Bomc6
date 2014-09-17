@@ -19,6 +19,6 @@ public class SearchAlarmShieldPage extends Page {
     {
         tools.sendKeys(filter_name,tools.getMapValue(map,"过滤器名称_SHIELD"));
         tools.click(searchBtn);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 }

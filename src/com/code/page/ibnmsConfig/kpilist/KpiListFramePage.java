@@ -6,6 +6,7 @@ import com.code.page.ibnmsConfig.kpilist.page.KpiBtnPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiFormPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiTreePage;
 import com.code.page.ibnmsConfig.kpilist.page.SearchKpiPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -15,12 +16,15 @@ import java.util.Map;
 public class KpiListFramePage extends Page{
     public String title="Kpi列表";
     public String kpiListIFrame="kpiListFrame";
-
-    KpiTreePage kpiTree=new KpiTreePage();
-    SearchKpiPage searchKpi=new SearchKpiPage();
-    GridPage gridTable=new GridPage();
-    public KpiBtnPage kpiBtn=new KpiBtnPage();
-    KpiFormPage kpiForm=new KpiFormPage();
+    public KpiListFramePage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    KpiTreePage kpiTree=new KpiTreePage(eventDriver);
+    SearchKpiPage searchKpi=new SearchKpiPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
+    public KpiBtnPage kpiBtn=new KpiBtnPage(eventDriver);
+    KpiFormPage kpiForm=new KpiFormPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame();
@@ -34,7 +38,7 @@ public class KpiListFramePage extends Page{
         kpiTree.searchByTree(tools.getMapValue(map,"KBP"));
         tools.switchToFrame();
         tools.switchToFrame(kpiListIFrame);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 
     public GridPage operateKpi(Map<String,String> map)

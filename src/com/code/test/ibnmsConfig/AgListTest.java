@@ -21,12 +21,18 @@ import java.util.Map;
  * Created by jinkai on 2014/7/14.
  */
 public class AgListTest extends TestCase {
-    public AgentListPage agList=new AgentListPage();
+    public AgentListPage agList;
+    @Parameters({"node"})
+    public AgListTest(String node)
+    {
+        super(node);
+        agList=new AgentListPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="agList")
@@ -54,7 +60,7 @@ public class AgListTest extends TestCase {
     public void deployAG(String[] str)
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=new GridPage();
+        GridPage gridTable=new GridPage(eventDriver);
         gridTable=agList.deployAG(map);
         agList.search(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(1);

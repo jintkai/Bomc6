@@ -7,5 +7,6 @@ Sleep(1000)
 WinActivate("Áí´æÎª")
 WinWaitActive("Áí´æÎª")
 Sleep(1000)
+ControlSetText($title,"","Edit1",$CmdLine[1])
 ControlClick("Áí´æÎª","","Button1")
 

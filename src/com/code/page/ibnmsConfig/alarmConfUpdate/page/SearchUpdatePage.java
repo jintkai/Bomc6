@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -11,6 +12,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/23.
  */
 public class SearchUpdatePage extends Page {
+    public SearchUpdatePage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(name="filter.UNIT_ID")
     WebElement UNIT_ID;
     @FindBy(name="filter.KPI_ID")
@@ -28,6 +33,6 @@ public class SearchUpdatePage extends Page {
         tools.selectByVisibleText(ALARM_TYPE, tools.getMapValue(map, "告警类型_ALARM"));
         tools.selectByVisibleText(WF_STATE,tools.getMapValue(map,"工单状态_ALARM"));
         tools.click(search);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

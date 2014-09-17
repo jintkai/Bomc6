@@ -8,6 +8,7 @@ import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfTreePage;
 import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmSearchHeadPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.List;
 import java.util.Map;
@@ -17,10 +18,14 @@ import java.util.Map;
  * 告警集中配置；
  */
 public class AlarmConfigFrame extends Page {
-    public AlarmConfTreePage confTree=new AlarmConfTreePage();
-    public AlarmConfBtnPage confBtn=new AlarmConfBtnPage();
+    public AlarmConfigFrame(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    public AlarmConfTreePage confTree=new AlarmConfTreePage(eventDriver);
+    public AlarmConfBtnPage confBtn=new AlarmConfBtnPage(eventDriver);
     public AlarmSearchHeadPage searchHead=new AlarmSearchHeadPage();
-    public GridPage gridTable=new GridPage();
+    public GridPage gridTable=new GridPage(eventDriver);
     public AlarmConfFormPage alarmConfForm=new AlarmConfFormPage();
     public GridPage searchByTree(Map<String,String> map)
     {
@@ -95,7 +100,7 @@ public class AlarmConfigFrame extends Page {
     {
         tools.switchToFrame();
         tools.switchToFrame(1);
-        GridPage gridTable=new GridPage();
+        GridPage gridTable=new GridPage(eventDriver);
         System.out.println(gridTable.getWebElementTr(1));
         gridTable.selectTr(1);
         confBtn.addfilter();

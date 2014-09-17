@@ -7,6 +7,7 @@ import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.alarmConfUpdate.AlarmConfUpdateList;
 import com.code.page.ibnmsConfig.alarmPolicy.AlarmPolicyList;
 import jxl.read.biff.BiffException;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -21,13 +22,21 @@ import java.util.Map;
  * Created by Jin on 2014/7/30.
  */
 public class AlarmPolicyTest extends TestCase {
-    public AlarmPolicyList alarmPlicy=new AlarmPolicyList();
-    GridPage gridTable=new GridPage();
+    public AlarmPolicyList alarmPlicy;//=new AlarmPolicyList(eventDriver);
+    GridPage gridTable;//=new GridPage(eventDriver);
+
+    public AlarmPolicyTest(String node)
+    {
+        super(node);
+        alarmPlicy=new AlarmPolicyList(eventDriver);
+        gridTable=new GridPage(eventDriver);
+        Reporter.log("selenium Grid:" + node);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmpolicy")

@@ -48,7 +48,7 @@ public class CfgInstrFrame extends Page {
         groupTree.searchByTree(map);
         tools.switchToFrame();
         tools.switchToFrame("instrList");
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
     public int searchGroup(String str)
     {

@@ -33,7 +33,7 @@ public class GeneratAlarmFormPage extends Page {
     @FindBy(id="btn-cancel")
     WebElement cancelBtn;
     ExpressionAssertPage expressAssert=new ExpressionAssertPage();
-    KpiListFramePage kpiList=new KpiListFramePage();
+    KpiListFramePage kpiList=new KpiListFramePage(eventDriver);
 
 
 
@@ -58,7 +58,7 @@ public class GeneratAlarmFormPage extends Page {
             tools.openModelDialog(selectKpiBtn);
             String hand=tools.switchToWindowByTitle(kpiList.title);
             kpiList.search(map);
-            new GridPage().selectTr(1);
+            new GridPage(eventDriver).selectTr(1);
             kpiList.kpiBtn.select();
             tools.switchToWindowByHand(hand);
         }

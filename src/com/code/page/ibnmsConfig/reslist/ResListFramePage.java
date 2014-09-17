@@ -6,6 +6,7 @@ import com.code.page.ibnmsConfig.reslist.page.ResBtnPage;
 import com.code.page.ibnmsConfig.reslist.page.ResFormPage;
 import com.code.page.ibnmsConfig.reslist.page.ResTreePage;
 import com.code.page.ibnmsConfig.reslist.page.SearchResPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -13,11 +14,15 @@ import java.util.Map;
  * Created by jinkai on 07/07/2014.
  */
 public class ResListFramePage extends Page{
-    ResTreePage resTree=new ResTreePage();
-    SearchResPage searchRes=new SearchResPage();
-    public GridPage gridTable=new GridPage();
-    public ResBtnPage resBtn=new ResBtnPage();
-    ResFormPage resForm=new ResFormPage();
+    public ResListFramePage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    ResTreePage resTree=new ResTreePage(eventDriver);
+    SearchResPage searchRes=new SearchResPage(eventDriver);
+    public GridPage gridTable=new GridPage(eventDriver);
+    public ResBtnPage resBtn=new ResBtnPage(eventDriver);
+    ResFormPage resForm=new ResFormPage(eventDriver);
     public String resListFrame="resListFrame";
     public String title="资源列表";
     public int treeIFrame=0;
@@ -35,7 +40,7 @@ public class ResListFramePage extends Page{
         resTree.searchByTree(tools.getMapValue(map, "TREE"));
         tools.switchToFrame();
         tools.switchToFrame(resListFrame);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 
     public GridPage operateRes(Map<String,String> map)
@@ -60,7 +65,7 @@ public class ResListFramePage extends Page{
             GridPage gridTable=searchRes.search(map);
             gridTable.selectTr(0);
             resBtn.delete();
-            return new GridPage();
+            return new GridPage(eventDriver);
         }
     }
 

@@ -22,13 +22,21 @@ import java.util.Map;
  * 数据库宕告警关联配置
  */
 public class AlarmCorrelationCfgListTest extends TestCase {
-    AlarmCorrelationCfgList alrmCorrelation=new AlarmCorrelationCfgList();
-    GridPage gridTable=new GridPage();
+
+    AlarmCorrelationCfgList alrmCorrelation;
+    GridPage gridTable;
+    @Parameters({"node"})
+    public AlarmCorrelationCfgListTest(String node)
+    {
+        super(node);
+        alrmCorrelation=new AlarmCorrelationCfgList(eventDriver);
+        gridTable=new GridPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="AlarmCorrelation")

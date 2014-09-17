@@ -23,7 +23,7 @@ public class TemplateFormPage extends Page {
     @FindBy(id="btn-add-s")
     WebElement addKpiBtn;
 
-    GridPage gridTable=new GridPage();
+    GridPage gridTable=new GridPage(eventDriver);
 
     public void inputForm(Map<String,String> map)
     {

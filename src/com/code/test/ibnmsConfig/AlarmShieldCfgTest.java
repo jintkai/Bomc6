@@ -22,13 +22,20 @@ import java.util.Map;
  * 告警屏蔽过滤器
  */
 public class AlarmShieldCfgTest extends TestCase{
-    AlarmShieldCfgPage shieldCfg=new AlarmShieldCfgPage();
-    GridPage gridTable=new GridPage();
+    AlarmShieldCfgPage shieldCfg;//=new AlarmShieldCfgPage();
+    GridPage gridTable;//=new GridPage(eventDriver);
+    @Parameters({"node"})
+    public AlarmShieldCfgTest(String node)
+    {
+        super(node);
+        shieldCfg=new AlarmShieldCfgPage(eventDriver);
+        gridTable=new GridPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="AlarmShield")

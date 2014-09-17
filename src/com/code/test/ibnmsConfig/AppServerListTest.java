@@ -20,12 +20,18 @@ import java.util.Map;
  * Created by Jin on 2014/8/10.
  */
 public class AppServerListTest extends TestCase {
-    AppServerListPage appServerList=new AppServerListPage();
+    AppServerListPage appServerList;
+    @Parameters({"node"})
+    public AppServerListTest(String node)
+    {
+        super(node);
+        appServerList=new AppServerListPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="AppServerList")

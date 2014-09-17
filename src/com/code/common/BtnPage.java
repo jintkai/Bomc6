@@ -4,12 +4,17 @@ import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
  * Created by jinkai on 06/07/2014.
  * 包含一些通用的按钮，增删、部署卸载等按钮
  */
 public class BtnPage extends Page {
+    public BtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(how= How.ID,using=Data.btnAdd)
     public WebElement addBtn;
     @FindBy(how= How.ID,using="btn-edit")
@@ -43,18 +48,18 @@ public class BtnPage extends Page {
     public FormPage openFormByAdd()
     {
         tools.click(addBtn);
-        return new FormPage();
+        return new FormPage(eventDriver);
     }
     public FormPage add()
     {
         tools.click(addBtn);
-        return  new FormPage();
+        return  new FormPage(eventDriver);
     }
     public FormPage edit()
     {
         tools.click(editBtn);
 
-        return  new FormPage();
+        return  new FormPage(eventDriver);
     }
     public  void  delete()
     {
@@ -68,7 +73,7 @@ public class BtnPage extends Page {
     } public  FormPage  editForm()
     {
         tools.click(editBtn);
-        return new FormPage();
+        return new FormPage(eventDriver);
     }
     public void select()
     {

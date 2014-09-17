@@ -20,12 +20,20 @@ import java.util.Map;
  * Created by jinkai on 2014/7/9.
  */
 public class EnvListTest  extends TestCase{
-    EnvListPage envList=new EnvListPage();
+    EnvListPage envList=new EnvListPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
+    @Parameters({"node"})
+    public EnvListTest(String node)
+    {
+        super(node);
+        envList=new EnvListPage(eventDriver);
+        gridTable=new GridPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="envList")
@@ -39,7 +47,7 @@ public class EnvListTest  extends TestCase{
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.search(map);
-        GridPage gridTable=new GridPage();
+        gridTable=new GridPage(eventDriver);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider="envList",priority = 1,description = "操作部署环境，增加、修改、删除")
@@ -47,7 +55,7 @@ public class EnvListTest  extends TestCase{
     {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.operateRes(map);
-        GridPage gridTable=envList.search(map);
+        gridTable=envList.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 }

@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -11,6 +12,10 @@ import java.util.Map;
  * Created by jinkai on 07/07/2014.
  */
 public class SearchResPage extends Page {
+    public SearchResPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(name="filter.unitId")
     WebElement unitId;
     @FindBy(name="filter.deviceName")
@@ -28,6 +33,6 @@ public class SearchResPage extends Page {
         tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_RES"));
         tools.selectByVisibleText(filterBzTypeKbpClass,tools.getMapValue(map,"业务类型_RES"));
         tools.click(btnSearch);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 }

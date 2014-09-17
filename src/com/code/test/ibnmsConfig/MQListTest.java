@@ -18,12 +18,19 @@ import java.util.Map;
  * Created by jinkai on 2014/7/9.
  */
 public class MQListTest extends TestCase {
-    MQListPage mqList=new MQListPage();
+    MQListPage mqList;
+    @Parameters({"node"})
+    public MQListTest(String node)
+    {
+        super(node);
+        mqList=new MQListPage(eventDriver);
+
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="mqList")

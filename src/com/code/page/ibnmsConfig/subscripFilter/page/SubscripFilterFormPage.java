@@ -8,6 +8,7 @@ import com.code.page.ibnmsConfig.kpilist.KpiListFramePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.List;
 import java.util.Map;
@@ -16,6 +17,10 @@ import java.util.Map;
  * Created by Jin on 2014/8/24.
  */
 public class SubscripFilterFormPage extends FormPage {
+    public SubscripFilterFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String titile="时间段屏蔽";
     @FindBy(id = "token-input-input-params-loginId")
     WebElement loginId;
@@ -25,7 +30,7 @@ public class SubscripFilterFormPage extends FormPage {
     WebElement filterDesc;
     String chooseClass="choose";
     KbpListFramePage kbpFrame=new KbpListFramePage();
-    KpiListFramePage kpiFrame=new KpiListFramePage();
+    KpiListFramePage kpiFrame=new KpiListFramePage(eventDriver);
     @FindBy(id = "btn-choose-kpi")
     WebElement chooseKpiBtn;
 

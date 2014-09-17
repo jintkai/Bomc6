@@ -5,6 +5,7 @@ import com.code.page.ibnmsConfig.monitorPoints.MonitorPointsFramePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -12,6 +13,10 @@ import java.util.Map;
  * Created by Jin on 2014/9/11.
  */
 public class AlarmCorrelationCfgPage extends Page {
+    public AlarmCorrelationCfgPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String title="数据库宕告警关联配置";
     @FindBy(name="alarmCorrelationCfg.sourceUnitId")
     WebElement sourceUnitId;

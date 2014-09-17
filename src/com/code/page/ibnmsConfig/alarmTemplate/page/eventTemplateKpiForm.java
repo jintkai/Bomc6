@@ -37,7 +37,7 @@ public class eventTemplateKpiForm extends Page {
     public void operate(Map<String,String> map)
     {
         tools.openModelDialog(selectKpiBtn);
-        KpiListFramePage kpiFrame=new KpiListFramePage();
+        KpiListFramePage kpiFrame=new KpiListFramePage(eventDriver);
         String hand=tools.switchToWindowByTitle(kpiFrame.title);
         kpiFrame.search(map).selectTr(1);
         kpiFrame.kpiBtn.select();

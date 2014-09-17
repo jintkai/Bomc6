@@ -5,6 +5,7 @@ import com.code.common.Page;
 import com.code.common.TreePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
  * Created by jinkai on 01/07/2014.
@@ -12,6 +13,10 @@ import org.openqa.selenium.WebElement;
  */
 public class KbpTreePage extends Page {
 
+    public KbpTreePage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     WebElement fuzzy;
     public void searchByTree(String treeValue)
     {

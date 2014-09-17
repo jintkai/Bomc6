@@ -5,11 +5,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
 import javax.xml.crypto.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,7 +21,7 @@ import java.util.Map;
  * 对列表Table的处理
  */
 public class GridPage  extends Page implements Data{
-    Tools tools=new Tools();
+    Tools tools=new Tools(eventDriver);
     private int rowNum;
     private int gridCount=0;
     int tdIndex=0;
@@ -59,9 +61,10 @@ public class GridPage  extends Page implements Data{
     //选择按钮在table中，第几个td中。
     int gridTable_cd=1;
     String gridTable_cbID="gridTable_cb";
-    public GridPage()
+
+    public GridPage(EventFiringWebDriver eventDriver)
     {
-        super();
+        super(eventDriver);
         //heads=this.getHead();
     }
     public void setWait()

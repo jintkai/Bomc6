@@ -8,6 +8,7 @@ import com.code.page.ibnmsConfig.envList.EnvListPage;
 import com.code.page.ibnmsConfig.reslist.ResListFramePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -18,6 +19,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/11.
  */
 public class WKFormPage  extends FormPage{
+    public WKFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id = "form.instanceName")
     WebElement instanceName;
     @FindBy(id = "btn-select-host")
@@ -49,6 +54,6 @@ public class WKFormPage  extends FormPage{
     public GridPage operateWK(Map<String,String> map)
     {
         inputForm(map);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 }

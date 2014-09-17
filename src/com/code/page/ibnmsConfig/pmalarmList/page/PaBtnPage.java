@@ -6,6 +6,7 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,6 +15,10 @@ import java.util.Map;
  */
 public class PaBtnPage extends BtnPage {
 
+    public PaBtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public void deploy()
     {
         tools.click(deploy);

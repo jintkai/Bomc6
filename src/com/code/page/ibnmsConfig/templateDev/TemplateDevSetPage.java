@@ -14,9 +14,9 @@ import java.util.Map;
 
 public class TemplateDevSetPage extends Page {
     public String title="资源与模版关联设置";
-    GridPage gridTable=new GridPage();
-    public BtnPage btn=new BtnPage();
-    public TemplateDevListSearchPage devSearch=new TemplateDevListSearchPage();
+    GridPage gridTable=new GridPage(eventDriver);
+    public BtnPage btn=new BtnPage(eventDriver);
+    public TemplateDevListSearchPage devSearch=new TemplateDevListSearchPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         devSearch.search(map);

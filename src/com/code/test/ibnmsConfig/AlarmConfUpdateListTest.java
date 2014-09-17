@@ -19,13 +19,20 @@ import java.util.Iterator;
  * Created by jinkai on 2014/7/23.
  */
 public class AlarmConfUpdateListTest extends TestCase {
-    public AlarmConfUpdateList alarmConfUpdate=new AlarmConfUpdateList();
-    GridPage gridTable=new GridPage();
+    public AlarmConfUpdateList alarmConfUpdate;//=new AlarmConfUpdateList();
+    GridPage gridTable;//=new GridPage(eventDriver);
+    @Parameters({"node"})
+    public AlarmConfUpdateListTest(String node)
+    {
+        super(node);
+        alarmConfUpdate=new AlarmConfUpdateList(eventDriver);
+        gridTable=new GridPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmFrame")

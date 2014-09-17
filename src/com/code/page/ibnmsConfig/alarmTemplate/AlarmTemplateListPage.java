@@ -5,7 +5,9 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.alarmTemplate.page.AlarmTemplateBtnPage;
 import com.code.page.ibnmsConfig.alarmTemplate.page.SearchTemplatePage;
 import com.code.page.ibnmsConfig.alarmTemplate.page.TemplateFormPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.awt.*;
 import java.util.Map;
 
 /**
@@ -13,11 +15,15 @@ import java.util.Map;
  * 告警配置模板
  */
 public class AlarmTemplateListPage extends Page {
+    public AlarmTemplateListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String title="告警配置模板列表";
     SearchTemplatePage searchTemplate=new SearchTemplatePage();
-    AlarmTemplateBtnPage templateBtn=new AlarmTemplateBtnPage();
+    AlarmTemplateBtnPage templateBtn=new AlarmTemplateBtnPage(eventDriver);
     TemplateFormPage templateForm=new TemplateFormPage();
-    GridPage gridTable=new GridPage();
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         gridTable=searchTemplate.search(map);
@@ -27,12 +33,12 @@ public class AlarmTemplateListPage extends Page {
     {
         templateBtn.add();
         templateForm.operate(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
     public GridPage delete()
     {
         templateBtn.delte();
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
     public GridPage operate(Map<String,String> map)
     {

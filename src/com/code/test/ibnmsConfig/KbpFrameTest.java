@@ -6,6 +6,9 @@ import com.code.common.GridPage;
 import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.kbplist.KbpListFramePage;
 import jxl.read.biff.BiffException;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -19,13 +22,22 @@ import java.util.Iterator;
  * Created by jinkai on 01/07/2014.
  */
 public class KbpFrameTest extends TestCase {
-    KbpListFramePage kbpFrame=new KbpListFramePage();
+    KbpListFramePage kbpFrame;
+    GridPage gridTable;
+    @Parameters({"node"})
+    public KbpFrameTest(String node)
+    {
 
+        super(node);
+        kbpFrame=new KbpListFramePage(eventDriver);
+        gridTable=new GridPage(eventDriver);
+        Reporter.log("selenium Grid:"+node);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="kbpList")
@@ -38,14 +50,14 @@ public class KbpFrameTest extends TestCase {
     public void searchKBP(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=kbpFrame.search(map);
+        gridTable=kbpFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "kbpList",priority = 1,description = "按Tree查询KBP")
     public void searchKBPByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=kbpFrame.searchByTree(map);
+        gridTable=kbpFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider="kbpList",priority = 2,description="KBP增加、删除、修改;")
@@ -54,7 +66,7 @@ public class KbpFrameTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         String option=tools.getMapValue(map,"操作类型");
         kbpFrame.operateKbp(map);
-        GridPage gridTable=kbpFrame.search(map);
+        gridTable=kbpFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 }

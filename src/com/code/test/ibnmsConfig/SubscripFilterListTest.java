@@ -19,13 +19,19 @@ import java.util.Iterator;
  * Created by Jin on 2014/8/24.
  */
 public class SubscripFilterListTest extends TestCase {
-    SubscripFilterListPage subscriptList=new SubscripFilterListPage();
-    GridPage gridTable=new GridPage();
+    SubscripFilterListPage subscriptList;
+    @Parameters({"node"})
+    public SubscripFilterListTest(String node)
+    {
+        super(node);
+        subscriptList=new SubscripFilterListPage(eventDriver);
+    }
+    GridPage gridTable=new GridPage(eventDriver);
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="SubscripFilter")

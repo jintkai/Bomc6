@@ -5,6 +5,7 @@ import com.code.common.Page;
 import com.code.common.Tools;
 import com.code.page.ibnmsConfig.MQList.Page.MQBtnPage;
 import com.code.page.ibnmsConfig.MQList.Page.MQFormPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -13,9 +14,13 @@ import java.util.Map;
  * Created by jinkai on 2014/7/9.
  */
 public class MQListPage extends Page {
-    MQBtnPage mqBtn=new MQBtnPage();
-    MQFormPage mqForm=new MQFormPage();
-    GridPage gridTable=new GridPage();
+    public MQListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    MQBtnPage mqBtn=new MQBtnPage(eventDriver);
+    MQFormPage mqForm=new MQFormPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
 
     public GridPage operateMQ(Map<String,String> map)
     {

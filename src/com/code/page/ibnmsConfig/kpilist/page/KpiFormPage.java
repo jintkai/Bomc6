@@ -6,6 +6,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -13,6 +14,10 @@ import java.util.Map;
  * Created by jinkai on 06/07/2014.
  */
 public class KpiFormPage extends FormPage {
+    public KpiFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id="kpi.kpiId")
     WebElement kpiId;
     @FindBy(id="kpi.kpiName")
@@ -69,7 +74,7 @@ public class KpiFormPage extends FormPage {
     public GridPage operateKpi(Map<String,String> map)
     {
         inputForm(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 
 }

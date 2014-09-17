@@ -8,6 +8,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -16,6 +17,10 @@ import java.util.Map;
  * Kbp编辑页面
  */
 public class KbpFormPage extends Page {
+    public KbpFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     WebElement classAfter;
     @FindBy(id="kbp.kbpCaption")
     WebElement kbpCaption;
@@ -28,7 +33,7 @@ public class KbpFormPage extends Page {
     public GridPage operateKbp(Map<String,String> map)
     {
         inputForm(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 
     public void inputForm(Map<String,String> map)

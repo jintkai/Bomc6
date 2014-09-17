@@ -21,13 +21,20 @@ import java.util.List;
  * Created by jinkai on 2014/7/16.
  */
 public class AlarmConFrameTest extends TestCase {
-    public AlarmConfigFrame alarmFrame=new AlarmConfigFrame();
-    GridPage gridTable=new GridPage();
+    public AlarmConfigFrame alarmFrame;
+    @Parameters({"node"})
+    public AlarmConFrameTest(String node)
+    {
+        super(node);
+        alarmFrame=new AlarmConfigFrame(eventDriver);
+    }
+
+    GridPage gridTable=new GridPage(eventDriver);
     @BeforeMethod
      @Parameters({"Action_URL"})
      public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="alarmFrame")

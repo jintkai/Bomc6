@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.page.ibnmsConfig.PfList.page.PfBtnPage;
 import com.code.page.ibnmsConfig.PfList.page.PfFormPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -11,10 +12,14 @@ import java.util.Map;
  * Created by jinkai on 2014/7/11.
  */
 public class PFListPage extends Page {
-    public PfBtnPage pfBtn=new PfBtnPage();
-    public PfFormPage pfForm=new PfFormPage();
-    GridPage gridTable=new GridPage();
 
+    public PfBtnPage pfBtn=new PfBtnPage(eventDriver);
+    public PfFormPage pfForm=new PfFormPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
+    public PFListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public GridPage deployPF(Map<String,String> map)
     {
         gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));

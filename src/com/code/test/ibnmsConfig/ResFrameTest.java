@@ -5,6 +5,7 @@ import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.reslist.ResListFramePage;
+import com.code.page.ibnmsConfig.reslist.page.ResFormPage;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -19,7 +20,15 @@ import java.util.Iterator;
  * Created by jinkai on 07/07/2014.
  */
 public class ResFrameTest extends TestCase {
-    ResListFramePage resFrame=new ResListFramePage();
+    ResListFramePage resFrame;//=new ResListFramePage(eventDriver);
+    GridPage gridTable;//=new GridPage(eventDriver);
+    @Parameters({"node"})
+    public ResFrameTest(String node)
+    {
+        super(node);
+        resFrame=new ResListFramePage(eventDriver);
+        gridTable=new GridPage(eventDriver);
+    }
     @DataProvider(name="resCase")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
         ExcelDriver excelDriver=new ExcelDriver("资源基础配置",method.getName());
@@ -36,22 +45,22 @@ public class ResFrameTest extends TestCase {
     public void searchRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.search(map);
-        tools.assertEquals(gritTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        gridTable=resFrame.search(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "resCase",priority = 1,description = "按Tree查询资源基础配置")
     public void searchResByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
-        GridPage gritTable=resFrame.searchByTree(map);
-        tools.assertEquals(gritTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        gridTable=resFrame.searchByTree(map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
     @Test(dataProvider = "resCase",priority = 2,description = "操作资源基础配置，增加、修改、删除；")
     public void operateRes(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         resFrame.operateRes(map);
-        GridPage gridTable=resFrame.search(map);
+        gridTable=resFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
     }
 

@@ -20,13 +20,19 @@ import java.util.Map;
  * Created by Jin on 2014/8/21.
  */
 public class TemplateDevListTest extends TestCase {
-    TemplateDevListPage devList=new TemplateDevListPage();
-    GridPage gridTable=new GridPage();
+    TemplateDevListPage devList;
+    @Parameters({"node"})
+    public TemplateDevListTest(String node)
+    {
+        super(node);
+        devList=new TemplateDevListPage(eventDriver);
+    }
+    GridPage gridTable=new GridPage(eventDriver);
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="TemplateDev")

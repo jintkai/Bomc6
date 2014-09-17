@@ -5,6 +5,7 @@ import com.code.common.GridPage;
 import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -12,6 +13,10 @@ import java.util.Map;
  * Created by Jin on 2014/8/10.
  */
 public class PaFormPage extends FormPage {
+    public PaFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     WebElement instanceName;
     WebElement deviceName;
     WebElement workstationId;
@@ -45,6 +50,6 @@ public class PaFormPage extends FormPage {
     public GridPage operatePA(Map<String,String> map)
     {
         inputForm(map);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 }

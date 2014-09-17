@@ -5,17 +5,23 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.appServer.page.AppBtnPage;
 import com.code.page.ibnmsConfig.appServer.page.AppFormPage;
 import com.code.page.ibnmsConfig.appServer.page.AppSearchPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.awt.*;
 import java.util.Map;
 
 /**
  * Created by Jin on 2014/8/10.
  */
 public class AppServerListPage extends Page {
-    AppBtnPage appBtn=new AppBtnPage();
+    public AppServerListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    AppBtnPage appBtn=new AppBtnPage(eventDriver);
     AppSearchPage appSearch=new AppSearchPage();
     AppFormPage appForm=new AppFormPage();
-    GridPage gridTable=new GridPage();
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage operateApp(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");

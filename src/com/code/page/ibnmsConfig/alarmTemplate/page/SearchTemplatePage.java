@@ -22,6 +22,6 @@ public class SearchTemplatePage  extends Page{
         tools.sendKeys(templateName,tools.getMapValue(map,"模板名称_ALARMTEMPLATE"));
         tools.selectByVisibleText(templateType,tools.getMapValue(map,"模板类型_ALARMTEMPLATE"));
         tools.click(searchBtn);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

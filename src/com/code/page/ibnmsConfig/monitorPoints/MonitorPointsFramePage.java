@@ -14,8 +14,8 @@ import java.util.Map;
 public class MonitorPointsFramePage extends Page {
     public String title="监控点列表（多选）";
     MonitorPointsListPage monitorPointlist=new MonitorPointsListPage();
-    KbpTreePage kbpTree=new KbpTreePage();
-    GridPage gridTable=new GridPage();
+    KbpTreePage kbpTree=new KbpTreePage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage searchMonitorPoints(Map<String,String> map)
     {
         tools.switchToFrame();

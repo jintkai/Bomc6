@@ -39,6 +39,6 @@ public class AlarmSearchHeadPage extends Page {
             actions.sendKeys(Keys.ARROW_DOWN).perform();
         }
         actions.sendKeys(Keys.ENTER).perform();
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

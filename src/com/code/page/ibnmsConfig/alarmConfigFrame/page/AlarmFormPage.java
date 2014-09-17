@@ -38,7 +38,7 @@ public class AlarmFormPage extends Page {
         {
             tools.click(tools.findBy(policy, By.className(selectClass)));
             tools.click(tools.findBy(policy, By.id(useOtherID)));
-            AlarmPolicyList alarmPolicy=new AlarmPolicyList();
+            AlarmPolicyList alarmPolicy=new AlarmPolicyList(eventDriver);
             String hand=tools.switchToWindowByTitle(alarmPolicy.title);
             alarmPolicy.search(map).selectTr(1);
             alarmPolicy.policyBtn.select();

@@ -6,6 +6,7 @@ import com.code.common.GridPage;
 import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.kpilist.KpiListFramePage;
 import jxl.read.biff.BiffException;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -19,13 +20,21 @@ import java.util.Iterator;
  * Created by jinkai on 06/07/2014.
  */
 public class KpiFrameTest extends TestCase {
-    KpiListFramePage kpiFrame=new KpiListFramePage();
-
+    KpiListFramePage kpiFrame;
+    GridPage gridTable;
+    @Parameters({"node"})
+    public KpiFrameTest(String node)
+    {
+        super(node);
+        kpiFrame=new KpiListFramePage(eventDriver);
+        gridTable=new GridPage(eventDriver);
+        Reporter.log("selenium Grid:" + node);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="kpiList")
@@ -38,7 +47,7 @@ public class KpiFrameTest extends TestCase {
     public void searchKPI(String[] obj)
     {
         map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kpiFrame.search(map);
+        gridTable=kpiFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
                 map);
     }
@@ -46,7 +55,7 @@ public class KpiFrameTest extends TestCase {
     public void searchKPIByTree(String[] obj)
     {
         map=tools.changeStringToMap(excelHead,obj);
-        GridPage gridTable=kpiFrame.searchByTree(map);
+        gridTable=kpiFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
                 map);
     }
@@ -55,7 +64,7 @@ public class KpiFrameTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,obj);
         kpiFrame.operateKpi(map);
-        GridPage gridTable=kpiFrame.search(map);
+        gridTable=kpiFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
                map);
     }

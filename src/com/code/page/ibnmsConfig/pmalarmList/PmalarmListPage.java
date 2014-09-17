@@ -4,6 +4,8 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.page.ibnmsConfig.pmalarmList.page.PaBtnPage;
 import com.code.page.ibnmsConfig.pmalarmList.page.PaFormPage;
+import com.code.test.ibnmsConfig.PmAlarmListTest;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -11,9 +13,13 @@ import java.util.Map;
  * Created by Jin on 2014/8/10.
  */
 public class PmalarmListPage extends Page {
-    PaBtnPage paBtn=new PaBtnPage();
-    PaFormPage paForm=new PaFormPage();
-    GridPage gridTable=new GridPage();
+    public PmalarmListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    PaBtnPage paBtn=new PaBtnPage(eventDriver);
+    PaFormPage paForm=new PaFormPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage operatePA(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");

@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.text.Normalizer;
 import java.util.Map;
@@ -15,6 +16,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/9.
  */
 public class EnvFormPage  extends FormPage{
+    public EnvFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(how= How.ID,using="btn-select-host")
     WebElement selectHostBtn;
     WebElement userName;
@@ -29,7 +34,7 @@ public class EnvFormPage  extends FormPage{
     {
         if (!tools.getMapValue(map,"资源名称").isEmpty()){
             tools.click(selectHostBtn);
-            ResListFramePage resList=new ResListFramePage();
+            ResListFramePage resList=new ResListFramePage(eventDriver);
             String hand=tools.switchToWindowByTitle(resList.title);
             resList.search(map);
             resList.gridTable.selectTr(0);
@@ -49,6 +54,6 @@ public class EnvFormPage  extends FormPage{
     public GridPage operateEnv(Map<String,String> map)
     {
         inputForm(map);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
 }

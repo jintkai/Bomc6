@@ -7,6 +7,7 @@ import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,7 +15,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/14.
  */
 public class AgFormPage extends FormPage {
-
+    public AgFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id="btn-select-host")
     WebElement selectHostBtn;
     WebElement instanceName;
@@ -29,7 +33,7 @@ public class AgFormPage extends FormPage {
     {
 
         inputForm(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
     public void inputForm(Map<String,String> map)
     {

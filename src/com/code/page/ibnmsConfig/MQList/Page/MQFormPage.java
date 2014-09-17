@@ -7,6 +7,7 @@ import com.code.page.ibnmsConfig.envList.EnvListPage;
 import com.code.page.ibnmsConfig.envList.page.EnvFormPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,6 +15,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/9.
  */
 public class MQFormPage extends FormPage {
+    public MQFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id = "form.instanceName")
     WebElement instanceName;
     @FindBy(id = "form.port")
@@ -32,7 +37,7 @@ public class MQFormPage extends FormPage {
     public GridPage operateMQ(Map<String,String> map)
     {
         inputForm(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
     public void inputForm(Map<String,String> map)
     {

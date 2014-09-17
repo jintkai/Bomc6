@@ -5,6 +5,7 @@ import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -19,12 +20,15 @@ public class SearchKbpPage extends Page {
     WebElement kbpCaption;
     @FindBy(how = How.ID, using = "btn-search")
     WebElement searchBtn;
-
+    public SearchKbpPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public GridPage search(Map<String, String> map)
     {
         tools.sendKeys(kbpCaption, tools.getMapValue(map, "KBP名称_KBP"));
         tools.sendKeys(kbpClass, tools.getMapValue(map, "KBP编号_KBP"));
         tools.click(searchBtn);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

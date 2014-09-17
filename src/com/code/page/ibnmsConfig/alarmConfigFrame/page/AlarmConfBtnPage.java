@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.List;
 import java.util.Map;
@@ -14,6 +15,10 @@ import java.util.Map;
  * 按钮
  */
 public class AlarmConfBtnPage extends BtnPage {
+    public AlarmConfBtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id="btn-add-select")
     WebElement btnAddSelect;
     @FindBy(id="btn-export-as-excel")

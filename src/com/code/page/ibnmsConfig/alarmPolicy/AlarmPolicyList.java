@@ -3,10 +3,12 @@ package com.code.page.ibnmsConfig.alarmPolicy;
 import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.page.ibnmsConfig.alarmConfigFrame.page.AlarmConfListPage;
+import com.code.page.ibnmsConfig.alarmCorrelation.AlarmCorrelationCfgList;
 import com.code.page.ibnmsConfig.alarmPolicy.page.*;
 import com.code.page.ibnmsConfig.alarmTemplate.AlarmTemplateListPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -15,15 +17,19 @@ import java.util.Map;
  * 告警策略维护列表
  */
 public class AlarmPolicyList extends Page {
+    public AlarmPolicyList(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String title="策略维护列表";
     SearchAlarmPolicyPage searchPolicy=new SearchAlarmPolicyPage();
-    public AlarmPolicyBtnPage policyBtn=new AlarmPolicyBtnPage();
+    public AlarmPolicyBtnPage policyBtn=new AlarmPolicyBtnPage(eventDriver);
     GeneratAlarmFormPage generatAlarm=new GeneratAlarmFormPage();
     PreGeneratAlarmFormPage preGeneratAlarm=new PreGeneratAlarmFormPage();
     UpAlarmFormPage upAlarm=new UpAlarmFormPage();
     FilterAlarmFormPage filterAlarm=new FilterAlarmFormPage();
     ClearAlarmFormPage clearAlarm=new ClearAlarmFormPage();
-    GridPage gridTable=new GridPage();
+    GridPage gridTable=new GridPage(eventDriver);
     //告警集中配置列表
     AlarmConfListPage alaremConfList=new AlarmConfListPage();
     public GridPage search(Map<String,String> map)
@@ -50,7 +56,7 @@ public class AlarmPolicyList extends Page {
 
         if (tools.getMapValue(map,"可点击列名").contains("模板"))
         {
-           AlarmTemplateListPage alarmTemplateList=new AlarmTemplateListPage();
+           AlarmTemplateListPage alarmTemplateList=new AlarmTemplateListPage(eventDriver);
            hand=tools.switchToWindowByTitle(alarmTemplateList.title);
 
         }
@@ -59,7 +65,7 @@ public class AlarmPolicyList extends Page {
             AlarmConfListPage alarmConfList=new AlarmConfListPage();
             hand=tools.switchToWindowByTitle(alarmConfList.title);
         }
-        int row=new GridPage().getRowNum();
+        int row=new GridPage(eventDriver).getRowNum();
         String js="window.open(\"\", \"_self\");window.close();";
         tools.execJS(js);
         tools.switchToWindowByHand(hand);
@@ -120,9 +126,9 @@ public class AlarmPolicyList extends Page {
         policyBtn.sysAlarm();
         String hand=tools.switchToWindowByTitle(alaremConfList.title);
         if(tools.getMapValue(map,"同步条数").equals("全部"))
-            new GridPage().selectTr(0);
+            new GridPage(eventDriver).selectTr(0);
         else
-            new GridPage().selectTr(1);
+            new GridPage(eventDriver).selectTr(1);
 
         alaremConfList.btnPage.select();
         tools.alertAccept();

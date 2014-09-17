@@ -20,12 +20,18 @@ import java.util.Map;
  * Created by Jin on 2014/8/10.
  */
 public class PmAlarmListTest extends TestCase {
-    PmalarmListPage pmAlarm=new PmalarmListPage();
+    PmalarmListPage pmAlarm;
+    @Parameters({"node"})
+    public PmAlarmListTest(String node)
+    {
+        super(node);
+        pmAlarm=new PmalarmListPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="PmAlarmList")

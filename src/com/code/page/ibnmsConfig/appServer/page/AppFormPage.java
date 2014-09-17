@@ -48,6 +48,6 @@ public class AppFormPage extends Page {
     public GridPage operateApp(Map<String,String> map)
     {
         inputForm(map);
-        return new GridPage();
+        return new GridPage(eventDriver);
     }
 }

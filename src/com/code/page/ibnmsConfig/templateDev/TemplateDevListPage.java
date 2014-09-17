@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.page.ibnmsConfig.templateDev.page.TemplateDevListBtnPage;
 import com.code.page.ibnmsConfig.templateDev.page.TemplateDevListSearchPage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -12,10 +13,14 @@ import java.util.Map;
  * 告警模板与资源关联列表
  */
 public class TemplateDevListPage extends Page{
+    public TemplateDevListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String title="告警模版与资源关联列表";
-    TemplateDevListSearchPage devSearch=new TemplateDevListSearchPage();
-    TemplateDevListBtnPage devBtn=new TemplateDevListBtnPage();
-    GridPage gridTable=new GridPage();
+    TemplateDevListSearchPage devSearch=new TemplateDevListSearchPage(eventDriver);
+    TemplateDevListBtnPage devBtn=new TemplateDevListBtnPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         return devSearch.search(map);

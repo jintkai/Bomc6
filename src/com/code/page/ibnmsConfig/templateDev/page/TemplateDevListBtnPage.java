@@ -4,11 +4,16 @@ import com.code.common.BtnPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
  * Created by Jin on 2014/8/21.
  */
 public class TemplateDevListBtnPage extends BtnPage {
+    public TemplateDevListBtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id = "btn-sync")
     WebElement syncBtn;
     @FindBy(id="btn-set")

@@ -33,7 +33,7 @@ public class MonitorPointPage extends Page {
             return;
 //        tools.click(btnSelectKpi);
         tools.openModelDialog(btnSelectKpi);
-        KpiListFramePage kpiList=new KpiListFramePage();
+        KpiListFramePage kpiList=new KpiListFramePage(eventDriver);
         String hand=tools.switchToWindowByTitle(kpiList.title);
         kpiList.search(map).selectAllTr();
         kpiList.kpiBtn.select();

@@ -5,6 +5,8 @@ import com.code.common.Page;
 import com.code.page.ibnmsConfig.subscripFilter.page.SearchFilterPage;
 import com.code.page.ibnmsConfig.subscripFilter.page.SubscripFilterBtn;
 import com.code.page.ibnmsConfig.subscripFilter.page.SubscripFilterFormPage;
+import com.code.test.ibnmsConfig.SubscripFilterListTest;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 /**
@@ -12,11 +14,14 @@ import java.util.Map;
  * 告警订阅过滤器
  */
 public class SubscripFilterListPage  extends Page{
-
-    public SearchFilterPage searchPage=new SearchFilterPage();
-    public SubscripFilterBtn subscripBtn=new SubscripFilterBtn();
-    public SubscripFilterFormPage subscripForm=new SubscripFilterFormPage();
-    GridPage gridTable=new GridPage();
+    public SubscripFilterListPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
+    public SearchFilterPage searchPage=new SearchFilterPage(eventDriver);
+    public SubscripFilterBtn subscripBtn=new SubscripFilterBtn(eventDriver);
+    public SubscripFilterFormPage subscripForm=new SubscripFilterFormPage(eventDriver);
+    GridPage gridTable=new GridPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         gridTable=searchPage.search(map);

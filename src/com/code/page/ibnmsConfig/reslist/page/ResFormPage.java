@@ -5,6 +5,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -12,6 +13,10 @@ import java.util.Map;
  * Created by jinkai on 2014/7/8.
  */
 public class ResFormPage extends FormPage {
+    public ResFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     WebElement devTypeKbpClass;
     WebElement deviceName;
     WebElement deviceId;
@@ -45,7 +50,7 @@ public class ResFormPage extends FormPage {
     public GridPage operateRes(Map<String,String> map)
     {
         inputForm(map);
-        return  new GridPage();
+        return  new GridPage(eventDriver);
     }
     public void inputForm(Map<String,String> map)
     {

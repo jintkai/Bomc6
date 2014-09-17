@@ -20,12 +20,18 @@ import java.util.Map;
  * Created by jinkai on 2014/7/11.
  */
 public class PFListTest extends TestCase {
-    PFListPage pfList=new PFListPage();
+    PFListPage pfList;
+    @Parameters({"node"})
+    public PFListTest(String node)
+    {
+        super(node);
+        pfList=new PFListPage(eventDriver);
+    }
     @BeforeMethod
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        TestCase.eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Data.baseUrl + actionUrl);
     }
 
     @DataProvider(name="PFlist")

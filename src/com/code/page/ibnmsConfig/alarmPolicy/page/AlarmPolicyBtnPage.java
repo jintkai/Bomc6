@@ -7,6 +7,7 @@ import com.code.common.Page;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,6 +15,10 @@ import java.util.Map;
  * Created by Jin on 2014/7/30.
  */
 public class AlarmPolicyBtnPage extends BtnPage {
+    public AlarmPolicyBtnPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(id="btn-add")
     WebElement addBtn;
     @FindBy(id="btn-add-select")
@@ -58,7 +63,7 @@ public class AlarmPolicyBtnPage extends BtnPage {
     public FormPage edit()
     {
         tools.openModelDialog(editBtn);
-        return new FormPage();
+        return new FormPage(eventDriver);
     }
     public void sysAlarm()
     {

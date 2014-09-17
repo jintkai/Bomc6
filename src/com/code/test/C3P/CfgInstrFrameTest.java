@@ -22,11 +22,18 @@ import java.util.List;
  */
 public class CfgInstrFrameTest extends TestCase {
     public CfgInstrFrame instrFrame=new CfgInstrFrame();
+    @Parameters({"node"})
+    public CfgInstrFrameTest(String node)
+    {
+        super(node);
+        instrFrame=new CfgInstrFrame();
+
+    }
     @BeforeMethod
     @Parameters({"Base_URL","Action_URL"})
     public void beforeMethod(String baseUrl,String actionUrl)
     {
-        TestCase.eventDriver.get(baseUrl + actionUrl);
+        eventDriver.get(baseUrl + actionUrl);
     }
 
     @DataProvider(name="instrFrame")
