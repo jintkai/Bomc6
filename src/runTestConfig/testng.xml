@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="selenium2" parallel="tests" thread-count="2">
-    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
-    <test name="指标管理">
-        <parameter name="node" value="http://127.0.0.1:5555/wd/hub"/>
+<suite name="selenium2" >
+    <!--suite name="selenium2" parallel="tests" thread-count="10"-->
+    <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
+    <parameter name="Base_URL" value="http://192.168.1.104:8080" />
+    <!--test name="指标管理">
+        <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
         <classes>
-            <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
+
             <class name="com.code.test.ibnmsConfig.KbpFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
@@ -13,9 +15,8 @@
             </class>
             </classes>
         </test>
-
     <test name="资源管理">
-        <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
+        <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
         <classes>
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
@@ -25,7 +26,8 @@
             </class>
         </classes>
     </test >
-    <!--test name="部署配置">
+    <test name="部署配置">
+        <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
         <classes>
             <class name="com.code.test.ibnmsConfig.MQListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
@@ -45,6 +47,11 @@
             <class name="com.code.test.ibnmsConfig.AppServerListTest">
                 <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
             </class>
+            </classes>
+        </test-->
+    <test name="告警策略模板相关配置">
+        <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
+        <classes>
             <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
             </class>
@@ -53,8 +60,12 @@
             </class>
             <class name="com.code.test.ibnmsConfig.TemplateDevListTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/templateDevList.action" />
-
             </class>
+            </classes>
+        </test>
+    <test name="告警集中配置">
+        <parameter name="node" value="http://192.168.1.105:5555/wd/hub"/>
+        <classes>
             <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
             </class>
@@ -66,21 +77,21 @@
             <class name="com.code.test.ibnmsConfig.AlarmShieldCfgTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmShieldCfgList.action" />
             </class>
-
-            <class name="com.code.test.ibnmsConfig.AlarmCorrelationCfgListTest">
-                <parameter name="Action_URL" value="/ibnms/config/alarmCorrelationCfgList.action?type=database" />
-            </class>
-            <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
-                <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
-            </class>
-
-            <集中控制>
-            <class name="com.code.test.C3P.CfgInstrFrameTest">
-                <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />
-                 <methods>
-                    <include name="searchAlarmShield"></include>
-                </methods>
-            </class>
         </classes>
-    </test-->
+    </test>
 </suite>
+
+        <!--class name="com.code.test.ibnmsConfig.AlarmCorrelationCfgListTest">
+            <parameter name="Action_URL" value="/ibnms/config/alarmCorrelationCfgList.action?type=database" />
+        </class>
+        <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
+            <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
+        </class>
+
+
+        <class name="com.code.test.C3P.CfgInstrFrameTest">
+            <parameter name="Action_URL" value="/cfgInstr/instrFrame.action?groupType=0" />
+             <methods>
+                <include name="searchAlarmShield"></include>
+            </methods>
+        </class-->

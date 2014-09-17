@@ -86,8 +86,6 @@ public class TestCase {
     @BeforeClass(alwaysRun=true)
     public void beforeClass(String base_url)
     {
-        //driver=createDriver("IE","http://192.168.1.102:5555/wd/hub");
-        //eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         eventDriver.get(base_url);
         eventDriver.manage().window().maximize();
         LoginPage login=new LoginPage(eventDriver);
@@ -96,7 +94,6 @@ public class TestCase {
 
     public TestCase(String node)
     {
-        //driver=createDriver("IE","http://172.21.148.174:5555/wd/hub");
         driver=createDriver("IE",node);
         eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         tools=new Tools(eventDriver);

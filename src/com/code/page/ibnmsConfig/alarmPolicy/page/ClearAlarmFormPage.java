@@ -9,6 +9,7 @@ import com.code.page.ibnmsConfig.kpilist.KpiListFramePage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -16,6 +17,10 @@ import java.util.Map;
  * Created by Jin on 2014/8/14.
  */
 public class ClearAlarmFormPage extends Page {
+    public ClearAlarmFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     public String title="告警清除策略配置";
     @FindBy(name="policyName")
     WebElement policyName;

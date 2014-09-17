@@ -7,6 +7,7 @@ import com.code.page.ibnmsConfig.kpilist.page.KpiFormPage;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,6 +15,10 @@ import java.util.Map;
  * Created by Jin on 2014/7/30.
  */
 public class SearchAlarmPolicyPage extends Page{
+    public SearchAlarmPolicyPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(name="filter.policyName")
     WebElement policyName;
     @FindBy(name="unitNamePrefix")

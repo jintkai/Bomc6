@@ -24,7 +24,7 @@ import java.util.Map;
 public class AlarmPolicyTest extends TestCase {
     public AlarmPolicyList alarmPlicy;//=new AlarmPolicyList(eventDriver);
     GridPage gridTable;//=new GridPage(eventDriver);
-
+    @Parameters({"node"})
     public AlarmPolicyTest(String node)
     {
         super(node);

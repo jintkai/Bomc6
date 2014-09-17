@@ -4,6 +4,7 @@ import com.code.common.GridPage;
 import com.code.common.Page;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -11,7 +12,10 @@ import java.util.Map;
  * Created by Jin on 2014/8/4.
  */
 public class TemplateFormPage extends Page {
-
+    public TemplateFormPage(EventFiringWebDriver eventDriver)
+    {
+        super(eventDriver);
+    }
     @FindBy(name="alarmTemplateForm.templateName")
     WebElement templateName;
     @FindBy(name="alarmTemplateForm.templateType")

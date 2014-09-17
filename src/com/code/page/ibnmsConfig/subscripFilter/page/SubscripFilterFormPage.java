@@ -29,7 +29,7 @@ public class SubscripFilterFormPage extends FormPage {
     @FindBy(name = "filter.filterDesc")
     WebElement filterDesc;
     String chooseClass="choose";
-    KbpListFramePage kbpFrame=new KbpListFramePage();
+    KbpListFramePage kbpFrame=new KbpListFramePage(eventDriver);
     KpiListFramePage kpiFrame=new KpiListFramePage(eventDriver);
     @FindBy(id = "btn-choose-kpi")
     WebElement chooseKpiBtn;

@@ -22,16 +22,16 @@ public class AlarmPolicyList extends Page {
         super(eventDriver);
     }
     public String title="策略维护列表";
-    SearchAlarmPolicyPage searchPolicy=new SearchAlarmPolicyPage();
+    SearchAlarmPolicyPage searchPolicy=new SearchAlarmPolicyPage(eventDriver);
     public AlarmPolicyBtnPage policyBtn=new AlarmPolicyBtnPage(eventDriver);
-    GeneratAlarmFormPage generatAlarm=new GeneratAlarmFormPage();
-    PreGeneratAlarmFormPage preGeneratAlarm=new PreGeneratAlarmFormPage();
-    UpAlarmFormPage upAlarm=new UpAlarmFormPage();
-    FilterAlarmFormPage filterAlarm=new FilterAlarmFormPage();
-    ClearAlarmFormPage clearAlarm=new ClearAlarmFormPage();
+    GeneratAlarmFormPage generatAlarm=new GeneratAlarmFormPage(eventDriver);
+    PreGeneratAlarmFormPage preGeneratAlarm=new PreGeneratAlarmFormPage(eventDriver);
+    UpAlarmFormPage upAlarm=new UpAlarmFormPage(eventDriver);
+    FilterAlarmFormPage filterAlarm=new FilterAlarmFormPage(eventDriver);
+    ClearAlarmFormPage clearAlarm=new ClearAlarmFormPage(eventDriver);
     GridPage gridTable=new GridPage(eventDriver);
     //告警集中配置列表
-    AlarmConfListPage alaremConfList=new AlarmConfListPage();
+    AlarmConfListPage alaremConfList=new AlarmConfListPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
         searchPolicy.search(map);
@@ -62,7 +62,7 @@ public class AlarmPolicyList extends Page {
         }
            else
         {
-            AlarmConfListPage alarmConfList=new AlarmConfListPage();
+            AlarmConfListPage alarmConfList=new AlarmConfListPage(eventDriver);
             hand=tools.switchToWindowByTitle(alarmConfList.title);
         }
         int row=new GridPage(eventDriver).getRowNum();

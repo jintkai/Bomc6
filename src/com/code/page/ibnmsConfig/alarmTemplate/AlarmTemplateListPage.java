@@ -22,7 +22,7 @@ public class AlarmTemplateListPage extends Page {
     public String title="告警配置模板列表";
     SearchTemplatePage searchTemplate=new SearchTemplatePage();
     AlarmTemplateBtnPage templateBtn=new AlarmTemplateBtnPage(eventDriver);
-    TemplateFormPage templateForm=new TemplateFormPage();
+    TemplateFormPage templateForm=new TemplateFormPage(eventDriver);
     GridPage gridTable=new GridPage(eventDriver);
     public GridPage search(Map<String,String> map)
     {
@@ -69,7 +69,7 @@ public class AlarmTemplateListPage extends Page {
         gridTable=searchTemplate.search(map);
         gridTable.selectTr(0);
         templateBtn.edit();
-        new TemplateFormPage().operateKPI(map);
+        new TemplateFormPage(eventDriver).operateKPI(map);
         templateBtn.save();
     }
 }
