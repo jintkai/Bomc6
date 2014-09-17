@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="selenium2" >
+<suite name="selenium2" parallel="tests" thread-count="2">
     <parameter name="Base_URL" value="http://172.21.0.31:8084" />
     <test name="指标管理">
         <parameter name="node" value="http://127.0.0.1:5555/wd/hub"/>
@@ -14,8 +14,8 @@
             </classes>
         </test>
 
-    <!--test name="资源管理">
-        <parameter name="node" value="http://172.21.149.176:5555/wd/hub"/>
+    <test name="资源管理">
+        <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
         <classes>
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
@@ -24,7 +24,7 @@
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
         </classes>
-    </test -->
+    </test >
     <!--test name="部署配置">
         <classes>
             <class name="com.code.test.ibnmsConfig.MQListTest" >
