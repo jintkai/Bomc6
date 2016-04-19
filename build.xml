@@ -7,6 +7,7 @@
     <!--编译包位置-->
     <property name="class.dir" value="${basedir}/classes" />
     <!--依赖Jar位置-->
+
     <property name="lib.dir" value="${basedir}/lib" />
     <!--测试结果输出位置-->
     <property name="output.dir" value="${basedir}/test-output" />
