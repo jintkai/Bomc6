@@ -22,7 +22,7 @@ public class ExcelDriver implements Iterator {
     public ExcelDriver(String fileName,String sheetName) {
         try {
             File dir = new File(".");
-            this.book = Workbook.getWorkbook(new File(dir.getCanonicalPath() + "\\Case\\" + fileName + ".xls"));
+            this.book = Workbook.getWorkbook(new File(dir.getCanonicalPath() + "/Case/" + fileName + ".xls"));
             this.sheet = book.getSheet(sheetName);
             rowNum = sheet.getRows();
             colNum = sheet.getColumns();

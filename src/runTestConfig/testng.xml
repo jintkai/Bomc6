@@ -2,24 +2,25 @@
 <suite name="selenium2" >
     <!--suite name="selenium2" parallel="tests" thread-count="10"-->
     <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
-    <parameter name="Base_URL" value="http://192.168.1.104:8080" />
-    <!--test name="指标管理">
+    <parameter name="Base_URL" value="http://172.21.0.31:8084" />
+    <test name="测试环境IE8">
         <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
         <classes>
-
-            <class name="com.code.test.ibnmsConfig.KbpFrameTest">
+            <class name="com.code.test.ibnmsConfig.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
-            <class name="com.code.test.ibnmsConfig.KpiFrameTest" >
+            <class name="com.code.test.ibnmsConfig.KpiFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
+                <!--methods><include name="searchKpi1"></include></methods-->
             </class>
             </classes>
         </test>
-    <test name="资源管理">
+    <!--test name="资源管理">
         <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
         <classes>
             <class name="com.code.test.ibnmsConfig.ResFrameTest" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
+                <methods><include name="editKpi"></include></methods>
             </class>
             <class name="com.code.test.ibnmsConfig.EnvListTest" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
@@ -49,7 +50,7 @@
             </class>
             </classes>
         </test-->
-    <test name="告警策略模板相关配置">
+    <!--test name="告警策略模板相关配置">
         <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
         <classes>
             <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
@@ -78,7 +79,7 @@
                 <parameter name="Action_URL" value="/ibnms/config/alarmShieldCfgList.action" />
             </class>
         </classes>
-    </test>
+    </test-->
 </suite>
 
         <!--class name="com.code.test.ibnmsConfig.AlarmCorrelationCfgListTest">

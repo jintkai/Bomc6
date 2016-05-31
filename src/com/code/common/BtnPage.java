@@ -1,6 +1,7 @@
 package com.code.common;
 
 import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -63,9 +64,13 @@ public class BtnPage extends Page {
     }
     public  void  delete()
     {
+        tools.execJS("window.confirm = function() {return true}");
+
         tools.click(delBtn);
-        tools.alertAccept();
+        //tools.execJS("window.confirm = function() {return true}");
+        //tools.alertAccept();
     }
+
     public  void  deleteForm()
     {
         tools.click(delBtn);

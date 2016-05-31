@@ -1047,10 +1047,12 @@
 					<br>
                                         <xsl:element name="img">
 						<xsl:attribute name="src">
-						<xsl:value-of select="substring(.,24,30)"/>
+						<!--xsl:value-of select="substring(.,24,30)"/-->
+                            <xsl:value-of select="substring(.,42,30)"/>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
-						<xsl:value-of select="substring(.,24,30)"/>
+						<!--xsl:value-of select="substring(.,24,30)"/-->
+                            <xsl:value-of select="substring(.,42,30)"/>
 						</xsl:attribute>
 					</xsl:element>
 					</br>

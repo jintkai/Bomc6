@@ -13,7 +13,7 @@ public  class Config {
     public  FileInputStream in;
     public Config() {
         try {
-            in=new FileInputStream(".\\config\\config.properties");
+            in=new FileInputStream("./config/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

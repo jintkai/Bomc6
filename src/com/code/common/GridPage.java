@@ -9,6 +9,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
+import org.testng.annotations.Test;
 
 import javax.xml.crypto.*;
 import java.awt.*;
@@ -31,6 +32,8 @@ public class GridPage  extends Page implements Data{
     //读取中....
     @FindBy(id="load_gridTable")
     WebElement loadGrid;
+    @FindBy(xpath = "//*[@id=\"gridPager_right\"]/div") //grid显示的总行数
+    WebElement grid_xb;
     /*
     table数据区域,>>>>>>>>>>>>>>>>>数据区，不包含表头
      */
@@ -101,6 +104,17 @@ public class GridPage  extends Page implements Data{
         return  rowNum;
     }
 
+    /**
+     * 返回查询的总行数;(Grid的下标)
+     */
+    public String getGrid_xb()
+    {
+        loadGridUnDisplay();
+        String xb=grid_xb.getText();
+        if (xb.indexOf("无数据显示")!=-1)
+            return "0";
+        return xb.substring(xb.indexOf("共 ")+2,xb.indexOf(" 条"));
+    }
     /**
      * 返回table中的表头数组
      * @return
@@ -260,6 +274,11 @@ public class GridPage  extends Page implements Data{
      */
     public void selectTr(int index)
     {
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         if (index==0)
         {

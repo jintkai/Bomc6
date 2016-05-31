@@ -11,7 +11,7 @@ public interface Data {
     public Config configPro=new Config();
     //public static String browserType = "IE";
     public static String browserType = configPro.prop.getProperty("browserType");
-    public static String baseDir = "c:\\Test\\Bomc6";
+    public static String baseDir = "./";
     public static String baseUrl = configPro.prop.getProperty("baseURL");
     public static int timeOut=8;       //wait超时时间，单位秒
     public static int sleepTime=250;    //调度频率，单位毫秒

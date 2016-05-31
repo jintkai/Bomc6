@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
 
@@ -15,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
+
 
 /**
  * Created by jinkai on 2014/6/21.
@@ -56,8 +57,9 @@ public class TestCase {
             //driver = new InternetExplorerDriver(ieCapabilities);
             DesiredCapabilities test=DesiredCapabilities.internetExplorer();
             try {
-                driver = new RemoteWebDriver(new URL(nodeURL),ieCapabilities);
-            } catch (MalformedURLException e) {
+                //driver = new RemoteWebDriver(new URL(nodeURL),ieCapabilities);
+                driver=new InternetExplorerDriver();
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -70,6 +72,11 @@ public class TestCase {
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }
+        }
+        else
+        if(BrowerType.equals("safari")){
+            System.out.println("safari浏览器");
+           driver=new SafariDriver();
         }
         else
         {
@@ -90,6 +97,7 @@ public class TestCase {
         eventDriver.manage().window().maximize();
         LoginPage login=new LoginPage(eventDriver);
         login.login("admin","123456");
+
     }
 
     public TestCase(String node)

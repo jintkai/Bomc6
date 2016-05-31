@@ -26,6 +26,7 @@ public class LoginPage extends Page {
     {
         tools.sendKeys(userId,name);
         tools.sendKeys(password, passwd);
+        tools.sleep();
         tools.submit(userId);
         return new HomePage();
     }

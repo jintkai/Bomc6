@@ -29,6 +29,7 @@ public class KpiListFramePage extends Page{
     {
         tools.switchToFrame();
         tools.switchToFrame(kpiListIFrame);
+        tools.switchToFrame("showPage");
         return searchKpi.search(map);
     }
     public GridPage searchByTree(Map<String,String> map)
@@ -40,7 +41,16 @@ public class KpiListFramePage extends Page{
         tools.switchToFrame(kpiListIFrame);
         return new GridPage(eventDriver);
     }
-
+    public GridPage selectTree(String name)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(0);
+        kpiTree.selectTree(name);
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
+        tools.switchToFrame("showPage");
+        return new GridPage(eventDriver);
+    }
     public GridPage operateKpi(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
@@ -48,9 +58,10 @@ public class KpiListFramePage extends Page{
         {
             tools.switchToFrame();
             tools.switchToFrame(0);
-            this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
+            //this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
             tools.switchToFrame();
             tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
             kpiBtn.add();
             return kpiForm.operateKpi(map);
         }
@@ -58,14 +69,16 @@ public class KpiListFramePage extends Page{
         {
             tools.switchToFrame();
             tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
             searchKpi.search(map);
-            gridTable.selectTr(0);
+            gridTable.selectTr(1);
             kpiBtn.edit();
             return kpiForm.operateKpi(map);
         }
         else {
             tools.switchToFrame();
             tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
             searchKpi.search(map);
             gridTable.selectTr(0);
             kpiBtn.delete();
@@ -76,6 +89,7 @@ public class KpiListFramePage extends Page{
     {
         tools.switchToFrame();
         tools.switchToFrame(kpiListIFrame);
+        tools.switchToFrame("showPage");
         kpiBtn.select();
     }
 }

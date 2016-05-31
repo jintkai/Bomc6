@@ -1,10 +1,12 @@
 package com.code.common;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 /**
  * Created by jinkai on 2014/6/21.
@@ -13,16 +15,20 @@ public class EventListener implements WebDriverEventListener {
 
     Logger mylog=Logger.getLogger(this.getClass());
     //public Tools tools=new Tools();
+
+    public EventListener(){
+        PropertyConfigurator.configure( "./config/log4j.properties" );
+        Logger logger  =  Logger.getLogger(this.getClass() );
+    }
     @Override
     public void beforeNavigateTo(String s, WebDriver webDriver) {
 
-        mylog.info("beforeNavigateTo:"+s);
 
     }
 
     @Override
     public void afterNavigateTo(String s, WebDriver webDriver) {
-
+        mylog.info("跳转url:"+s);
     }
 
     @Override
@@ -46,10 +52,21 @@ public class EventListener implements WebDriverEventListener {
     }
 
     @Override
+    public void beforeNavigateRefresh(WebDriver driver) {
+
+    }
+
+    @Override
+    public void afterNavigateRefresh(WebDriver driver) {
+
+    }
+
+    @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
         if(webElement!=null)
         {
+            mylog.error("定位元素:"+by.toString());
             try {
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
@@ -62,12 +79,13 @@ public class EventListener implements WebDriverEventListener {
             catch(TimeoutException e)
             {
                 //e.printStackTrace();
-                System.out.println("定位元素超时");
+                mylog.error("定位元素超时."+by.toString());
             }
         }
         else
         {
             try {
+                mylog.error("定位元素:"+by.toString());
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
                     public WebElement apply(WebDriver webDriver) {
@@ -78,7 +96,7 @@ public class EventListener implements WebDriverEventListener {
             catch(TimeoutException e)
             {
                 //e.printStackTrace();
-                System.out.println("定位元素超时");
+                mylog.error("定位元素超时."+by.toString());
             }
         }
 
@@ -114,7 +132,9 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-       // mylog.info("AfterClickOn"+webElement.getTagName());
+        mylog.info("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
+        Reporter.log("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
+
     }
 
     @Override
@@ -133,14 +153,15 @@ public class EventListener implements WebDriverEventListener {
             }
             catch(TimeoutException e)
             {
-                System.out.println("BeforeChangeValueOf失败");
+                mylog.error("修改元素值失败."+webElement);
             }
         }
     }
 
     @Override
     public void afterChangeValueOf(WebElement webElement, WebDriver webDriver) {
-
+        mylog.info("修改元素"+webElement+"输入框值后:"+webElement.getAttribute("value"));
+        Reporter.log("修改元素"+webElement+"输入框值后:"+webElement.getAttribute("value"));
     }
 
     @Override

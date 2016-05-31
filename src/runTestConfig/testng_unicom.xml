@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="unicoum" >
+    <!--suite name="selenium2" parallel="tests" thread-count="10"-->
+    <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
+    <parameter name="Base_URL" value="http://172.16.212.80:8010/npage/login.html" />
+    <test name="unicom_host_127.0.0.1">
+        <parameter name="node" value="http://192.168.0.8:6666/wd/hub"/> <!--http://localhost:6666/wd/hub-->
+        <classes>
+            <!--class name="com.code.test.unicom.LoginTest">
+            </class-->
+            <class name="com.code.test.unicom.MainMenuTest"></class>
+            </classes>
+        </test>
+    <!--test name="资源管理">
+        <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
+        <classes>
+            <class name="com.code.test.ibnmsConfig.ResFrameTest" >
+                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
+                <methods><include name="editKpi"></include></methods>
+            </class>
+            <class name="com.code.test.ibnmsConfig.EnvListTest" >
+                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+            </class>
+        </classes>
+    </test >
+    <test name="部署配置">
+        <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
+        <classes>
+            <class name="com.code.test.ibnmsConfig.MQListTest" >
+                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
+            </class >
+            <class name="com.code.test.ibnmsConfig.WKlistTest">
+                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
+            </class>
+            <class name="com.code.test.ibnmsConfig.PFListTest">
+                <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
+            </class>
+            <class name="com.code.test.ibnmsConfig.AgListTest">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class>
+            <class name="com.code.test.ibnmsConfig.PmAlarmListTest">
+                <parameter name="Action_URL" value="/cfgColl/listPmAlarm.action?type=1"></parameter>
+            </class>
+            <class name="com.code.test.ibnmsConfig.AppServerListTest">
+                <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
+            </class>
+            </classes>
+        </test-->
+    <!--test name="告警策略模板相关配置">
+        <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
+        <classes>
+            <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
+            </class>
+            <class name="com.code.test.ibnmsConfig.AlarmTemplateTest">
+            <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/alarmTemplateList.action" />
+            </class>
+            <class name="com.code.test.ibnmsConfig.TemplateDevListTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/templateDevList.action" />
+            </class>
+            </classes>
+        </test>
+    <test name="告警集中配置">
+        <parameter name="node" value="http://192.168.1.105:5555/wd/hub"/>
+        <classes>
+            <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
+            </class>
+            <class name="com.code.test.ibnmsConfig.SubscripFilterListTest">
+                <parameter name="Action_URL" value="/ibnms/config/subscripFilterList.action" />
+                <methods><include name="operateSubscripFilter"></include></methods>
+            </class>
+
+            <class name="com.code.test.ibnmsConfig.AlarmShieldCfgTest">
+                <parameter name="Action_URL" value="/ibnms/config/alarmShieldCfgList.action" />
+            </class>
+        </classes>
+    </test-->
+</suite>
+
