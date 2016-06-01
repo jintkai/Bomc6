@@ -212,12 +212,13 @@ public class Tools {
         try{ele.click();
 
         }
+
         catch(Exception e)
         {
             e.printStackTrace();
             Reporter.log("点击元素失败！");
             takesScreenshot("点击元素失败!");
-            ele.click();
+            //ele.click();
         }
     }
 
