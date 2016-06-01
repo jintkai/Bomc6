@@ -42,6 +42,7 @@ public class Tools {
 
     public void refresh()
     {
+        sleep(3000);
         driver.navigate().refresh();
     }
     public void sleep()
@@ -669,6 +670,18 @@ public class Tools {
 
         try {
             String setscroll = "document.documentElement.scrollTop=" + height; //支持IE
+            JavascriptExecutor jse=(JavascriptExecutor) driver;
+            jse.executeScript(setscroll);
+        }
+        catch (Exception e) {
+            System.out.println("Fail to set the scroll.");
+            Reporter.log("Fail to set the scroll.");
+        }
+    }
+
+    public void setScollWidth(int width){
+        try {
+            String setscroll = "document.documentElement.scrollWidth=" + width; //支持IE
             JavascriptExecutor jse=(JavascriptExecutor) driver;
             jse.executeScript(setscroll);
         }

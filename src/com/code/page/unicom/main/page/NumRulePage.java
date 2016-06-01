@@ -23,7 +23,9 @@ public class NumRulePage extends Page {
     @FindBy(how= How.ID,using="validForm")
     WebElement validForm;
     @FindBy(how=How.ID,using = "btn_add")
-    WebElement btn_add;
+    WebElement btnAdd;
+    @FindBy(how=How.ID,using="btn_sub")
+    WebElement btnSub;
     @FindBy(how=How.ID,using = "good_name")
     WebElement goodName;
     @FindBy(how=How.ID,using="good_kind")
@@ -57,7 +59,7 @@ public class NumRulePage extends Page {
     @FindBy(how = How.ID,using="btn_addsub")
     WebElement btnAddSub;
     public void add(Map<String,String> map){
-        tools.click(btn_add);
+        tools.click(btnAdd);
         editForm(map);
     }
     public void editForm(Map<String,String> map){
@@ -81,6 +83,9 @@ public class NumRulePage extends Page {
     }
     public void numRuleSearch(Map<String,String> map){
         searchPage.searchNumRule(map);
+    }
+    public void numRuleDelete(int rowNum){
+        resultDiv.deleteRow(rowNum);
     }
 
 }

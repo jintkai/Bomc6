@@ -85,12 +85,13 @@ public class TestCase2 {
         {
             DesiredCapabilities test=DesiredCapabilities.chrome();
             System.setProperty("webdriver.chrome.driver",  Data.baseDir+ "\\Driver\\chromedriver.exe");
-            if (!nodeURL.equals(""))
+            if (!nodeURL.equals("")) {
                 try {
-                    driver = new RemoteWebDriver(new URL(nodeURL),test);
+                    driver = new RemoteWebDriver(new URL(nodeURL), test);
                 } catch (MalformedURLException e) {
                     e.printStackTrace();
                 }
+            }
             else
             driver=new ChromeDriver();
         }

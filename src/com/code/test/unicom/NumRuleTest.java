@@ -6,6 +6,7 @@ import com.code.page.unicom.common.ResultDivPage;
 import com.code.page.unicom.main.MainPage;
 import com.code.page.unicom.main.page.NumRulePage;
 import com.code.page.unicom.main.page.NumRuleSearchPage;
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -38,7 +39,7 @@ public class NumRuleTest extends TestCase2 {
         beforeClass(base_url);
     }
 
-    @Test(description = "增加普通靓号")
+    //@Test(description = "增加普通靓号")
     public void addNumRule(){
         mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");
         map=new HashMap<String, String>();
@@ -60,7 +61,7 @@ public class NumRuleTest extends TestCase2 {
         numRulePage.add(map);
     }
 
-    @Test(description = "查询靓号规则",dependsOnMethods = "addNumRule")
+    //@Test(description = "查询靓号规则",dependsOnMethods = "addNumRule")
     public void searchNumRule()
     {
         tools.refresh();
@@ -70,8 +71,17 @@ public class NumRuleTest extends TestCase2 {
         map.put("规则状态","新增待刷");
         map.put("靓号级别","三级");
         numRulePage.numRuleSearch(map);
-        //tools.sleep(5000);
         resultDiv.getTabelTh();
         Assert.assertEquals(resultDiv.getCount(),1,map.toString());
+    }
+    @Test(description = "删除靓号规则")
+    public void deleteNumRule(){
+        tools.refresh();
+        mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");
+        map=new HashMap<String, String>();
+        numRulePage.numRuleSearch(map);
+        int rowCount=resultDiv.getCount();
+        numRulePage.numRuleDelete(2);
+        Assert.assertEquals(resultDiv.getCount(),rowCount-1,"删除靓号规则错误");
     }
 }
