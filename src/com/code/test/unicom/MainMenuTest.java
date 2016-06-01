@@ -22,12 +22,14 @@ public class MainMenuTest extends TestCase2 {
     {
         eventDriver.get(Data.baseUrl);
         beforeClass(base_url);
-
     }
 
     @Test
     public void selectMenu(){
         tools.sleep(10000);
-        mainPage.selectMenu("号码属性维护","靓号规则维护");
+        mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");
+        tools.sleep(5000);
+        //mainPage.leftBodyPage.add();
+        //tools.sleep(10000);
     }
 }

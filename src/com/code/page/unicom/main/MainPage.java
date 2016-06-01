@@ -1,6 +1,8 @@
 package com.code.page.unicom.main;
 
 import com.code.common.Page;
+import com.code.page.unicom.main.page.LeftBodyPage;
+import com.code.page.unicom.main.page.MenuPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
@@ -19,23 +21,7 @@ public class MainPage extends Page{
     public MainPage(EventFiringWebDriver eventFiringWebDriver){
         super(eventFiringWebDriver);
     }
-    @FindBy(how= How.ID,using = "menu-list")
-    WebElement menuList;
-    public void selectMenu(String MainMenu,String subMenu){
+    public MenuPage menuPage=new MenuPage(eventDriver);
+    public LeftBodyPage leftBodyPage=new LeftBodyPage(eventDriver);
 
-        List<WebElement> elements=tools.findElements((SearchContext) menuList, By.tagName("li"));
-        for(WebElement element : elements){
-            WebElement element_h4=element.findElement(By.tagName("h4"));
-            System.out.println("h4:"+element_h4.getText());
-            if(element_h4.getText().equals(MainMenu)) {
-
-                List<WebElement> subMenuList=element.findElements(By.tagName("a"));
-                for (WebElement submenu : subMenuList){
-                    System.out.println("a:"+submenu.getText()+":"+submenu.getAttribute(""));
-                }
-                return;
-            }
-        }
-        System.out.println("return");
-    };
 }
