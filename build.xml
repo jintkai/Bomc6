@@ -64,7 +64,7 @@
         <testng classpathref="compile.path" failureproperty="test.failed" >
             <!--xml test suite file -->
             <xmlfileset dir="${configclass}">
-                <include name="testng.xml" />
+                <include name="testng_unicom.xml" />
             </xmlfileset>
         </testng>
     </target>
