@@ -42,12 +42,12 @@ public class ResultDivPage extends Page {
         List<WebElement> tableTr=resultTable.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
         WebElement deleteBtn=tableTr.get(rowNum).findElement(By.id("delclick"));
         System.out.println(deleteBtn.getText());
-        tools.sleep(5000);
+        /*tools.sleep(5000);
         Actions actions = new Actions(tools.getDriver());
 
         actions.moveToElement(deleteBtn).click().perform();
         tools.sleep(5000);
-        clickWebElement(deleteBtn,tools.getDriver());
+        clickWebElement(deleteBtn,tools.getDriver());*/
         tools.click(deleteBtn);
 
         tools.alertAccept();

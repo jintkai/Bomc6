@@ -85,7 +85,7 @@ public class NumRulePage extends Page {
         searchPage.searchNumRule(map);
     }
     public void numRuleDelete(int rowNum){
-        resultDiv.deleteRow(rowNum);
+        resultDiv.deleteRow(rowNum-1);
     }
 
 }
