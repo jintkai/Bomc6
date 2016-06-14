@@ -132,8 +132,10 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        mylog.info("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
-        Reporter.log("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
+
+            mylog.info("点击按钮:" + " -> [" + webElement.getText() + "] -> " + webElement.toString());
+            Reporter.log("点击按钮:" + " -> [" + webElement.getText() + "] -> " + webElement.toString());
+
 
     }
 

@@ -277,7 +277,6 @@ public class Tools {
         }catch(AssertionError e) {
 
             takesScreenshot(msg);
-            System.out.println(e);
             Assert.assertEquals(actual, exception, msg);
         }
     }
@@ -585,6 +584,9 @@ public class Tools {
         {
             System.out.println("Alert对话框不存在！");
         }
+    }
+    public Alert getAlert(){
+        return driver.switchTo().alert();
     }
     public void alarmDismiss()
     {

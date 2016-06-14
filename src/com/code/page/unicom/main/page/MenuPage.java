@@ -26,6 +26,8 @@ public class MenuPage extends Page{
             WebElement element_h4=element.findElement(By.tagName("h4"));
             if(element_h4.getText().equals(MainMenu)) {
                 tools.click(element);
+                String js="$('#powerTip').remove()";
+                tools.execJS(js);
                 List<WebElement> subMenuList=element.findElements(By.tagName("a"));
                 for (WebElement submenu : subMenuList){
                     if (submenu.getText().equals(subMenu))

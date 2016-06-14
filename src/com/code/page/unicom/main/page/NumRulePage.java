@@ -78,7 +78,9 @@ public class NumRulePage extends Page {
         tools.sendKeys(regionCode,tools.getMapValue(map,"地市编码"));
         tools.selectByVisibleText(isAffirm,tools.getMapValue(map,"是否需要确认"));
         tools.sendKeys(note,tools.getMapValue(map,"备注"));
+        tools.execJS("$('.page-footer').remove()");
         tools.click(btnAddSub);
+
         tools.alertAccept();
     }
     public void numRuleSearch(Map<String,String> map){

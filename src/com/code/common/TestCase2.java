@@ -109,7 +109,7 @@ public class TestCase2 {
         eventDriver.manage().window().maximize();
         LoginPage login=new LoginPage(eventDriver);
         map=new HashMap<String, String>();
-        map.put("用户名","bj0001");
+        map.put("用户名","jinkai1");
         map.put("密码","1");
         login.login(map);
 

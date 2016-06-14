@@ -23,7 +23,7 @@ import java.util.HashMap;
 public class NumRuleTest extends TestCase2 {
     MainPage mainPage=new MainPage(eventDriver);
     NumRulePage numRulePage=new NumRulePage(eventDriver);
-    NumRuleSearchPage searchPage=new NumRuleSearchPage(eventDriver);
+    //NumRuleSearchPage searchPage=new NumRuleSearchPage(eventDriver);
     ResultDivPage resultDiv=new ResultDivPage(eventDriver);
     SimpleDateFormat df = new SimpleDateFormat("yymmss");
     String nowTime=df.format(new Date());
@@ -72,7 +72,7 @@ public class NumRuleTest extends TestCase2 {
         map.put("靓号级别","三级");
         numRulePage.numRuleSearch(map);
         resultDiv.getTabelTh();
-        Assert.assertEquals(resultDiv.getCount(),1,map.toString());
+        tools.assertEquals(resultDiv.getCount(),1,map);
     }
     @Test(description = "删除靓号规则")
     public void deleteNumRule(){
@@ -82,6 +82,6 @@ public class NumRuleTest extends TestCase2 {
         numRulePage.numRuleSearch(map);
         int rowCount=resultDiv.getCount();
         numRulePage.numRuleDelete(1);
-        Assert.assertEquals(resultDiv.getCount(),rowCount-1,"删除靓号规则错误");
+        tools.assertEquals(resultDiv.getCount(),rowCount-1,map);
     }
 }
