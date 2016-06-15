@@ -39,7 +39,7 @@ public class NumRuleTest extends TestCase2 {
         beforeClass(base_url);
     }
 
-    @Test(description = "增加普通靓号")
+    @Test(description = "增加普通靓号" ,priority = 0)
     public void addNumRule(){
         mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");
         map=new HashMap<String, String>();
@@ -58,7 +58,10 @@ public class NumRuleTest extends TestCase2 {
         map.put("地市编码","100081");
         map.put("是否需要确认","不需要确认");
         map.put("备注","系统测试"+nowTime);
-        numRulePage.add(map);
+        String result=numRulePage.add(map);
+        System.out.println(result);
+        tools.assertEquals(result,"操作成功",map);
+        tools.alertAccept();
     }
 
     @Test(description = "查询靓号规则",dependsOnMethods = "addNumRule")
@@ -74,7 +77,7 @@ public class NumRuleTest extends TestCase2 {
         resultDiv.getTabelTh();
         tools.assertEquals(resultDiv.getCount(),1,map);
     }
-    @Test(description = "删除靓号规则")
+    //@Test(description = "删除靓号规则",priority = 1)
     public void deleteNumRule(){
         tools.refresh();
         mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");

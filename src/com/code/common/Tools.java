@@ -586,6 +586,11 @@ public class Tools {
         }
     }
     public Alert getAlert(){
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return driver.switchTo().alert();
     }
     public void alarmDismiss()

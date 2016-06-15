@@ -58,9 +58,11 @@ public class NumRulePage extends Page {
     WebElement note;
     @FindBy(how = How.ID,using="btn_addsub")
     WebElement btnAddSub;
-    public void add(Map<String,String> map){
+    public String add(Map<String,String> map){
         tools.click(btnAdd);
         editForm(map);
+        //tools.sleep(10000);
+        return tools.getAlert().getText();
     }
     public void editForm(Map<String,String> map){
         tools.sendKeys(goodName,tools.getMapValue(map,"靓号规则名称"));
@@ -80,8 +82,7 @@ public class NumRulePage extends Page {
         tools.sendKeys(note,tools.getMapValue(map,"备注"));
         tools.execJS("$('.page-footer').remove()");
         tools.click(btnAddSub);
-
-        tools.alertAccept();
+    //    tools.alertAccept();
     }
     public void numRuleSearch(Map<String,String> map){
         searchPage.searchNumRule(map);

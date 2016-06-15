@@ -109,7 +109,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
         if(webElement!=null)
         {
             System.out.println(webElement.getTagName());
@@ -133,15 +133,15 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
 
-            mylog.info("点击按钮:" + " -> [" + webElement.getText() + "] -> " + webElement.toString());
-            Reporter.log("点击按钮:" + " -> [" + webElement.getText() + "] -> " + webElement.toString());
+//            mylog.info("点击按钮:" + " -> [" + webElement.getText() + "] -> " );
+//            Reporter.log("点击按钮:" + " -> [" + webElement.getText() + "] -> " + webElement.toString());
 
 
     }
 
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        /*WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
 
@@ -157,7 +157,7 @@ public class EventListener implements WebDriverEventListener {
             {
                 mylog.error("修改元素值失败."+webElement);
             }
-        }
+        }*/
     }
 
     @Override
