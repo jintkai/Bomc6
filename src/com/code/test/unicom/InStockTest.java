@@ -36,6 +36,8 @@ public class InStockTest  extends TestCase2 {
     public void inStock(){
         mainPage.menuPage.selectMenu("库存管理","号码入库");
         Map<String ,String > map = new HashMap<String ,String >();
+        map.put("操作方式","文件方式");
+        map.put("文本路径","C:\\Driver\\inStock.txt");
         map.put("操作类型","起止号段入库");
         map.put("开始号段","15536849016");
         map.put("终止号段","15536849017");

@@ -117,7 +117,7 @@ public class TestCase2 {
 
     public TestCase2(String node)
     {
-        driver=createDriver("IE",node);
+        driver=createDriver("chrome",node);
         eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         tools=new Tools(eventDriver);
     }

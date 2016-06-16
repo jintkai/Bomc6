@@ -39,7 +39,7 @@ public class NumRuleTest extends TestCase2 {
         beforeClass(base_url);
     }
 
-    @Test(description = "增加普通靓号" ,priority = 0)
+    @Test(description = "增加普通靓号" )
     public void addNumRule(){
         mainPage.menuPage.selectMenu("号码属性维护","靓号规则维护");
         map=new HashMap<String, String>();
@@ -64,7 +64,7 @@ public class NumRuleTest extends TestCase2 {
         tools.alertAccept();
     }
 
-    @Test(description = "查询靓号规则",dependsOnMethods = "addNumRule")
+    @Test(description = "查询靓号规则")
     public void searchNumRule()
     {
         tools.refresh();

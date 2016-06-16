@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
 
+import java.util.Date;
+
 /**
  * Created by jinkai on 2014/6/21.
  */
@@ -63,7 +65,8 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
+        Date begin=new Date();
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
             mylog.error("定位元素:"+by.toString());
@@ -79,7 +82,7 @@ public class EventListener implements WebDriverEventListener {
             catch(TimeoutException e)
             {
                 //e.printStackTrace();
-                mylog.error("定位元素超时."+by.toString());
+                mylog.error("定位元素超时."+"超时时间【---"+Data.timeOut+"---】"+by.toString());
             }
         }
         else
@@ -96,7 +99,7 @@ public class EventListener implements WebDriverEventListener {
             catch(TimeoutException e)
             {
                 //e.printStackTrace();
-                mylog.error("定位元素超时."+by.toString());
+                mylog.error("定位元素超时 ."+begin.toString()+">>>>>>>"+new Date().toString()+" 超时时间【---"+Data.timeOut+"---】"+by.toString());
             }
         }
 
@@ -109,7 +112,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
         if(webElement!=null)
         {
             System.out.println(webElement.getTagName());

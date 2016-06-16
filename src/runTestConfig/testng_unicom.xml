@@ -4,12 +4,19 @@
     <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
     <parameter name="Base_URL" value="http://172.16.212.79:8010/npage/login.html" />
     <test name="unicom_host_127.0.0.1" preserve-order="true">
-        <parameter name="node" value="http://172.16.212.87:5555/wd/hub"/> <!--value="http://172.16.212.87:5555/wd/hub"-->
+        <parameter name="node" value=""/> <!--value="http://172.16.212.87:5555/wd/hub"-->
         <classes>
             <!--class name="com.code.test.unicom.LoginTest">
             </class-->
-            <!--class name="com.code.test.unicom.NumRuleTest"></class-->
-            <class name="com.code.test.unicom.InStockTest"></class>
+            <class name="com.code.test.unicom.NumRuleTest">
+                <methods>
+                    <include name="addNumRule"></include>
+                    <include name="searchNumRule"></include>
+                </methods>
+            </class>
+            <class name="com.code.test.unicom.InStockTest">
+                <methods><include name="inStock"></include></methods>
+            </class>
             <!--class name="com.code.test.unicom.NumAssignTest"></class>
             <class name="com.code.test.unicom.NumTransferTest"></class-->
             </classes>
