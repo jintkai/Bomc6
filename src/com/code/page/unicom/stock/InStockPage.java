@@ -95,6 +95,7 @@ public class InStockPage extends Page{
         tools.selectByVisibleText(inStock_id,tools.getMapValue(map,"入库仓库"));
         tools.sendKeys(inNote,tools.getMapValue(map,"备注"));
         tools.click(btn);
+        tools.sleep(20000);
         return dialog.getText();
     }
 

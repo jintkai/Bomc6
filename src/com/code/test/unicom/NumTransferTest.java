@@ -32,11 +32,10 @@ public class NumTransferTest extends TestCase2 {
     public void numAssignTest(){
         mainPage.menuPage.selectMenu("库存管理","号码调拨");
         Map<String ,String > map = new HashMap<String ,String >();
-        map.put("操作方式","手工方式");
-        map.put("开始号段","15536849016");
-        map.put("终止号段","15536849017");
+        map.put("操作方式","文件方式");
+        map.put("文本路径","C:\\Driver\\inStock.txt");
         map.put("业务分类","集团");
-        map.put("目的机构","北京区县1");
+        map.put("目的机构","北京市区1");
         map.put("号码用途","手机号码");
         map.put("号码分类","普通号码");
         map.put("备注","备注");

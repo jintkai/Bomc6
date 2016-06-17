@@ -20,6 +20,8 @@ public class NumAssignPage extends Page {
     }
     @FindBy(how= How.ID,using = "inValidForm")
     WebElement inValidForm;
+    @FindBy(how=How.ID,using = "fileselect")
+    WebElement fileselect;
     @FindBy(how=How.ID,using = "begin_num")
     WebElement begin_num;
     @FindBy(how=How.ID,using = "end_num")
@@ -75,28 +77,35 @@ public class NumAssignPage extends Page {
             tools.sendKeys(begin_num,tools.getMapValue(map,"开始号段"));
             tools.sendKeys(end_num,tools.getMapValue(map,"终止号段"));
         }
-        else
+        else {
             tools.click(e2);
+            fileselect.sendKeys(tools.getMapValue(map,"文本路径"));
+        }
+        if( tools.getMapValue(map,"目的机构").contains("区县")) {
+            tools.click(desStock_name);
 
-        tools.click(desStock_name);
+            tools.click(group_tree_1_switch);
 
-        tools.click(group_tree_1_switch);
-
-        List<WebElement> treeMenus=tools.findElements(group_tree_1_ul,By.tagName("a"));
-        for (int i=0;i<treeMenus.size();i++ ) {
-            WebElement e=treeMenus.get(i);
+            List<WebElement> treeMenus = tools.findElements(group_tree_1_ul, By.tagName("a"));
+            for (int i = 0; i < treeMenus.size(); i++) {
+                WebElement e = treeMenus.get(i);
             /*group_tree_1_ul=tools.findBy(tools.getDriver(),By.id("group_tree_1_ul"));
             e=tools.findElements(group_tree_1_ul,By.tagName("a")).get(i);*/
-            String s=e.getText();
-            if( s.equals(tools.getMapValue(map,"目的机构"))){
-                //tools.sleep(3000);
+                String s = e.getText();
+                if (s.equals(tools.getMapValue(map, "目的机构"))) {
+                    //tools.sleep(3000);
                 /*group_tree_1_ul=tools.findBy(tools.getDriver(),By.id("group_tree_1_ul"));
                 e=tools.findElements(group_tree_1_ul,By.tagName("a")).get(i);*/
-                tools.click(e);
-                break;
+                    tools.click(e);
+                    break;
+                }
             }
         }
-
+        String res=tools.getMapValue(map,"目的机构");
+        if( tools.getMapValue(map,"目的机构").contains("市区")){
+            tools.click(desStock_name);
+            tools.click(tools.findBy(tools.getDriver(),By.id("group_tree_1_a")));
+        }
         tools.selectByVisibleText(busi_type,tools.getMapValue(map,"业务分类"));
         tools.selectByVisibleText(phone_use,tools.getMapValue(map,"号码用途"));
         String kind=tools.getMapValue(map,"号码分类");

@@ -45,4 +45,6 @@ public class NumAssignTest extends TestCase2 {
         tools.assertTrue(result.contains("失败：0条"),"期望值：【失败：0条】，实际值："+result);
         numAssignPage.clickDialogBtn();
     }
+
+
 }
