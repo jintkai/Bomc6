@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.workstation;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.workstation.domain.WKFormDomain;
 import com.code.page.ibnmsConfig.workstation.page.WKBtnPage;
 import com.code.page.ibnmsConfig.workstation.page.WKFormPage;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -34,6 +35,21 @@ public class WKlistPage extends Page {
             wkBtn.shutdown();
         return gridTable;
     }
+
+    public GridPage deployWK(String option,Map<String,String> map)
+    {
+        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
+        if (option.equals("部署"))
+            wkBtn.deploy();
+        if(option.equals("卸载"))
+            wkBtn.unload();
+        if (option.equals("启动"))
+            wkBtn.startup();
+        if (option.equals("停止"))
+            wkBtn.shutdown();
+        return gridTable;
+    }
+
     public GridPage operateWK(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
@@ -56,6 +72,16 @@ public class WKlistPage extends Page {
             wkBtn.delete();
             return gridTable;
         }
+
+    }
+    public GridPage operateWK(String operation, WKFormDomain wkFormDomain)
+    {
+        if (operation.equals("增加"))
+        {
+            wkBtn.add();
+            return wkForm.operateWK(operation,wkFormDomain);
+        }
+        return  null;
 
     }
 }

@@ -1,9 +1,10 @@
 package com.code.common;
 
-import junit.framework.Test;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.internal.WrapsDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -14,6 +15,7 @@ import org.testng.Reporter;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.Dimension;
+import java.awt.Rectangle;
 import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -36,6 +38,27 @@ public class Tools {
     public WebDriver getDriver()
     {
         return driver;
+    }
+
+    public void refresh()
+    {
+        driver.navigate().refresh();
+    }
+    public void sleep()
+    {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    public void sleep(int mics)
+    {
+        try {
+            Thread.sleep(mics);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     /**
     *描述判断元素是否存在；
@@ -120,12 +143,19 @@ public class Tools {
      */
     public void sendKeys(WebElement ele,String value)
     {
+        if(value==null)
+        {
+            System.out.println("null,则表示要清除");
+            clear(ele);
+            return;
+        }
         if(! value.isEmpty()) {
             clear(ele);
             ele.sendKeys(value);
         }
         else
         {
+
             System.out.println("未输入值，不用处理");
         }
 
@@ -179,7 +209,9 @@ public class Tools {
         return ele.getAttribute(str);
     }
     public void click(WebElement ele) {
-        try{ele.click();}
+        try{ele.click();
+
+        }
         catch(Exception e)
         {
             e.printStackTrace();
@@ -367,6 +399,11 @@ public class Tools {
     {
         try{
             driver.switchTo().frame(name);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         catch(NoSuchFrameException e)
         {
@@ -412,6 +449,7 @@ public class Tools {
             // 拷贝屏幕到一个BufferedImage对象screenshot
             BufferedImage screenshot = (new Robot()).createScreenCapture(new Rectangle(0, 0,(int) d.getWidth(), (int) d.getHeight() - 40));
             String filename = picDir + getCurrentDateTime() +"."+imageFormat;	//设置截屏保存的路径名称
+            System.out.println(this.getClass());
             File f = new File(filename);
             System.out.print("Save File " + filename);
             ImageIO.write(screenshot, imageFormat, f);		// 将screenshot对象写入图像文件
@@ -429,7 +467,7 @@ public class Tools {
     {
         Reporter.log("TakesScreenshot截图");
         String imageFormat = "png";// 图像文件的格式
-        String picDir= Data.baseDir+"\\pictures\\";
+        String picDir= Data.baseDir+"/pictures/";
         File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String filename=picDir+getCurrentDateTime()+"."+imageFormat;
         try {
@@ -444,7 +482,7 @@ public class Tools {
     {
         Reporter.log("TakesScreenshot截图");
         String imageFormat = "png";// 图像文件的格式
-        String picDir= Data.baseDir+"\\pictures\\";
+        String picDir= Data.baseDir+"/pictures/";
         File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         BufferedImage image = null;
         try {
@@ -540,7 +578,8 @@ public class Tools {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        try{driver.switchTo().alert().accept();}
+        try{
+            driver.switchTo().alert().accept();}
         catch (NoAlertPresentException e)
         {
             System.out.println("Alert对话框不存在！");
@@ -678,5 +717,14 @@ public class Tools {
             }
             element.sendKeys(",");
         }
+    }
+
+    /**
+     * 返回0-10000的随机数
+     * @return
+     */
+    public int random(){
+        int i=(int)(Math.random()*10000);
+        return i;
     }
 }

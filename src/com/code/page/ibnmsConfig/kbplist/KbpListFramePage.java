@@ -61,7 +61,8 @@ public class KbpListFramePage extends Page {
         if (operation.contains("增加")) {
             tools.switchToFrame();
             tools.switchToFrame(kbpTreeIFrame);
-            kbpTree.searchByTree(tools.getMapValue(map, "KBP编号前缀"));
+            if (!tools.getMapValue(map, "KBP编号前缀").equals("") )
+                kbpTree.searchByTree(tools.getMapValue(map, "KBP编号前缀"));
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
             kbpBtn.add();
@@ -81,7 +82,7 @@ public class KbpListFramePage extends Page {
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
             gridTable = searchKbp.search(map);
-            gridTable.selectTr(0);
+            gridTable.selectTr(1);
             //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
             kbpBtn.delete();
             return gridTable;

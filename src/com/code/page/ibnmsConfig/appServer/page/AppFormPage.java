@@ -35,7 +35,7 @@ public class AppFormPage extends Page {
         if(!tools.getMapValue(map,"部署主机").isEmpty())
         {
             tools.click(selectHostBtn);
-            EnvFramePage envFrame=new EnvFramePage();
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
             String hand=tools.switchToWindowByTitle(envFrame.title);
             GridPage gridTable= envFrame.search(map);
             gridTable.selectTr(0);

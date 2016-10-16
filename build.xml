@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--默认启用Run_test任务 -->
 <project name="Test" basedir="." default="move">
-    <!--项目包位置-->
     <property name="SRC" value="src" />
-    <!--编译包位置-->
     <property name="class.dir" value="${basedir}/classes" />
-    <!--依赖Jar位置-->
-
     <property name="lib.dir" value="${basedir}/lib" />
     <!--测试结果输出位置-->
     <property name="output.dir" value="${basedir}/test-output" />
@@ -17,9 +12,6 @@
     <property name="configclass" value="${class.dir}/runTestConfig" />
     <!--备份报告文件-->
     <property name="backup" value="${basedir}/backup"/>
-
-
-
 
     <path id="compile.path">
         <!-- 设置加载jar 环境 -->
@@ -34,6 +26,8 @@
     <target name="init">
         <echo message="**************init**************" />
         <delete dir="${class.dir}" />
+        <delete dir="${basedir}/pictures" />
+        <mkdir dir="${basedir}/pictures" />
         <mkdir dir="${class.dir}" />
         <mkdir dir="${class.dir}/runTestConfig" />
     </target>
@@ -78,6 +72,8 @@
               out="${basedir}/test-output/Report.html" classpathref="compile.path">
             <param name="testNgXslt.outputDir" expression="${basedir}/test-output/" />
         </xslt>
+        <copydir dest="${basedir}/test-output/pictures" src="${basedir}/pictures">
+        </copydir>
     </target>
 
     <target name="backup" depends="transform">
@@ -95,6 +91,8 @@
         <delete file="${basedir}/test-output/results.xml"></delete>
         <copy file="${basedir}/test-output/testng-results.xml"
               tofile="${basedir}/test-output/results.xml" outputencoding="UTF-8"></copy>
+        <copydir dest="${basedir}/test-output/pictures" src="${basedir}/pictures">
+        </copydir>
     </target>
 	<target name="trans" description="report" depends="test" >
         <echo message="**************transform**************" />
@@ -102,8 +100,15 @@
               out="${basedir}/test-output/Report.html" classpathref="compile.path">
             <param name="testNgXslt.outputDir" expression="${basedir}/test-output/" />
         </xslt>
+        <copydir dest="${basedir}/test-output/pictures" src="${basedir}/pictures">
+        </copydir>
     </target>
-	
+
+    <target name="trans2" description="report"  >
+        <echo message="**************transform**************" />
+
+    </target>
+
     <tstamp>
         <format property="TODAY" pattern="yyyy-MM-dd" locale="cn"/>
     </tstamp>

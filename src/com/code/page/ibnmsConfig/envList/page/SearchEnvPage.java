@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.envList.page;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -28,6 +29,12 @@ public class SearchEnvPage extends Page {
     {
         tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_ENV"));
         tools.sendKeys(deviceName,tools.getMapValue(map,"主机名称_ENV"));
+        tools.click(btnSearch);
+        return new GridPage(eventDriver);
+    }
+    public GridPage search(EnvSearchDomain envSearchDomain){
+        tools.sendKeys(ipAddr,envSearchDomain.getIpAddr());
+        tools.sendKeys(deviceName,envSearchDomain.getDeviceName());
         tools.click(btnSearch);
         return new GridPage(eventDriver);
     }

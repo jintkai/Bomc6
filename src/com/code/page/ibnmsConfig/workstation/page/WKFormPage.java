@@ -6,6 +6,7 @@ import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
 import com.code.page.ibnmsConfig.reslist.ResListFramePage;
+import com.code.page.ibnmsConfig.workstation.domain.WKFormDomain;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -42,7 +43,7 @@ public class WKFormPage  extends FormPage{
         tools.selectByVisibleText(mqId, tools.getMapValue(map, "ActiveMQ"));
         if(!tools.getMapValue(map,"部署主机").isEmpty()){
             tools.openModelDialog(selectHostBtn);
-            EnvFramePage envFrame=new EnvFramePage();
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
             String hand = tools.switchToWindowByTitle(envFrame.title);
             envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
@@ -55,5 +56,28 @@ public class WKFormPage  extends FormPage{
     {
         inputForm(map);
         return  new GridPage(eventDriver);
+    }
+
+    public GridPage operateWK(String operation ,WKFormDomain wkFormDomain)
+    {
+        inputForm(operation,wkFormDomain);
+        return  new GridPage(eventDriver);
+    }
+
+    public void inputForm(String operation, WKFormDomain wkFormDomain)
+    {
+
+        tools.sendKeys(installPath, wkFormDomain.getInstallPath());
+
+        if(operation.equals("增加")){
+            tools.click(selectHostBtn);
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
+            String hand = tools.switchToWindowByTitle(envFrame.title);
+            envFrame.search(wkFormDomain.getEnvSearchDomain()).selectTr(0);
+            envFrame.listPage.envBtn.select();
+            tools.switchToWindowByHand(hand);
+        }
+        tools.click(this.btnSubmit);
+        tools.alertAccept();
     }
 }

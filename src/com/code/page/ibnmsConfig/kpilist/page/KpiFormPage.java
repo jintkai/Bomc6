@@ -4,6 +4,7 @@ import com.code.common.Data;
 import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.common.Page;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -40,9 +41,15 @@ public class KpiFormPage extends FormPage {
     WebElement trendFlag;
     @FindBy(id="kpi_baseLineFlag")
     WebElement baseLineFlag;
+    @FindBy(id="tr-kpiMngType")
+    WebElement kpiMngType;
 
     public void inputForm(Map<String,String> map)
     {
+
+        tools.selectByVisibleText(kpiMngType.findElement(By.tagName("select")),tools.getMapValue(map,"管理类型"));
+        tools.sleep(3000);
+
         tools.sendKeys(kpiId,tools.getMapValue(map,"编号"));
         tools.sendKeys(kpiName,tools.getMapValue(map,"名称"));
         if (!tools.getMapValue(map,"KBP编号").isEmpty())

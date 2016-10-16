@@ -40,7 +40,7 @@ public class PfFormPage extends FormPage {
         tools.sendKeys(lang,tools.getMapValue(map,"LANG"));
         if(!tools.getMapValue(map,"部署主机").isEmpty()){
             tools.openModelDialog(selectHostBtn);
-            EnvFramePage envFrame=new EnvFramePage();
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
             String hand = tools.switchToWindowByTitle(envFrame.title);
             envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();

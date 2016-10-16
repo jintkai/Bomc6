@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.code.page.ibnmsConfig.kbplist.dao.KbpFormDao">
+    <resultMap id="kbpMap" type="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain">
+        <result property="KBP_CLASS" column="KBP_CLASS"></result>
+    </resultMap>
+    <select id="getKbpForm" parameterType="String" resultType="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain">
+        select * from TB_CDE_KBP where KBP_CLASS = #{KBP_CLASS}
+    </select>
+
+    <select id="getKbpByRowNum" parameterType="int" resultType="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain">
+            select * from (select rownum as row_num,t.* from tb_cde_kbp t ) b where  row_num=#{num}
+    </select>
+
+    <select id="getKbpList" parameterType="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain" resultType="List"
+            resultMap="kbpMap">
+        select * from tb_cde_kbp t where 1=1
+          <if test="KBP_CLASS!=null">
+              AND (KBP_CLASS = '${KBP_CLASS}' or KBP_CLASS like '${KBP_CLASS}-%')
+          </if>
+        <if test="KBP_CAPTION!=null">
+            AND KBP_CAPTION LIKE '%${KBP_CAPTION}%'
+        </if>
+    </select>
+
+    <select id="getOneKbpByClass" resultType="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain" >
+        select * from (select length(t.KBP_CLASS) as l,t.* from TB_CDE_KBP t  order by l desc ) t2
+        where rownum   =1
+    </select>
+    <select id="getOneKbpByCaption" resultType="com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain" >
+        select * from (select length(t.KBP_CAPTION) as l,t.* from TB_CDE_KBP t  order by l desc ) t2
+        where l is not null and rownum  =1
+    </select>
+    <select id="getKbpID" resultType="String" >select KBP_CLASS from (
+            SELECT KBP_CLASS
+            FROM (
+                     SELECT
+                         t.KBP_CLASS,
+                         substr(t.KBP_CLASS, 0, INSTR(t.KBP_CLASS, '-', '1')) AS ts
+                     FROM TB_CDE_KBP t
+                 ) t2
+            WHERE t2.ts IS NULL
+            ORDER BY t2.ts DESC
+        ) GROUP BY KBP_CLASS
+
+    </select>
+</mapper>

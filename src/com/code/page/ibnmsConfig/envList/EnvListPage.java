@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.envList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
 import com.code.page.ibnmsConfig.envList.page.EnvBtnPage;
 import com.code.page.ibnmsConfig.envList.page.EnvFormPage;
 import com.code.page.ibnmsConfig.envList.page.SearchEnvPage;
@@ -26,6 +27,9 @@ public class EnvListPage extends Page {
     public GridPage search(Map<String,String> map)
     {
         return searchEnv.search(map);
+    }
+    public GridPage search(EnvSearchDomain o){
+        return searchEnv.search(o);
     }
     public GridPage operateRes(Map<String,String> map)
     {

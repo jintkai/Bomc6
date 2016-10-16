@@ -25,6 +25,7 @@ public class ResFormPage extends FormPage {
     WebElement bzTypeKbpClass;
     WebElement usage;
     WebElement linkman;
+
     @FindBy(name="res.enable")
     WebElement enable;
     /*
@@ -33,7 +34,8 @@ public class ResFormPage extends FormPage {
     WebElement res_dbUser;
     WebElement res_dbPassword;
     WebElement res_dbUrl;
-
+    WebElement res_dbPort;
+    WebElement res_dbSsid;
 
     public void editRes(Map<String,String> map)
     {
@@ -41,6 +43,8 @@ public class ResFormPage extends FormPage {
         {
             tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称"));
             tools.sendKeys(res_dbUser,tools.getMapValue(map,"用户名"));
+            tools.sendKeys(res_dbSsid,tools.getMapValue(map,"SSID"));
+            tools.sendKeys(res_dbPort,tools.getMapValue(map,"端口号"));
         }
         else
             tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称"));
@@ -67,6 +71,8 @@ public class ResFormPage extends FormPage {
             tools.sendKeys(res_dbUser, tools.getMapValue(map, "用户名"));
             tools.sendKeys(res_dbPassword, tools.getMapValue(map, "密码"));
             tools.sendKeys(res_dbUrl, tools.getMapValue(map, "URL"));
+            tools.sendKeys(res_dbSsid,tools.getMapValue(map,"SSID"));
+            tools.sendKeys(res_dbPort,tools.getMapValue(map,"端口号"));
         }
         tools.click(btnSubmit);
     }

@@ -1,5 +1,6 @@
 package com.code.test.ibnmsConfig;
 
+import org.testng.annotations.Test;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
@@ -11,6 +12,8 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by jinkai on 2014/7/10.
@@ -75,5 +78,28 @@ public class TT {
         System.out.println(root.getAttribute("name"));
 
 
+    }
+
+    @Test
+    public void t()
+    {
+
+        String str="共 100 页,1 2 3 4..";
+        //split支持正则表达式,返回数组
+        System.out.println(str.split(",")[0]);
+        System.out.println(str.split(" ")[1]);
+        System.out.println(str.split(" ")[2]);
+        //采用indexOf
+        int begin=str.indexOf(" ");
+        int end=str.indexOf(" ",begin+1);
+        System.out.println("substring:"+str.substring(begin+1,end));
+
+        str="10-11-11";
+        System.out.println("---:"+str.split("-")[0]);
+        str="12";
+        System.out.println("+++:"+str.split("-")[0]);
+
+        Date now =new Date();
+        System.out.println(System.currentTimeMillis());
     }
 }

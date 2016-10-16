@@ -1,0 +1,12 @@
+baidu_input:
+  type:id
+  value:"%s"
+baidu_button:
+  type:id
+  value:"%s%s"
+baidu_input1:
+  type:id
+  value:kw
+baidu_button1:
+  type:xpath
+  value:"//div[@id='%productId%']//div"

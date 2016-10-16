@@ -3,6 +3,7 @@ package com.code.page.ibnmsConfig.agentList.page;
 import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.agentList.domain.AgentFormDomain;
 import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
 import org.openqa.selenium.WebElement;
@@ -48,12 +49,42 @@ public class AgFormPage extends FormPage {
         if (!tools.getMapValue(map,"部署主机").isEmpty())
         {
             tools.click(selectHostBtn);
-            EnvFramePage envFrame=new EnvFramePage();
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
             String hand=tools.switchToWindowByTitle(envFrame.title);
             envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
         }
         tools.click(this.btnSubmit);
+    }
+    public void inputForm(String operate, AgentFormDomain agentFormDomain){
+        if(operate.equals("增加")){
+            tools.click(selectHostBtn);
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
+            String hand=tools.switchToWindowByTitle(envFrame.title);
+            envFrame.search(agentFormDomain.getEnvSearchDomain()).selectTr(0);
+            envFrame.listPage.envBtn.select();
+            tools.switchToWindowByHand(hand);
+
+
+            tools.sendKeys(instanceName,agentFormDomain.getAgentName());
+            /*
+            tools.selectByVisibleText(workstaionId, tools.getMapValue(map, "关联的Workstation"));
+            tools.selectByVisibleText(performanceId,tools.getMapValue(map,"关联的Performance"));
+            tools.sendKeys(processKey,tools.getMapValue(map,"进程关键字"));
+             */
+            tools.sendKeys(installPath,agentFormDomain.getInstallPath());
+            tools.sendKeys(hsqldbPort,agentFormDomain.getDbPort());
+            tools.sendKeys(jmxPort,agentFormDomain.getJmxPort());
+            tools.sendKeys(lang,agentFormDomain.getLang());
+            tools.click(this.btnSubmit);
+
+        }
+    }
+    public GridPage operateAG(String operate,AgentFormDomain agentFormDomain)
+    {
+
+        inputForm(operate,agentFormDomain);
+        return new GridPage(eventDriver);
     }
 }

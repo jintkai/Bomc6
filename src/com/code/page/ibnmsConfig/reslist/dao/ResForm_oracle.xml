@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.code.page.ibnmsConfig.reslist.dao.ResFormDao">
+    <resultMap id="hostMap" type="com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain">
+        <result property="device_id" column="device_id"></result>
+        <result property="device_name" column="device_name"></result>
+        <result property="manufacturer" column="manufacturer"></result>
+        <result property="usage" column="usage"></result>
+        <result property="ip_addr" column="ip_addr"></result>
+        <result property="linkman" column="linkman"></result>
+        <result property="bz_type" column="bz_type"></result>
+        <result property="unit_id" column="unit_id"></result>
+    </resultMap>
+    <select id="getHostForm" parameterType="String" resultType="com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain">
+        select * from tb_asset_host where KBP_CLASS = #{KBP_CLASS}
+    </select>
+
+    <select id="getHostFormByRowNum" parameterType="int" resultType="com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain">
+        select * from (select rownum as row_num,t.* from tb_asset_host t ) b where  row_num=#{num}
+    </select>
+
+    <select id="getHostList" parameterType="com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain" resultType="List"
+            resultMap="hostMap">
+        select * from tb_asset_host t where 1=1
+        <if test="device_id!=null">
+            AND (device_id like '%${device_id}%')
+        </if>
+        <if test="device_name!=null">
+            AND device_name LIKE '%${device_name}%'
+        </if>
+        <if test="ip_addr!=null">
+            AND ip_addr LIKE '${ip_addr}%'
+        </if>
+    </select>
+
+</mapper>

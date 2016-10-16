@@ -2,7 +2,9 @@ package com.code.page.ibnmsConfig.envList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
 import com.code.page.ibnmsConfig.kbplist.page.KbpTreePage;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
 
@@ -14,9 +16,17 @@ public class EnvFramePage extends Page {
     String entityQueryFrame="entityQueryFrame";
     public String title="监控指标列表";
     public EnvListPage listPage=new EnvListPage(eventDriver);
+    public EnvFramePage(EventFiringWebDriver eventDriver){
+        super(eventDriver);
+    }
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame(entityQueryFrame);
         return listPage.search(map);
+    }
+    public GridPage search(EnvSearchDomain searchDomain)
+    {
+        tools.switchToFrame(entityQueryFrame);
+        return listPage.search(searchDomain);
     }
 }
