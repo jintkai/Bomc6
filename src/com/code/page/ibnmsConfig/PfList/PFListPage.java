@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.PfList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.PfList.domain.PfFormDomain;
 import com.code.page.ibnmsConfig.PfList.page.PfBtnPage;
 import com.code.page.ibnmsConfig.PfList.page.PfFormPage;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -20,40 +21,40 @@ public class PFListPage extends Page {
     {
         super(eventDriver);
     }
-    public GridPage deployPF(Map<String,String> map)
+    public GridPage deployPF(String operation,Map<String,String> map)
     {
-        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
-        if (tools.getMapValue(map,"操作类型").equals("部署"))
+        gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
+        if (operation.equals("部署"))
             pfBtn.deploy();
-        if (tools.getMapValue(map,"操作类型").equals("卸载"))
+        if (operation.equals("卸载"))
         {
             pfBtn.remove();
         }
-        if (tools.getMapValue(map,"操作类型").equals("启动"))
+        if (operation.equals("启动"))
             pfBtn.startup();
-        if (tools.getMapValue(map,"操作类型").equals("停止"))
+        if (operation.equals("停止"))
             pfBtn.shutdown();
         return gridTable;
     }
 
-    public GridPage operatePF(Map<String,String> map)
+    public GridPage operatePF(String operation, PfFormDomain domain,Map map)
     {
-        String operation=tools.getMapValue(map, "操作类型");
+
 
         if (operation.equals("增加"))
         {
             pfBtn.add();
-            return  pfForm.operatePF(map);
+            return  pfForm.operatePF(domain);
         }
         if (operation.equals("修改"))
         {
-            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
             pfBtn.edit();
-            return  pfForm.operatePF(map);
+            return  pfForm.operatePF(domain);
         }
         else
         {
-            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
             pfBtn.delete();
             return gridTable;
         }

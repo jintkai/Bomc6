@@ -126,7 +126,7 @@ public class WKlistTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
     }
-    @Test(priority = 1,description = "停止Workstation",dependsOnMethods = "stopWorkstation")
+    @Test(priority = 1,description = "卸载Workstation",dependsOnMethods = "stopWorkstation")
     public void updeployWorkstation( )
     {
         Map<String,String> map=new HashMap<>();

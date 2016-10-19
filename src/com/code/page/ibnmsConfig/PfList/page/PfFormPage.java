@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.PfList.page;
 
 import com.code.common.FormPage;
 import com.code.common.GridPage;
+import com.code.page.ibnmsConfig.PfList.domain.PfFormDomain;
 import com.code.page.ibnmsConfig.envList.EnvFramePage;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
 import org.openqa.selenium.WebElement;
@@ -31,6 +32,7 @@ public class PfFormPage extends FormPage {
     WebElement processKey;
     @FindBy(id="lang")
     WebElement lang;
+    @Deprecated
     public void inputForm(Map<String,String> map)
     {
         tools.sendKeys(instanceName,tools.getMapValue(map,"PERFORMANCE名称"));
@@ -49,10 +51,31 @@ public class PfFormPage extends FormPage {
         tools.click(this.btnSubmit);
         tools.alertAccept();
     }
+    public void inputForm(PfFormDomain domain){
+        tools.sendKeys(installPath,domain.getInstallPath());
+        tools.sendKeys(lang,domain.getLang());
+        if (!(domain.getEnSearchDomain()==null)){
+            tools.click(selectHostBtn);
+            EnvFramePage envFrame=new EnvFramePage(eventDriver);
+            String hand = tools.switchToWindowByTitle(envFrame.title);
+            envFrame.search(domain.getEnSearchDomain()).selectTr(0);
+            envFrame.listPage.envBtn.select();
+            tools.switchToWindowByHand(hand);
+        }
+        tools.click(this.btnSubmit);
+        tools.alertAccept();
+
+
+    }
+    @Deprecated
     public GridPage operatePF(Map<String,String> map)
     {
         inputForm(map);
         return  new GridPage(eventDriver);
     }
-
+    public GridPage operatePF(PfFormDomain domain)
+    {
+        inputForm(domain);
+        return  new GridPage(eventDriver);
+    }
 }

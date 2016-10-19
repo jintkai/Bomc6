@@ -187,8 +187,8 @@ public class ResFrameTest2 extends TestCase {
         domain.setIp_addr(ip);
         domain.setLinkman("selenium");
         domain.setEnable("是");
-        domain.setSsid("DBSelenium");
-        domain.setDbPort("1521");
+        //domain.setSsid("DBSelenium");
+        //domain.setDbPort("1521");
         domain.setDbUser("DBUser");
         domain.setDbPasswd("1234567890");
         domain.setDbUrl("jdbc:oracle:thin:@//127.0.0.1:1521/oracle");

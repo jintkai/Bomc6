@@ -29,8 +29,8 @@
             </class>
             -->
 
-            <class name="com.code.test.ibnmsConfig.WKlistTest2">
-                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
+            <class name="com.code.test.ibnmsConfig.PFListTest">
+                <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
             </class>
 
         </classes>

@@ -30,15 +30,15 @@ import java.util.Map;
  MapListHandler：将结果集中的每一行数据都封装到一个Map里，然后再存放到List
  */
 public class DBTools {
-//    private static String dirverClassName = "com.mysql.jdbc.Driver";
-//    public static String url = "jdbc:mysql://172.21.2.96:3306/bnms_cs?useUnicode=true&characterEncoding=utf8";
-//    private static String user = "bnms15";
-//    private static String password = "bnms15";
+    private static String dirverClassName = "com.mysql.jdbc.Driver";
+    public static String url = "jdbc:mysql://172.21.2.96:3306/bnms_cs?useUnicode=true&characterEncoding=utf8";
+    private static String user = "bnms15";
+    private static String password = "bnms15";
 
-    private static String dirverClassName = "oracle.jdbc.driver.OracleDriver";
-    public static String url = "jdbc:oracle:thin:@172.21.1.5:1523:bnms";
-    private static String user = "bnms3";
-    private static String password = "bnms3";
+//    private static String dirverClassName = "oracle.jdbc.driver.OracleDriver";
+//    public static String url = "jdbc:oracle:thin:@172.21.1.5:1523:bnms";
+//    private static String user = "bnms3";
+//    private static String password = "bnms3";
     public static Connection makeConnection() {
         Connection conn = null;
         try {
