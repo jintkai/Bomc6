@@ -113,7 +113,7 @@ public class EnvListTest2 extends TestCase{
                 "UNION\n" +
                 "select env_id from tb_cfg_deploy_performance\n" +
                 "UNION\n" +
-                "select env_id from tb_cfg_deploy_pmalarm)) a left JOIN tb_asset_host b ON  a.unit_id=b.unit_id";
+                "select env_id from tb_cfg_deploy_pmalarm)) a left JOIN tb_asset_host b ON  a.unit_id=b.unit_id order by length(a.unit_id) desc";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
         EnvSearchDomain searchDomain=new EnvSearchDomain();
         searchDomain.setDeviceName(list.get(1).get("device_name"));
@@ -140,7 +140,7 @@ public class EnvListTest2 extends TestCase{
         tools.assertEquals(gridTable.getGridrowNum(),1,searchDomain.toString()+domain.toString());
     }
 
-    @Test(priority = 1,description = "删除部署环境")
+    @Test(priority = 2,description = "删除部署环境")
     public void deleteEnv()
     {
         map=new HashMap<>();

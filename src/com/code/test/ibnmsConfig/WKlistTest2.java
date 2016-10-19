@@ -59,7 +59,6 @@ public class WKlistTest2 extends TestCase {
     {
         GridPage gridPage=new GridPage(eventDriver);
         int r=gridPage.getGridrowNum()+1;
-        String gridNum=String.valueOf(r);
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
@@ -71,7 +70,7 @@ public class WKlistTest2 extends TestCase {
         wkFormDomain.setEnvSearchDomain(envSearchDomain);
         GridPage gridTable=wkList.operateWK("增加",wkFormDomain);
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGridrowNum(),gridNum,wkFormDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),r,wkFormDomain.toString());
     }
 
     //@Test(dataProvider = "WKlist",priority = 0,description = "增加、修改、删除WORKSTATION")

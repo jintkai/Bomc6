@@ -4,7 +4,7 @@
     <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
     <test name="测试环境IE8" preserve-order="true">
-        <parameter name="node" value="http://172.21.221.141:5555/wd/hub"/>
+        <parameter name="node" value="http://192.168.0.6:5555/wd/hub"/>
 
         <classes>
             <!--
@@ -14,14 +14,6 @@
 
             <class name="com.code.test.ibnmsConfig.KpiFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class>
-
-            <class name="com.code.test.ibnmsConfig.ResFrameTest2" >
-                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
-             </class>
-
-            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
-                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
 
             <class name="com.code.test.ibnmsConfig.MQListTest2" >
@@ -36,10 +28,10 @@
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
             -->
-            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
-                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
-                <methods><incluede name="deleteEnv"></incluede></methods>
-            </class>
+
+            <class name="com.code.test.ibnmsConfig.MQListTest2" >
+                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
+            </class >
 
         </classes>
     </test>

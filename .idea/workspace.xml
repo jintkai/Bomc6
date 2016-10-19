@@ -2,697 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de583ee3-7402-4642-b987-d5cac85afcea" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/selenium-server-standalone-2.53.0.jar~HEAD_0" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/selenium-server-standalone-2.53.0.jar~origin_master" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/selenium-server-standalone-2.53.0.jar~origin_master_0" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1058.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1065.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1162.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/119.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1196.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1197.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1223.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1331.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1378.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1399.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1401.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1463.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1464.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1503.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1523.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1595.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1598.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1674.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/17.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1722.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1941.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1944.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/1949.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2015.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160511124318.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160511124357.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160511124417.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531002622.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531002653.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531114618.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531114720.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531130514.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20160531140834.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161017095902.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161017144711.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161017145220.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161017151037.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018131125.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018131153.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018131230.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018132202.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018132312.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018132814.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018133052.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018133906.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018155519.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018160139.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018160544.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018160717.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018160846.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018161028.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018161208.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018161713.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018161900.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018162111.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018162522.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018163645.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018163819.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018164446.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018165808.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018230233.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018230313.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018230323.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018230818.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018230833.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018231711.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018231726.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018232043.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018232311.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018232614.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161018233034.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019000723.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019095410.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019095721.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019104055.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019112854.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132103.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132136.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132156.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132211.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132230.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132237.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132301.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132306.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132328.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132353.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132412.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132437.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132514.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019132835.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019133001.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019134053.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019134218.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019135507.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019140841.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/20161019140849.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/207.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2164.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2225.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2228.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2267.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2325.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2330.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2398.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2407.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2455.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/249.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2526.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2586.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2678.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2764.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/291.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2922.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2931.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2978.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/2991.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3034.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/307.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/309.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/31.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3193.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3252.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3284.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3420.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3501.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3560.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3563.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3575.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3606.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3674.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3700.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3704.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3726.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3731.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3805.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3819.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/3981.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4053.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4064.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4080.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4104.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/42.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4201.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4218.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4254.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/427.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/429.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4314.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4380.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4419.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4456.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4470.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4477.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4568.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4614.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4628.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4656.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4788.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/482.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4918.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/4955.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5024.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5055.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5071.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5083.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5131.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5165.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5181.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5215.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5266.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5358.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5439.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5501.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5508.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5571.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5594.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5626.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/566.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5698.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5767.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5786.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5795.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5873.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/5952.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/597.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6042.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6128.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6139.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/619.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6215.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6227.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6268.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6272.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6320.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6374.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6388.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6402.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6481.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6498.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6529.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/659.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6665.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6711.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6730.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6741.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6774.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6795.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/684.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6845.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/6871.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/704.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7047.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7116.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7123.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7379.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7389.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7436.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7446.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/748.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7560.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7596.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7608.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7609.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7649.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7684.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7693.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7711.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/774.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7869.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7960.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7977.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/7987.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8012.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8028.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8075.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8079.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8108.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8172.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8202.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8257.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8276.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8353.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8372.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/842.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8458.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8480.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8486.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8492.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8518.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/853.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8597.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8626.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8639.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8688.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8731.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8756.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8759.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8779.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8811.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/885.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8858.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/886.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8908.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8930.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8946.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/8950.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9003.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9036.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9077.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9103.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9108.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9115.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9121.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9218.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9245.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9280.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/931.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9346.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9462.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9543.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/957.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9611.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9632.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9657.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9802.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9828.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9881.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9897.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/991.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pictures/9922.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/hub.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/node_ie.bat" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Driver/note_chorme.bat" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Case/._KPI管理.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/BtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/DBcon.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/Data.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/DriverManager.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/EventListener$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/EventListener$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/EventListener$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/EventListener$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/EventListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/ExcelDriver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/FormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/GridPage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/GridPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/HomePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/Login.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/Page.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/TestCase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/Tools.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/common/TreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/CfgInstrFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/BtnInstrPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/GroupTreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SQLFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SearchInstrPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrFrame/page/SheelFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/C3P/instrLoge/test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/MQListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/PFListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/page/PfBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/PfList/page/PfFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/AgentListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/AgFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfTreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmExpressionPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmGenerationFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSubscripsPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmUpgradeFrame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmConfigFrame/page/MonitorPointPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/ClearAlarmFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/FilterAlarmFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratAlarmFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/PreGeneratAlarmFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmPolicy/page/UpAlarmFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/AppServerListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/appServer/page/AppSearchPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/collModelList/CollModelListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/collModelList/page/CollModelForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvFramePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/EnvListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/EnvBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/EnvFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/login/LoginPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/PmalarmListPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/page/PaBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/pmalarmList/page/PaFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/ResListFramePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/ResTreePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/reslist/page/SearchResPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/WKlistPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/page/WKBtnPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/page/ibnmsConfig/workstation/page/WKFormPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/C3P/CfgInstrFrameTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/JqueryTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AgListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmConFrameTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmPolicyTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AlarmTemplateTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/AppServerListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/EnvListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KbpFrameTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/KpiFrameTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/LoginPageTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/MQListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/PFListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/PmAlarmListTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/ResFrameTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/TT.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/com/code/test/ibnmsConfig/WKlistTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/classes/runTestConfig/testng.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Bomc6/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pictures/readmi.txt" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Driver/selenium-server-standalone-2.53.0.jar" afterPath="$PROJECT_DIR$/Driver/selenium-server-standalone-2.53.0.jar~HEAD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Case/KPI管理.xls" afterPath="$PROJECT_DIR$/Case/KPI管理.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/BtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/BtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DBcon.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DBcon.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Data.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DotTestListener.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DotTestListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DriverManager.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/DriverManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$1.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$2.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$3.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$4.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/EventListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/ExcelDriver.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/ExcelDriver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/FormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/FormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/GridPage$1.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/GridPage$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/GridPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/GridPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/HomePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/HomePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/MyLogger.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/MyLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Page.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Page.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/TestCase.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/TestCase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Tools.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/Tools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/TreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/TreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/test.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/common/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/CfgInstrFrame.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/CfgInstrFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/BtnInstrPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/BtnInstrPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/GroupTreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/GroupTreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SQLFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SQLFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SearchInstrPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SearchInstrPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SheelFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrFrame/page/SheelFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrLoge/test.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/C3P/instrLoge/test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/MQListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/MQListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/MQList/Page/MQFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/PFListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/PFListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/page/PfBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/page/PfBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/page/PfFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/PfList/page/PfFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/AgentListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/AgentListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/AgBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/AgBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/AgFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/AgFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/agentList/page/SearchAGPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfFilter/AlarmConfFilterList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/AlarmConfUpdateList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/page/SearchUpdatePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfUpdate/page/UpdateBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/AlarmConfigFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmClearPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfTreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmConfTreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmExpressionPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmExpressionPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFilterPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmGenerationFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmGenerationFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmPolicyPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSearchHeadPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSubscripsPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmSubscripsPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmUpgradeFrame.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/AlarmUpgradeFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/ExpressionAssertPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/MonitorPointPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/MonitorPointPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/newPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmConfigFrame/page/newPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/AlarmPolicyList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/AlarmPolicyBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/ClearAlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/ClearAlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/FilterAlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/FilterAlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratAlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/GeneratAlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/PreGeneratAlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/PreGeneratAlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/SearchAlarmPolicyPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/UpAlarmFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmPolicy/page/UpAlarmFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/AlarmShieldCfgPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/AlarmShieldCfgPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/AlarmShieldBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/AlarmShieldBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/AlarmShieldFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/AlarmShieldFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/SearchAlarmShieldPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmShield/page/SearchAlarmShieldPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/AlarmTemplateListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/AlarmTemplateBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/SearchTemplatePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/TemplateFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/eventTemplateKpiForm.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/alarmTemplate/page/eventTemplateKpiForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/AppServerListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/AppServerListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppSearchPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/appServer/page/AppSearchPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/collModelList/CollModelListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/collModelList/CollModelListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/collModelList/page/CollModelForm.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/collModelList/page/CollModelForm.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/EnvFramePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/EnvFramePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/EnvListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/EnvListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/EnvBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/EnvBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/EnvFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/EnvFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/KbpTreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/login/LoginPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/login/LoginPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/PmalarmListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/PmalarmListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/page/PaBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/page/PaBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/page/PaFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/pmalarmList/page/PaFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/ResListFramePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/ResListFramePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResTreePage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/ResTreePage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/SearchResPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/reslist/page/SearchResPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/SubscripFilterListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/SubscripFilterListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SearchFilterPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SearchFilterPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SubscripFilterBtn.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SubscripFilterBtn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SubscripFilterFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/subscripFilter/page/SubscripFilterFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/TemplateDevListPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/TemplateDevListPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/TemplateDevSetPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/TemplateDevSetPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/page/TemplateDevListBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/page/TemplateDevListBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/page/TemplateDevListSearchPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/templateDev/page/TemplateDevListSearchPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/WKlistPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/WKlistPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/page/WKBtnPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/page/WKBtnPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/page/WKFormPage.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/page/ibnmsConfig/workstation/page/WKFormPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/C3P/CfgInstrFrameTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/C3P/CfgInstrFrameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/JqueryTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/JqueryTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AgListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AgListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmConFrameTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmConFrameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmConfUpdateListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmPolicyTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmPolicyTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmShieldCfgTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmShieldCfgTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmTemplateTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AlarmTemplateTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AppServerListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/AppServerListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/EnvListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/EnvListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/KbpFrameTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/KbpFrameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/KpiFrameTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/KpiFrameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/LoginPageTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/LoginPageTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/MQListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/MQListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/PFListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/PFListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/PmAlarmListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/PmAlarmListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/ResFrameTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/ResFrameTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/SubscripFilterListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/SubscripFilterListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/TT.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/TT.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/TemplateDevListTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/TemplateDevListTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/WKlistTest.class" afterPath="$PROJECT_DIR$/out/production/Bomc6/com/code/test/ibnmsConfig/WKlistTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mylog.txt" afterPath="$PROJECT_DIR$/mylog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/runTestConfig/testng-results.xsl" afterPath="$PROJECT_DIR$/out/production/Bomc6/runTestConfig/testng-results.xsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Bomc6/runTestConfig/testng.xml" afterPath="$PROJECT_DIR$/out/production/Bomc6/runTestConfig/testng.xml" />
-    </list>
-    <list id="e8d0a051-5edd-443c-8eef-e1fefb244c85" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/encodings.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;Driver/selenium-server-standalone-2.53.0.jar&#10;#&#9;config/config.properties&#10;#&#9;lib/selenium-server-standalone-2.40.0.jar&#10;#&#9;lib/selenium-server-standalone-2.42.2.jar&#10;#&#9;lib/selenium-server-standalone-2.53.0.jar&#10;#&#9;lib/selenium-server-standalone-2.53.1.jar&#10;#&#9;src/com/code/common/EventListener.java&#10;#&#9;src/com/code/common/GridPage.java&#10;#&#9;src/com/code/common/TestCase.java&#10;#&#9;src/com/code/common/TestCase2.java&#10;#&#9;src/com/code/common/Tools.java&#10;#&#9;src/com/code/page/ibnmsConfig/kbplist/dao/KbpForm_oracle.xml&#10;#&#9;src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java&#10;#&#9;src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java&#10;#&#9;src/com/code/test/ibnmsConfig/KbpFrameTest2.java&#10;#&#9;src/com/code/test/ibnmsConfig/KpiFrameTest2.java&#10;#&#9;src/mybatis.properties&#10;#&#9;src/runTestConfig/testng.xml&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/slf4j-log4j12-1.7.21.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build_fail.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/common/ClassUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/common/FrameHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/formConfig/Domain/FormConfAdd.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/formConfig/FormConfPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/formConfig/FormSelectPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/formConfig/SelectElementPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/getAppealList/ActFormPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/getAppealList/gAlistPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/webProDesigner/GraphlistPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/webProDesigner/page/ActFormlistPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/itilManage/webProDesigner/page/GraphlistlinkPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/domain/KbpSearchDomain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/domain/KpiSearchDomain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/domain/ResFormDomain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/domain/ResSearchDomain.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/common/ResultDivPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/login/LoginPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/main/MainPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/main/page/LeftBodyPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/main/page/MenuPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/main/page/NumRulePage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/page/unicom/main/page/NumRuleSearchPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/reflect/Demo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/reflect/Person.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/itilManage/FormConfTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/itilManage/MainTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/unicom/LoginTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/unicom/MainMenuTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/code/test/unicom/NumRuleTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/runTestConfig/testng_unicom.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/ojdbc14.jar.bak" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/org.apache.commons.zip" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/code/common/AnnotationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/code/common/MyAnnotation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/domain/SearchKbpDomain.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/Report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/antTomcat.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/bullet_point.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/collapseall.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/emailable-report.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/failed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.AgListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.AppServerListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.EnvListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KbpFrameTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.KpiFrameTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.LoginPageTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.MQListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.PFListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.PmAlarmListTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.ResFrameTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/junitreports/TEST-com.code.test.ibnmsConfig.WKlistTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/navigation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/navigator-bullet.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/classes.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/frame.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/groups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/methods-alphabetical.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/methods-not-run.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/methods.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/reporter-output.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/testng.xml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/old/suite/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/overview-chart.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/passed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/reporterOutput.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/results.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/skipped.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite/frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite/frame.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite/testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite_frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/suite_groups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng-reports.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng-reports.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng-results.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng-results.xsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test-output/testng.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/DBTools.java" afterPath="$PROJECT_DIR$/src/com/code/common/DBTools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/GridPage.java" afterPath="$PROJECT_DIR$/src/com/code/common/GridPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/TestCase.java" afterPath="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/TestCase2.java" afterPath="$PROJECT_DIR$/src/com/code/common/TestCase2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/common/Tools.java" afterPath="$PROJECT_DIR$/src/com/code/common/Tools.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/page/PfFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/PfList/page/PfFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/page/AgFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/agentList/page/AgFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/EnvFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/EnvFramePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/EnvListPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/EnvListPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/domain/EnvFormDomain.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/domain/EnvFormDomain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/domain/EnvSearchDomain.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/domain/EnvSearchDomain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/SearchEnvPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/domain/KbpFormDomain.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/domain/KbpFormDomain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/KbpFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/page/SearchKbpPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/domain/KpiFormDomain.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/domain/KpiFormDomain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/login/LoginPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/login/LoginPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/ResListFramePage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/domain/ResHostFormDomain.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/domain/ResHostFormDomain.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/ResFormPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java" afterPath="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/reslist/page/SearchResPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KpiFrameTest2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java" afterPath="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/runTestConfig/testng.xml" afterPath="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
     </list>
+    <list id="e8d0a051-5edd-443c-8eef-e1fefb244c85" name="Failed commit: Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/compiler.xml&#10;#&#9;.idea/encodings.xml&#10;#&#9;.idea/misc.xml&#10;#&#9;.idea/workspace.xml&#10;#&#9;Driver/selenium-server-standalone-2.53.0.jar&#10;#&#9;config/config.properties&#10;#&#9;lib/selenium-server-standalone-2.40.0.jar&#10;#&#9;lib/selenium-server-standalone-2.42.2.jar&#10;#&#9;lib/selenium-server-standalone-2.53.0.jar&#10;#&#9;lib/selenium-server-standalone-2.53.1.jar&#10;#&#9;src/com/code/common/EventListener.java&#10;#&#9;src/com/code/common/GridPage.java&#10;#&#9;src/com/code/common/TestCase.java&#10;#&#9;src/com/code/common/TestCase2.java&#10;#&#9;src/com/code/common/Tools.java&#10;#&#9;src/com/code/page/ibnmsConfig/kbplist/dao/KbpForm_oracle.xml&#10;#&#9;src/com/code/page/ibnmsConfig/kpilist/KpiListFramePage.java&#10;#&#9;src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java&#10;#&#9;src/com/code/test/ibnmsConfig/KbpFrameTest2.java&#10;#&#9;src/com/code/test/ibnmsConfig/KpiFrameTest2.java&#10;#&#9;src/mybatis.properties&#10;#&#9;src/runTestConfig/testng.xml&#10;" />
     <ignored path="Bomc6.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -714,11 +32,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="testng.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.26">
-              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MQListTest2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AgListTest2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MQBtnPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BtnPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MQListPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/MQListPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WKlistTest2.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="4.9678454">
+              <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -728,64 +106,8 @@
         <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="222" column="25" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="25" />
+              <caret line="118" column="26" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="26" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClassUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/ClassUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build_fail.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build_fail.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="58" column="48" selection-start-line="58" selection-start-column="48" selection-end-line="58" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBTools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/DBTools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="38" column="10" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WKlistTest2.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1402#1403#0" expanded="false" />
-                <element signature="e#1459#1460#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -794,17 +116,7 @@
         <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="155" column="143" selection-start-line="155" selection-start-column="143" selection-end-line="155" selection-end-column="143" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnvFormPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -878,9 +190,6 @@
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/EnvListPage.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/domain/EnvSearchDomain.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/envList/page/EnvFormPage.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java" />
-        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java" />
         <option value="$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kbplist/KbpListFramePage.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/KbpFrameTest2.java" />
         <option value="$PROJECT_DIR$/src/com/code/common/TestCase.java" />
@@ -892,6 +201,9 @@
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java" />
         <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java" />
         <option value="$PROJECT_DIR$/src/runTestConfig/testng.xml" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java" />
+        <option value="$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java" />
       </list>
     </option>
   </component>
@@ -1002,6 +314,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomc6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomc6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomc6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Bomc6" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="code" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ibnmsConfig" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1839,44 +1199,44 @@
       <workItem from="1476793945753" duration="218000" />
       <workItem from="1476799736767" duration="7880000" />
       <workItem from="1476841018403" duration="12977000" />
-      <workItem from="1476881304883" duration="627000" />
+      <workItem from="1476881304883" duration="3896000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 30m 07s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 22m 54s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 35m 25s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 25m 38s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 42m 24s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 28m 38s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 47m 03s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 32m 31s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 51m 09s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 34m 05s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 53m 24s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 36m 27s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 55m 09s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 39m 04s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 13h 58m 04s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 40m 50s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 14h 00m 40s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 47m 27s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 14h 09m 43s.xml">
+    <history-entry file="_Volumes_Transcend_1_project_svn_bomc_svn_Bomc6_src_runTestConfig_testng_xml - 2016.10.19 at 21h 56m 53s.xml">
       <configuration name="/Volumes/Transcend 1/project_svn/bomc_svn/Bomc6/src/runTestConfig/testng.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187077000" />
+    <option name="totallyTimeSpent" value="190346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1889,7 +1249,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="738" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1899,9 +1259,9 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47534245" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47523218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5325077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.88390094" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26494345" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1950,8 +1310,14 @@
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.java</url>
+          <line>18</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="23" />
+      <option name="time" value="24" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="TestNG">
@@ -1968,20 +1334,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/KpiTreePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5555556">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/domain/KpiSearchDomain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53418803">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/kpilist/page/SearchKpiPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2219,6 +1571,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2247,30 +1600,6 @@
             <element signature="e#19926#19927#0" expanded="false" />
             <element signature="e#19956#19957#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/MQListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="67" column="56" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2332,18 +1661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1402#1403#0" expanded="false" />
-            <element signature="e#1459#1460#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/DBTools.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2352,28 +1669,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/common/ClassUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/code/common/GridPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="222" column="25" selection-start-line="222" selection-start-column="16" selection-end-line="222" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -2394,14 +1693,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="155" column="143" selection-start-line="155" selection-start-column="143" selection-end-line="155" selection-end-column="143" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build_fail.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2410,10 +1701,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/ClassUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048231512">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/EnvListTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/ResFrameTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="26" selection-start-line="118" selection-start-column="16" selection-end-line="118" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/runTestConfig/testng.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.26">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/common/BtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/MQListPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/page/ibnmsConfig/MQList/Page/MQBtnPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/AgListTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="4" selection-start-line="54" selection-start-column="4" selection-end-line="54" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/MQListTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/code/test/ibnmsConfig/WKlistTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.9678454">
+          <caret line="138" column="36" selection-start-line="138" selection-start-column="36" selection-end-line="138" selection-end-column="36" />
           <folding />
         </state>
       </provider>

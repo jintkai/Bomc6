@@ -49,13 +49,13 @@ public class MQListTest2 extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    //@Test( priority = 0,description = "增加MQ")
+    @Test( priority = 0,description = "增加MQ")
     public void addMQ()
     {
 
         GridPage gridPage=new GridPage(eventDriver);
         int r=gridPage.getGridrowNum()+1;
-        String gridNum=String.valueOf(r);
+
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
@@ -70,7 +70,7 @@ public class MQListTest2 extends TestCase {
         mqFormDomain.setWebPort(String.valueOf(tools.random()));
         GridPage gridTable=mqList.operateMQ("增加",mqFormDomain);
         System.out.println(mqFormDomain.toString());
-        tools.assertEquals(gridNum,gridTable.getGridrowNum(),mqFormDomain.toString());
+        tools.assertEquals(r,gridTable.getGridrowNum(),mqFormDomain.toString());
     }
 
     @Test(priority = 1,description = "部署MQ")

@@ -52,7 +52,7 @@ public class AgListTest2 extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    //@Test(priority = 0,description = "查询Agent")
+    @Test(priority = 0,description = "查询Agent")
     public void searchAG()
     {
         String sql="\n" +
@@ -74,12 +74,11 @@ public class AgListTest2 extends TestCase {
         tools.assertEquals(gridTable.getGridrowNum(),list.size(),agentSearchDomain.toString());
     }
 
-    //@Test(priority = 1,description = "增加Agent")
+    @Test(priority = 1,description = "增加Agent")
     public void addAgent()
     {
         GridPage gridPage=new GridPage(eventDriver);
         int r=gridPage.getGridrowNum()+1;
-        String gridNum=String.valueOf(r);
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
@@ -97,7 +96,7 @@ public class AgListTest2 extends TestCase {
         agentFormDomain.setLang("EN_US"+tools.random());
         GridPage gridTable=agList.operateAG("增加",agentFormDomain);
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGridrowNum(),gridNum,agentFormDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),r,agentFormDomain.toString());
     }
 
 
