@@ -1,9 +1,6 @@
 package com.code.test.ibnmsConfig;
 
-import com.code.common.Data;
-import com.code.common.ExcelDriver;
-import com.code.common.GridPage;
-import com.code.common.TestCase;
+import com.code.common.*;
 import com.code.page.ibnmsConfig.agentList.domain.AgentFormDomain;
 import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
 import com.code.page.ibnmsConfig.workstation.WKlistPage;
@@ -27,11 +24,21 @@ import java.util.Map;
  */
 public class WKlistTest2 extends TestCase {
     WKlistPage wkList;
+    String rowValue;
+    String rowName;
     @Parameters({"node"})
     public WKlistTest2(String node)
     {
         super(node);
         wkList=new WKlistPage(eventDriver);
+        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
+            rowName="ID";
+            rowValue="B8D27C1...";
+        }
+        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
+            rowName="安装路径";
+            rowValue="/test-bnms/app/";
+        }
     }
     @BeforeMethod
     @Parameters({"Action_URL"})
@@ -51,7 +58,7 @@ public class WKlistTest2 extends TestCase {
     public void addWorkstation()
     {
         GridPage gridPage=new GridPage(eventDriver);
-        int r=Integer.parseInt(gridPage.getGrid_xb())+1;
+        int r=gridPage.getGridrowNum()+1;
         String gridNum=String.valueOf(r);
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
@@ -64,7 +71,7 @@ public class WKlistTest2 extends TestCase {
         wkFormDomain.setEnvSearchDomain(envSearchDomain);
         GridPage gridTable=wkList.operateWK("增加",wkFormDomain);
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGrid_xb(),gridNum,wkFormDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),gridNum,wkFormDomain.toString());
     }
 
     //@Test(dataProvider = "WKlist",priority = 0,description = "增加、修改、删除WORKSTATION")
@@ -88,8 +95,8 @@ public class WKlistTest2 extends TestCase {
     public void deployWorkstation( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列名","主机");
-        map.put("列值","jlbnms97");
+        map.put("列名",rowName);
+        map.put("列值",rowValue);
         GridPage gridTable=wkList.deployWK("部署",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -101,8 +108,8 @@ public class WKlistTest2 extends TestCase {
     public void startWorkstation( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列名","主机");
-        map.put("列值","jlbnms97");
+        map.put("列名",rowName);
+        map.put("列值",rowValue);
         GridPage gridTable=wkList.deployWK("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -124,9 +131,8 @@ public class WKlistTest2 extends TestCase {
     public void updeployWorkstation( )
     {
         Map<String,String> map=new HashMap<>();
-
-        map.put("列名","主机");
-        map.put("列值","jlbnms97");
+        map.put("列名",rowName);
+        map.put("列值",rowValue);
 
         GridPage gridTable=wkList.deployWK("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(

@@ -4,9 +4,11 @@ import com.code.common.Data;
 import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
+import com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain;
 import com.code.page.ibnmsConfig.kpilist.KpiListFramePage;
 import com.code.page.ibnmsConfig.kpilist.dao.KpiFormDao;
 import com.code.page.ibnmsConfig.kpilist.domain.KpiFormDomain;
+import com.code.page.ibnmsConfig.kpilist.domain.KpiSearchDomain;
 import jxl.read.biff.BiffException;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
@@ -40,12 +42,12 @@ public class KpiFrameTest2 extends TestCase {
         eventDriver.get(Data.baseUrl + actionUrl);
     }
 
-    @DataProvider(name="kpiList")
-    public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("KPI管理",method.getName());
-        excelHead=excelDriver.getHead(0);
-        return excelDriver;
-    }
+//    @DataProvider(name="kpiList")
+//    public Iterator dataDriver(Method method) throws IOException, BiffException {
+//        ExcelDriver excelDriver=new ExcelDriver("KPI管理",method.getName());
+//        excelHead=excelDriver.getHead(0);
+//        return excelDriver;
+//    }
     @Test(priority = 0,description = "通过KPI编号查询")
     public void searchKpi1(){
         tools.refresh();
@@ -53,11 +55,12 @@ public class KpiFrameTest2 extends TestCase {
         String kpi_id=((Map<String,String>)(dbTools.queryMapListHandler(sql).get(10))).get("kpi_id");
         sql="select * from tb_cde_kpi where kpi_id like \'%"+kpi_id+"%\'";
         List list=dbTools.queryMapListHandler(sql);
-        map=new HashMap<>();
-        map.put("指标编号_KPI",kpi_id);
-        gridTable=kpiFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),Integer.toString(list.size()),
-                map);
+
+        KpiSearchDomain domain=new KpiSearchDomain();
+        domain.setKpiID(kpi_id);
+        gridTable=kpiFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),
+                domain.toString());
 
     }
     @Test(priority = 0,description = "通过KPI名称查询")
@@ -69,11 +72,11 @@ public class KpiFrameTest2 extends TestCase {
         List list=dbTools.queryMapListHandler(sql);
 
 
-        map=new HashMap<>();
-        map.put("指标名称_KPI",kpiName);
-        gridTable=kpiFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),Integer.toString(list.size()),
-                map);
+        KpiSearchDomain domain=new KpiSearchDomain();
+        domain.setKpiName(kpiName);
+        gridTable=kpiFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),
+                domain.toString());
 
     }
     @Test(priority = 0,description = "通过KPI编号,名称查询")
@@ -84,12 +87,13 @@ public class KpiFrameTest2 extends TestCase {
         String kpi_id=((Map<String,String>)(dbTools.queryMapListHandler(sql).get(10))).get("kpi_id");
         sql="select * from tb_cde_kpi where kpi_Name like \'%"+kpi_Name+"%\' and kpi_id like '%"+kpi_id+"%\'";
         List list=dbTools.queryMapListHandler(sql);
-        map=new HashMap<>();
-        map.put("指标名称_KPI",kpi_Name);
-        map.put("指标编号_KPI",kpi_id);
-        gridTable=kpiFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),Integer.toString(list.size()),
-                map);
+
+        KpiSearchDomain domain=new KpiSearchDomain();
+        domain.setKpiID(kpi_id);
+        domain.setKpiName(kpi_Name);
+        gridTable=kpiFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),
+                domain.toString());
 
     }
 
@@ -109,25 +113,25 @@ public class KpiFrameTest2 extends TestCase {
                 "            WHERE 1 = 1 AND (t1.kbp_class LIKE concat('10-10', '-%') OR t1.kbp_class = '10-10')) order_\n" +
                 "      ORDER BY KPI_ID ASC) page_ ";
         List list=dbTools.queryMapListHandler(sql);
-        tools.assertEquals(gridTable.getGrid_xb(),Integer.toString(list.size()),"通过KBP树查询KPI:主机类");
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),"通过KBP树查询KPI:主机类");
     }
 
     @Test(priority = 0,description = "通过KBP树,KPI编号组合查询")
     public void searchKpi5(){
         tools.refresh();
-
-
         String sql="select * from tb_cde_kpi where kbp_class like \'10-10%\'";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
+        kpiFrame.selectTree("主机");
 
         String kpi_id=((Map<String,String>) list.get(0)).get("kpi_id");
         sql="select * from tb_cde_kpi where kbp_class like \'10-10%\' and kpi_id like '"+kpi_id+"%'";
         list=dbTools.queryMapListHandler(sql);
-        map=new HashMap<>();
-        map.put("指标编号_KPI",kpi_id);
-        gridTable=kpiFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(list.size()),
-                map);
+
+        KpiSearchDomain domain=new KpiSearchDomain();
+        domain.setKpiID(kpi_id);
+        gridTable=kpiFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),
+                domain.toString());
     }
 
     @Test(priority = 3,description = "删除KPI")
@@ -138,12 +142,16 @@ public class KpiFrameTest2 extends TestCase {
         String sql="select * from (select length(t.KPI_ID) as l,t.* from TB_CDE_KPI t  order by l desc ) t2  ";
         String kpi_id=((Map<String,String>)(dbTools.queryMapListHandler(sql).get(0))).get("kpi_id");
 
-        map.put("指标编号_KPI",kpi_id);
-        kpiFrame.operateKpi(map);
+        KpiSearchDomain domain=new KpiSearchDomain();
+        domain.setKpiID(kpi_id);
+
+        kpiFrame.operateKpi("删除",domain,null);
+
         tools.sleep(10000);
-        gridTable=kpiFrame.search(map);
+
+        gridTable=kpiFrame.search(domain);
         System.out.println(map.toString());
-        tools.assertEquals(gridTable.getGrid_xb(),"0",
+        tools.assertEquals(gridTable.getGridrowNum(),0,
                 map);
     }
 
@@ -158,23 +166,36 @@ public class KpiFrameTest2 extends TestCase {
         map.put("管理类型","告警管理");
         map.put("指标类型","数量");
         map.put("编号",kpi_id+"6");
-        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-        String nowTime=df.format(new Date());
+        //SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+        String nowTime=tools.formatNow();
         String kpi_name="KPI名称"+nowTime;
         map.put("名称",kpi_name);
         map.put("指标描述","KPI描述"+nowTime);
         map.put("单位","个");
         map.put("数据类型","数值");
 
+        KpiFormDomain domain=new KpiFormDomain();
+        domain.setBaseLineFlag("否");
+        domain.setTrendFlag("否");
+        domain.setKPI_DESC("KPI描述:"+tools.formatNow());
+        domain.setKPI_ID(kpi_id+0);
+        domain.setKPI_MNGTYPE("告警管理");
+        domain.setKPI_MEASURE("个");
+        domain.setKPI_NAME("KPI名称"+nowTime);
+        //domain.setKPI_RANG("数量");
+        domain.setKPI_STYLE("数值");
+        domain.setKPI_TYPE("成功率");
         gridTable=kpiFrame.selectTree("主机"); //asyncTree_21_span 10-10
 
-        kpiFrame.operateKpi(map);
+        kpiFrame.operateKpi("增加",null,domain);
         map.clear();
         map.put("指标编号_KPI",kpi_id+"6");
-        gridTable=kpiFrame.search(map);
+        KpiSearchDomain searchDomain=new KpiSearchDomain();
+        searchDomain.setKpiID(kpi_id+0);
+        gridTable=kpiFrame.search(searchDomain);
 
-        tools.assertEquals(gridTable.getGrid_xb(),"1",
-                map);
+        tools.assertEquals(gridTable.getGridrowNum(),1,
+                domain.toString());
     }
 
     @Test(priority = 2,description = "修改KPI信息")
@@ -186,12 +207,11 @@ public class KpiFrameTest2 extends TestCase {
         String kpi_Name=((Map<String,String>)(dbTools.queryMapListHandler(sql).get(0))).get("kpi_Name");
         String kpi_id=((Map<String,String>)(dbTools.queryMapListHandler(sql).get(0))).get("kpi_id");
 
-        map.put("操作类型","修改");
+
 
         map.put("指标类型","使用率");
 
-        SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
-        String nowTime=df.format(new Date());
+        String nowTime=tools.formatNow();
         String kpi_name=kpi_Name+"selenium";
         map.put("名称",kpi_name);
         map.put("指标描述",kpi_name+nowTime);
@@ -199,17 +219,27 @@ public class KpiFrameTest2 extends TestCase {
         map.put("数据类型","字符串");
         map.put("指标编号_KPI",kpi_id);
 
-        gridTable=kpiFrame.search(map);
+        KpiSearchDomain searchDomain=new KpiSearchDomain();
+        searchDomain.setKpiID(kpi_id);
+        //gridTable=kpiFrame.search(searchDomain);
 
-        kpiFrame.operateKpi(map);
+        KpiFormDomain domain=new KpiFormDomain();
+        domain.setKPI_TYPE("成功率");//指标类型
+        domain.setKPI_DESC("KPI描述:"+nowTime);
+        domain.setKPI_MEASURE("率");//单位
+        domain.setKPI_NAME("KPI名称"+nowTime);
+        //domain.setKPI_RANG("数量");
+        domain.setKPI_STYLE("字符串"); //数据类型
+
+
+        kpiFrame.operateKpi("修改",searchDomain,domain);
         map.clear();
-        map.put("指标编号_KPI",kpi_id);
-        map.put("指标名称_KPI",kpi_name);
 
-        gridTable=kpiFrame.search(map);
 
-        tools.assertEquals(gridTable.getGrid_xb(),"1",
-                map);
+        gridTable=kpiFrame.search(searchDomain);
+
+        tools.assertEquals(gridTable.getGridrowNum(),1,
+                domain.toString());
     }
 
 }

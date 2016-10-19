@@ -1,9 +1,6 @@
 package com.code.test.ibnmsConfig;
 
-import com.code.common.Data;
-import com.code.common.ExcelDriver;
-import com.code.common.GridPage;
-import com.code.common.TestCase;
+import com.code.common.*;
 import com.code.page.ibnmsConfig.agentList.AgentListPage;
 import com.code.page.ibnmsConfig.agentList.domain.AgentFormDomain;
 import com.code.page.ibnmsConfig.agentList.domain.AgentSearchDomain;
@@ -26,11 +23,21 @@ import java.util.Map;
  */
 public class AgListTest2 extends TestCase {
     public AgentListPage agList;
+    String rowValue;
+    String rowName;
     @Parameters({"node"})
     public AgListTest2(String node)
     {
         super(node);
         agList=new AgentListPage(eventDriver);
+        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
+            rowName="Agent名称";
+            rowValue="agent96";
+        }
+        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
+            rowName="安装路径";
+            rowValue="/test-bnms/app/";
+        }
     }
     @BeforeMethod
     @Parameters({"Action_URL"})
@@ -45,7 +52,7 @@ public class AgListTest2 extends TestCase {
         excelHead=excelDriver.getHead(0);
         return excelDriver;
     }
-    @Test(priority = 0,description = "查询Agent")
+    //@Test(priority = 0,description = "查询Agent")
     public void searchAG()
     {
         String sql="\n" +
@@ -64,21 +71,23 @@ public class AgListTest2 extends TestCase {
                 "on t.unit_id=b.unit_id\n" +
                 ") s on a.env_id=s.unit_id WHERE s.device_name like '%"+agentSearchDomain.getDevice_name()+"%' and s.ip_addr like '%"+agentSearchDomain.getIp()+"%'";
         list=dbTools.queryMapListHandler(sql);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(list.size()),agentSearchDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),agentSearchDomain.toString());
     }
 
-    @Test(priority = 1,description = "增加Agent")
+    //@Test(priority = 1,description = "增加Agent")
     public void addAgent()
     {
         GridPage gridPage=new GridPage(eventDriver);
-        int r=Integer.parseInt(gridPage.getGrid_xb())+1;
+        int r=gridPage.getGridrowNum()+1;
         String gridNum=String.valueOf(r);
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
+
         EnvSearchDomain envSearchDomain=new EnvSearchDomain();
         envSearchDomain.setDeviceName(list.get(0).get("device_name"));
         envSearchDomain.setIpAddr(list.get(0).get("ip_addr"));
+
         AgentFormDomain agentFormDomain=new AgentFormDomain();
         agentFormDomain.setEnvSearchDomain(envSearchDomain);
         agentFormDomain.setAgentName("seleniumAgent"+tools.random());
@@ -88,7 +97,7 @@ public class AgListTest2 extends TestCase {
         agentFormDomain.setLang("EN_US"+tools.random());
         GridPage gridTable=agList.operateAG("增加",agentFormDomain);
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGrid_xb(),gridNum,agentFormDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),gridNum,agentFormDomain.toString());
     }
 
 
@@ -107,8 +116,8 @@ public class AgListTest2 extends TestCase {
     public void deployAgent( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","agent96");
-        map.put("列名","Agent名称");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=agList.deployAG("部署",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -120,8 +129,8 @@ public class AgListTest2 extends TestCase {
     public void startAgent( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","agent96");
-        map.put("列名","Agent名称");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=agList.deployAG("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -131,8 +140,8 @@ public class AgListTest2 extends TestCase {
     public void stopAgent( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","agent96");
-        map.put("列名","Agent名称");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=agList.deployAG("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -142,8 +151,8 @@ public class AgListTest2 extends TestCase {
     public void updeployAgent( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","agent96");
-        map.put("列名","Agent名称");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=agList.deployAG("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));

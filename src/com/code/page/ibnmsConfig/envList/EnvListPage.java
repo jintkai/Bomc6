@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.envList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.envList.domain.EnvFormDomain;
 import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
 import com.code.page.ibnmsConfig.envList.page.EnvBtnPage;
 import com.code.page.ibnmsConfig.envList.page.EnvFormPage;
@@ -23,7 +24,7 @@ public class EnvListPage extends Page {
     public EnvBtnPage envBtn=new EnvBtnPage(eventDriver);
     public GridPage gridTable=new GridPage(eventDriver);
     EnvFormPage envForm=new EnvFormPage(eventDriver);
-
+    @Deprecated
     public GridPage search(Map<String,String> map)
     {
         return searchEnv.search(map);
@@ -31,6 +32,7 @@ public class EnvListPage extends Page {
     public GridPage search(EnvSearchDomain o){
         return searchEnv.search(o);
     }
+    @Deprecated
     public GridPage operateRes(Map<String,String> map)
     {
         String operation=tools.getMapValue(map,"操作类型");
@@ -50,6 +52,31 @@ public class EnvListPage extends Page {
         else
         {
             GridPage gridTable=searchEnv.search(map);
+            gridTable.selectTr(0);
+            envBtn.delete();
+            return new GridPage(eventDriver);
+        }
+    }
+
+    public GridPage operateRes(String operation, EnvSearchDomain envSearchDomain, EnvFormDomain envFormDomain)
+    {
+
+        if (operation.equals("增加"))
+        {
+            envBtn.add();
+            return envForm.operateEnv("增加",null,envFormDomain);
+        }
+        if (operation.equals("修改"))
+        {
+
+            GridPage gridTable=searchEnv.search(envSearchDomain);
+            gridTable.selectTr(0);
+            envBtn.edit();
+            return envForm.operateEnv("修改",envSearchDomain,envFormDomain);
+        }
+        else
+        {
+            GridPage gridTable=searchEnv.search(envSearchDomain);
             gridTable.selectTr(0);
             envBtn.delete();
             return new GridPage(eventDriver);

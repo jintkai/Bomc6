@@ -1,5 +1,7 @@
 package com.code.page.ibnmsConfig.kbplist.domain;
 
+import com.code.common.JacksonUtil;
+
 /**
  * Created by jon on 16/5/4.
  */
@@ -10,6 +12,15 @@ public class KbpFormDomain {
     private String KBP_DESC;
     private String VIEW_STYLE;
     private String ENABLE;
+    private String middle;//关联kpi前缀
+
+    public String getMiddle() {
+        return middle;
+    }
+
+    public void setMiddle(String middle) {
+        this.middle = middle;
+    }
 
     public String getKBP_CLASS() {
         return KBP_CLASS;
@@ -60,6 +71,6 @@ public class KbpFormDomain {
     }
 
     public String toString(){
-        return this.getENABLE()+this.getKBP_CAPTION()+this.getKBP_CLASS()+this.getKBP_DESC()+this.getKBP_TYPE()+this.getVIEW_STYLE();
+        return JacksonUtil.toJSon(this);
     }
 }

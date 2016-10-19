@@ -4,6 +4,8 @@ import com.code.common.Data;
 import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.kpilist.dao.KpiFormDao;
+import com.code.page.ibnmsConfig.kpilist.domain.KpiFormDomain;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,6 +46,7 @@ public class KpiFormPage extends FormPage {
     @FindBy(id="tr-kpiMngType")
     WebElement kpiMngType;
 
+    @Deprecated
     public void inputForm(Map<String,String> map)
     {
 
@@ -78,10 +81,51 @@ public class KpiFormPage extends FormPage {
 
         tools.click(btnSubmit);
     }
+    @Deprecated
     public GridPage operateKpi(Map<String,String> map)
     {
         inputForm(map);
         return new GridPage(eventDriver);
     }
 
+    public GridPage operateKpi(String operation, KpiFormDomain domain)
+    {
+        inputForm(operation,domain);
+        return new GridPage(eventDriver);
+    }
+
+
+    public void inputForm(String operation, KpiFormDomain domain)
+    {
+        if(operation.equals("增加")) {
+            tools.selectByVisibleText(kpiMngType.findElement(By.tagName("select")), domain.getKPI_MNGTYPE());
+            tools.sleep(3000);
+
+            tools.sendKeys(kpiId, domain.getKPI_ID());
+            tools.sendKeys(kpiName, domain.getKPI_NAME());
+            if (!(domain.getKBP_CLASS()==null))
+                tools.sendKeys(kbpClass, domain.getKBP_CLASS());
+            tools.selectByVisibleText(kpiType, domain.getKPI_TYPE());
+            tools.sendKeys(kpiMeasure, domain.getKPI_MEASURE());
+            tools.sendKeys(kpiDesc, domain.getKPI_DESC());
+            String s = domain.getKPI_STYLE();
+            if (s.equals("字符串")) {
+                tools.click(kpiStylestring);
+            }
+            if (s.equals("数值")) {
+                tools.click(kpiStylenumber);
+            }
+            if (s.equals("日期时间")) {
+                tools.click(kpiStyledatetime);
+            }
+            s = domain.getTrendFlag();
+            if (s.equals("是"))
+                tools.click(trendFlag);
+            s = domain.getBaseLineFlag();
+            if (s.equals("是"))
+                tools.click(baseLineFlag);
+
+            tools.click(btnSubmit);
+        }
+    }
 }

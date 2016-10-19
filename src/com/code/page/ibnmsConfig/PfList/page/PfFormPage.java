@@ -42,7 +42,7 @@ public class PfFormPage extends FormPage {
             tools.openModelDialog(selectHostBtn);
             EnvFramePage envFrame=new EnvFramePage(eventDriver);
             String hand = tools.switchToWindowByTitle(envFrame.title);
-            envFrame.search(map).selectTr(0);
+            //envFrame.search(map).selectTr(0);
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
         }

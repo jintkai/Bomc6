@@ -145,8 +145,8 @@ public class Tools {
     {
         if(value==null)
         {
-            System.out.println("null,则表示要清除");
-            clear(ele);
+            //System.out.println("null,则表示要清除");
+            //clear(ele);
             return;
         }
         if(! value.isEmpty()) {
@@ -156,7 +156,7 @@ public class Tools {
         else
         {
 
-            System.out.println("未输入值，不用处理");
+            //System.out.println("未输入值，不用处理");
         }
 
     }
@@ -230,6 +230,19 @@ public class Tools {
             takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
             Reporter.log(map.toString());
             Assert.assertEquals(actual, expected, map.toString());
+
+        }
+    }
+
+    public void assertEquals(Object actual,Object expected,String message)
+    {
+        try {
+            Assert.assertEquals(actual, expected, message);
+        }catch(AssertionError e){
+            e.printStackTrace();
+            takesScreenshot(message+":------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
+            Reporter.log(message.toString());
+            Assert.assertEquals(actual, expected,message);
 
         }
     }
@@ -421,6 +434,11 @@ public class Tools {
         driver.switchTo().frame(ele);
     }
 
+    public void switchToFrame2(WebElement ele)
+    {
+        //driver.switchTo().defaultContent();
+        driver.switchTo().frame(ele);
+    }
 
     /**
      * 根据当前时间生成时间字符串
@@ -726,5 +744,14 @@ public class Tools {
     public int random(){
         int i=(int)(Math.random()*10000);
         return i;
+    }
+
+    /**
+     * 返回时间戳
+     */
+    public String formatNow(){
+        Date now = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMddHHmmss");
+        return dateFormat.format(now);
     }
 }

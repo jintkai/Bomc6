@@ -6,6 +6,7 @@ import com.code.common.FormPage;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain;
 import com.code.page.ibnmsConfig.kpilist.page.KpiBtnPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,12 +32,13 @@ public class KbpFormPage extends Page {
     WebElement middle;
     WebElement kbp_viewStyle;
     WebElement kbp_enable;
+    @Deprecated
     public GridPage operateKbp(Map<String,String> map)
     {
         inputForm(map);
         return new GridPage(eventDriver);
     }
-
+    @Deprecated
     public void inputForm(Map<String,String> map)
     {
         tools.sendKeys(classAfter,tools.getMapValue(map,"编号"));
@@ -46,5 +48,19 @@ public class KbpFormPage extends Page {
         tools.selectByVisibleText(kbp_enable,tools.getMapValue(map,"是否有效"));
         tools.sendKeys(middle,tools.getMapValue(map,"关联KPI前缀"));
         tools.submit(kbpCaption);
+    }
+
+    public void inputForm(KbpFormDomain domain){
+        tools.sendKeys(classAfter,domain.getKBP_CLASS());
+        tools.sendKeys(kbpCaption,domain.getKBP_CAPTION());
+        tools.sendKeys(kbpDesc,domain.getKBP_DESC());
+        tools.selectByVisibleText(kbp_viewStyle,domain.getVIEW_STYLE());
+        tools.selectByVisibleText(kbp_enable,domain.getENABLE());
+        tools.sendKeys(middle,domain.getMiddle());
+        tools.submit(kbpCaption);
+    }
+    public GridPage operateKbp(KbpFormDomain domain){
+        inputForm(domain);
+        return new GridPage(eventDriver);
     }
 }

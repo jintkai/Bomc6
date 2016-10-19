@@ -2,6 +2,7 @@ package com.code.common;
 
 
 import com.code.page.ibnmsConfig.login.LoginPage;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -118,6 +119,8 @@ public class TestCase {
     public Tools tools;//=new Tools(eventDriver);
     public String[] excelHead;
     public Map<String,String> map;
+    //protected Logger logger= LoggerFactory.
+
     public WebDriver 	createDriver(String BrowserType,String nodeURL) {
         Properties props=System.getProperties();
         String pcVersion=props.getProperty("os.arch");
@@ -201,7 +204,8 @@ public class TestCase {
 
             test.setVersion("47.01");
             try {
-                driver = new RemoteWebDriver(new URL(" http://192.168.0.6:5555/wd/hub"), ieCapabilities);
+                driver = new RemoteWebDriver(new URL(nodeURL), ieCapabilities);
+                //driver = new RemoteWebDriver(new URL(" http://192.168.0.6:5555/wd/hub"), ieCapabilities);
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             }

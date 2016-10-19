@@ -2,6 +2,8 @@ package com.code.page.ibnmsConfig.kpilist;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.kpilist.domain.KpiFormDomain;
+import com.code.page.ibnmsConfig.kpilist.domain.KpiSearchDomain;
 import com.code.page.ibnmsConfig.kpilist.page.KpiBtnPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiFormPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiTreePage;
@@ -25,6 +27,7 @@ public class KpiListFramePage extends Page{
     GridPage gridTable=new GridPage(eventDriver);
     public KpiBtnPage kpiBtn=new KpiBtnPage(eventDriver);
     KpiFormPage kpiForm=new KpiFormPage(eventDriver);
+    @Deprecated
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame();
@@ -32,11 +35,31 @@ public class KpiListFramePage extends Page{
         tools.switchToFrame("showPage");
         return searchKpi.search(map);
     }
+    @Deprecated
     public GridPage searchByTree(Map<String,String> map)
     {
         tools.switchToFrame();
         tools.switchToFrame(0);
         kpiTree.searchByTree(tools.getMapValue(map,"KBP"));
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
+        return new GridPage(eventDriver);
+    }
+
+    public GridPage search(KpiSearchDomain domain)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
+        tools.switchToFrame("showPage");
+        return searchKpi.search(domain);
+    }
+
+
+    public GridPage searchByTree(String treeName)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(0);
+        kpiTree.searchByTree(treeName);
         tools.switchToFrame();
         tools.switchToFrame(kpiListIFrame);
         return new GridPage(eventDriver);
@@ -86,6 +109,40 @@ public class KpiListFramePage extends Page{
             return gridTable;
         }
     }
+    public GridPage operateKpi(String operation, KpiSearchDomain searchDomain, KpiFormDomain formDomain)
+    {
+        if (operation.contains("增加"))
+        {
+            tools.switchToFrame();
+            tools.switchToFrame(0);
+            //this.kpiTree.searchByTree(tools.getMapValue(map, "KBP前缀"));
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
+            kpiBtn.add();
+            return kpiForm.operateKpi("增加",formDomain);
+        }
+        if (operation.contains("修改"))
+        {
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
+            searchKpi.search(searchDomain);
+            gridTable.selectTr(1);
+            kpiBtn.edit();
+            return kpiForm.operateKpi("修改",formDomain);
+        }
+        else {
+            tools.switchToFrame();
+            tools.switchToFrame(kpiListIFrame);
+            tools.switchToFrame("showPage");
+            searchKpi.search(searchDomain);
+            gridTable.selectTr(0);
+            kpiBtn.delete();
+            return gridTable;
+        }
+    }
+
     public void select()
     {
         tools.switchToFrame();

@@ -24,7 +24,7 @@ public class SearchEnvPage extends Page {
     WebElement deviceName;
     @FindBy(how=How.ID,using="btn-search")
     WebElement btnSearch;
-
+    @Deprecated
     public GridPage search(Map<String,String> map)
     {
         tools.sendKeys(ipAddr,tools.getMapValue(map,"IP地址_ENV"));

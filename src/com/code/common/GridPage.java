@@ -74,6 +74,10 @@ public class GridPage  extends Page implements Data{
     {
         wait=new WebDriverWait(tools.getDriver(),Data.timeOut,Data.sleepTime);
     }
+
+    /**
+     * 等待"读取中"消失
+     */
     public void loadGridUnDisplay()
     {
         setWait();
@@ -92,6 +96,7 @@ public class GridPage  extends Page implements Data{
      * 返回当前页面中总行数；
      * @return
      */
+    @Deprecated
     public int getRowNum()
     {
         loadGridUnDisplay();
@@ -107,13 +112,19 @@ public class GridPage  extends Page implements Data{
     /**
      * 返回查询的总行数;(Grid的下标)
      */
-    public String getGrid_xb()
+    public int getGridrowNum()
     {
         loadGridUnDisplay();
         String xb=grid_xb.getText();
         if (xb.indexOf("无数据显示")!=-1)
-            return "0";
-        return (xb.substring(xb.indexOf("共 ")+2,xb.indexOf(" 条"))).replace(" ","");
+            return 0;
+        if(xb.equals(""))
+            return 0;
+        int a=xb.indexOf("共 ")+2;
+        int b=xb.indexOf(" 条");
+        xb.substring(a,b);
+        String rowNum=(xb.substring(xb.indexOf("共 ")+2,xb.indexOf(" 条"))).replace(" ","");
+        return Integer.parseInt(rowNum);
     }
     /**
      * 返回table中的表头数组
@@ -168,8 +179,9 @@ public class GridPage  extends Page implements Data{
         return tdIndex;
     }
 
-    /*
-    根据输入的行数，列名，返回table中指定行数的指定列名
+    /**
+     *根据输入的行数，列名，返回table中指定行数的指定列名;
+     * 根据行号,列名称返回值;
      */
     public String getTdOfTr(int index,String str)
     {
@@ -177,8 +189,8 @@ public class GridPage  extends Page implements Data{
         return getTdOfAllTr(str)[index-1];
     }
 
-    /*
-    返回数据区域，某一列的所有数据，组成的数组
+    /**
+     *返回数据区域，某一列的所有数据，组成的数组
      */
 
     /**
@@ -189,23 +201,18 @@ public class GridPage  extends Page implements Data{
     public String[] getTdOfAllTr(String str)
     {
         loadGridUnDisplay();
-        System.out.println("开始执行headIndex函数"+tools.getCurrentDateTime());
         tdIndex=this.HeadIndex(str);
-        System.out.println("结束执行headIndex函数"+tools.getCurrentDateTime());
-        String[] rowVales=new String[getRowNum()];
+        rowNum=getRowNum();
+        String[] rowVales=new String[rowNum];
+
          for (int i=0;i<rowNum;i++) {
              String trXpath=this.dataTableTrXpath+"["+(i+1)+"]";
-             String tdXpath=this.dataTableTdXpath+"["+tdIndex+"]";
-             tdXpath=trXpath+"/td["+(tdIndex)+"]";
+             //String tdXpath=this.dataTableTdXpath+"["+tdIndex+"]";
+             String tdXpath=trXpath+"/td["+(tdIndex)+"]";
              WebElement webTd;
-             /*WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
-             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));*/
-             System.out.println(tdXpath);
              webTd=tools.findBy(tools.getDriver(),By.xpath(tdXpath));
-            // WebElement webTd=tools.findBy(grid,By.xpath(trXpath+tdXpath));
             rowVales[i]=webTd.getText().trim();
         }
-        System.out.println("结束执行headIndex的for循环函数"+tools.getCurrentDateTime());
         return rowVales;
     }
     /**
@@ -218,8 +225,8 @@ public class GridPage  extends Page implements Data{
     {
         loadGridUnDisplay();
         String trXpath=this.dataTableTrXpath+"["+(tr+1)+"]";
-        String tdXpath=this.dataTableTdXpath+"["+td+"]";
-        tdXpath=trXpath+"/td["+td+"]";
+        //String tdXpath=this.dataTableTdXpath+"["+td+"]";
+        String tdXpath=trXpath+"/td["+td+"]";
         //WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
         WebElement webTd=tools.findBy(tools.getDriver(),By.xpath(tdXpath));
         return webTd;
@@ -228,7 +235,7 @@ public class GridPage  extends Page implements Data{
     /**
      * 根据输入行号，返回当前页面中，该行的所有列元素组成的Map对象；
      * @param index 行号
-     * @return
+     * @return  Key是列名称,Value表示列值
      */
     public Map<String,String> getTrOfAllTd(int index)
     {
@@ -282,18 +289,16 @@ public class GridPage  extends Page implements Data{
 
         if (index==0)
         {
-            System.out.println("选择所有");
+            //System.out.println("选择所有");
             tools.click(selectBt);
         }
         else
         {
-            System.out.println("选择部分");
+            //System.out.println("选择部分");
             String trXpath=this.dataTableTrXpath+"["+(index)+"]";
 
             String tdXpath=this.dataTableTdXpath+"["+gridTable_cd+"]";
             tdXpath=trXpath+"/td["+gridTable_cd+"]/input";
-            System.out.println(trXpath);
-            System.out.println(tdXpath);
 
             /*WebElement webTr=tools.findBy(grid,By.xpath(trXpath));
             WebElement webTd=tools.findBy(webTr,By.xpath(tdXpath));
@@ -318,7 +323,7 @@ public class GridPage  extends Page implements Data{
         {Reporter.log("请选择数据");
             return 0;}
         for (int i=0;i<list.size();i++) {
-            System.out.println("选择部分");
+            //System.out.println("选择部分");
             String trXpath = this.dataTableTrXpath + "[" + list.get(i) + "]";
             String tdXpath = this.dataTableTdXpath + "[" + gridTable_cd + "]";
             tdXpath=trXpath+"/td["+gridTable_cd+"]/input";
@@ -346,7 +351,7 @@ public class GridPage  extends Page implements Data{
     public boolean equalsSearch(String colStr,int expNum,String searchClass)
     {
         loadGridUnDisplay();
-        rowNum=getRowNum();
+        rowNum=getGridrowNum();
         if (expNum==0 && rowNum==0) {
             System.out.println("期望值："+expNum+"，实际值："+rowNum);
             return true;

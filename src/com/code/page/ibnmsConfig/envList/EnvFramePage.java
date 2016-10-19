@@ -19,6 +19,7 @@ public class EnvFramePage extends Page {
     public EnvFramePage(EventFiringWebDriver eventDriver){
         super(eventDriver);
     }
+    @Deprecated
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame(entityQueryFrame);

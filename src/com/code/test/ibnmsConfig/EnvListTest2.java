@@ -5,6 +5,9 @@ import com.code.common.ExcelDriver;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
 import com.code.page.ibnmsConfig.envList.EnvListPage;
+import com.code.page.ibnmsConfig.envList.domain.EnvFormDomain;
+import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
+import com.code.page.ibnmsConfig.reslist.domain.ResSearchDomain;
 import jxl.read.biff.BiffException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -38,63 +41,69 @@ public class EnvListTest2 extends TestCase{
         eventDriver.get(Data.baseUrl + actionUrl);
     }
 
-    @DataProvider(name="envList")
-    public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("部署环境",method.getName());
-        excelHead=excelDriver.getHead(0);
-        return excelDriver;
-    }
+//    @DataProvider(name="envList")
+//    public Iterator dataDriver(Method method) throws IOException, BiffException {
+//        ExcelDriver excelDriver=new ExcelDriver("部署环境",method.getName());
+//        excelHead=excelDriver.getHead(0);
+//        return excelDriver;
+//    }
 
     @Test(priority = 0,description = "查询部署环境")
     public void searchEnv()
     {
         String sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host on t.unit_id=tb_asset_host.unit_id ";
         List<Map<String,String>> list = dbTools.queryMapListHandler(sql);
-        map=new HashMap<>();
-        map.put("IP地址_ENV",list.get(0).get("ip_addr"));
-        map.put("主机名称_ENV",list.get(0).get("device_name"));
-        envList.search(map);
+
+        EnvSearchDomain searchDomain=new EnvSearchDomain();
+        searchDomain.setIpAddr(list.get(0).get("ip_addr"));
+        searchDomain.setDeviceName(list.get(0).get("device_name"));
+        envList.search(searchDomain);
+
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host on t.unit_id=tb_asset_host.unit_id " +
                 "where ip_addr ='"+list.get(0).get("ip_addr")+"' and device_name like '%"+list.get(0).get("device_name")+"%'";
         list=dbTools.queryMapListHandler(sql);
         gridTable=new GridPage(eventDriver);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(list.size()),map);
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),searchDomain.toString());
     }
+
     @Test(priority = 1,description = "增加部署环境")
     public void addEnv()
     {
-        map=new HashMap<>();
-        String sql="select * from tb_asset_host t where t.unit_id not in(select unit_id from tb_cfg_deploy_env) ";
+        String sql="select * from tb_asset_host t where t.unit_id not in(select unit_id from tb_cfg_deploy_env) and ip_addr not like '172.%' order by length(unit_id) desc ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
-        map.put("操作类型","增加");
-        map.put("资源名称",list.get(2).get("device_name"));
-        map.put("资源UNIT_ID_RES",list.get(2).get("unit_id"));
-        map.put("资源名称_RES",list.get(2).get("device_name"));
-        map.put("用户名","seleniumName");
-        map.put("密码","seleniumPword");
-        map.put("JDK路径","/selenium/java");
-        map.put("密码","seleniumPword");
+
+        ResSearchDomain resSearchDomain=new ResSearchDomain();
+        resSearchDomain.setDeviceName(list.get(2).get("device_name"));
+        resSearchDomain.setUnitID(list.get(2).get("unit_id"));
+        EnvFormDomain domain=new EnvFormDomain();
+        domain.setResSearchDomain(resSearchDomain);
+        domain.setUsername("seleniumName");
+        domain.setPassword("123456");
+        domain.setJdkHome("/home/selenium/autoTesting/env");
         int r=(int)(Math.random()*10);
         switch (r%2){
             case 0:
-                map.put("连接协议","ssh");
+                domain.setProtocol("ssh");
                 break;
             case 1:
-                map.put("连接协议","telnet");
+                domain.setProtocol("telnet");
         }
-        map.put("协议端口","22");
-        map.put("FTP端口","21");
-        envList.operateRes(map);
-        map.put("主机名称_ENV",list.get(2).get("device_name"));
-        map.put("IP地址_ENV",list.get(2).get("ip_addr"));
-        gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(1),map);
+        domain.setProtocolPort("22");
+        domain.setFtpPort("21");
+
+        envList.operateRes("增加",null,domain);
+        EnvSearchDomain envSearchDomain=new EnvSearchDomain();
+        envSearchDomain.setDeviceName(list.get(2).get("device_name"));
+        envSearchDomain.setIpAddr(list.get(2).get("ip_addr"));
+
+        gridTable=envList.search(envSearchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString());
     }
 
     @Test(priority = 1,description = "修改部署环境")
     public void editEnv()
     {
-        map=new HashMap<>();
+
         String sql="select * from (select * from tb_cfg_deploy_env where unit_id not in(\n" +
                 "select env_id from tb_cfg_deploy_mq\n" +
                 "UNION\n" +
@@ -106,31 +115,32 @@ public class EnvListTest2 extends TestCase{
                 "UNION\n" +
                 "select env_id from tb_cfg_deploy_pmalarm)) a left JOIN tb_asset_host b ON  a.unit_id=b.unit_id";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
-        map.put("主机名称_ENV",list.get(1).get("device_name"));
-        map.put("IP地址_ENV",list.get(1).get("ip_addr"));
-        int r=(int)(Math.random()*10);
-        map.put("操作类型","修改");
-        map.put("用户名","seleniumName"+r);
-        map.put("密码","seleniumPword"+r);
-        map.put("JDK路径","/selenium/java"+r);
-        map.put("密码","seleniumPword"+r);
+        EnvSearchDomain searchDomain=new EnvSearchDomain();
+        searchDomain.setDeviceName(list.get(1).get("device_name"));
+        searchDomain.setIpAddr(list.get(1).get("ip_addr"));
 
+        EnvFormDomain domain=new EnvFormDomain();
+        domain.setUsername("seleniumName"+tools.random());
+        domain.setPassword("123456");
+        domain.setJdkHome("/home/selenium/autoTesting/edit");
+        int r=(int)(Math.random()*10);
         switch (r%2){
             case 0:
-                map.put("连接协议","ssh");
+                domain.setProtocol("ssh");
                 break;
             case 1:
-                map.put("连接协议","telnet");
-                break;
+                domain.setProtocol("telnet");
         }
-        map.put("协议端口","22"+r);
-        map.put("FTP端口","21"+r);
-        envList.operateRes(map);
-        gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(1),map);
+        domain.setProtocolPort(String.valueOf(tools.random()));
+        domain.setFtpPort(String.valueOf(tools.random()));
+
+
+        envList.operateRes("修改",searchDomain,domain);
+        gridTable=envList.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,searchDomain.toString()+domain.toString());
     }
 
-    @Test(priority = 1,description = "修改部署环境")
+    @Test(priority = 1,description = "删除部署环境")
     public void deleteEnv()
     {
         map=new HashMap<>();
@@ -143,15 +153,16 @@ public class EnvListTest2 extends TestCase{
                 "UNION\n" +
                 "select env_id from tb_cfg_deploy_performance\n" +
                 "UNION\n" +
-                "select env_id from tb_cfg_deploy_pmalarm)) a left JOIN tb_asset_host b ON  a.unit_id=b.unit_id";
+                "select env_id from tb_cfg_deploy_pmalarm)) a left JOIN tb_asset_host b ON  a.unit_id=b.unit_id order by length(b.unit_id) desc";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
-        map.put("主机名称_ENV",list.get(1).get("device_name"));
-        map.put("IP地址_ENV",list.get(1).get("ip_addr"));
-        map.put("操作类型","删除");
-        envList.operateRes(map);
+        EnvSearchDomain searchDomain=new EnvSearchDomain();
+        searchDomain.setDeviceName(list.get(1).get("device_name"));
+        searchDomain.setIpAddr(list.get(1).get("ip_addr"));
+
+        envList.operateRes("删除",searchDomain,null);
         tools.sleep(10000);
-        gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(0),map);
+        gridTable=envList.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),0,searchDomain.toString());
     }
 
 }

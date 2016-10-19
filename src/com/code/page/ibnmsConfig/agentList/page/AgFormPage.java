@@ -66,7 +66,6 @@ public class AgFormPage extends FormPage {
             envFrame.listPage.envBtn.select();
             tools.switchToWindowByHand(hand);
 
-
             tools.sendKeys(instanceName,agentFormDomain.getAgentName());
             /*
             tools.selectByVisibleText(workstaionId, tools.getMapValue(map, "关联的Workstation"));

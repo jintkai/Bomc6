@@ -3,9 +3,12 @@ package com.code.test.ibnmsConfig;
 import com.code.common.*;
 import com.code.page.ibnmsConfig.reslist.ResListFramePage;
 import com.code.page.ibnmsConfig.reslist.dao.ResFormDao;
+import com.code.page.ibnmsConfig.reslist.domain.ResFormDomain;
 import com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain;
+import com.code.page.ibnmsConfig.reslist.domain.ResSearchDomain;
 import jxl.read.biff.BiffException;
 import org.apache.commons.collections.map.CaseInsensitiveMap;
+import org.apache.log4j.Logger;
 import org.testng.Reporter;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -24,6 +27,7 @@ public class ResFrameTest2 extends TestCase {
     ResListFramePage resFrame;//=new ResListFramePage(eventDriver);
     GridPage gridTable;//=new GridPage(eventDriver);
     //ResFormDao dao;
+    private static Logger logger = Logger.getLogger(ResFrameTest2.class);
     @Parameters({"node"})
     public ResFrameTest2(String node)
     {
@@ -48,13 +52,9 @@ public class ResFrameTest2 extends TestCase {
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
 
-
-        map.put("TREE",map.get("device_id"));
-
-
-        gridTable=resFrame.searchByTree(map);
+        gridTable=resFrame.searchByTree(map.get("device_id"));
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGrid_xb(),"0",map);
+        tools.assertEquals(gridTable.getGridrowNum(),0,map);
     }
 
     @Test(priority = 0,description = "通过设备id查询资源树")
@@ -65,28 +65,19 @@ public class ResFrameTest2 extends TestCase {
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
 
-
-        map.put("TREE",map.get("unit_id"));
-
-
-        gridTable=resFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getGrid_xb(),"0",map);
+        gridTable=resFrame.searchByTree(map.get("unit_id"));
+        tools.assertEquals(gridTable.getGridrowNum(),0,map);
     }
 
-    @Test(priority = 0,description = "通过设备id查询数据库资源")
+    @Test(priority = 0,description = "树查询,通过设备id查询数据库资源")
     public void searchDBResByTree()
     {
         String sqlStr="select * from tb_asset_database order by length(unit_id) desc";
 
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
-
-
-        map.put("TREE",map.get("unit_id"));
-
-
-        gridTable=resFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getGrid_xb(),"0",map);
+        gridTable=resFrame.searchByTree(map.get("unit_id"));
+        tools.assertEquals(gridTable.getGridrowNum(),0,map);
     }
 
 
@@ -96,14 +87,14 @@ public class ResFrameTest2 extends TestCase {
         String sqlStr="select * from tb_asset_host  ";
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
-        System.out.println(list);
 
-        map.put("资源UNIT_ID_RES",map.get("unit_id"));
-        map.put("资源名称_RES",map.get("device_name"));
-        map.put("IP地址_RES",map.get("ip_addr"));
+        ResSearchDomain domain=new ResSearchDomain();
+        domain.setUnitID(map.get("unit_id"));
+        domain.setDeviceName(map.get("device_name"));
+        domain.setIp(map.get("ip_addr"));
 
-        gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),"1",map);
+        gridTable=resFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString());
     }
 
     @Test(priority = 0,description = "查询资源基础配置-数据库")
@@ -113,14 +104,14 @@ public class ResFrameTest2 extends TestCase {
         String sqlStr="select * from tb_asset_database  ";
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
-        System.out.println(list);
 
-        map.put("资源UNIT_ID_RES",map.get("unit_id"));
-        map.put("资源名称_RES",map.get("device_name"));
-        map.put("IP地址_RES",map.get("ip_addr"));
+        ResSearchDomain domain=new ResSearchDomain();
+        domain.setUnitID(map.get("unit_id"));
+        domain.setDeviceName(map.get("device_name"));
+        domain.setIp(map.get("ip_addr"));
 
-        gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),"1",map);
+        gridTable=resFrame.search(domain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString());
     }
 
 
@@ -128,17 +119,14 @@ public class ResFrameTest2 extends TestCase {
     public void addHostRes()
     {
         map=new HashMap<>();
-        map.put("操作类型","增加");
-        map.put("资源类型","主机");
-        SimpleDateFormat df = new SimpleDateFormat("yyMMddHHmmss");
-        String nowTime=df.format(new Date());
+
+        String nowTime=tools.formatNow();
+
         String resName="host"+nowTime;
-        map.put("资源名称",resName);
-        map.put("资源标识","ID"+nowTime);
         int r1= (int) (Math.random()*1000)%253+1;
         int r2= (int) (Math.random()*1000)%253+1;
         String ip=r1+"."+r1+"."+r2+"."+r2;
-        map.put("IP地址",ip);
+
         //获取厂家类型
         String sql1="select * from tb_cde_kbp where kbp_class like '10-10-__' and enable=1";
         List<Map<String , String >> list=dbTools.queryMapListHandler(sql1);
@@ -149,77 +137,86 @@ public class ResFrameTest2 extends TestCase {
         sql1="select * from tb_cde_kbp where kbp_class like '11-__' and enable=1 ";
         list=dbTools.queryMapListHandler(sql1);
         typeClass=list.get(r1%list.size()).get("kbp_caption");
-        map.put("业务类型",typeClass);
-        map.put("简明用途","简明用途");
-        map.put("责任人","selenium");
-        map.put("是否有效","是");
-        resFrame.operateRes(map);
-        map.put("资源UNIT_ID_RES","ID"+nowTime);
-        gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(1),map);
+
+        ResFormDomain domain=new ResFormDomain();
+        domain.setDevType("主机");
+        domain.setDevice_name(resName);
+        domain.setDevice_id("ID"+nowTime);
+        domain.setBz_type(typeClass);
+        domain.setIp_addr(ip);
+        domain.setLinkman("selenium");
+        domain.setEnable("是");
+        domain.setManufacturer(resClass);
+        domain.setUsage("简明用途");
+
+        resFrame.operateRes("增加",null,domain);
+
+        ResSearchDomain searchDomain=new ResSearchDomain();
+        searchDomain.setUnitID("ID"+nowTime);
+
+        gridTable=resFrame.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString());
     }
 
     @Test(priority = 2,description = "增加数据库")
     public void addDatabaseRes()
     {
-        map=new HashMap<>();
-        map.put("资源类型","数据库");
-        map.put("操作类型","增加");
-        SimpleDateFormat df = new SimpleDateFormat("yyMMddHHmmss");
-        String nowTime=df.format(new Date());
+        
+        String nowTime=tools.formatNow();
         String resName="db"+nowTime;
-        map.put("资源名称",resName);
-        map.put("资源标识","ID"+nowTime);
-        map.put("SSID","selenium");
-        map.put("端口号","100");
         int r1= (int) (Math.random()*1000)%253+1;
         int r2= (int) (Math.random()*1000)%253+1;
         String ip=r1+"."+r1+"."+r2+"."+r2;
-        map.put("IP地址",ip);
         //获取厂家类型
         String sql1="select * from tb_cde_kbp where kbp_class like '10-11-__' and enable=1";
         List<Map<String , String >> list=dbTools.queryMapListHandler(sql1);
         String resClass=null;
         resClass=list.get(r1%list.size()).get("kbp_caption");
-        map.put("厂家类型",resClass);
         String typeClass=null;
         sql1="select * from tb_cde_kbp where kbp_class like '11-__' and enable=1";
         list=dbTools.queryMapListHandler(sql1);
         typeClass=list.get(r1%list.size()).get("kbp_caption");
-        map.put("业务类型",typeClass);
-        map.put("简明用途","简明用途");
-        map.put("责任人","selenium");
-        map.put("是否有效","是");
-        map.put("用户名","username");
-        map.put("密码","password");
-        map.put("URL","jdbc:oracle:thin:@//127.0.0.1:1521/oracle");
-        resFrame.operateRes(map);
-        map.put("资源UNIT_ID_RES","ID"+nowTime);
-        gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(1),map);
+
+        ResFormDomain domain=new ResFormDomain();
+        domain.setDevType("数据库");
+        domain.setDevice_name(resName);
+        domain.setDevice_id("ID"+nowTime);
+        domain.setBz_type(typeClass);
+        domain.setManufacturer(resClass);
+        //domain.setDevType(resClass);
+        domain.setIp_addr(ip);
+        domain.setLinkman("selenium");
+        domain.setEnable("是");
+        domain.setSsid("DBSelenium");
+        domain.setDbPort("1521");
+        domain.setDbUser("DBUser");
+        domain.setDbPasswd("1234567890");
+        domain.setDbUrl("jdbc:oracle:thin:@//127.0.0.1:1521/oracle");
+        resFrame.operateRes("增加",null,domain);
+        ResSearchDomain searchDomain=new ResSearchDomain();
+        searchDomain.setUnitID("ID"+nowTime);
+        gridTable=resFrame.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString());
     }
 
     @Test(priority = 2,description = "修改数据库")
     public void editRes()
     {
-        map=new HashMap<>();
-        map.put("资源类型","数据库");
-        map.put("操作类型","修改");
         String sqlStr="select * from tb_asset_database order by length(unit_id) desc";
         String unit_id=((Map<String,String>)(dbTools.queryMapListHandler(sqlStr)).get(0)).get("unit_id");
 
-        SimpleDateFormat df = new SimpleDateFormat("yyMMddHHmmss");
-        String nowTime=df.format(new Date());
+        String nowTime=tools.formatNow();
         String resName="db"+nowTime;
-        map.put("资源名称",resName);
-        map.put("资源UNIT_ID_RES",unit_id);
-        map.put("URL","jdbc:oracle:thin:@//127.0.0.1:1521/oracle_Edit");
-        resFrame.operateRes(map);
-        map.put("资源UNIT_ID_RES",unit_id);
-        map.put("资源名称_RES",resName);
-        gridTable=resFrame.search(map);
-        Reporter.log(map.toString());
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(1),map);
+        ResSearchDomain searchDomain=new ResSearchDomain();
+        searchDomain.setUnitID(unit_id);
+        ResFormDomain domain=new ResFormDomain();
+        domain.setDevice_name(resName);
+        domain.setDevType("数据库");
+        domain.setDbUrl("jdbc:oracle:thin:@//127.0.0.1:1521/oracle_Edit");
+        resFrame.operateRes("修改",searchDomain,domain);
+        searchDomain.setDeviceName(resName);
+        gridTable=resFrame.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),1,searchDomain.toString()+";"+domain.toString());
     }
 
     @Test(priority = 3,description = "删除资源")
@@ -227,16 +224,15 @@ public class ResFrameTest2 extends TestCase {
     {
         map=new HashMap<>();
         map.put("操作类型","删除");
-        String sqlStr="select * from tb_asset_database where ip_addr not like '1.%' order by length(unit_id) desc";
+        String sqlStr="select * from tb_asset_database where ip_addr not like '172.%' order by length(unit_id) desc";
         String unit_id=((Map<String,String>)(dbTools.queryMapListHandler(sqlStr)).get(0)).get("unit_id");
-        map.put("资源UNIT_ID_RES",unit_id);
+        ResSearchDomain searchDomain=new ResSearchDomain();
+        searchDomain.setUnitID(unit_id);
 
-        resFrame.operateRes(map);
+        resFrame.operateRes("删除",searchDomain,null);
 
-        gridTable=resFrame.search(map);
-        Reporter.log(map.toString());
-        System.out.println(map.toString());
-        tools.assertEquals(gridTable.getGrid_xb(),String.valueOf(0),map);
+        gridTable=resFrame.search(searchDomain);
+        tools.assertEquals(gridTable.getGridrowNum(),0,searchDomain.toString());
     }
 
 

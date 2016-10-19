@@ -1,6 +1,7 @@
 package com.code.page.ibnmsConfig.envList.domain;
 
 
+import com.code.common.JacksonUtil;
 import net.sf.json.JSONObject;
 
 public class EnvSearchDomain{
@@ -30,7 +31,7 @@ public class EnvSearchDomain{
         this.deviceName = deviceName;
     }
     public String toString(){
-        JSONObject jsonObject=JSONObject.fromObject(this);
-        return jsonObject.toString();
+
+        return JacksonUtil.toJSon(this);
     }
 }

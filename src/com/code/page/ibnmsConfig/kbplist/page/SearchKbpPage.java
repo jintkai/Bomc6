@@ -2,6 +2,7 @@ package com.code.page.ibnmsConfig.kbplist.page;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.kbplist.domain.KbpSearchDomain;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -24,10 +25,18 @@ public class SearchKbpPage extends Page {
     {
         super(eventDriver);
     }
+    @Deprecated
     public GridPage search(Map<String, String> map)
     {
         tools.sendKeys(kbpCaption, tools.getMapValue(map, "KBP名称_KBP"));
         tools.sendKeys(kbpClass, tools.getMapValue(map, "KBP编号_KBP"));
+        tools.click(searchBtn);
+        return new GridPage(eventDriver);
+    }
+    public GridPage search(KbpSearchDomain domain)
+    {
+        tools.sendKeys(kbpCaption, domain.getKbp_Caption());
+        tools.sendKeys(kbpClass,domain.getKbp_class());
         tools.click(searchBtn);
         return new GridPage(eventDriver);
     }

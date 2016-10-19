@@ -2,15 +2,13 @@ package com.code.page.ibnmsConfig.kbplist;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
-import com.code.common.TestCase;
+import com.code.page.ibnmsConfig.kbplist.domain.KbpFormDomain;
+import com.code.page.ibnmsConfig.kbplist.domain.KbpSearchDomain;
 import com.code.page.ibnmsConfig.kbplist.page.KbpBtnPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpTreePage;
 import com.code.page.ibnmsConfig.kbplist.page.SearchKbpPage;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
@@ -41,12 +39,20 @@ public class KbpListFramePage extends Page {
 
     }
 
+    @Deprecated
     public GridPage search(Map<String,String> map)
     {
         tools.switchToFrame();
         tools.switchToFrame(kbpListIFrame);
         return this.searchKbp.search(map);
     }
+    public GridPage search(KbpSearchDomain domain)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kbpListIFrame);
+        return this.searchKbp.search(domain);
+    }
+    @Deprecated
     public GridPage searchByTree(Map<String,String> map)
     {
         tools.switchToFrame();
@@ -56,6 +62,16 @@ public class KbpListFramePage extends Page {
         tools.switchToFrame(kbpListIFrame);
         return new GridPage(eventDriver);
     }
+    public GridPage searchByTree(String treeName)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kbpTreeIFrame);
+        kbpTree.searchByTree(treeName);
+        tools.switchToFrame();
+        tools.switchToFrame(kbpListIFrame);
+        return new GridPage(eventDriver);
+    }
+    @Deprecated
     public GridPage operateKbp(Map<String,String> map) {
         String operation = tools.getMapValue(map, "操作类型");
         if (operation.contains("增加")) {
@@ -69,6 +85,7 @@ public class KbpListFramePage extends Page {
             kbpForm = new KbpFormPage(eventDriver);
             return kbpForm.operateKbp(map);
         }
+
         if (operation.contains("修改")) {
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
@@ -82,6 +99,41 @@ public class KbpListFramePage extends Page {
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
             gridTable = searchKbp.search(map);
+            gridTable.selectTr(1);
+            //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
+            kbpBtn.delete();
+            return gridTable;
+        }
+        return gridTable;
+    }
+
+    public GridPage operateKbp(String operation, String treeName, KbpSearchDomain searchDomain, KbpFormDomain domain) {
+
+        if (operation.contains("增加")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpTreeIFrame);
+            if (!(treeName==null) )
+                kbpTree.searchByTree(treeName);
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            kbpBtn.add();
+            kbpForm = new KbpFormPage(eventDriver);
+
+            return kbpForm.operateKbp(domain);
+        }
+        if (operation.contains("修改")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            gridTable = searchKbp.search(searchDomain);
+            gridTable.selectTr(0);
+            //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
+            kbpBtn.edit();
+            kbpForm = new KbpFormPage(eventDriver);
+            return kbpForm.operateKbp(domain);
+        } else if (operation.contains("删除")) {
+            tools.switchToFrame();
+            tools.switchToFrame(kbpListIFrame);
+            gridTable = searchKbp.search(searchDomain);
             gridTable.selectTr(1);
             //gridTable.selectTrs(gridTable.getListOftr("KBP名称", tools.getMapValue(map, "选择名称")));
             kbpBtn.delete();

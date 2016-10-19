@@ -1,9 +1,6 @@
 package com.code.test.ibnmsConfig;
 
-import com.code.common.Data;
-import com.code.common.ExcelDriver;
-import com.code.common.GridPage;
-import com.code.common.TestCase;
+import com.code.common.*;
 import com.code.page.ibnmsConfig.MQList.MQListPage;
 import com.code.page.ibnmsConfig.MQList.domain.MqFormDomain;
 import com.code.page.ibnmsConfig.envList.domain.EnvSearchDomain;
@@ -22,11 +19,21 @@ import java.util.*;
  */
 public class MQListTest2 extends TestCase {
     MQListPage mqList;
+    String rowValue;
+    String rowName;
     @Parameters({"node"})
     public MQListTest2(String node)
     {
         super(node);
         mqList=new MQListPage(eventDriver);
+        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
+            rowName="安装路径";
+            rowValue="/jlbnms/bomc5/app/broker1";
+        }
+        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
+            rowName="安装路径";
+            rowValue="/test-bnms/app";
+        }
 
     }
     @BeforeMethod
@@ -47,7 +54,7 @@ public class MQListTest2 extends TestCase {
     {
 
         GridPage gridPage=new GridPage(eventDriver);
-        int r=Integer.parseInt(gridPage.getGrid_xb())+1;
+        int r=gridPage.getGridrowNum()+1;
         String gridNum=String.valueOf(r);
         String sql;
         sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
@@ -63,15 +70,16 @@ public class MQListTest2 extends TestCase {
         mqFormDomain.setWebPort(String.valueOf(tools.random()));
         GridPage gridTable=mqList.operateMQ("增加",mqFormDomain);
         System.out.println(mqFormDomain.toString());
-        tools.assertEquals(gridNum,gridTable.getGrid_xb(),mqFormDomain.toString());
+        tools.assertEquals(gridNum,gridTable.getGridrowNum(),mqFormDomain.toString());
     }
 
     @Test(priority = 1,description = "部署MQ")
     public void deployMQ( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","/jlbnms/bomc5/app/broker1");
-        map.put("列名","安装路径");
+        System.out.println(rowName+":"+rowValue);
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=mqList.deploy("部署",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -82,8 +90,8 @@ public class MQListTest2 extends TestCase {
     public void startMQ( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","/jlbnms/bomc5/app/broker1");
-        map.put("列名","安装路径");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=mqList.deploy("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -93,8 +101,8 @@ public class MQListTest2 extends TestCase {
     public void stopMQ( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","/jlbnms/bomc5/app/broker1");
-        map.put("列名","安装路径");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=mqList.deploy("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
@@ -104,8 +112,8 @@ public class MQListTest2 extends TestCase {
     public void updeployMQ( )
     {
         Map<String,String> map=new HashMap<>();
-        map.put("列值","/jlbnms/bomc5/app/broker1");
-        map.put("列名","安装路径");
+        map.put("列值",rowValue);
+        map.put("列名",rowName);
         GridPage gridTable=mqList.deploy("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));

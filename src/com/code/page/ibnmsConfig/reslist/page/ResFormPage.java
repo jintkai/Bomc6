@@ -3,6 +3,8 @@ package com.code.page.ibnmsConfig.reslist.page;
 import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.page.ibnmsConfig.reslist.domain.ResFormDomain;
+import com.code.page.ibnmsConfig.reslist.domain.ResHostFormDomain;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -50,12 +52,13 @@ public class ResFormPage extends FormPage {
             tools.sendKeys(deviceName,tools.getMapValue(map,"资源名称"));
         tools.click(btnSubmit);
     }
-
+    @Deprecated
     public GridPage operateRes(Map<String,String> map)
     {
         inputForm(map);
         return  new GridPage(eventDriver);
     }
+    @Deprecated
     public void inputForm(Map<String,String> map)
     {
         tools.selectByVisibleText(devTypeKbpClass,tools.getMapValue(map,"资源类型"));
@@ -75,5 +78,30 @@ public class ResFormPage extends FormPage {
             tools.sendKeys(res_dbPort,tools.getMapValue(map,"端口号"));
         }
         tools.click(btnSubmit);
+    }
+    public void inputForm(String ResType,ResFormDomain domain){
+        tools.selectByVisibleText(devTypeKbpClass,domain.getDevType());
+        tools.sendKeys(deviceName,domain.getDevice_name());
+        tools.sendKeys(deviceId,domain.getDevice_id());
+        tools.sendKeys(ipAddr,domain.getIp_addr());
+        tools.selectByVisibleText(manufactureKbpClass,domain.getManufacturer());
+        tools.selectByVisibleText(bzTypeKbpClass,domain.getBz_type());
+        tools.sendKeys(usage,domain.getUsage());
+        tools.sendKeys(linkman,domain.getLinkman());
+        tools.selectByVisibleText(enable,domain.getEnable());
+        if (domain.getDevType().equals("数据库")) {
+            tools.sendKeys(res_dbUser, domain.getDbUser());
+            tools.sendKeys(res_dbPassword, domain.getDbPasswd());
+            tools.sendKeys(res_dbUrl, domain.getDbUrl());
+            tools.sendKeys(res_dbSsid,domain.getSsid());
+            tools.sendKeys(res_dbPort,domain.getDbPort());
+        }
+        tools.click(btnSubmit);
+    }
+
+    public GridPage operateRes(String operate, ResFormDomain domain)
+    {
+        inputForm(operate,domain);
+        return  new GridPage(eventDriver);
     }
 }

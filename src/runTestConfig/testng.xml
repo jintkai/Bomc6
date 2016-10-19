@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="BomcWeb" >
+<suite name="业务监控BOMC-自动化测试" parallel="tests" thread-count="5">
     <!--suite name="selenium2" parallel="tests" thread-count="10"-->
     <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
-    <test name="测试环境IE8">
-        <parameter name="node" value=""/>
+    <test name="测试环境IE8" preserve-order="true">
+        <parameter name="node" value="http://172.21.221.141:5555/wd/hub"/>
 
         <classes>
             <!--
             <class name="com.code.test.ibnmsConfig.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
+
             <class name="com.code.test.ibnmsConfig.KpiFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class>
@@ -30,12 +31,43 @@
             <class name="com.code.test.ibnmsConfig.AgListTest2">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-            -->
+
             <class name="com.code.test.ibnmsConfig.WKlistTest2">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
+            -->
+            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
+                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+                <methods><incluede name="deleteEnv"></incluede></methods>
+            </class>
+
         </classes>
     </test>
+    <!--
+    <test name="测试环境IE9" preserve-order="true">
+        <parameter name="node" value="http://172.21.221.141:6666/wd/hub"/>
+
+        <classes>
+
+            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
+                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+            </class>
+
+            <class name="com.code.test.ibnmsConfig.MQListTest2" >
+                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
+            </class >
+
+            <class name="com.code.test.ibnmsConfig.AgListTest2">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class>
+
+            <class name="com.code.test.ibnmsConfig.WKlistTest2">
+                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
+            </class>
+
+        </classes>
+    </test>
+    -->
         <!--test name="资源管理">
             <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
             <classes>

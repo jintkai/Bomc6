@@ -1,5 +1,7 @@
 package com.code.page.ibnmsConfig.kpilist.domain;
 
+import com.code.common.JacksonUtil;
+
 /**
  * Created by jon on 16/5/10.
  */
@@ -11,6 +13,42 @@ public class KpiFormDomain {
     private String KPI_MEASURE;
     private String KPI_RANG;
     private String KPI_DESC;
+    private String trendFlag;//趋势计算
+    private String baseLineFlag;//异动计算
+    private String KPI_TYPE;//指标类型
+    private String KPI_MNGTYPE;//管理类型
+
+    public String getKPI_MNGTYPE() {
+        return KPI_MNGTYPE;
+    }
+
+    public void setKPI_MNGTYPE(String KPI_MNGTYPE) {
+        this.KPI_MNGTYPE = KPI_MNGTYPE;
+    }
+
+    public String getTrendFlag() {
+        return trendFlag;
+    }
+
+    public void setTrendFlag(String trendFlag) {
+        this.trendFlag = trendFlag;
+    }
+
+    public String getBaseLineFlag() {
+        return baseLineFlag;
+    }
+
+    public void setBaseLineFlag(String baseLineFlag) {
+        this.baseLineFlag = baseLineFlag;
+    }
+
+    public String getKPI_TYPE() {
+        return KPI_TYPE;
+    }
+
+    public void setKPI_TYPE(String KPI_TYPE) {
+        this.KPI_TYPE = KPI_TYPE;
+    }
 
     public String getKPI_ID() {
         return KPI_ID;
@@ -66,5 +104,8 @@ public class KpiFormDomain {
 
     public void setKPI_DESC(String KPI_DESC) {
         this.KPI_DESC = KPI_DESC;
+    }
+    public String toString(){
+        return JacksonUtil.toJSon(this);
     }
 }

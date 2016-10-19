@@ -258,7 +258,8 @@
     <xsl:template name="htmlHead">
         <head>
             <title>
-                <xsl:value-of select="testng:getVariableSafe($testNgXslt.reportTitle, 'TestNG Results')"/>
+                <!--xsl:value-of select="testng:getVariableSafe($testNgXslt.reportTitle, 'TestNG Results')"/-->
+				监控系统6.0自动化测试报告
             </title>
             <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
             <meta http-equiv="pragma" content="no-cache"/>
@@ -522,7 +523,7 @@
             <html xmlns="http://www.w3.org/1999/xhtml">
                 <xsl:call-template name="htmlHead"/>
                 <body>
-                    <h2>Test suites overview</h2>
+                    <h2>Test suites overview(测试套件概述)</h2>
                     <table width="100%">
                         <tr>
                             <td align="center" id="chart-container">
@@ -840,10 +841,13 @@
             <table class="testMethodsTable" cellpadding="0" cellspacing="0">
                 <tr class="methodsTableHeader">
                     <td width="100%">Name</td>
+						<td>Description</td>
                     <td nowrap="true">Started</td>
                     <td nowrap="true">Duration</td>
-                    <td>Exception</td>
-		    <td>ErrorScreen</td>
+					<td>Exception</td>
+				<td>ErrorScreen</td>
+			
+				
                 </tr>
                 <xsl:call-template name="testMethodsList">
                     <xsl:with-param name="methodList" select="$failedMethods"/>
@@ -877,9 +881,11 @@
                     </tr>
                     <tr class="methodsTableHeader">
                         <td width="100%">Name</td>
+						<td>Description</td>
                         <td nowrap="true">Started</td>
                         <td nowrap="true">Duration</td>
                         <td>Exception</td>
+						
                     </tr>
                     <xsl:call-template name="testMethodsList">
                         <!--<xsl:with-param name="methodList" select="./test-method[not(@is-config)]"/>-->
@@ -899,13 +905,15 @@
         <xsl:param name="category"/>
         <xsl:param name="sortByStartTime"/>
 	<xsl:param name="errorScreen"/>
+	<xsl:param name="mothdDesc"/>
         <xsl:for-each select="$methodList">
             <xsl:sort order="ascending" select="if (compare($sortByStartTime, 'true') = 0) then @started-at else ''"/>
             <xsl:variable name="methodId" select="concat(../@name, '_', @name, '_', $category, '_', @status, position())"/>
             <xsl:variable name="detailsId" select="concat($methodId, '_details')"/>
             <xsl:variable name="exceptionDetailsId" select="concat($methodId, '_exception')"/>
-	    <xsl:variable name="errScreenId" select="concat($methodId, '_error')"/>
-	    <xsl:variable name="picId" select="./reporter-output/line[contains(., 'picName')]"/>
+	    <!--xsl:variable name="errScreenId" select="concat($methodId, '_error')"/-->
+		<xsl:variable name="errScreenId" select="concat($methodId, '_error')"/>
+	    <xsl:variable name="picId" select="./reporter-output/line[contains(., 'TakesScreenshot Save File')]"/>
 		   
             <tr id="{concat($methodId, '_row')}" class="{testng:testMethodStatus(.)}">
                 <xsl:if test="testng:isFilterSelected(@status) != 'true'">
@@ -913,8 +921,12 @@
                 </xsl:if>
                 <td width="100%" class="firstMethodCell">
                     <a onclick="toggleDetailsVisibility('{$detailsId}')">
-                        <xsl:value-of select="concat(@name, '(', testng:trim(testng:concatParams(./params/param)), ')')"/>
+                        <!--xsl:value-of select="concat(@name, '(', testng:trim(testng:concatParams(./params/param)), ')')"/-->
+						<xsl:value-of select="@name"/>
                     </a>
+                </td>
+				<td nowrap="true" align="left">
+                    <xsl:value-of select="@description"/>
                 </td>
                 <td nowrap="true">
                     <xsl:value-of select="substring(@started-at, 12, 8)"/>
@@ -931,7 +943,8 @@
                 </td >
 		<td>
 			<xsl:if test="@status = 'FAIL'">
-			<a onclick="toggleDetailsVisibility('{$errScreenId}')">
+			<!--a onclick="toggleDetailsVisibility('{$errScreenId}')"-->
+				<a onclick="toggleDetailsVisibility('{$errScreenId}')">
 			<xsl:choose>
                                 <xsl:when test="$picId">
                                     <xsl:value-of select="$picId"/>
@@ -943,6 +956,9 @@
 			</a>
 			</xsl:if>
 		</td>
+		
+		
+				
             </tr>
             <tr>
                 <td colspan="5" style="padding: 0; background-color: white; border-style: none; height: 0px;">
@@ -1031,10 +1047,12 @@
 					<br>
                                         <xsl:element name="img">
 						<xsl:attribute name="src">
-						<xsl:value-of select="substring(.,24,30)"/>
+						<!--xsl:value-of select="substring(.,24,30)"/-->
+                            <xsl:value-of select="substring(.,42,30)"/>
 						</xsl:attribute>
 						<xsl:attribute name="alt">
-						<xsl:value-of select="substring(.,24,30)"/>
+						<!--xsl:value-of select="substring(.,24,30)"/-->
+                            <xsl:value-of select="substring(.,42,30)"/>
 						</xsl:attribute>
 					</xsl:element>
 					</br>
