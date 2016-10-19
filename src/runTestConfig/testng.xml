@@ -29,9 +29,9 @@
             </class>
             -->
 
-            <class name="com.code.test.ibnmsConfig.MQListTest2" >
-                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
-            </class >
+            <class name="com.code.test.ibnmsConfig.WKlistTest2">
+                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
+            </class>
 
         </classes>
     </test>

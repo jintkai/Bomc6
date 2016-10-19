@@ -119,8 +119,8 @@ public class WKlistTest2 extends TestCase {
     {
         Map<String,String> map=new HashMap<>();
 
-        map.put("列名","主机");
-        map.put("列值","jlbnms97");
+        map.put("列名",rowName);
+        map.put("列值",rowValue);
         GridPage gridTable=wkList.deployWK("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));

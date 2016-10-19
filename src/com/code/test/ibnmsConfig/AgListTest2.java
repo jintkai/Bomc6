@@ -100,17 +100,6 @@ public class AgListTest2 extends TestCase {
     }
 
 
-
-    //@Test(dataProvider="agList",priority = 1,description = "增加、修改、删除Agent")
-    public void operateAG(String[] str)
-    {
-        Map<String,String> map=tools.changeStringToMap(excelHead,str);
-        GridPage gridTable=agList.operateAG(map);
-        gridTable=agList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
-    }
-
-
     @Test(priority = 1,description = "部署agent")
     public void deployAgent( )
     {
