@@ -187,8 +187,8 @@ public class ResFrameTest2 extends TestCase {
         domain.setIp_addr(ip);
         domain.setLinkman("selenium");
         domain.setEnable("是");
-        //domain.setSsid("DBSelenium");
-        //domain.setDbPort("1521");
+        domain.setSsid("DBSelenium");
+        domain.setDbPort("1521");
         domain.setDbUser("DBUser");
         domain.setDbPasswd("1234567890");
         domain.setDbUrl("jdbc:oracle:thin:@//127.0.0.1:1521/oracle");
@@ -222,8 +222,6 @@ public class ResFrameTest2 extends TestCase {
     @Test(priority = 3,description = "删除资源")
     public void deleteRes()
     {
-        map=new HashMap<>();
-        map.put("操作类型","删除");
         String sqlStr="select * from tb_asset_database where ip_addr not like '172.%' order by length(unit_id) desc";
         String unit_id=((Map<String,String>)(dbTools.queryMapListHandler(sqlStr)).get(0)).get("unit_id");
         ResSearchDomain searchDomain=new ResSearchDomain();
