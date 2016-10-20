@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="业务监控BOMC-自动化测试" parallel="tests" thread-count="5">
+<suite name="业务监控BOMC-自动化测试">
     <!--suite name="selenium2" parallel="tests" thread-count="10"-->
     <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
@@ -16,6 +16,15 @@
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class>
 
+            <class name="com.code.test.ibnmsConfig.ResFrameTest2" >
+                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
+                <methods><include name="editKpi"></include></methods>
+            </class>
+
+            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
+                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
+            </class>
+
             <class name="com.code.test.ibnmsConfig.MQListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
             </class >
@@ -27,10 +36,21 @@
             <class name="com.code.test.ibnmsConfig.WKlistTest2">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
-            -->
+
 
             <class name="com.code.test.ibnmsConfig.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
+            </class>
+
+            <class name="com.code.test.ibnmsConfig.AppServerListTest">
+                <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
+            </class>
+            <class name="com.code.test.ibnmsConfig.CronsShowTest">
+                <parameter name="Action_URL" value="/ibnms/cfgCrons/showCrons.action"></parameter>
+            </class>
+            -->
+            <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
 
         </classes>

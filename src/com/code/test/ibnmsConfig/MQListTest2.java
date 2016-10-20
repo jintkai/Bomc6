@@ -57,7 +57,7 @@ public class MQListTest2 extends TestCase {
         int r=gridPage.getGridrowNum()+1;
 
         String sql;
-        sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id ";
+        sql="select * from tb_cfg_deploy_env t LEFT JOIN tb_asset_host b on t.unit_id=b.unit_id where ip_addr not like '172.%' ";
         List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
         EnvSearchDomain searchDomain=new EnvSearchDomain();
         searchDomain.setDeviceName(list.get(0).get("device_name"));

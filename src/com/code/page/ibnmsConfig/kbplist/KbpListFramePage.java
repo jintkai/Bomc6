@@ -9,6 +9,8 @@ import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpTreePage;
 import com.code.page.ibnmsConfig.kbplist.page.SearchKbpPage;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
@@ -28,6 +30,8 @@ public class KbpListFramePage extends Page {
     public String kbpTreeIFrame="kbpTree";
     public String kbpListIFrame="kbpListFrame";
 
+    @FindBy(id="btn-cite")
+    WebElement citeBtn;
     public KbpListFramePage(EventFiringWebDriver eventDriver)
     {
         //PageFactory.initElements(eventDriver, this);
@@ -52,6 +56,17 @@ public class KbpListFramePage extends Page {
         tools.switchToFrame(kbpListIFrame);
         return this.searchKbp.search(domain);
     }
+
+    public void select(KbpSearchDomain domain)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kbpListIFrame);
+        searchKbp.search(domain);
+        gridTable.selectTr(1);
+        tools.click(citeBtn);
+
+    }
+
     @Deprecated
     public GridPage searchByTree(Map<String,String> map)
     {

@@ -1,6 +1,8 @@
 package com.code.page.ibnmsConfig.agentList.page;
 
 import com.code.common.BtnPage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 /**
@@ -17,5 +19,10 @@ public class AgBtnPage extends BtnPage {
         tools.click(delBtn);
         tools.alertAccept();
         tools.alertAccept();
+    }
+    @FindBy(id="btn-busiConfig")
+    WebElement btn_busiConfig;
+    public void busiConfig(){
+        tools.click(btn_busiConfig);
     }
 }

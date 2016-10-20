@@ -237,7 +237,12 @@ public class DBTools {
     }
 
     public List queryMapListHandler(String sqlStr){
-        System.out.println(">>>>>>>>>>>SQL:"+sqlStr+";");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         Connection conn = DBTools.makeConnection();
         List<Map> list=null;
         QueryRunner qRunner = new QueryRunner();

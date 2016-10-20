@@ -146,4 +146,5 @@ public class AgListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
     }
+    
 }

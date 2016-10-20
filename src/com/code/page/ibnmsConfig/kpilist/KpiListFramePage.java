@@ -8,6 +8,8 @@ import com.code.page.ibnmsConfig.kpilist.page.KpiBtnPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiFormPage;
 import com.code.page.ibnmsConfig.kpilist.page.KpiTreePage;
 import com.code.page.ibnmsConfig.kpilist.page.SearchKpiPage;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.util.Map;
@@ -27,6 +29,8 @@ public class KpiListFramePage extends Page{
     GridPage gridTable=new GridPage(eventDriver);
     public KpiBtnPage kpiBtn=new KpiBtnPage(eventDriver);
     KpiFormPage kpiForm=new KpiFormPage(eventDriver);
+    @FindBy(id="btn-select")
+    WebElement selectBtn;
     @Deprecated
     public GridPage search(Map<String,String> map)
     {
@@ -54,6 +58,16 @@ public class KpiListFramePage extends Page{
         return searchKpi.search(domain);
     }
 
+    public void select(KpiSearchDomain domain)
+    {
+        tools.switchToFrame();
+        tools.switchToFrame(kpiListIFrame);
+        tools.switchToFrame("showPage");
+        searchKpi.search(domain);
+        GridPage gridPage=new GridPage(eventDriver);
+        gridPage.selectTr(1);
+        tools.click(selectBtn);
+    }
 
     public GridPage searchByTree(String treeName)
     {

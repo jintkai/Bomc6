@@ -2,11 +2,16 @@ package com.code.page.ibnmsConfig.agentList;
 
 import com.code.common.GridPage;
 import com.code.common.Page;
+import com.code.common.Tools;
 import com.code.page.ibnmsConfig.agentList.domain.AgentFormDomain;
 import com.code.page.ibnmsConfig.agentList.domain.AgentSearchDomain;
 import com.code.page.ibnmsConfig.agentList.page.AgBtnPage;
 import com.code.page.ibnmsConfig.agentList.page.AgFormPage;
 import com.code.page.ibnmsConfig.agentList.page.SearchAGPage;
+import com.code.page.ibnmsConfig.collBusiConfig.CollBusiConfigPage;
+import com.code.page.ibnmsConfig.collBusiConfig.domain.ShellFormDomain;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import sun.management.Agent;
 
@@ -25,6 +30,10 @@ public class AgentListPage extends Page {
     SearchAGPage agSearch=new SearchAGPage(eventDriver);
     GridPage gridTable=new GridPage(eventDriver);
     AgFormPage agForm=new AgFormPage(eventDriver);
+
+    @FindBy(id="btn-busiConfig")
+    WebElement busiConfig;
+
     public GridPage search(Map<String,String> map)
     {
         return agSearch.search(map);
@@ -63,8 +72,24 @@ public class AgentListPage extends Page {
             agBtn.startup();
         if (operation.equals("停止"))
             agBtn.shutdown();
+        if(operation.equals("业务采集配置"))
+            busiConfig.click();
         return gridTable;
     }
+
+    public GridPage addBusi(String operation, Map<String,String> map, ShellFormDomain shellFormDomain)
+    {
+        ArrayList<Integer> arrayList= gridTable.getListOftr(tools.getMapValue(map, "列名"),tools.getMapValue(map, "列值"));
+        gridTable.selectTrs(arrayList);
+
+        if(operation.equals("业务采集配置")) {
+            busiConfig.click();
+            CollBusiConfigPage collBusiConfigPage=new CollBusiConfigPage(eventDriver);
+            collBusiConfigPage.addShellColl(shellFormDomain);
+        }
+        return gridTable;
+    }
+
 
     public GridPage operateAG(Map<String,String> map)
     {
@@ -94,6 +119,7 @@ public class AgentListPage extends Page {
         {
             agBtn.add();
             return agForm.operateAG(operation,agentFormDomain);
+
         }
         /*
         if (operation.equals("修改"))

@@ -181,6 +181,7 @@ public class Tools {
             (new Select(ele)).selectByVisibleText(text);}
         catch(Exception e)
         {
+
             e.printStackTrace();
             //System.out.println("select控件中无该值："+text);
             Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
@@ -601,6 +602,7 @@ public class Tools {
         catch (NoAlertPresentException e)
         {
             System.out.println("Alert对话框不存在！");
+            this.assertTrue(false,"Alert对话框不存在!");
         }
     }
     public void alarmDismiss()
