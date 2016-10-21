@@ -78,7 +78,7 @@ public class ShellConfigPage extends Page {
             if(domain.getShell()!=null){
                 WebElement div=tools.findBy(eventDriver,By.className("CodeMirror"));
                 JavascriptExecutor js = (JavascriptExecutor) eventDriver;
-                String str="#output# $UNIT_ID:1000 CM-001-1 999;#output# $UNIT_ID:1000 CM-001-2 999;";
+                String str=domain.getShell();
                 js.executeScript("arguments[0].CodeMirror.setValue(\"" +str+ "\");", div);
 
             }

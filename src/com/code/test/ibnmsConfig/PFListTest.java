@@ -119,5 +119,7 @@ public class PFListTest extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        pfList.deployPF("部署",map);
+        pfList.deployPF("启动",map);
     }
 }

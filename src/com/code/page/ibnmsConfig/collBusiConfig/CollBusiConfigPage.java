@@ -21,11 +21,23 @@ public class CollBusiConfigPage extends Page {
     @FindBy(id="btn-addShellButton")
     WebElement addShellBtn;
 
+    @FindBy(id="serviceType")
+    WebElement serviceType;
+    @FindBy(name="filter.serviceName")
+    WebElement serviceName;
+    @FindBy(id="btn-search")
+    WebElement searchBtn;
     public void addShellColl(ShellFormDomain domain){
 
         tools.click(addScheduleBtn);
         tools.click(addShellBtn);
         ShellConfigPage shellConfigPage=new ShellConfigPage(eventDriver);
         shellConfigPage.opertate("增加",domain);
+    }
+
+    public void search(String type,String name){
+        tools.selectByVisibleText(serviceType,type);
+        tools.sendKeys(serviceName,name);
+        tools.click(searchBtn);
     }
 }

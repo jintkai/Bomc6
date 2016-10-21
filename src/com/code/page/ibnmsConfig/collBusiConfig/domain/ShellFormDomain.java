@@ -15,15 +15,17 @@ public class ShellFormDomain {
     private String shellType;
     private String cronsName;
     private String overTimeId;
-    private String[] shell;
+    private String shell;
     private KbpSearchDomain kbpSearchDomain;
     private KpiSearchDomain[] kpiSearchDomains;
 
-    public String[] getShell() {
+
+
+    public String getShell() {
         return shell;
     }
 
-    public void setShell(String[] shell) {
+    public void setShell(String shell) {
         this.shell = shell;
     }
 

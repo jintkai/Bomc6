@@ -48,11 +48,14 @@
             <class name="com.code.test.ibnmsConfig.CronsShowTest">
                 <parameter name="Action_URL" value="/ibnms/cfgCrons/showCrons.action"></parameter>
             </class>
+
+            <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class>
             -->
             <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-
         </classes>
     </test>
     <!--

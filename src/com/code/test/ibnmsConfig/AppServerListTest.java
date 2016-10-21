@@ -162,5 +162,7 @@ public class AppServerListTest extends TestCase {
 
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr(rowName,rowValue).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署","卸载BmcServer:"+map+";"+MqMap);
+        appServerList.deployApp("部署",map);
+        appServerList.deployApp("启动",map);
     }
 }

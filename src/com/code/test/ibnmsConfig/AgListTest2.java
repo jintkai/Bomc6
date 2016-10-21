@@ -145,6 +145,8 @@ public class AgListTest2 extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        agList.deployAG("部署",map);
+        agList.deployAG("启动",map);
     }
     
 }
