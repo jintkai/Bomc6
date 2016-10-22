@@ -42,7 +42,7 @@ public class FormSelectPage extends Page{
 	    
 	    public void formConf(){
 	    WebElement configIframe = eventDriver.findElement(By.id("configIframe"));	
-	    tools.switchToFrame2(configIframe);	
+	    tools.switchToFrame(configIframe);
 	    tools.click(FormConf);	    	
 	    	
 	    }
@@ -50,7 +50,7 @@ public class FormSelectPage extends Page{
 	    public void FormjsConf(){
 	    	
 	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-	       tools.switchToFrame2(configIframe);
+	       tools.switchToFrame(configIframe);
 	      // System.out.println(FormjsConf.getTagName());
 		    tools.click(FormjsConf);
 		    tools.switchToWindos();
@@ -59,7 +59,7 @@ public class FormSelectPage extends Page{
 	    
 	    public void DefaultValue(){
 	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-		       tools.switchToFrame2(configIframe);
+		       tools.switchToFrame(configIframe);
 		    tools.click(DefaultValue);
 		    	
 		    	
@@ -67,7 +67,7 @@ public class FormSelectPage extends Page{
 	    
 	    public void TransferConf(){
 	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-	        tools.switchToFrame2(configIframe);
+	        tools.switchToFrame(configIframe);
 		    tools.click(TransferConf);
 		    	
 		    	
@@ -75,7 +75,7 @@ public class FormSelectPage extends Page{
 	    
 	    public void DealerConf(){
 	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-	        tools.switchToFrame2(configIframe);
+	        tools.switchToFrame(configIframe);
 		    tools.click(DealerConf);
 		    	
 		    	

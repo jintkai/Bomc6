@@ -36,4 +36,29 @@ public class FrameHelper {
     public void deSelectFrame(){
         driver.switchTo().defaultContent();
     }
+    public void selectFrame2(WebDriver driver, Object ... framePaths){
+
+        if (framePaths.length!=1){
+            for (int i=0;i<framePaths.length;i++){
+                if(framePaths[i] instanceof WebElement){
+                    driver.switchTo().frame((WebElement)framePaths[i]);
+                }
+                else if(framePaths[i]instanceof String){
+                    driver.switchTo().frame((String)framePaths[i]);
+                }else{
+                    driver.switchTo().frame((Integer) framePaths[i]);
+                }
+            }
+
+        }else{
+            if(framePaths[0] instanceof WebElement){
+                driver.switchTo().frame((WebElement)framePaths[0]);
+            }
+            else if(framePaths[0]instanceof String){
+                driver.switchTo().frame((String)framePaths[0]);
+            }else{
+                driver.switchTo().frame((Integer) framePaths[0]);
+            }
+        }
+    }
 }

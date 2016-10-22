@@ -39,7 +39,7 @@ public class GraphlistlinkPage extends Page  {
             	 
            	  WebElement listiframe = eventDriver.findElement(By.id("graphlist"));
            	
-            	  tools.switchToFrame2(listiframe);
+            	  tools.switchToFrame(listiframe);
             	  //WebElement list0  = eventDriver.findElement(By.id("dd0"));
             	  //List<WebElement> list = list0.findElements(By.xpath("//a[@href='javascript: d.o(2);']"));
             	  //定义列表中【服务管理】前的+号
@@ -55,7 +55,7 @@ public class GraphlistlinkPage extends Page  {
               
               if (name =="表单配置") {
             	 WebElement formframe = eventDriver.findElement(By.id("appealConfigTree"));
-            	  tools.switchToFrame2(formframe);
+            	  tools.switchToFrame(formframe);
             	  WebElement activity = eventDriver.findElement(By.id("sd1"));            	  
             	  tools.click(activity);
             	  tools.switchToWindos();
@@ -64,7 +64,7 @@ public class GraphlistlinkPage extends Page  {
               
               if (name =="数据字典配置") {
              	 WebElement formframe = eventDriver.findElement(By.id("dictConfigTree"));
-             	 tools.switchToFrame2(formframe);              	 
+             	 tools.switchToFrame(formframe);
             	 WebElement dbConfig = eventDriver.findElement(By.id("sd16"));
             	  
             	  tools.click(dbConfig);

@@ -42,7 +42,15 @@ public class EventListener implements WebDriverEventListener {
 
     Logger mylog=Logger.getLogger(this.getClass());
 
+    public StringBuffer getElementsAttrs(WebElement webElement){
+        StringBuffer attrs=new StringBuffer();
 
+        attrs.append(">>>>>>TAG:").append(webElement.getTagName()).append(".TEXT:").append(webElement.getText())
+                .append(".ID:").append(webElement.getAttribute("id")).append(".NAME:")
+                .append(webElement.getAttribute("name")).append("...");
+
+        return attrs;
+    }
     public EventListener(){
         PropertyConfigurator.configure( "./config/log4j.properties" );
         Logger logger  =  Logger.getLogger(this.getClass() );
@@ -91,6 +99,7 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
+        //System.out.println("FindByElement:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
             //mylog.error("定位元素:"+by.toString());
@@ -134,9 +143,10 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        System.out.println("ClickElement:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
-            System.out.println(webElement.getTagName());
+
             try {
                 Boolean element = wait.until(new ExpectedCondition<Boolean>() {
                     @Override
@@ -165,6 +175,7 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        System.out.println("ChangeValue:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
 
@@ -175,6 +186,7 @@ public class EventListener implements WebDriverEventListener {
                         return webElement.isDisplayed();
                     }
                 });
+
             }
             catch(TimeoutException e)
             {
@@ -201,6 +213,8 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
+        System.out.println("CurrentUrl:"+webDriver.getCurrentUrl()+">>Title:"+webDriver.getTitle());
+        //System.out.println("修改元素值:"+getElementsAttrs(webElement));
         Reporter.log("TakesScreenshot截图");
         String imageFormat = "png";// 图像文件的格式
         String picDir= Data.baseDir+"/pictures/";

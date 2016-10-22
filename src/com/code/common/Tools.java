@@ -77,8 +77,8 @@ public class Tools {
             //System.out.println(e);
             Reporter.log("findElement【"+by+"】失败。");
             //screen();
-            takesScreenshot("WebElement不存在:"+by);
-            d.findElement(by);
+            //takesScreenshot("WebElement不存在:"+by);
+            //d.findElement(by);
             return false;
         }
     }
@@ -91,6 +91,7 @@ public class Tools {
      *@param by By类型，待查询的子节点元素定位方式。
      *@return 若子节点在父节点中存在则返回true，否则返回false；
      */
+    @Deprecated
     public boolean isElementsExist(SearchContext d,By by)
     {
         /*try {
@@ -117,8 +118,13 @@ public class Tools {
     public WebElement findBy(SearchContext d,By by)
     {
         WebElement ele=null;
-        if (isElementExist(d,by))
-            ele=d.findElement(by);
+        try {
+            ele = d.findElement(by);
+        }catch(Exception e){
+            System.out.println("查找元素失败!");
+            e.printStackTrace();
+            this.assertTrue(false,"查找元素失败!");
+        }
         return ele;
     }
     /**
@@ -131,11 +137,13 @@ public class Tools {
     public java.util.List<WebElement> findElements(SearchContext d,By by)
     {
         List<WebElement> eles=null;
-        /*if(isElementsExist(d,by))
-        {
-            eles=d.findElements(by);
-        }*/
-        eles=d.findElements(by);
+        try {
+            eles = d.findElements(by);
+        }catch(Exception e){
+            System.out.println("查找元素失败!");
+            e.printStackTrace();
+            this.assertTrue(false,"查找元素失败!");
+        }
         return  eles;
     }
     /**
@@ -143,20 +151,24 @@ public class Tools {
      */
     public void sendKeys(WebElement ele,String value)
     {
-        if(value==null)
-        {
-            //System.out.println("null,则表示要清除");
-            //clear(ele);
-            return;
-        }
-        if(! value.isEmpty()) {
-            clear(ele);
-            ele.sendKeys(value);
-        }
-        else
-        {
-
-            //System.out.println("未输入值，不用处理");
+        try {
+            if (value == null) {
+                //null表示不用处理;
+                //System.out.println("null,则表示要清除");
+                //clear(ele);
+                return;
+            }
+            if (!value.isEmpty()) {
+                clear(ele);
+                ele.sendKeys(value);
+            } else {
+                //空,表示需要清空
+                clear(ele);
+            }
+        }catch(Exception e){
+            System.out.println("清除内容失败!");
+            e.printStackTrace();
+            this.assertTrue(false,"清除内容失败!");
         }
 
     }
@@ -165,10 +177,9 @@ public class Tools {
             ele.clear();
         }catch(Exception e)
         {
+            System.out.println("清除内容失败!");
             e.printStackTrace();
-            Reporter.log("清除元素内容失败");
-            takesScreenshot("调用WebElement.clear()方法失败");
-            ele.clear();
+            this.assertTrue(false,"清除内容失败!");
         }
     }
     public void submit(WebElement ele){ele.submit();}
@@ -183,16 +194,26 @@ public class Tools {
         {
 
             e.printStackTrace();
-            //System.out.println("select控件中无该值："+text);
-            Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
+            System.out.println("select控件中无该值："+text);
+            //Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
             takesScreenshot("Select控件中无法通过该值：【"+text+"】进行选择");
-            (new Select(ele)).selectByVisibleText(text);
+            this.assertTrue(false,"选取下拉框失败!");
         }
     }
 
     public List<WebElement> getOptions(WebElement ele)
     {
-        return new Select(ele).getOptions();
+        List<WebElement> list=null;
+        try {
+            list = new Select(ele).getOptions();
+        }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("获取select控件所有值失败");
+            //Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
+            takesScreenshot("获取select控件所有值失败：【"+"】进行选择");
+            this.assertTrue(false,"获取select控件所有值失败!");
+        }
+        return list;
     }
     public String getTitle(WebDriver driver)
     {
@@ -207,7 +228,14 @@ public class Tools {
      */
     public String getAttribute(WebElement ele,String str)
     {
-        return ele.getAttribute(str);
+        String attr="";
+        try {
+            attr = ele.getAttribute(str);
+        }catch(Exception e){
+            e.printStackTrace();
+            this.assertTrue(false,"获取元素属性失败!");
+        }
+        return attr;
     }
     public void click(WebElement ele) {
         try{ele.click();
@@ -218,7 +246,7 @@ public class Tools {
             e.printStackTrace();
             Reporter.log("点击元素失败！");
             takesScreenshot("点击元素失败!");
-            ele.click();
+            this.assertTrue(false,"点击元素失败!");
         }
     }
 
@@ -318,10 +346,10 @@ public class Tools {
 
     /**
      * 通过窗口title来跳转窗口
-     * @param title windows的title
+     * @param containsTitle windows的title
      * @return 返回跳转前的窗口句柄
      */
-    public String switchToWindowByTitle(String title)
+    public String switchToWindowByTitle(String containsTitle)
     {
         try {
             Thread.sleep(1000);
@@ -336,11 +364,12 @@ public class Tools {
         {
             driver.switchTo().window(handsStr[i]);
             String str=driver.getTitle();
-            if (str.contains(title))
+            if (str.contains(containsTitle))
                 return hand;
         }
-        Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
-        takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        Reporter.log("切换窗口失败，无法按Title【"+containsTitle+"】切换窗口。");
+        takesScreenshot("切换窗口失败，无法按Title【"+containsTitle+"】切换窗口。");
+        this.assertTrue(false,"跳转窗口失败,title:"+containsTitle);
         return "FALSE";
     }
     public String switchToWindowByTitle2(String title)
@@ -363,6 +392,7 @@ public class Tools {
         }
         Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
         takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        this.assertTrue(false,"跳转窗口失败,title:"+title);
         return "FALSE";
     }
     /**
@@ -381,6 +411,7 @@ public class Tools {
         {
             Reporter.log("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
             takesScreenshot("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
+            this.assertTrue(false,"跳转窗口失败,hand:"+hand);
         }
     }
     /**
@@ -405,42 +436,69 @@ public class Tools {
     public void switchToFrame(){
             driver.switchTo().defaultContent();
     }
-    /**
-     * 根据Frame的name,id来切换Frame
-     * @param name
-     */
-    public void switchToFrame(String name)
-    {
-        try{
-            driver.switchTo().frame(name);
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+//    /**
+//     * 根据Frame的name,id来切换Frame
+//     * @param name
+//     */
+//    @Deprecated
+//    public void switchToFrame(String name)
+//    {
+//        try{
+//            driver.switchTo().frame(name);
+//            try {
+//                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//        catch(NoSuchFrameException e)
+//        {
+//            Reporter.log("无法切换IFrame："+name);
+//            takesScreenshot("无法切换IFrame："+name);
+//            this.assertTrue(false,"跳转iframe失败,id,name:"+name);
+//        }
+//    }
+//    /**
+//     * 根据WebElement来切换Frame
+//     * @param ele
+//     */
+//    @Deprecated
+//    public void switchToFrame(WebElement ele)
+//    {
+//        driver.switchTo().defaultContent();
+//        driver.switchTo().frame(ele);
+//    }
+    public void switchToDefaultFrame(){
+        driver.switchTo().defaultContent();
+    }
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+
+    public void switchToFrame(Object ... frameObject){
+        if (frameObject.length!=1){
+            for (int i=0;i<frameObject.length;i++){
+                if(frameObject[i] instanceof WebElement){
+                    driver.switchTo().frame((WebElement)frameObject[i]);
+                }
+                else if(frameObject[i]instanceof String){
+                    driver.switchTo().frame((String)frameObject[i]);
+                }else{
+                    driver.switchTo().frame((Integer) frameObject[i]);
+                }
+            }
+
+        }else{
+            if(frameObject[0] instanceof WebElement){
+                driver.switchTo().frame((WebElement)frameObject[0]);
+            }
+            else if(frameObject[0]instanceof String){
+                driver.switchTo().frame((String)frameObject[0]);
+            }else{
+                driver.switchTo().frame((Integer) frameObject[0]);
             }
         }
-        catch(NoSuchFrameException e)
-        {
-            Reporter.log("无法切换IFrame："+name);
-            takesScreenshot("无法切换IFrame："+name);
-        }
     }
-    /**
-     * 根据WebElement来切换Frame
-     * @param ele
-     */
-    public void switchToFrame(WebElement ele)
-    {
-        driver.switchTo().defaultContent();
-        driver.switchTo().frame(ele);
-    }
-
-    public void switchToFrame2(WebElement ele)
-    {
-        //driver.switchTo().defaultContent();
-        driver.switchTo().frame(ele);
-    }
-
     /**
      * 根据当前时间生成时间字符串
      * @return
@@ -612,12 +670,22 @@ public class Tools {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        driver.switchTo().alert().dismiss();
+        try {
+            driver.switchTo().alert().dismiss();
+        }catch(Exception e){
+            e.printStackTrace();
+            this.assertTrue(false,"Dismiss对话框不存在!");
+        }
     }
     public void alertSetText(String str)
     {
-        driver.switchTo().alert().sendKeys(str);
-        driver.switchTo().alert().accept();
+        try {
+            driver.switchTo().alert().sendKeys(str);
+            driver.switchTo().alert().accept();
+        }catch(Exception e){
+            e.printStackTrace();
+            this.assertTrue(false,"alert对话框不存在!");
+        }
     }
     public void printMap(Map<String,String> map)
     {

@@ -9,6 +9,7 @@ import com.code.page.ibnmsConfig.kbplist.page.KbpFormPage;
 import com.code.page.ibnmsConfig.kbplist.page.KbpTreePage;
 import com.code.page.ibnmsConfig.kbplist.page.SearchKbpPage;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -53,6 +54,9 @@ public class KbpListFramePage extends Page {
     public GridPage search(KbpSearchDomain domain)
     {
         tools.switchToFrame();
+        WebElement e=tools.findBy(eventDriver, By.id("kbpListFrame"));
+        tools.switchToFrame(e,"kbpListFrame",1);
+        tools.switchToFrame(1);
         tools.switchToFrame(kbpListIFrame);
         return this.searchKbp.search(domain);
     }
