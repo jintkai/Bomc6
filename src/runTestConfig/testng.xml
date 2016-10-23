@@ -7,7 +7,7 @@
         <parameter name="node" value="http://192.168.0.6:5555/wd/hub"/>
 
         <classes>
-            <!--
+
             <class name="com.code.test.ibnmsConfig.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
@@ -52,10 +52,9 @@
             <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-            -->
-            <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
-                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-            </class>
+
+
+
         </classes>
     </test>
     <!--
@@ -63,7 +62,9 @@
         <parameter name="node" value="http://172.21.221.141:6666/wd/hub"/>
 
         <classes>
-
+ <class name="com.code.test.ibnmsConfig.EntityTest">
+                <parameter name="Action_URL" value="/cfgColl/selectEntityKbpFrame.action?rootId=10-11"></parameter>
+            </class>
             <class name="com.code.test.ibnmsConfig.EnvListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
@@ -83,41 +84,7 @@
         </classes>
     </test>
     -->
-        <!--test name="资源管理">
-            <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
-            <classes>
-                <class name="com.code.test.ibnmsConfig.ResFrameTest" >
-                    <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
-                    <methods><include name="editKpi"></include></methods>
-                </class>
-                <class name="com.code.test.ibnmsConfig.EnvListTest" >
-                    <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
-                </class>
-            </classes>
-        </test >
-        <test name="部署配置">
-            <parameter name="node" value="http://192.168.1.102:5555/wd/hub"/>
-            <classes>
-                <class name="com.code.test.ibnmsConfig.MQListTest" >
-                    <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
-                </class >
-                <class name="com.code.test.ibnmsConfig.WKlistTest">
-                    <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
-                </class>
-                <class name="com.code.test.ibnmsConfig.PFListTest">
-                    <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-                </class>
-                <class name="com.code.test.ibnmsConfig.AgListTest">
-                    <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-                </class>
-                <class name="com.code.test.ibnmsConfig.PmAlarmListTest">
-                    <parameter name="Action_URL" value="/cfgColl/listPmAlarm.action?type=1"></parameter>
-                </class>
-                <class name="com.code.test.ibnmsConfig.AppServerListTest">
-                    <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
-                </class>
-                </classes>
-            </test-->
+
     <!--test name="告警策略模板相关配置">
         <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
         <classes>

@@ -40,52 +40,60 @@ public class ShellConfigPage extends Page {
         super(driver);
     }
 
-    private void inputForm(String operation, ShellFormDomain domain){
-        if (operation.equals("增加")){
-            tools.sendKeys(serviceName,domain.getServiceName());
-            tools.sendKeys(serviceDesc,domain.getServiceDesc());
-            if(domain.getCronsName()!=null){
-                tools.click(addCronBtn);
-                CronsShowPage cronsShowPage=new CronsShowPage(eventDriver);
-                String hand=tools.switchToWindowByTitle(cronsShowPage.title);
-                cronsShowPage.select(domain.getCronsName());
-                tools.switchToWindowByHand(hand);
-            }
-            if(domain.getKbpSearchDomain()!=null){
-                tools.click(addKbpBtn);
-                KbpListFramePage kbpListFramePage=new KbpListFramePage(eventDriver);
-                String hand=tools.switchToWindowByTitle(kbpListFramePage.title);
-                kbpListFramePage.select(domain.getKbpSearchDomain());
-                tools.switchToWindowByHand(hand);
-            }
-            tools.sendKeys(shellName,domain.getShellName());
-            tools.sendKeys(shellType,domain.getShellType());
-            tools.sendKeys(overTimeId,domain.getOverTimeId());
-            if(domain.getKpiSearchDomains()!=null){
-                KpiSearchDomain kpiSearchDomain=new KpiSearchDomain();
-                for(int i=0;i<domain.getKpiSearchDomains().length;i++){
-
-                    tools.click(addVarsBtn);
-                    List<WebElement> e=tools.findElements(eventDriver,By.className("btn-addkpi"));
-                    tools.click(e.get(i));
-                    kpiSearchDomain=domain.getKpiSearchDomains()[i];
-                    KpiListFramePage kpiListFramePage=new KpiListFramePage(eventDriver);
-                    String hand=tools.switchToWindowByTitle(kpiListFramePage.title);
-                    kpiListFramePage.select(kpiSearchDomain);
+    private void inputForm(String operation, String type,Object domain1){
+        if (type.equals("SHELL")) {
+            ShellFormDomain domain = (ShellFormDomain) domain1;
+            if (operation.equals("增加")) {
+                tools.sendKeys(serviceName, domain.getServiceName());
+                tools.sendKeys(serviceDesc, domain.getServiceDesc());
+                if (domain.getCronsName() != null) {
+                    tools.click(addCronBtn);
+                    CronsShowPage cronsShowPage = new CronsShowPage(eventDriver);
+                    String hand = tools.switchToWindowByTitle(cronsShowPage.title);
+                    cronsShowPage.select(domain.getCronsName());
                     tools.switchToWindowByHand(hand);
                 }
-            }
-            if(domain.getShell()!=null){
-                WebElement div=tools.findBy(eventDriver,By.className("CodeMirror"));
-                JavascriptExecutor js = (JavascriptExecutor) eventDriver;
-                String str=domain.getShell();
-                js.executeScript("arguments[0].CodeMirror.setValue(\"" +str+ "\");", div);
+                if (domain.getKbpSearchDomain() != null) {
+                    tools.click(addKbpBtn);
+                    KbpListFramePage kbpListFramePage = new KbpListFramePage(eventDriver);
+                    String hand = tools.switchToWindowByTitle(kbpListFramePage.title);
+                    kbpListFramePage.select(domain.getKbpSearchDomain());
+                    tools.switchToWindowByHand(hand);
+                }
+                tools.sendKeys(shellName, domain.getShellName());
+                tools.sendKeys(shellType, domain.getShellType());
+                tools.sendKeys(overTimeId, domain.getOverTimeId());
+                if (domain.getKpiSearchDomains() != null) {
+                    KpiSearchDomain kpiSearchDomain = new KpiSearchDomain();
+                    for (int i = 0; i < domain.getKpiSearchDomains().length; i++) {
 
+                        tools.click(addVarsBtn);
+                        List<WebElement> e = tools.findElements(eventDriver, By.className("btn-addkpi"));
+                        tools.click(e.get(i));
+                        kpiSearchDomain = domain.getKpiSearchDomains()[i];
+                        KpiListFramePage kpiListFramePage = new KpiListFramePage(eventDriver);
+                        String hand = tools.switchToWindowByTitle(kpiListFramePage.title);
+                        kpiListFramePage.select(kpiSearchDomain);
+                        tools.switchToWindowByHand(hand);
+                    }
+                }
+                if (domain.getShell() != null) {
+                    WebElement div = tools.findBy(eventDriver, By.className("CodeMirror"));
+                    JavascriptExecutor js = (JavascriptExecutor) eventDriver;
+                    String str = domain.getShell();
+                    js.executeScript("arguments[0].CodeMirror.setValue(\"" + str + "\");", div);
+
+                }
             }
+
+        }
+        if(type.equals("SQL")){
+
         }
     }
-    public void opertate(String operation,ShellFormDomain domain){
-        inputForm(operation,domain);
+    public void opertate(String operation,String type,Object domain){
+
+        inputForm(operation,type,domain);
         tools.click(shellSubmit);
     }
 }

@@ -10,6 +10,7 @@ import com.code.page.ibnmsConfig.agentList.page.AgFormPage;
 import com.code.page.ibnmsConfig.agentList.page.SearchAGPage;
 import com.code.page.ibnmsConfig.collBusiConfig.CollBusiConfigPage;
 import com.code.page.ibnmsConfig.collBusiConfig.domain.ShellFormDomain;
+import com.code.page.ibnmsConfig.collBusiConfig.domain.SqlFormDomain;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -43,6 +44,7 @@ public class AgentListPage extends Page {
         return agSearch.search(agentSearchDomain);
     }
 
+    @Deprecated
     public GridPage deployAG(Map<String,String> map)
     {
         gridTable=agSearch.search(map);
@@ -77,15 +79,20 @@ public class AgentListPage extends Page {
         return gridTable;
     }
 
-    public GridPage addBusi(String operation, Map<String,String> map, ShellFormDomain shellFormDomain)
+    public GridPage addBusi(String operation, Map<String,String> map, Object formDomain)
     {
         ArrayList<Integer> arrayList= gridTable.getListOftr(tools.getMapValue(map, "列名"),tools.getMapValue(map, "列值"));
         gridTable.selectTrs(arrayList);
 
-        if(operation.equals("业务采集配置")) {
+        if(operation.equals("SHELL")) {
             busiConfig.click();
             CollBusiConfigPage collBusiConfigPage=new CollBusiConfigPage(eventDriver);
-            collBusiConfigPage.addShellColl(shellFormDomain);
+            collBusiConfigPage.addShellColl((ShellFormDomain) formDomain);
+        }
+        if(operation.equals("SQL")) {
+            busiConfig.click();
+            CollBusiConfigPage collBusiConfigPage=new CollBusiConfigPage(eventDriver);
+            collBusiConfigPage.addSQLColl((SqlFormDomain) formDomain);
         }
         return gridTable;
     }
