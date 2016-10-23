@@ -189,7 +189,7 @@ public class KbpFrameTest2 extends TestCase {
         KbpSearchDomain searchDomain=new KbpSearchDomain();
         searchDomain.setKbp_Caption("selenium"+nowStr);
         gridTable=kbpFrame.search(searchDomain);
-        tools.assertEquals(gridTable.getGridrowNum(),1,map);
+        tools.assertEquals(gridTable.getGridrowNum(),1,domain.toString()+searchDomain.toString());
     }
 
     @Test(priority = 3,description="KBP删除")

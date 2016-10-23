@@ -184,14 +184,15 @@ public class EventListener implements WebDriverEventListener {
                 Boolean element = wait.until(new ExpectedCondition<Boolean>() {
                     @Override
                     public Boolean apply(WebDriver webDriver) {
-                        return webElement.isDisplayed();
+                        //return webElement.isEnabled();
+                        return (webElement.isDisplayed() && webElement.isEnabled());
                     }
                 });
 
             }
             catch(TimeoutException e)
             {
-                mylog.error("修改元素值失败."+webElement);
+                mylog.error("修改元素值失败."+getElementsAttrs(webElement));
             }
         }
     }

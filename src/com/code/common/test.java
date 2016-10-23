@@ -1,10 +1,14 @@
 package com.code.common;
 
+
 import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import java.lang.annotation.Annotation;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -15,6 +19,14 @@ public class test {
     @Test
     public test()
     {
+        Annotation[] annotations=this.getClass().getAnnotations();
+        List<Annotation> list=new ArrayList<Annotation>();
+        Collections.addAll(list,annotations);
+        for(int i=0;i<list.size();i++){
+            String str=list.get(i).annotationType().toString();
+            System.out.println(".............."+str);
+        }
+        //System.out.println(">>>>>>>>>>."+);
         Assert.assertEquals(1,1);
         for (int i=1;i<50;i++){
             System.out.println(i);

@@ -87,9 +87,7 @@ public class ShellConfigPage extends Page {
             }
 
         }
-        if(type.equals("SQL")){
 
-        }
     }
     public void opertate(String operation,String type,Object domain){
 

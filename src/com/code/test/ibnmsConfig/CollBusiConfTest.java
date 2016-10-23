@@ -85,7 +85,7 @@ public class CollBusiConfTest extends TestCase {
         Map<String,String> map=new HashMap<>();
         map.put("列值",rowValue);
         map.put("列名",rowName);
-        agentListPage.addBusi("SQL",map,formDomain);
+        agentListPage.addBusi("SHELL",map,formDomain);
         tools.sleep(10000);
         GridPage gridTable=new GridPage(eventDriver);
 

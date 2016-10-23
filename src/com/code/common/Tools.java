@@ -75,7 +75,7 @@ public class Tools {
         }catch(NoSuchElementException e)
         {
             //System.out.println(e);
-            Reporter.log("findElement【"+by+"】失败。");
+            //Reporter.log("findElement【"+by+"】失败。");
             //screen();
             //takesScreenshot("WebElement不存在:"+by);
             //d.findElement(by);
@@ -103,7 +103,7 @@ public class Tools {
         if (list.size()>0)
             return  true;
         else {
-            System.out.println("无法定位元素集，通过："+by);
+            //System.out.println("无法定位元素集，通过："+by);
 
             return false;
         }
@@ -117,13 +117,14 @@ public class Tools {
      */
     public WebElement findBy(SearchContext d,By by)
     {
+
         WebElement ele=null;
         try {
             ele = d.findElement(by);
         }catch(Exception e){
-            System.out.println("查找元素失败!");
+            System.out.println("查找元素失败!"+by.toString());
             e.printStackTrace();
-            this.assertTrue(false,"查找元素失败!");
+            this.assertTrue(false,"查找元素失败!"+by.toString());
         }
         return ele;
     }
@@ -140,9 +141,9 @@ public class Tools {
         try {
             eles = d.findElements(by);
         }catch(Exception e){
-            System.out.println("查找元素失败!");
+            System.out.println("查找元素失败!"+by.toString());
             e.printStackTrace();
-            this.assertTrue(false,"查找元素失败!");
+            this.assertTrue(false,"查找元素失败!"+by.toString());
         }
         return  eles;
     }
@@ -166,9 +167,9 @@ public class Tools {
                 clear(ele);
             }
         }catch(Exception e){
-            System.out.println("清除内容失败!");
+            System.out.println("清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
             e.printStackTrace();
-            this.assertTrue(false,"清除内容失败!");
+            this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
         }
 
     }
@@ -177,9 +178,9 @@ public class Tools {
             ele.clear();
         }catch(Exception e)
         {
-            System.out.println("清除内容失败!");
+            System.out.println("清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
             e.printStackTrace();
-            this.assertTrue(false,"清除内容失败!");
+            this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
         }
     }
     public void submit(WebElement ele){ele.submit();}
@@ -339,7 +340,7 @@ public class Tools {
         catch(AssertionError e)
         {
             takesScreenshot(msg);
-            System.out.println(e);
+            e.printStackTrace();
             Assert.assertTrue(actual,msg);
         }
     }

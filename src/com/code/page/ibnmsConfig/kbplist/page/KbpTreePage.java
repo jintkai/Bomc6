@@ -26,11 +26,16 @@ public class KbpTreePage extends Page {
         tools.sendKeys(fuzzy,treeValue);
 
         try {
-            Thread.sleep(5000);
+            Thread.sleep(8000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         tools.click(li);
+        try {
+            Thread.sleep(8000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         /*actions.sendKeys(Keys.ARROW_DOWN);
         //actions.keyDown(Keys.ARROW_DOWN).keyUp(Keys.ARROW_DOWN).perform();
         try {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestNg">
+    <listeners>
+        <listener class-name="com.code.testng.MyITestListener" />
+    </listeners>
+    <test name="TestNg" preserve-order="true">
+
+        <classes>
+
+            <class name="com.code.testng.Test">
+
+            </class>
+
+        </classes>
+    </test>
+
+</suite>
+

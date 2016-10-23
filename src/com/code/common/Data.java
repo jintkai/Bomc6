@@ -13,7 +13,7 @@ public interface Data {
     public static String browserType = configPro.prop.getProperty("browserType");
     public static String baseDir = "./";
     public static String baseUrl = configPro.prop.getProperty("baseURL");
-    public static int timeOut=8;       //wait超时时间，单位秒
+    public static int timeOut=10;       //wait超时时间，单位秒
     public static int sleepTime=250;    //调度频率，单位毫秒
     /*
     KbpList，KBP列表对应的tableXpath，td，tr。

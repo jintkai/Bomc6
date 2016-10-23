@@ -55,8 +55,6 @@ public class KbpListFramePage extends Page {
     {
         tools.switchToFrame();
         WebElement e=tools.findBy(eventDriver, By.id("kbpListFrame"));
-        tools.switchToFrame(e,"kbpListFrame",1);
-        tools.switchToFrame(1);
         tools.switchToFrame(kbpListIFrame);
         return this.searchKbp.search(domain);
     }
@@ -131,8 +129,9 @@ public class KbpListFramePage extends Page {
         if (operation.contains("增加")) {
             tools.switchToFrame();
             tools.switchToFrame(kbpTreeIFrame);
-            if (!(treeName==null) )
+            if (!(treeName==null) ){
                 kbpTree.searchByTree(treeName);
+            }
             tools.switchToFrame();
             tools.switchToFrame(kbpListIFrame);
             kbpBtn.add();

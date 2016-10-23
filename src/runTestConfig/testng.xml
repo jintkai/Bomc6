@@ -7,7 +7,7 @@
         <parameter name="node" value="http://192.168.0.6:5555/wd/hub"/>
 
         <classes>
-
+            
             <class name="com.code.test.ibnmsConfig.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
@@ -52,7 +52,6 @@
             <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-
 
 
         </classes>
