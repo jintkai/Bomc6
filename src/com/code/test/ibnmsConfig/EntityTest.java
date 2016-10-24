@@ -20,10 +20,10 @@ public class EntityTest extends TestCase {
     public void test(){
         entityPage.selectTree("数据库","MySql","bnms15(172.21.2.96)");
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 }

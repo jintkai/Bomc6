@@ -36,12 +36,12 @@ public class ResFrameTest2 extends TestCase {
         gridTable=new GridPage(eventDriver);
     }
 
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        this.eventDriver.get(Data.baseUrl+actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        this.eventDriver.get(Data.baseUrl+actionUrl);
+//    }
 
 
     @Test(priority = 0,description = "通过设备名称查询资源树")

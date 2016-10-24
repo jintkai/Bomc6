@@ -13,9 +13,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
-
+import com.code.portal.login.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
@@ -220,10 +221,17 @@ public class TestCase {
     @BeforeClass(alwaysRun=true)
     public void beforeClass(String base_url)
     {
-        eventDriver.get(base_url);
-        eventDriver.manage().window().maximize();
-        LoginPage login=new LoginPage(eventDriver);
-        login.login("admin","123456");
+//        eventDriver.get(base_url);
+//        eventDriver.manage().window().maximize();
+//        LoginPage login=new LoginPage(eventDriver);
+//        login.login("admin","123456");
+        eventDriver.get("http://172.21.10.31:10005/portal");
+        com.code.portal.login.LoginPage portalLogin=new com.code.portal.login.LoginPage(eventDriver);
+        Map<String,String> map=new HashMap<>();
+        map.put("用户名","admin");
+        map.put("密码","12345678");
+        portalLogin.login(map);
+        tools.execJS("window.onbeforeunload=null;");
 
     }
 
@@ -268,5 +276,13 @@ public class TestCase {
         }
         eventDriver.close();
         eventDriver.quit();
+    }
+    @BeforeMethod
+    @Parameters({"Action_URL"})
+    public void beforeMethod(String actionUrl)
+    {
+        eventDriver.get(Data.baseUrl + actionUrl);
+        //tools.alertAccept();
+
     }
 }

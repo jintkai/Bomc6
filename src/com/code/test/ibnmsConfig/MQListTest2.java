@@ -36,12 +36,12 @@ public class MQListTest2 extends TestCase {
         }
 
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 
     @DataProvider(name="mqList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {

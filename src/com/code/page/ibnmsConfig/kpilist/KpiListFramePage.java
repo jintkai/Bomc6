@@ -58,7 +58,7 @@ public class KpiListFramePage extends Page{
         return searchKpi.search(domain);
     }
 
-    public void select2(KpiSearchDomain domain)
+    public void select(KpiSearchDomain domain)
     {
         String hand=tools.switchToWindowByTitle(this.title);
         tools.switchToFrame();
@@ -70,18 +70,18 @@ public class KpiListFramePage extends Page{
         tools.click(selectBtn);
         tools.switchToWindowByHand(hand);
     }
-    @Deprecated
-    public void select(KpiSearchDomain domain)
-    {
-
-        tools.switchToFrame();
-        tools.switchToFrame(kpiListIFrame);
-        tools.switchToFrame("showPage");
-        searchKpi.search(domain);
-        GridPage gridPage=new GridPage(eventDriver);
-        gridPage.selectTr(1);
-        tools.click(selectBtn);
-    }
+//    @Deprecated
+//    public void select(KpiSearchDomain domain)
+//    {
+//
+//        tools.switchToFrame();
+//        tools.switchToFrame(kpiListIFrame);
+//        tools.switchToFrame("showPage");
+//        searchKpi.search(domain);
+//        GridPage gridPage=new GridPage(eventDriver);
+//        gridPage.selectTr(1);
+//        tools.click(selectBtn);
+//    }
 
     public GridPage searchByTree(String treeName)
     {

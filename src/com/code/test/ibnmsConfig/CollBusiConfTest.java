@@ -39,12 +39,12 @@ public class CollBusiConfTest extends TestCase {
         }
     }
 
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 
     @Test(priority = 1,description = "增加Shell采集")
     public void addShellBusiConf(){

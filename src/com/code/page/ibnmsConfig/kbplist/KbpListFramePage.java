@@ -61,12 +61,13 @@ public class KbpListFramePage extends Page {
 
     public void select(KbpSearchDomain domain)
     {
+        String hand=tools.switchToWindowByTitle(this.title);
         tools.switchToFrame();
         tools.switchToFrame(kbpListIFrame);
         searchKbp.search(domain);
         gridTable.selectTr(1);
         tools.click(citeBtn);
-
+        tools.switchToWindowByHand(hand);
     }
 
     @Deprecated

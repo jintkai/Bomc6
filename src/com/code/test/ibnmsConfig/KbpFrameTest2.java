@@ -35,12 +35,12 @@ public class KbpFrameTest2 extends TestCase {
         Reporter.log("selenium Grid:"+node);
         //kbpFormDao=new KbpFormDao();
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 
 //    @DataProvider(name="kbpList")
 //    public Iterator dataDriver(Method method) throws IOException, BiffException {

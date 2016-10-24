@@ -25,12 +25,12 @@ public class CronsShowTest extends TestCase {
         super(node);
     }
 
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 
 
 

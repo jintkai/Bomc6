@@ -38,12 +38,12 @@ public class PFListTest extends TestCase {
             rowValue="/test-bnms/app/";
         }
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+//    @BeforeMethod
+//    @Parameters({"Action_URL"})
+//    public void beforeMethod(String actionUrl)
+//    {
+//        eventDriver.get(Data.baseUrl + actionUrl);
+//    }
 
 //    @DataProvider(name="PFlist")
 //    public Iterator dataDriver(Method method) throws IOException, BiffException {
