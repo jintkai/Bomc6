@@ -10,7 +10,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Parameters;
-import com.code.unicom.login.LoginPage;
+import com.code.test.unicom.login.LoginPage;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;

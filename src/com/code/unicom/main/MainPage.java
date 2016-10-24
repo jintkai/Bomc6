@@ -1,7 +1,7 @@
 package com.code.unicom.main;
 
 import com.code.common.Page;
-import com.code.unicom.main.page.LeftBodyPage;
+import com.code.test.unicom.main.page.LeftBodyPage;
 import com.code.unicom.main.page.MenuPage;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 

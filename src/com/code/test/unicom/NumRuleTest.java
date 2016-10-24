@@ -2,12 +2,11 @@ package com.code.test.unicom;
 
 import com.code.common.Data;
 import com.code.common.TestCase2;
-import com.code.page.unicom.common.ResultDivPage;
-import com.code.page.unicom.main.MainPage;
-import com.code.page.unicom.main.page.NumRulePage;
-import com.code.page.unicom.main.page.NumRuleSearchPage;
+import com.code.test.unicom.common.ResultDivPage;
+import com.code.test.unicom.main.MainPage;
+import com.code.unicom.main.page.NumRulePage;
+import com.code.unicom.main.page.NumRuleSearchPage;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

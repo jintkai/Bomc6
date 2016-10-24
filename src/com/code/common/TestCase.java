@@ -1,19 +1,18 @@
 package com.code.common;
 
 
-import com.code.page.ibnmsConfig.login.LoginPage;
+import com.code.bnms.login.LoginPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.*;
-import com.code.portal.login.*;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;

@@ -2,7 +2,7 @@ package com.code.test.unicom;
 
 import com.code.common.Data;
 import com.code.common.TestCase2;
-import com.code.page.unicom.main.MainPage;
+import com.code.test.unicom.main.MainPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

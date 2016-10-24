@@ -1,9 +1,8 @@
 package com.code.test.unicom;
 
 import com.code.common.Data;
-import com.code.common.TestCase;
 import com.code.common.TestCase2;
-import com.code.page.unicom.login.LoginPage;
+import com.code.test.unicom.login.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;

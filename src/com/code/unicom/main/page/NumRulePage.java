@@ -1,8 +1,7 @@
 package com.code.unicom.main.page;
 
 import com.code.common.Page;
-import com.code.unicom.common.ResultDivPage;
-import org.openqa.selenium.Alert;
+import com.code.test.unicom.common.ResultDivPage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -24,9 +23,7 @@ public class NumRulePage extends Page {
     @FindBy(how= How.ID,using="validForm")
     WebElement validForm;
     @FindBy(how=How.ID,using = "btn_add")
-    WebElement btnAdd;
-    @FindBy(how=How.ID,using="btn_sub")
-    WebElement btnSub;
+    WebElement btn_add;
     @FindBy(how=How.ID,using = "good_name")
     WebElement goodName;
     @FindBy(how=How.ID,using="good_kind")
@@ -59,15 +56,9 @@ public class NumRulePage extends Page {
     WebElement note;
     @FindBy(how = How.ID,using="btn_addsub")
     WebElement btnAddSub;
-    @FindBy(how = How.ID,using="btn_addsub2")
-    WebElement btnAddSub2;
-    public String add(Map<String,String> map){
-	tools.click(btnAddSub2);
-        tools.click(btnAdd);
+    public void add(Map<String,String> map){
+        tools.click(btn_add);
         editForm(map);
-        //tools.sleep(10000);
-        Alert alert=tools.getDriver().switchTo().alert();
-        return alert.getText();
     }
     public void editForm(Map<String,String> map){
         tools.sendKeys(goodName,tools.getMapValue(map,"靓号规则名称"));
@@ -85,17 +76,11 @@ public class NumRulePage extends Page {
         tools.sendKeys(regionCode,tools.getMapValue(map,"地市编码"));
         tools.selectByVisibleText(isAffirm,tools.getMapValue(map,"是否需要确认"));
         tools.sendKeys(note,tools.getMapValue(map,"备注"));
-        tools.execJS("$('.page-footer').remove()");
-        btnAddSub.click();
-        //tools.click(btnAddSub);
-        tools.sleep(5000);
-    //    tools.alertAccept();
+        tools.click(btnAddSub);
+        tools.alertAccept();
     }
     public void numRuleSearch(Map<String,String> map){
         searchPage.searchNumRule(map);
-    }
-    public void numRuleDelete(int rowNum){
-        resultDiv.deleteRow(rowNum-1);
     }
 
 }

@@ -1,58 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="业务监控BOMC-自动化测试">
     <!--suite name="selenium2" parallel="tests" thread-count="10"-->
-    <!--class name="com.code.test.ibnmsConfig.LoginPageTest"></class-->
+    <!--class name="com.code.test.bnms.LoginPageTest"></class-->
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
     <test name="测试环境IE8" preserve-order="true">
         <parameter name="node" value="http://192.168.0.6:5555/wd/hub"/>
 
         <classes>
-            
-            <class name="com.code.test.ibnmsConfig.KbpFrameTest2">
+
+            <class name="com.code.test.bnms.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
 
-            <class name="com.code.test.ibnmsConfig.KpiFrameTest2" >
+            <class name="com.code.test.bnms.KpiFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class>
 
-            <class name="com.code.test.ibnmsConfig.ResFrameTest2" >
+            <class name="com.code.test.bnms.ResFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
                 <methods><include name="editKpi"></include></methods>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
+            <class name="com.code.test.bnms.EnvListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
 
-            <class name="com.code.test.ibnmsConfig.MQListTest2" >
+            <class name="com.code.test.bnms.MQListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
             </class >
 
-            <class name="com.code.test.ibnmsConfig.AgListTest2">
+            <class name="com.code.test.bnms.AgListTest2">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.WKlistTest2">
+            <class name="com.code.test.bnms.WKlistTest2">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
 
 
-            <class name="com.code.test.ibnmsConfig.PFListTest">
+            <class name="com.code.test.bnms.PFListTest">
                 <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
             </class>
 
-            <class name="com.code.test.ibnmsConfig.AppServerListTest">
+            <class name="com.code.test.bnms.AppServerListTest">
                 <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
             </class>
-            <class name="com.code.test.ibnmsConfig.CronsShowTest">
+            <class name="com.code.test.bnms.CronsShowTest">
                 <parameter name="Action_URL" value="/ibnms/cfgCrons/showCrons.action"></parameter>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.CollBusiConfTest">
+            <class name="com.code.test.bnms.CollBusiConfTest">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
-
 
         </classes>
     </test>
@@ -61,22 +60,22 @@
         <parameter name="node" value="http://172.21.221.141:6666/wd/hub"/>
 
         <classes>
- <class name="com.code.test.ibnmsConfig.EntityTest">
+ <class name="com.code.test.bnms.EntityTest">
                 <parameter name="Action_URL" value="/cfgColl/selectEntityKbpFrame.action?rootId=10-11"></parameter>
             </class>
-            <class name="com.code.test.ibnmsConfig.EnvListTest2" >
+            <class name="com.code.test.bnms.EnvListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
             </class>
 
-            <class name="com.code.test.ibnmsConfig.MQListTest2" >
+            <class name="com.code.test.bnms.MQListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
             </class >
 
-            <class name="com.code.test.ibnmsConfig.AgListTest2">
+            <class name="com.code.test.bnms.AgListTest2">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.WKlistTest2">
+            <class name="com.code.test.bnms.WKlistTest2">
                 <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
             </class>
 
@@ -87,13 +86,13 @@
     <!--test name="告警策略模板相关配置">
         <parameter name="node" value="http://192.168.1.104:5555/wd/hub"/>
         <classes>
-            <class name="com.code.test.ibnmsConfig.AlarmPolicyTest">
+            <class name="com.code.test.bnms.AlarmPolicyTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmPolicy/alarmPolicyList.action" />
             </class>
-            <class name="com.code.test.ibnmsConfig.AlarmTemplateTest">
+            <class name="com.code.test.bnms.AlarmTemplateTest">
             <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/alarmTemplateList.action" />
             </class>
-            <class name="com.code.test.ibnmsConfig.TemplateDevListTest">
+            <class name="com.code.test.bnms.TemplateDevListTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmTemplate/templateDevList.action" />
             </class>
             </classes>
@@ -101,25 +100,25 @@
     <test name="告警集中配置">
         <parameter name="node" value="http://192.168.1.105:5555/wd/hub"/>
         <classes>
-            <class name="com.code.test.ibnmsConfig.AlarmConFrameTest">
+            <class name="com.code.test.bnms.AlarmConFrameTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmConfigFrame.action" />
             </class>
-            <class name="com.code.test.ibnmsConfig.SubscripFilterListTest">
+            <class name="com.code.test.bnms.SubscripFilterListTest">
                 <parameter name="Action_URL" value="/ibnms/config/subscripFilterList.action" />
                 <methods><include name="operateSubscripFilter"></include></methods>
             </class>
 
-            <class name="com.code.test.ibnmsConfig.AlarmShieldCfgTest">
+            <class name="com.code.test.bnms.AlarmShieldCfgTest">
                 <parameter name="Action_URL" value="/ibnms/config/alarmShieldCfgList.action" />
             </class>
         </classes>
     </test-->
 </suite>
 
-        <!--class name="com.code.test.ibnmsConfig.AlarmCorrelationCfgListTest">
+        <!--class name="com.code.test.bnms.AlarmCorrelationCfgListTest">
             <parameter name="Action_URL" value="/ibnms/config/alarmCorrelationCfgList.action?type=database" />
         </class>
-        <class name="com.code.test.ibnmsConfig.AlarmConfUpdateListTest">
+        <class name="com.code.test.bnms.AlarmConfUpdateListTest">
             <parameter name="Action_URL" value="/ibnms/config/inputEventUpdateInfoList.action" />
         </class>
 
