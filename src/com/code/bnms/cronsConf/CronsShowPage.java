@@ -60,9 +60,11 @@ public class CronsShowPage extends Page {
         return this;
     }
     public void select(String cronName){
+        String hand=tools.switchToWindowByTitle(this.title);
         search(cronName);
         (new GridPage(eventDriver)).selectTr(1);
         tools.click(citeCronBtn);
         tools.alertAccept();
+        tools.switchToWindowByHand(hand);
     }
 }

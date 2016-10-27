@@ -5,16 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.code.common.FormPage;
 import com.code.common.Page;
-import com.code.common.Tools;
-import com.code.portal.main.MainPage;
-import com.code.portal.main.PortalHeader;
 
 public class GraphlistPage extends Page {
 	

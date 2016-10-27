@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="业务监控BOMC-自动化测试">
-    <!--suite name="selenium2" parallel="tests" thread-count="10"-->
-    <!--class name="com.code.test.bnms.LoginPageTest"></class-->
+<suite name="业务监控BOMC-自动化测试" parallel="tests" thread-count="2">
+    <parameter name="MaxReties" value="3" ></parameter>
+    <listeners>
+        <listener class-name="com.code.testng.listener.BnmsAnnotationTransformer" />
+    </listeners>
+    <groups>
+        <run>
+            <exclude name="broken"></exclude>
+        </run>
+    </groups>
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
     <test name="测试环境IE8" preserve-order="true">
         <parameter name="node" value="http://192.168.0.6:5555/wd/hub"/>
 
         <classes>
 
+            <class name="com.code.test.bnms.AgListTest2">
+                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
+            </class>
+
+        </classes>
+    </test>
+    <!--test name="测试环境IE9" preserve-order="true">
+        <parameter name="node" value="http://172.21.133.180:5555/wd/hub"/>
+        <classes>
             <class name="com.code.test.bnms.KbpFrameTest2">
                 <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
             </class>
@@ -53,8 +69,9 @@
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
             </class>
 
+
         </classes>
-    </test>
+    </test-->
     <!--
     <test name="测试环境IE9" preserve-order="true">
         <parameter name="node" value="http://172.21.221.141:6666/wd/hub"/>

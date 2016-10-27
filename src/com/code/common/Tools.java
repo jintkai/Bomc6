@@ -234,7 +234,8 @@ public class Tools {
             attr = ele.getAttribute(str);
         }catch(Exception e){
             e.printStackTrace();
-            this.assertTrue(false,"获取元素属性失败!");
+
+            this.assertTrue(false,"获取元素属性失败!"+ele.getTagName()+","+ele.getText());
         }
         return attr;
     }
@@ -402,7 +403,7 @@ public class Tools {
     public void switchToWindowByHand(String hand)
     {
         try {
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -477,6 +478,7 @@ public class Tools {
     }
 
     public void switchToFrame(Object ... frameObject){
+
         if (frameObject.length!=1){
             for (int i=0;i<frameObject.length;i++){
                 if(frameObject[i] instanceof WebElement){
@@ -484,7 +486,10 @@ public class Tools {
                 }
                 else if(frameObject[i]instanceof String){
                     driver.switchTo().frame((String)frameObject[i]);
-                }else{
+                }else if(frameObject[i] instanceof By){
+                    driver.switchTo().frame(findBy(driver,(By)frameObject[i]));
+                }
+                else{
                     driver.switchTo().frame((Integer) frameObject[i]);
                 }
             }
@@ -495,6 +500,8 @@ public class Tools {
             }
             else if(frameObject[0]instanceof String){
                 driver.switchTo().frame((String)frameObject[0]);
+            }else if (frameObject[0] instanceof By){
+                driver.switchTo().frame(findBy(driver,(By)frameObject[0]));
             }else{
                 driver.switchTo().frame((Integer) frameObject[0]);
             }
@@ -582,6 +589,35 @@ public class Tools {
             e.printStackTrace();
         }
     }
+
+    public void takesScreenshot2(String info)
+    {
+        Reporter.log("TakesScreenshot截图");
+        String imageFormat = "png";// 图像文件的格式
+        String picDir= Data.baseDir+"/pictures/";
+        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        BufferedImage image = null;
+        try {
+            image = ImageIO.read(srcFile);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Graphics g = image.getGraphics();
+        g.setFont(new Font("Serif",Font.BOLD,15));
+        g.setColor(Color.red);
+        g.drawString(info, 10, 15);
+
+
+        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
+        try {
+            ImageIO.write(image, "png", new File(filename));
+            Reporter.log("TakesScreenshot Save File:"+filename+"....Finished!\n");
+            System.out.println(Reporter.getCurrentTestResult().getMethod());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      *执行AntoIT脚本
      * @param path AntoIT脚本文件的位置

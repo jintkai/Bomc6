@@ -26,7 +26,7 @@ public class TT {
         /*
         现在可以从文件中读入某个文档
          */
-        File f=new File("D:\\Test\\Bomc6\\src\\runTestConfig\\testng.xml");
+        File f=new File("D:\\Test\\Bomc6\\src\\runTestConfig\\testng_test.xml");
         Document doc=builder.parse(f);
         /*
         或则，可以用一个URL

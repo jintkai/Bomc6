@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="测试套件">
+    <parameter name="MaxReties" value="10" ></parameter>
+    <listeners>
+        <listener class-name="com.code.testng.listener.BnmsAnnotationTransformer" />
+        <listener class-name="com.code.testng.listener.BnmsInvokedMethodListener"/>
+        <listener class-name="com.code.testng.listener.MyTestListener"/>
+    </listeners>
+    <!-- 分组执行:优点,把暂时不需要执行的方法放到组broken中,exclude的用例在测试报告中会体现-->
+    <groups>
+        <run>
+            <exclude name="broken"></exclude>
+        </run>
+    </groups>
+    <test name="TestNg" preserve-order="true">
+        <method-selectors>
+            <method-selector>
+                <selector-class name="com.code.testng.annotation.ScheduledTestSelector" priority="15"/>
+            </method-selector>
+        </method-selectors>
+        <classes>
+
+            <class name="com.code.testng.Test4"></class>
+
+        </classes>
+    </test>
+
+</suite>
+

@@ -23,6 +23,7 @@ public class MQListPage extends Page {
     MQFormPage mqForm=new MQFormPage(eventDriver);
     GridPage gridTable=new GridPage(eventDriver);
 
+    @Deprecated
     public GridPage operateMQ(Map<String,String> map)
     {
         //GridPage gridTable=new GridPage();
@@ -34,7 +35,7 @@ public class MQListPage extends Page {
         }
         if (operation.equals("修改"))
         {
-            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
             mqBtn.edit();
             tools.alertAccept();
             tools.alertAccept();
@@ -43,7 +44,7 @@ public class MQListPage extends Page {
         else
         {
             //删除
-            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")));
+            gridTable.selectTrs(gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")));
             mqBtn.delete();
             return gridTable;
         }

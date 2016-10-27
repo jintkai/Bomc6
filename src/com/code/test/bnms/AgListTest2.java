@@ -38,19 +38,7 @@ public class AgListTest2 extends TestCase {
             rowValue="/test-bnms/app/";
         }
     }
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        eventDriver.get(Data.baseUrl + actionUrl);
-//    }
 
-    @DataProvider(name="agList")
-    public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("AGENT",method.getName());
-        excelHead=excelDriver.getHead(0);
-        return excelDriver;
-    }
     @Test(priority = 0,description = "查询Agent")
     public void searchAG()
     {
@@ -73,7 +61,11 @@ public class AgListTest2 extends TestCase {
         tools.assertEquals(gridTable.getGridrowNum(),list.size(),agentSearchDomain.toString());
     }
 
-    @Test(priority = 1,description = "增加Agent")
+    @Test(priority = 0,description = "修改agent")
+    public void editAgent(){
+        GridPage gridTable=agList.operateAG("修改",null);
+    }
+    @Test(priority = 1,description = "增加Agent",groups = "broken")
     public void addAgent()
     {
         GridPage gridPage=new GridPage(eventDriver);
@@ -99,7 +91,7 @@ public class AgListTest2 extends TestCase {
     }
 
 
-    @Test(priority = 1,description = "部署agent")
+    @Test(priority = 1,description = "部署agent",groups = "broken")
     public void deployAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -112,7 +104,7 @@ public class AgListTest2 extends TestCase {
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
     }
 
-    @Test(priority = 1,description = "启动agent",dependsOnMethods = "deployAgent")
+    @Test(priority = 1,description = "启动agent",dependsOnMethods = "deployAgent",groups = "broken")
     public void startAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -123,7 +115,7 @@ public class AgListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
     }
-    @Test(priority = 1,description = "停止agent",dependsOnMethods = "startAgent")
+    @Test(priority = 1,description = "停止agent",dependsOnMethods = "startAgent",groups = "broken")
     public void stopAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -134,7 +126,7 @@ public class AgListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
     }
-    @Test(priority = 1,description = "停止Agent",dependsOnMethods = "stopAgent")
+    @Test(priority = 1,description = "停止Agent",dependsOnMethods = "stopAgent",groups = "broken")
     public void updeployAgent( )
     {
         Map<String,String> map=new HashMap<>();

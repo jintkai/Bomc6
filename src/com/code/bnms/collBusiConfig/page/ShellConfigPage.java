@@ -49,16 +49,14 @@ public class ShellConfigPage extends Page {
                 if (domain.getCronsName() != null) {
                     tools.click(addCronBtn);
                     CronsShowPage cronsShowPage = new CronsShowPage(eventDriver);
-                    String hand = tools.switchToWindowByTitle(cronsShowPage.title);
+
                     cronsShowPage.select(domain.getCronsName());
-                    tools.switchToWindowByHand(hand);
+
                 }
                 if (domain.getKbpSearchDomain() != null) {
                     tools.click(addKbpBtn);
                     KbpListFramePage kbpListFramePage = new KbpListFramePage(eventDriver);
-                    String hand = tools.switchToWindowByTitle(kbpListFramePage.title);
                     kbpListFramePage.select(domain.getKbpSearchDomain());
-                    tools.switchToWindowByHand(hand);
                 }
                 tools.sendKeys(shellName, domain.getShellName());
                 tools.sendKeys(shellType, domain.getShellType());
@@ -72,9 +70,7 @@ public class ShellConfigPage extends Page {
                         tools.click(e.get(i));
                         kpiSearchDomain = domain.getKpiSearchDomains()[i];
                         KpiListFramePage kpiListFramePage = new KpiListFramePage(eventDriver);
-                        String hand = tools.switchToWindowByTitle(kpiListFramePage.title);
                         kpiListFramePage.select(kpiSearchDomain);
-                        tools.switchToWindowByHand(hand);
                     }
                 }
                 if (domain.getShell() != null) {

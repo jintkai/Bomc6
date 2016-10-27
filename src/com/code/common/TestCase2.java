@@ -120,7 +120,7 @@ public class TestCase2 {
 
     public TestCase2(String node)
     {
-        driver=createDriver("IE","http://172.21.221.141:5555/wd/hub");
+        driver=createDriver("IE",node);
         eventDriver=new EventFiringWebDriver(driver).register(new EventListener());
         tools=new Tools(eventDriver);
     }

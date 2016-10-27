@@ -85,11 +85,11 @@ public class AppServerListTest extends TestCase {
         tools.assertEquals(gridTable.getListOftr("安装路径",installPath).size(),
                 1,"修改记录:"+map+";修改后记录:"+formDomain.toString());
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr("应用名称",appName).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"进程关键字"),processKey,"部署BmcServer:"+map+";"+MqMap);
-        tools.assertEquals(tools.getMapValue(MqMap,"安装路径"),installPath,"部署BmcServer:"+map+";"+MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"进程关键字"),processKey,"修改BmcServer:"+map+";"+MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"安装路径"),installPath,"修改BmcServer:"+map+";"+MqMap);
     }
 
-    @Test(priority = 1,description = "删除Appserver-BMCServer")
+    @Test(priority = 2,description = "删除Appserver-BMCServer")
     public void deleteAppServer()
     {
         String sql="select * from tb_cfg_appserver_deploy where applyvalue=\"BmcServer\" and applyhostip not like '172.%' order by length(applyname) desc";

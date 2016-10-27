@@ -229,7 +229,7 @@ public class KbpFrameTest2 extends TestCase {
         gridTable=kbpFrame.search(searchDomain);
 
         tools.sleep();
-        tools.assertEquals(gridTable.getGridrowNum(),1,map);
+        tools.assertEquals(gridTable.getGridrowNum(),1,searchDomain.toString()+","+kbpFormDomain.toString());
     }
 
     @Test(priority = 2,description = "增加根节点KBP")

@@ -71,7 +71,24 @@ public class MQListTest2 extends TestCase {
         System.out.println(mqFormDomain.toString());
         tools.assertEquals(r,gridTable.getGridrowNum(),mqFormDomain.toString());
     }
+    @Test( priority = 1,description = "删除MQ")
+    public void deleteMQ()
+    {
 
+        GridPage gridPage=new GridPage(eventDriver);
+        int r=gridPage.getGridrowNum()-1;
+
+        String sql;
+        sql="select * from tb_cfg_deploy_mq where INSTANCE_NAME like '%selenium%' order by INSTANCE_NAME asc";
+        List<Map<String,String>> list=dbTools.queryMapListHandler(sql);
+
+        Map<String,String> map=new HashMap<>();
+        map.put("列名","安装路径");
+        map.put("列值",list.get(0).get("INSTANCE_NAME"));
+        map.put("操作类型","删除");
+        GridPage gridTable=mqList.operateMQ(map);
+        tools.assertEquals(r,gridTable.getGridrowNum(),map.toString());
+    }
     @Test(priority = 1,description = "部署MQ")
     public void deployMQ( )
     {

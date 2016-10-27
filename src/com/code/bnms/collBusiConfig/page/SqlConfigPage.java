@@ -44,16 +44,12 @@ public class SqlConfigPage extends Page {
         if(domain.getKbpSearchDomain()!=null){
             tools.click(addKbpBtn);
             KbpListFramePage kbpListFramePage=new KbpListFramePage(eventDriver);
-            String hand=tools.switchToWindowByTitle(kbpListFramePage.title);
             kbpListFramePage.select(domain.getKbpSearchDomain());
-            tools.switchToWindowByHand(hand);
         }
         if(domain.getCronsName()!=null){
             tools.click(addCronBtn);
             CronsShowPage cronsShowPage=new CronsShowPage(eventDriver);
-            String hand=tools.switchToWindowByTitle(cronsShowPage.title);
             cronsShowPage.select(domain.getCronsName());
-            tools.switchToWindowByHand(hand);
         }
         if(domain.getEntirys()!=null){
             tools.click(addEntity);
@@ -82,9 +78,6 @@ public class SqlConfigPage extends Page {
                 kpiSearchDomain = domain.getKpiSearchDomains()[i];
                 KpiListFramePage kpiListFramePage = new KpiListFramePage(eventDriver);
                 kpiListFramePage.select(kpiSearchDomain);
-                //String hand = tools.switchToWindowByTitle(kpiListFramePage.title);
-                //kpiListFramePage.select(kpiSearchDomain);
-                //tools.switchToWindowByHand(hand);
             }
             List<WebElement> radio=tools.findElements(sqlResult,By.name("sql-attr"));
             tools.click(radio.get(0));

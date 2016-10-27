@@ -3,6 +3,7 @@ package com.code.testng;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 
 /**
  * Created by jon on 2016/10/23.
@@ -16,6 +17,7 @@ public class MyITestListener implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println("执行成功");
+        Reporter.log("hello");
         result.getTestName();
         System.out.println(result.getName()+"."+result.getTestClass()+","+result.getMethod());
     }

@@ -10,10 +10,12 @@ import com.code.bnms.agentList.page.SearchAGPage;
 import com.code.bnms.collBusiConfig.CollBusiConfigPage;
 import com.code.bnms.collBusiConfig.domain.ShellFormDomain;
 import com.code.bnms.collBusiConfig.domain.SqlFormDomain;
+import com.code.common.PageInfo;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -126,13 +128,16 @@ public class AgentListPage extends Page {
             return agForm.operateAG(operation,agentFormDomain);
 
         }
-        /*
+
         if (operation.equals("修改"))
         {
-            agSearch.search(map).selectTr(0);
+            gridTable.selectTr(1);
             agBtn.edit();
-            return agForm.operateAG(map);
+            (new AgFormPage(eventDriver)).getPageInfo();
+
+            return null;
         }
+        /*
         else
         {
             agSearch.search(map).selectTr(0);

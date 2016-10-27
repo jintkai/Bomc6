@@ -1,12 +1,9 @@
 package com.code.itilManage.formConfig;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
-
 import com.code.common.Page;
 
 public class FormSelectPage extends Page{
@@ -17,8 +14,8 @@ public class FormSelectPage extends Page{
 	    }
 
 	    //点击环节后右侧的IFRAME
-	   // @FindBy(id="configIframe")
-	    //WebElement configIframe;	    
+	    @FindBy(id="configIframe")
+	   WebElement configIframe;	    
 	    
 	    //表单配置选项卡名称
 	    @FindBy(xpath=("//a[@href='#ui-tabs-1']"))
@@ -39,27 +36,28 @@ public class FormSelectPage extends Page{
 	    //处理人配置选项卡名称
 	    @FindBy(xpath=("//a[@href='#ui-tabs-5']"))
 	    WebElement DealerConf;
+
 	    
 	    public void formConf(){
-	    WebElement configIframe = eventDriver.findElement(By.id("configIframe"));	
-	    tools.switchToFrame(configIframe);
+	    //WebElement configIframe = eventDriver.findElement(By.id("configIframe"));	
+	    tools.switchToFrame(configIframe);	
 	    tools.click(FormConf);	    	
 	    	
 	    }
 	    
 	    public void FormjsConf(){
 	    	
-	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-	       tools.switchToFrame(configIframe);
-	      // System.out.println(FormjsConf.getTagName());
+	    	//WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
+	    	tools.switchToFrame(configIframe);
+	    	System.out.println(FormjsConf.getTagName()+"ssssssssssssss");
 		    tools.click(FormjsConf);
-		    tools.switchToWindos();
+			tools.switchToFrame();
 		    	
 		    }
 	    
 	    public void DefaultValue(){
-	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
-		       tools.switchToFrame(configIframe);
+	    	//WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
+		    tools.switchToFrame(configIframe);
 		    tools.click(DefaultValue);
 		    	
 		    	
@@ -77,9 +75,9 @@ public class FormSelectPage extends Page{
 	    	WebElement configIframe = eventDriver.findElement(By.id("configIframe"));
 	        tools.switchToFrame(configIframe);
 		    tools.click(DealerConf);
-		    	
-		    	
-		    }	    
+		    			    	
+		    }	  
+	    
 
 	              
 }

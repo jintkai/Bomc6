@@ -4,10 +4,12 @@ import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.bnms.agentList.domain.AgentFormDomain;
 import com.code.bnms.envList.EnvFramePage;
+import com.code.common.PageInfo;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import java.lang.reflect.Field;
 import java.util.Map;
 
 /**
@@ -20,13 +22,23 @@ public class AgFormPage extends FormPage {
     }
     @FindBy(id="btn-select-host")
     WebElement selectHostBtn;
+    @PageInfo(info = "部署主机")
+    WebElement deviceName;
+    @PageInfo(info = "agent实例名称")
     WebElement instanceName;
+    @PageInfo(info = "主机UNIT_ID")
+    @FindBy(name="form.envId")
+    WebElement formEnvID;
     WebElement workstaionId;
     WebElement performanceId;
     WebElement processKey;
+    @PageInfo(info = "部署路径")
     WebElement installPath;
+    @PageInfo(info = "hsql端口")
     WebElement hsqldbPort;
+    @PageInfo(info = "jmx端口")
     WebElement jmxPort;
+    @PageInfo(info="字符编码")
     WebElement lang;
     public GridPage operateAG(Map<String,String> map)
     {
@@ -84,4 +96,22 @@ public class AgFormPage extends FormPage {
         inputForm(operate,agentFormDomain);
         return new GridPage(eventDriver);
     }
+
+//    public String toString() {
+//        StringBuffer info = new StringBuffer();
+//        Field arr[] = this.getClass().getDeclaredFields();
+//
+//        for (int i = 0; i < arr.length; i++) {
+//            info.append("字段类型:").append(arr[i].getType());
+//
+//            PageInfo pageInfo = arr[i].getAnnotation(PageInfo.class);
+//            if (pageInfo != null) {
+//                info.append(",pageInfo:" + pageInfo.info());
+//
+//            }
+//        }
+//        System.out.println(info.toString());
+//        return info.toString();
+//    }
+
 }

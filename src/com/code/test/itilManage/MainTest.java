@@ -1,17 +1,14 @@
 package com.code.test.itilManage;
 
 import com.code.common.TestCase2;
+import com.code.itilManage.webProDesigner.page.GraphlistlinkPage;
 import com.code.portal.login.LoginPage;
 import com.code.portal.main.MainPage;
 import com.code.portal.main.PortalHeader;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import com.code.itilManage.webProDesigner.page.*;
 import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by jon on 2016/10/13.
