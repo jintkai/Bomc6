@@ -16,13 +16,13 @@ public class MainMenuTest extends TestCase2 {
     public MainMenuTest(String node) {
         super(node);
     }
-    @BeforeMethod
-    @Parameters({"Base_URL"})
-    public void beforeMethod(String base_url)
-    {
-        eventDriver.get(Data.baseUrl);
-        beforeClass(base_url);
-    }
+//    @BeforeMethod
+//    @Parameters({"Base_URL"})
+//    public void beforeMethod(String base_url)
+//    {
+//        eventDriver.get(Data.baseUrl);
+//        beforeClass(base_url);
+//    }
 
     @Test
     public void selectMenu(){

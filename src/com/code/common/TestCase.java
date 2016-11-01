@@ -115,7 +115,7 @@ public class TestCase {
 
     public  WebDriver driver;//=createDriver("IE","http://192.168.1.102:5555/wd/hub");
     public DBTools dbTools=new DBTools();
-    public  EventFiringWebDriver eventDriver;//=new EventFiringWebDriver(driver).register(new EventListener());
+    public EventFiringWebDriver eventDriver;//=new EventFiringWebDriver(driver).register(new EventListener());
     public Tools tools;//=new Tools(eventDriver);
     public String[] excelHead;
     public Map<String,String> map;
@@ -280,7 +280,7 @@ public class TestCase {
     @Parameters({"Action_URL"})
     public void beforeMethod(String actionUrl)
     {
-        eventDriver.get(Data.baseUrl + actionUrl);
+        eventDriver.get(Config.getProperty("baseUrl") + actionUrl);
         //tools.alertAccept();
 
     }

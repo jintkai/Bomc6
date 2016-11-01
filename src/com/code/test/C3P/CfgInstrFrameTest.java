@@ -28,12 +28,7 @@ public class CfgInstrFrameTest extends TestCase {
         instrFrame=new CfgInstrFrame();
 
     }
-    @BeforeMethod
-    @Parameters({"Base_URL","Action_URL"})
-    public void beforeMethod(String baseUrl,String actionUrl)
-    {
-        eventDriver.get(baseUrl + actionUrl);
-    }
+
 
     @DataProvider(name="instrFrame")
     public Iterator dataDriver(Method method) throws IOException, BiffException {

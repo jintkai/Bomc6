@@ -10,6 +10,7 @@ import org.openqa.selenium.internal.WrapsDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import javax.imageio.ImageIO;
@@ -74,11 +75,6 @@ public class Tools {
             return true;
         }catch(NoSuchElementException e)
         {
-            //System.out.println(e);
-            //Reporter.log("findElement【"+by+"】失败。");
-            //screen();
-            //takesScreenshot("WebElement不存在:"+by);
-            //d.findElement(by);
             return false;
         }
     }
@@ -122,9 +118,7 @@ public class Tools {
         try {
             ele = d.findElement(by);
         }catch(Exception e){
-            System.out.println("查找元素失败!"+by.toString());
-            e.printStackTrace();
-            this.assertTrue(false,"查找元素失败!"+by.toString());
+            //this.assertTrue(false,"查找元素失败!"+by.toString());
         }
         return ele;
     }
@@ -141,35 +135,28 @@ public class Tools {
         try {
             eles = d.findElements(by);
         }catch(Exception e){
-            System.out.println("查找元素失败!"+by.toString());
-            e.printStackTrace();
-            this.assertTrue(false,"查找元素失败!"+by.toString());
+            //this.assertTrue(false,"查找元素失败!"+by.toString());
         }
         return  eles;
     }
     /**
      *对指定的WebElement中输入字符；
+     * @param value:null表示不用处理,""表示要清空
      */
     public void sendKeys(WebElement ele,String value)
     {
         try {
             if (value == null) {
-                //null表示不用处理;
-                //System.out.println("null,则表示要清除");
-                //clear(ele);
                 return;
             }
             if (!value.isEmpty()) {
                 clear(ele);
                 ele.sendKeys(value);
             } else {
-                //空,表示需要清空
                 clear(ele);
             }
         }catch(Exception e){
-            System.out.println("清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
-            e.printStackTrace();
-            this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
+            //this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
         }
 
     }
@@ -178,9 +165,7 @@ public class Tools {
             ele.clear();
         }catch(Exception e)
         {
-            System.out.println("清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
-            e.printStackTrace();
-            this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
+            //this.assertTrue(false,"清除内容失败!"+ele.getTagName()+ele.getText()+ele.getAttribute("id")+ele.getAttribute("name"));
         }
     }
     public void submit(WebElement ele){ele.submit();}
@@ -195,10 +180,9 @@ public class Tools {
         {
 
             e.printStackTrace();
-            System.out.println("select控件中无该值："+text);
             //Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
             takesScreenshot("Select控件中无法通过该值：【"+text+"】进行选择");
-            this.assertTrue(false,"选取下拉框失败!");
+            //this.assertTrue(false,"选取下拉框失败!");
         }
     }
 
@@ -208,11 +192,8 @@ public class Tools {
         try {
             list = new Select(ele).getOptions();
         }catch(Exception e){
-            e.printStackTrace();
-            System.out.println("获取select控件所有值失败");
-            //Reporter.log("Select控件中无法通过该值：【"+text+"】进行选择");
             takesScreenshot("获取select控件所有值失败：【"+"】进行选择");
-            this.assertTrue(false,"获取select控件所有值失败!");
+            //this.assertTrue(false,"获取select控件所有值失败!");
         }
         return list;
     }
@@ -233,7 +214,6 @@ public class Tools {
         try {
             attr = ele.getAttribute(str);
         }catch(Exception e){
-            e.printStackTrace();
 
             this.assertTrue(false,"获取元素属性失败!"+ele.getTagName()+","+ele.getText());
         }
@@ -245,20 +225,21 @@ public class Tools {
         }
         catch(Exception e)
         {
-            e.printStackTrace();
-            Reporter.log("点击元素失败！");
-            takesScreenshot("点击元素失败!");
-            this.assertTrue(false,"点击元素失败!");
+            //e.printStackTrace();
+            //Reporter.log("点击元素失败！");
+            //takesScreenshot("点击元素失败!");
+            //this.assertTrue(false,"点击元素失败!");
         }
     }
 
+    @Deprecated
     public void assertEquals(Object actual,Object expected,Map<String,String> map)
     {
         try {
             Assert.assertEquals(actual, expected, map.toString());
         }catch(AssertionError e){
             e.printStackTrace();
-            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
+            //takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
             Reporter.log(map.toString());
             Assert.assertEquals(actual, expected, map.toString());
 
@@ -271,38 +252,26 @@ public class Tools {
             Assert.assertEquals(actual, expected, message);
         }catch(AssertionError e){
             e.printStackTrace();
-            takesScreenshot(message+":------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
-            Reporter.log(message.toString());
+            takesScreenshot("实际值:"+actual.toString()+",期望值:"+expected.toString()+message);
             Assert.assertEquals(actual, expected,message);
 
         }
     }
 
-    public void assertNotEquals(Object actual,Object expected,Map<String,String> map) {
-        try {
-            Assert.assertNotEquals(actual, expected, map.toString());
-        } catch (AssertionError e) {
-            //screen();
-            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
-            e.printStackTrace();
-            Reporter.log(map.toString());
-            Assert.assertNotEquals(actual, expected, map.toString());
-        }
-    }
     /**
      *封装Testng的AssertEquals方法；
      * @param  actual 实际值
      * @param  msg 提示信息
      * @param exception map中的key，通过map，exception来返回预期值；
      */
-
+    @Deprecated
     public void assertEquals(int actual,String exception,String msg)
     {
         try {
             Assert.assertEquals(actual, Integer.parseInt( exception), msg);
         }catch(AssertionError e) {
 
-            takesScreenshot(msg);
+            //takesScreenshot(msg);
             Assert.assertEquals(actual, Integer.parseInt( exception), msg);
         }
     }
@@ -312,17 +281,18 @@ public class Tools {
      * @param  msg 错误提示信息
      * @param exception map中的key，通过map，exception来返回预期值；
      */
+    @Deprecated
     public void assertEquals(String actual,String exception,String msg)
     {
         try {
             Assert.assertEquals(actual, exception, msg);
         }catch(AssertionError e) {
 
-            takesScreenshot(msg);
-            System.out.println(e);
+            msg=("实际值:"+actual+",期望值:"+exception)+","+msg;
             Assert.assertEquals(actual, exception, msg);
         }
     }
+    @Deprecated
     public void assertEquals(String actual,String expected,Map<String,String> map)
     {
         try {
@@ -341,7 +311,6 @@ public class Tools {
         catch(AssertionError e)
         {
             takesScreenshot(msg);
-            e.printStackTrace();
             Assert.assertTrue(actual,msg);
         }
     }
@@ -370,7 +339,7 @@ public class Tools {
                 return hand;
         }
         Reporter.log("切换窗口失败，无法按Title【"+containsTitle+"】切换窗口。");
-        takesScreenshot("切换窗口失败，无法按Title【"+containsTitle+"】切换窗口。");
+        //takesScreenshot("切换窗口失败，无法按Title【"+containsTitle+"】切换窗口。");
         this.assertTrue(false,"跳转窗口失败,title:"+containsTitle);
         return "FALSE";
     }
@@ -393,7 +362,7 @@ public class Tools {
                 return hand;
         }
         Reporter.log("切换窗口失败，无法按Title【"+title+"】切换窗口。");
-        takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
+        //takesScreenshot("切换窗口失败，无法按Title【"+title+"】切换窗口。");
         this.assertTrue(false,"跳转窗口失败,title:"+title);
         return "FALSE";
     }
@@ -412,7 +381,7 @@ public class Tools {
         }catch(NoSuchWindowException e)
         {
             Reporter.log("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
-            takesScreenshot("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
+            //takesScreenshot("切换窗口失败，无法按Hand【"+hand+"】切换窗口。");
             this.assertTrue(false,"跳转窗口失败,hand:"+hand);
         }
     }
@@ -545,54 +514,18 @@ public class Tools {
             System.out.println(ex);
         }
     }
-    /**
-     * 截图
-     */
-    public void takesScreenshot()
+
+
+    public void takesScreenshot(String info)
     {
-        Reporter.log("TakesScreenshot截图");
-        String imageFormat = "png";// 图像文件的格式
-        String picDir= Data.baseDir+"/pictures/";
-        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
-        try {
-            FileUtils.copyFile(srcFile,new File(filename));
-            System.out.print("TakesScreenshot Save File:"+filename+"....Finished!\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ITestResult result=Reporter.getCurrentTestResult();
+        String fileName=Reporter.getCurrentTestResult().getMethod().getMethodName()+Reporter.getCurrentTestResult().getMethod().getDescription();
+        fileName=fileName.replaceAll(",","");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("MMddHHmmss");
 
-    }
-    public void takesScreenshot(String str)
-    {
-        Reporter.log("TakesScreenshot截图");
-        String imageFormat = "png";// 图像文件的格式
-        String picDir= Data.baseDir+"/pictures/";
-        File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        BufferedImage image = null;
-        try {
-            image = ImageIO.read(srcFile);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Graphics g = image.getGraphics();
-        g.setFont(new Font("Serif",Font.BOLD,15));
-        g.setColor(Color.red);
-        g.drawString(str, 10, 15);
+        String formatDate=dateFormat.format(new Date());
 
-
-        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
-        try {
-            ImageIO.write(image, "png", new File(filename));
-            Reporter.log("TakesScreenshot Save File:"+filename+"....Finished!\n");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void takesScreenshot2(String info)
-    {
-        Reporter.log("TakesScreenshot截图");
+        fileName=fileName+formatDate;
         String imageFormat = "png";// 图像文件的格式
         String picDir= Data.baseDir+"/pictures/";
         File srcFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
@@ -608,11 +541,13 @@ public class Tools {
         g.drawString(info, 10, 15);
 
 
-        String filename=picDir+getCurrentDateTime()+"."+imageFormat;
+
+        String filename=picDir+fileName+"."+imageFormat;
+        Reporter.log("<img src=\"../" + filename + "\"/>");
+        Reporter.getCurrentTestResult();
         try {
             ImageIO.write(image, "png", new File(filename));
-            Reporter.log("TakesScreenshot Save File:"+filename+"....Finished!\n");
-            System.out.println(Reporter.getCurrentTestResult().getMethod());
+            Reporter.log("onException:TakesScreenshot Save File:"+filename+"....Finished!\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

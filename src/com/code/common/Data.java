@@ -14,7 +14,7 @@ public interface Data {
     public static String baseDir = "./";
     public static String baseUrl = configPro.prop.getProperty("baseURL");
     public static int timeOut=10;       //wait超时时间，单位秒
-    public static int sleepTime=250;    //调度频率，单位毫秒
+    public static int sleepTime=20;    //调度频率，单位毫秒
     /*
     KbpList，KBP列表对应的tableXpath，td，tr。
     gridXpath表示data区域的数据table，

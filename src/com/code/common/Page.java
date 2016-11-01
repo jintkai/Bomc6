@@ -45,6 +45,7 @@ public class Page {
                     Class<?> cls=Class.forName("org.openqa.selenium.WebElement");
                     try {
                         WebElement e = (WebElement) arr[i].get(this);
+
                         attr=attr.append(tools.getAttribute(e,"Value")).append(",").append(tools.getAttribute(e,"innerHTML"));
 
                         info.append(",值:"+attr).append(e.getText());
@@ -62,14 +63,5 @@ public class Page {
 
         System.out.println(info.toString());
         return info.toString();
-    }
-}
-
-class Persion{
-    String a;
-    String b;
-    AgFormPage page;
-    public void test(){
-        //打印出所有变量的值
     }
 }

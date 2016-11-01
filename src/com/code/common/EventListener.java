@@ -6,6 +6,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import javax.imageio.ImageIO;
@@ -13,6 +14,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Created by jinkai on 2014/6/21.
@@ -100,10 +103,9 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeFindBy(final By by, final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
-        //System.out.println("FindByElement:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
-            //mylog.error("定位元素:"+by.toString());
+
             try {
                 WebElement element = wait.until(new ExpectedCondition<WebElement>() {
                     @Override
@@ -120,11 +122,18 @@ public class EventListener implements WebDriverEventListener {
         else
         {
             try {
-                //mylog.error("定位元素:"+by.toString());
-                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+//                WebElement element = wait.until(new ExpectedCondition<WebElement>() {
+//                    @Override
+//                    public WebElement apply(WebDriver webDriver) {
+//
+//                        return webDriver.findElement(by);
+//                    }
+//                });
+                Boolean b=wait.until(new ExpectedCondition<Boolean>(){
+
                     @Override
-                    public WebElement apply(WebDriver webDriver) {
-                        return webDriver.findElement(by);
+                    public Boolean apply(WebDriver webDriver) {
+                        return webDriver.findElements(by).size()!=0;
                     }
                 });
             }
@@ -143,7 +152,7 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
         System.out.println("ClickElement:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
@@ -158,8 +167,7 @@ public class EventListener implements WebDriverEventListener {
             }
             catch(TimeoutException e)
             {
-                //e.printStackTrace();
-                //System.out.println("点击元素失败");
+
             }
         }
 
@@ -167,15 +175,12 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void afterClickOn(WebElement webElement, WebDriver webDriver) {
-        /*mylog.info("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
-        Reporter.log("点击按钮:"+" -> ["+webElement.getText()+"] -> "+webElement.toString());
-        */
 
     }
 
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
-        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut,Data.sleepTime);
+        WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
         System.out.println("ChangeValue:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
@@ -184,7 +189,7 @@ public class EventListener implements WebDriverEventListener {
                 Boolean element = wait.until(new ExpectedCondition<Boolean>() {
                     @Override
                     public Boolean apply(WebDriver webDriver) {
-                        //return webElement.isEnabled();
+
                         return (webElement.isDisplayed() && webElement.isEnabled());
                     }
                 });
@@ -192,15 +197,13 @@ public class EventListener implements WebDriverEventListener {
             }
             catch(TimeoutException e)
             {
-                mylog.error("修改元素值失败."+getElementsAttrs(webElement));
+
             }
         }
     }
 
     @Override
     public void afterChangeValueOf(WebElement webElement, WebDriver webDriver) {
-        //mylog.info("修改元素"+webElement+"输入框值后:"+webElement.getAttribute("value"));
-        //Reporter.log("修改元素"+webElement+"输入框值后:"+webElement.getAttribute("value"));
     }
 
     @Override
@@ -215,9 +218,15 @@ public class EventListener implements WebDriverEventListener {
 
     @Override
     public void onException(Throwable throwable, WebDriver webDriver) {
-        System.out.println("CurrentUrl:"+webDriver.getCurrentUrl()+">>Title:"+webDriver.getTitle());
-        //System.out.println("修改元素值:"+getElementsAttrs(webElement));
-        Reporter.log("TakesScreenshot截图");
+
+        ITestResult result=Reporter.getCurrentTestResult();
+        String fileName=Reporter.getCurrentTestResult().getMethod().getMethodName()+Reporter.getCurrentTestResult().getMethod().getDescription();
+        fileName=fileName.replaceAll(",","");
+        SimpleDateFormat dateFormat=new SimpleDateFormat("MMddHHmmss");
+
+        String formatDate=dateFormat.format(new Date());
+
+        fileName=fileName+formatDate;
         String imageFormat = "png";// 图像文件的格式
         String picDir= Data.baseDir+"/pictures/";
         String str= String.valueOf((int)(Math.random()));
@@ -231,10 +240,10 @@ public class EventListener implements WebDriverEventListener {
         Graphics g = image.getGraphics();
         g.setFont(new Font("Serif",Font.BOLD,15));
         g.setColor(Color.red);
-        g.drawString(str, 10, 15);
+        g.drawString(throwable.getMessage(), 10, 15);
 
-        String r=String.valueOf((int)(Math.random()*10000));
-        String filename=picDir+r+"."+imageFormat;
+
+        String filename=picDir+fileName+"."+imageFormat;
         try {
             ImageIO.write(image, "png", new File(filename));
             Reporter.log("onException:TakesScreenshot Save File:"+filename+"....Finished!\n");

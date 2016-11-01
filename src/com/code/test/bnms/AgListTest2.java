@@ -65,7 +65,7 @@ public class AgListTest2 extends TestCase {
     public void editAgent(){
         GridPage gridTable=agList.operateAG("修改",null);
     }
-    @Test(priority = 1,description = "增加Agent",groups = "broken")
+    @Test(priority = 1,description = "增加Agent")
     public void addAgent()
     {
         GridPage gridPage=new GridPage(eventDriver);
@@ -91,7 +91,7 @@ public class AgListTest2 extends TestCase {
     }
 
 
-    @Test(priority = 1,description = "部署agent",groups = "broken")
+    @Test(priority = 1,description = "部署agent")
     public void deployAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -104,7 +104,7 @@ public class AgListTest2 extends TestCase {
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
     }
 
-    @Test(priority = 1,description = "启动agent",dependsOnMethods = "deployAgent",groups = "broken")
+    @Test(priority = 1,description = "启动agent",dependsOnMethods = "deployAgent" )
     public void startAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -115,7 +115,7 @@ public class AgListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
     }
-    @Test(priority = 1,description = "停止agent",dependsOnMethods = "startAgent",groups = "broken")
+    @Test(priority = 1,description = "停止agent",dependsOnMethods = "startAgent" )
     public void stopAgent( )
     {
         Map<String,String> map=new HashMap<>();
@@ -126,7 +126,7 @@ public class AgListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
     }
-    @Test(priority = 1,description = "停止Agent",dependsOnMethods = "stopAgent",groups = "broken")
+    @Test(priority = 1,description = "停止Agent",dependsOnMethods = "stopAgent" )
     public void updeployAgent( )
     {
         Map<String,String> map=new HashMap<>();

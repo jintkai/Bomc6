@@ -29,8 +29,10 @@ public class AgFormPage extends FormPage {
     @PageInfo(info = "主机UNIT_ID")
     @FindBy(name="form.envId")
     WebElement formEnvID;
+    @PageInfo(info = "workstation的ID")
     WebElement workstaionId;
     WebElement performanceId;
+    @PageInfo(info="进程关键字变量")
     WebElement processKey;
     @PageInfo(info = "部署路径")
     WebElement installPath;
@@ -97,21 +99,5 @@ public class AgFormPage extends FormPage {
         return new GridPage(eventDriver);
     }
 
-//    public String toString() {
-//        StringBuffer info = new StringBuffer();
-//        Field arr[] = this.getClass().getDeclaredFields();
-//
-//        for (int i = 0; i < arr.length; i++) {
-//            info.append("字段类型:").append(arr[i].getType());
-//
-//            PageInfo pageInfo = arr[i].getAnnotation(PageInfo.class);
-//            if (pageInfo != null) {
-//                info.append(",pageInfo:" + pageInfo.info());
-//
-//            }
-//        }
-//        System.out.println(info.toString());
-//        return info.toString();
-//    }
 
 }

@@ -144,7 +144,7 @@ public class KpiFrameTest2 extends TestCase {
         gridTable=kpiFrame.search(domain);
         System.out.println(map.toString());
         tools.assertEquals(gridTable.getGridrowNum(),0,
-                map);
+                domain.toString());
     }
 
     @Test(priority = 1,description = "增加与KBP关联的KPI")

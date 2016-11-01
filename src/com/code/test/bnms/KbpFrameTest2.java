@@ -17,7 +17,6 @@ import java.util.*;
 public class KbpFrameTest2 extends TestCase {
     KbpListFramePage kbpFrame;
     GridPage gridTable;
-    //KbpFormDao kbpFormDao;
     @Parameters({"node"})
     public KbpFrameTest2(String node)
     {
@@ -27,6 +26,7 @@ public class KbpFrameTest2 extends TestCase {
         Reporter.log("selenium Grid:"+node);
         //kbpFormDao=new KbpFormDao();
     }
+
 //    @BeforeMethod
 //    @Parameters({"Action_URL"})
 //    public void beforeMethod(String actionUrl)
@@ -56,7 +56,7 @@ public class KbpFrameTest2 extends TestCase {
         //kbpSearchDomain.setKbp_Caption(null);
         kbpSearchDomain.setKbp_class(kbp_class);
         gridTable=kbpFrame.search(kbpSearchDomain);
-        tools.assertEquals(gridTable.getGridrowNum(),list.size(),kbpSearchDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),list.size()+3,kbpSearchDomain.toString());
     }
 
     @Test(priority = 0,description = "通过KBP编号精确查询")

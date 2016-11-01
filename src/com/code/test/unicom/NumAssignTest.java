@@ -22,13 +22,13 @@ public class NumAssignTest extends TestCase2 {
 
     MainPage mainPage=new MainPage(eventDriver);
     NumAssignPage numAssignPage=new NumAssignPage(eventDriver);
-    @BeforeTest
-    @Parameters({"Base_URL"})
-    public void beforeMethod(String base_url)
-    {
-        eventDriver.get(Data.baseUrl);
-        beforeClass(base_url);
-    }
+//    @BeforeTest
+//    @Parameters({"Base_URL"})
+//    public void beforeMethod(String base_url)
+//    {
+//        eventDriver.get(Data.baseUrl);
+//        beforeClass(base_url);
+//    }
     @Test(description = "号码下发")
     public void numAssignTest(){
         mainPage.menuPage.selectMenu("库存管理","号码下发");

@@ -29,13 +29,13 @@ public class NumRuleTest extends TestCase2 {
     public NumRuleTest(String node) {
         super(node);
     }
-    @BeforeTest
-    @Parameters({"Base_URL"})
-    public void beforeMethod(String base_url)
-    {
-        eventDriver.get(Data.baseUrl);
-        beforeClass(base_url);
-    }
+//    @BeforeTest
+//    @Parameters({"Base_URL"})
+//    public void beforeMethod(String base_url)
+//    {
+//        eventDriver.get(Data.baseUrl);
+//        beforeClass(base_url);
+//    }
 
     @Test(description = "增加普通靓号")
     public void addNumRule(){

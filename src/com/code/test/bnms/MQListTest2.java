@@ -27,7 +27,7 @@ public class MQListTest2 extends TestCase {
         mqList=new MQListPage(eventDriver);
         if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
             rowName="安装路径";
-            rowValue="/jlbnms/bomc5/app/broker1";
+            rowValue="/jlbnms/bomc5/app/broker3";
         }
         if(DBTools.url.contains("172.21.1.5:1523:bnms")){
             rowName="安装路径";
@@ -35,12 +35,7 @@ public class MQListTest2 extends TestCase {
         }
 
     }
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        eventDriver.get(Data.baseUrl + actionUrl);
-//    }
+
 
     @DataProvider(name="mqList")
     public Iterator dataDriver(Method method) throws IOException, BiffException {
@@ -63,7 +58,7 @@ public class MQListTest2 extends TestCase {
         searchDomain.setIpAddr(list.get(0).get("ip_Addr"));
         MqFormDomain mqFormDomain=new MqFormDomain();
         mqFormDomain.setEnvSearchDomain(searchDomain);
-        mqFormDomain.setInstallPath("/selenium/mq");
+        mqFormDomain.setInstallPath("/selenium/mq"+tools.formatNow());
         mqFormDomain.setJmxPort(String.valueOf(tools.random()));
         mqFormDomain.setMqPort(String.valueOf(tools.random()));
         mqFormDomain.setWebPort(String.valueOf(tools.random()));
@@ -84,7 +79,7 @@ public class MQListTest2 extends TestCase {
 
         Map<String,String> map=new HashMap<>();
         map.put("列名","安装路径");
-        map.put("列值",list.get(0).get("INSTANCE_NAME"));
+        map.put("列值",list.get(0).get("install_patch"));
         map.put("操作类型","删除");
         GridPage gridTable=mqList.operateMQ(map);
         tools.assertEquals(r,gridTable.getGridrowNum(),map.toString());
@@ -92,6 +87,7 @@ public class MQListTest2 extends TestCase {
     @Test(priority = 1,description = "部署MQ")
     public void deployMQ( )
     {
+
         Map<String,String> map=new HashMap<>();
         System.out.println(rowName+":"+rowValue);
         map.put("列值",rowValue);
@@ -100,6 +96,7 @@ public class MQListTest2 extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         System.out.println(MqMap.toString());
+        tools.sleep(10000);
         tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
     }
     @Test(priority = 1,description = "启动MQ",dependsOnMethods = "deployMQ")

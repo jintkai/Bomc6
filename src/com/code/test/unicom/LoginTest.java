@@ -20,13 +20,13 @@ public class LoginTest extends TestCase2 {
         super(node);
         loginPage=new LoginPage(eventDriver);
     }
-    @BeforeMethod
-
-    public void beforeMethod()
-    {
-        eventDriver.get(Data.baseUrl);
-
-    }
+//    @BeforeMethod
+//
+//    public void beforeMethod()
+//    {
+//        eventDriver.get(Data.baseUrl);
+//
+//    }
     @Test
     public void login(){
         map=new HashMap<String, String>();

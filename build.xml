@@ -52,7 +52,6 @@
     <!-- 开始测试 -->
     <target name="run_tests" depends="initOutput">
         <echo message="**************run-test**************" />
-        <!--<sshexec host="." command="/opt/firefox/firefox-bin" trust="true" />-->
         <testng classpathref="compile.path" failureproperty="test.failed" >
             <!--xml test suite file -->
             <xmlfileset dir="${configclass}">
