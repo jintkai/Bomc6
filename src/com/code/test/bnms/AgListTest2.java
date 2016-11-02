@@ -61,10 +61,7 @@ public class AgListTest2 extends TestCase {
         tools.assertEquals(gridTable.getGridrowNum(),list.size(),agentSearchDomain.toString());
     }
 
-    @Test(priority = 0,description = "修改agent")
-    public void editAgent(){
-        GridPage gridTable=agList.operateAG("修改",null);
-    }
+
     @Test(priority = 1,description = "增加Agent")
     public void addAgent()
     {
