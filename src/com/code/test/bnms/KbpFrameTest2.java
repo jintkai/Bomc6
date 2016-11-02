@@ -56,7 +56,7 @@ public class KbpFrameTest2 extends TestCase {
         //kbpSearchDomain.setKbp_Caption(null);
         kbpSearchDomain.setKbp_class(kbp_class);
         gridTable=kbpFrame.search(kbpSearchDomain);
-        tools.assertEquals(gridTable.getGridrowNum(),list.size()+3,kbpSearchDomain.toString());
+        tools.assertEquals(gridTable.getGridrowNum(),list.size(),kbpSearchDomain.toString());
     }
 
     @Test(priority = 0,description = "通过KBP编号精确查询")
@@ -216,7 +216,7 @@ public class KbpFrameTest2 extends TestCase {
         String nowTime=String.valueOf(tools.random());
 
         KbpFormDomain kbpFormDomain=new KbpFormDomain();
-        kbpFormDomain.setKBP_CAPTION(kbp_caption+nowTime);
+        kbpFormDomain.setKBP_CAPTION(nowTime);
         kbpFormDomain.setKBP_DESC("seleniumKBP描述"+nowTime);
         kbpFormDomain.setVIEW_STYLE("一维表格");
         kbpFormDomain.setENABLE("是");
@@ -224,7 +224,7 @@ public class KbpFrameTest2 extends TestCase {
         kbpFrame.operateKbp("修改",null,searchDomain,kbpFormDomain);
         tools.refresh();
 
-        searchDomain.setKbp_Caption(kbp_caption+nowTime);
+        searchDomain.setKbp_Caption(nowTime);
         searchDomain.setKbp_class(kbp_classPre);
         gridTable=kbpFrame.search(searchDomain);
 

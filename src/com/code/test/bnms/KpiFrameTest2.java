@@ -27,12 +27,7 @@ public class KpiFrameTest2 extends TestCase {
         gridTable=new GridPage(eventDriver);
         Reporter.log("selenium Grid:" + node);
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+
 
 //    @DataProvider(name="kpiList")
 //    public Iterator dataDriver(Method method) throws IOException, BiffException {

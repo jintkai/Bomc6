@@ -28,12 +28,7 @@ public class EnvListTest2 extends TestCase{
         envList=new EnvListPage(eventDriver);
         gridTable=new GridPage(eventDriver);
     }
-    @BeforeMethod
-    @Parameters({"Action_URL"})
-    public void beforeMethod(String actionUrl)
-    {
-        eventDriver.get(Data.baseUrl + actionUrl);
-    }
+
 
 //    @DataProvider(name="envList")
 //    public Iterator dataDriver(Method method) throws IOException, BiffException {
