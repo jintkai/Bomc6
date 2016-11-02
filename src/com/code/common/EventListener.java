@@ -153,7 +153,7 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeClickOn(final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
-        System.out.println("ClickElement:"+getElementsAttrs(webElement));
+        System.out.println("点击元素:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
 
@@ -181,7 +181,7 @@ public class EventListener implements WebDriverEventListener {
     @Override
     public void beforeChangeValueOf(final WebElement webElement, WebDriver webDriver) {
         WebDriverWait wait=new WebDriverWait(webDriver,Data.timeOut/2,Data.sleepTime);
-        System.out.println("ChangeValue:"+getElementsAttrs(webElement));
+        System.out.println("修改元素值:"+getElementsAttrs(webElement));
         if(webElement!=null)
         {
 

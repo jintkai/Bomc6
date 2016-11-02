@@ -1,10 +1,9 @@
 package com.code.common;
 
+import com.sun.security.ntlm.Client;
 import org.junit.Test;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Properties;
 
 /**
@@ -16,11 +15,17 @@ public  class Config {
         FileInputStream in=null;
         try {
              in=new FileInputStream("./config/config.properties");
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            prop.load(in);
+            //prop.load(new InputStreamReader(Client.class.getClassLoader().getResourceAsStream("config.properties"), "UTF-8"));
+            //prop.load(in,"UTF-8");
+            InputStream inputStream = new FileInputStream("./config/config.properties");
+            BufferedReader bf = new BufferedReader(new InputStreamReader(inputStream, "utf-8"));
+            prop.load(bf);
+            inputStream.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
