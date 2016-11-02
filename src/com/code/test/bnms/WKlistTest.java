@@ -46,7 +46,7 @@ public class WKlistTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=wkList.operateWK(map);
         tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
-                Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+                Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider="WKlist",priority = 1,description = "部署、启动、停止、卸载WORKSTATION")
     public void deployWK(String[] str)
@@ -54,6 +54,6 @@ public class WKlistTest extends TestCase {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=wkList.deployWK(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map.toString());
     }
 }

@@ -48,7 +48,7 @@ public class EnvListTest  extends TestCase{
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.search(map);
         gridTable=new GridPage(eventDriver);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider="envList",priority = 1,description = "操作部署环境，增加、修改、删除")
     public void operateEnv(String[] str)
@@ -56,6 +56,6 @@ public class EnvListTest  extends TestCase{
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         envList.operateRes(map);
         gridTable=envList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
 }

@@ -50,9 +50,9 @@ public class AlarmShieldCfgTest extends TestCase{
         map=tools.changeStringToMap(excelHead,str);
         gridTable=shieldCfg.search(map);
         tools.assertEquals(gridTable.getRowNum(),
-                Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+                Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
         Map<String, String> resultMap=gridTable.getTrOfAllTd(1);
-        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map);
+        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map.toString());
     }
     @Test(dataProvider = "AlarmShield",priority = 1,description = "告警屏蔽过滤器操作功能：增、删、改")
     public void operateAlarmShield(String[] str)
@@ -62,10 +62,10 @@ public class AlarmShieldCfgTest extends TestCase{
         gridTable=shieldCfg.opearte(map);
         gridTable=shieldCfg.search(map);
         tools.assertEquals(gridTable.getRowNum(),
-                Integer.parseInt(tools.getMapValue(map, "期望值")), map);
+                Integer.parseInt(tools.getMapValue(map, "期望值")), map.toString());
         if (!tools.getMapValue(map,"操作类型").equals("删除"))
         {
         Map<String, String> resultMap=gridTable.getTrOfAllTd(1);
-        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map);}
+        tools.assertEquals(tools.getMapValue(resultMap,"关联监控点个数"),tools.getMapValue(map,"关联监控点个数"),map.toString());}
     }
 }

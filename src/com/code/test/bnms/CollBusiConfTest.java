@@ -1,5 +1,6 @@
 package com.code.test.bnms;
 
+import com.code.common.Config;
 import com.code.common.DBTools;
 import com.code.common.GridPage;
 import com.code.common.TestCase;
@@ -27,22 +28,10 @@ public class CollBusiConfTest extends TestCase {
     @Parameters({"node"})
     public CollBusiConfTest(String node) {
         super(node);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="Agent名称";
-            rowValue="agent96";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app/";
-        }
+        rowName= Config.getProperty("agentKey");
+        rowValue=Config.getProperty("agentValue");
     }
 
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        eventDriver.get(Data.baseUrl + actionUrl);
-//    }
 
     @Test(priority = 1,description = "增加Shell采集")
     public void addShellBusiConf(){

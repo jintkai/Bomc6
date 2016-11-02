@@ -47,7 +47,7 @@ public class KpiFrameTest extends TestCase {
         map=tools.changeStringToMap(excelHead,obj);
         gridTable=kpiFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
-                map);
+                map.toString());
     }
     @Test(dataProvider="kpiList",priority = 1,description = "按Tree查询KPI")
     public void searchKPIByTree(String[] obj)
@@ -55,7 +55,7 @@ public class KpiFrameTest extends TestCase {
         map=tools.changeStringToMap(excelHead,obj);
         gridTable=kpiFrame.searchByTree(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
-                map);
+                map.toString());
     }
     @Test(dataProvider = "kpiList",priority = 2,description = "KPI操作，增加、修改、删除；")
     public void operateKPI(String[] obj)
@@ -64,7 +64,7 @@ public class KpiFrameTest extends TestCase {
         kpiFrame.operateKpi(map);
         gridTable=kpiFrame.search(map);
         tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),
-               map);
+               map.toString());
     }
 }
 

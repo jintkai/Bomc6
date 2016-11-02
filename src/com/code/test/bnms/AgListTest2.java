@@ -29,14 +29,8 @@ public class AgListTest2 extends TestCase {
     {
         super(node);
         agList=new AgentListPage(eventDriver);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="Agent名称";
-            rowValue="agent96";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app/";
-        }
+        rowName=Config.getProperty("agentKey");
+        rowValue=Config.getProperty("agentValue");
     }
 
     @Test(priority = 0,description = "查询Agent")
@@ -98,7 +92,7 @@ public class AgListTest2 extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         System.out.println(MqMap.toString());
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap.toString());
     }
 
     @Test(priority = 1,description = "启动agent",dependsOnMethods = "deployAgent" )
@@ -110,7 +104,7 @@ public class AgListTest2 extends TestCase {
         GridPage gridTable=agList.deployAG("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map.toString());
     }
     @Test(priority = 1,description = "停止agent",dependsOnMethods = "startAgent" )
     public void stopAgent( )
@@ -121,7 +115,7 @@ public class AgListTest2 extends TestCase {
         GridPage gridTable=agList.deployAG("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map.toString());
     }
     @Test(priority = 1,description = "停止Agent",dependsOnMethods = "stopAgent" )
     public void updeployAgent( )
@@ -132,7 +126,7 @@ public class AgListTest2 extends TestCase {
         GridPage gridTable=agList.deployAG("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map.toString());
         agList.deployAG("部署",map);
         agList.deployAG("启动",map);
     }

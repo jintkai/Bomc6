@@ -1,5 +1,12 @@
 package com.code.test.bnms;
 
+import com.code.common.Tools;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -98,5 +105,11 @@ public class TT {
 
         Date now =new Date();
         System.out.println(System.currentTimeMillis());
+    }
+
+    @Test
+    public void t2(){
+
+        Assert.assertEquals("a",(Object) "a","c");
     }
 }

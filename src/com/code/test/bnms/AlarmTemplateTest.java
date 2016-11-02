@@ -45,7 +45,7 @@ public class AlarmTemplateTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=alarmTemplate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
     @Test(dataProvider = "alarmTemplate",priority = 1,description = "告警模板增加")
     public void operateAlarmTemplate(String[] str)
@@ -53,7 +53,7 @@ public class AlarmTemplateTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         alarmTemplate.operate(map);
         gridTable=alarmTemplate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
     @Test(dataProvider = "alarmTemplate",priority = 2,description = "告警模板KPI增加")
     public void operateTemplateKPI(String[] str)

@@ -49,14 +49,14 @@ public class KbpFrameTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=kbpFrame.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider = "kbpList",priority = 1,description = "按Tree查询KBP")
     public void searchKBPByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=kbpFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider="kbpList",priority = 2,description="KBP增加、删除、修改;")
     public void operateKBP(String str[])
@@ -65,6 +65,6 @@ public class KbpFrameTest extends TestCase {
         String option=tools.getMapValue(map,"操作类型");
         kbpFrame.operateKbp(map);
         gridTable=kbpFrame.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
 }

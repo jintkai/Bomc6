@@ -45,7 +45,7 @@ public class AgListTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=agList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider="agList",priority = 1,description = "增加、修改、删除Agent")
     public void operateAG(String[] str)
@@ -53,7 +53,7 @@ public class AgListTest extends TestCase {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=agList.operateAG(map);
         gridTable=agList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider="agList",priority = 2,description = "部署、启动、停止、卸载Agent")
     public void deployAG(String[] str)
@@ -63,6 +63,6 @@ public class AgListTest extends TestCase {
         gridTable=agList.deployAG(map);
         agList.search(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(1);
-        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map.toString());
     }
 }

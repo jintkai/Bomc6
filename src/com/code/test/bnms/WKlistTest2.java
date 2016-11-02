@@ -28,28 +28,11 @@ public class WKlistTest2 extends TestCase {
     {
         super(node);
         wkList=new WKlistPage(eventDriver);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="ID";
-            rowValue="B8D27C1...";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app/";
-        }
+        rowName=Config.getProperty("wkKey");
+        rowValue=Config.getProperty("wkValue");
     }
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        eventDriver.get(Data.baseUrl + actionUrl);
-//    }
 
-    @DataProvider(name="WKlist")
-    public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("WORKSTATION",method.getName());
-        excelHead=excelDriver.getHead(0);
-        return excelDriver;
-    }
+
 
     @Test(priority = 0,description = "增加WORKSTATION")
     public void addWorkstation()
@@ -80,7 +63,7 @@ public class WKlistTest2 extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         System.out.println(MqMap.toString());
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap.toString());
     }
 
     @Test(priority = 1,description = "启动Workstation",dependsOnMethods = "deployWorkstation")
@@ -92,7 +75,7 @@ public class WKlistTest2 extends TestCase {
         GridPage gridTable=wkList.deployWK("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map.toString());
     }
     @Test(priority = 1,description = "停止Workstation",dependsOnMethods = "startWorkstation")
     public void stopWorkstation( )
@@ -104,7 +87,7 @@ public class WKlistTest2 extends TestCase {
         GridPage gridTable=wkList.deployWK("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map.toString());
     }
     @Test(priority = 1,description = "卸载Workstation",dependsOnMethods = "stopWorkstation")
     public void updeployWorkstation( )
@@ -116,6 +99,6 @@ public class WKlistTest2 extends TestCase {
         GridPage gridTable=wkList.deployWK("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map.toString());
     }
 }

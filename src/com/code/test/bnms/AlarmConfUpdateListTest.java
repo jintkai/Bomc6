@@ -46,7 +46,7 @@ public class AlarmConfUpdateListTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=alarmConfUpdate.search(map);
-        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(gridTable.getRowNum(),tools.getMapValue(map,"期望值"),map.toString());
     }
     @Test
     public void update()

@@ -23,14 +23,8 @@ public class PFListTest extends TestCase {
     {
         super(node);
         pfList=new PFListPage(eventDriver);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="ID";
-            rowValue="86ADDF4...";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app/";
-        }
+        rowName=Config.getProperty("pfKey");
+        rowValue=Config.getProperty("pfValue");
     }
 //    @BeforeMethod
 //    @Parameters({"Action_URL"})
@@ -76,7 +70,7 @@ public class PFListTest extends TestCase {
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         System.out.println(MqMap.toString());
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap.toString());
     }
 
     @Test(priority = 1,description = "启动Performance",dependsOnMethods = "deployPerformance")
@@ -88,7 +82,7 @@ public class PFListTest extends TestCase {
         GridPage gridTable=pfList.deployPF("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map.toString());
     }
     @Test(priority = 1,description = "停止Performance",dependsOnMethods = "startPerformance")
     public void stopPerformance( )
@@ -100,7 +94,7 @@ public class PFListTest extends TestCase {
         GridPage gridTable=pfList.deployPF("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map.toString());
     }
     @Test(priority = 1,description = "卸载Performance",dependsOnMethods = "stopPerformance")
     public void updeployPerformance( )
@@ -112,7 +106,7 @@ public class PFListTest extends TestCase {
         GridPage gridTable=pfList.deployPF("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map.toString());
         pfList.deployPF("部署",map);
         pfList.deployPF("启动",map);
     }

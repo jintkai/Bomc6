@@ -26,14 +26,6 @@ public class ResFrameTest2 extends TestCase {
         gridTable=new GridPage(eventDriver);
     }
 
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        this.eventDriver.get(Data.baseUrl+actionUrl);
-//    }
-
-
     @Test(priority = 0,description = "通过设备名称查询资源树")
     public void searchResByTree()
     {
@@ -44,7 +36,7 @@ public class ResFrameTest2 extends TestCase {
 
         gridTable=resFrame.searchByTree(map.get("device_id"));
         tools.sleep(5000);
-        tools.assertEquals(gridTable.getGridrowNum(),0,map);
+        tools.assertEquals(gridTable.getGridrowNum(),0,map.toString());
     }
 
     @Test(priority = 0,description = "通过设备id查询资源树")
@@ -56,7 +48,7 @@ public class ResFrameTest2 extends TestCase {
         map=list.get(0);
 
         gridTable=resFrame.searchByTree(map.get("unit_id"));
-        tools.assertEquals(gridTable.getGridrowNum(),0,map);
+        tools.assertEquals(gridTable.getGridrowNum(),0,map.toString());
     }
 
     @Test(priority = 0,description = "树查询,通过设备id查询数据库资源")
@@ -67,7 +59,7 @@ public class ResFrameTest2 extends TestCase {
         List<Map> list=dbTools.queryMapListHandler(sqlStr);
         map=list.get(0);
         gridTable=resFrame.searchByTree(map.get("unit_id"));
-        tools.assertEquals(gridTable.getGridrowNum(),0,map);
+        tools.assertEquals(gridTable.getGridrowNum(),0,map.toString());
     }
 
 

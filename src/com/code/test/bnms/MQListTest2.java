@@ -25,24 +25,10 @@ public class MQListTest2 extends TestCase {
     {
         super(node);
         mqList=new MQListPage(eventDriver);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="安装路径";
-            rowValue="/jlbnms/bomc5/app/broker3";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app";
-        }
-
+        rowName=Config.getProperty("mqKey");
+        rowValue=Config.getProperty("mqValue");
     }
 
-
-    @DataProvider(name="mqList")
-    public Iterator dataDriver(Method method) throws IOException, BiffException {
-        ExcelDriver excelDriver=new ExcelDriver("MQ",method.getName());
-        excelHead=excelDriver.getHead(0);
-        return excelDriver;
-    }
     @Test( priority = 0,description = "增加MQ")
     public void addMQ()
     {
@@ -97,7 +83,7 @@ public class MQListTest2 extends TestCase {
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
         System.out.println(MqMap.toString());
         tools.sleep(10000);
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap);
+        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"已部署",MqMap.toString());
     }
     @Test(priority = 1,description = "启动MQ",dependsOnMethods = "deployMQ")
     public void startMQ( )
@@ -108,7 +94,7 @@ public class MQListTest2 extends TestCase {
         GridPage gridTable=mqList.deploy("启动",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"运行中",map.toString());
     }
     @Test(priority = 1,description = "停止MQ",dependsOnMethods = "startMQ")
     public void stopMQ( )
@@ -119,7 +105,7 @@ public class MQListTest2 extends TestCase {
         GridPage gridTable=mqList.deploy("停止",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map);
+        tools.assertEquals(tools.getMapValue(MqMap,"运行状态"),"已停止",map.toString());
     }
     @Test(priority = 1,description = "停止MQ",dependsOnMethods = "stopMQ")
     public void updeployMQ( )
@@ -130,7 +116,7 @@ public class MQListTest2 extends TestCase {
         GridPage gridTable=mqList.deploy("卸载",map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(
                 gridTable.getListOftr(tools.getMapValue(map,"列名"),tools.getMapValue(map,"列值")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,"部署状态"),"未部署",map);
+        tools.assertEquals((Object)tools.getMapValue(MqMap,"部署状态"),(Object) "未部署",map.toString());
 
         mqList.deploy("部署",map);
         mqList.deploy("启动",map);

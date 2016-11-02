@@ -45,14 +45,14 @@ public class ResFrameTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider = "resCase",priority = 1,description = "按Tree查询资源基础配置")
     public void searchResByTree(String str[])
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=resFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider = "resCase",priority = 2,description = "操作资源基础配置，增加、修改、删除；")
     public void operateRes(String str[])
@@ -60,7 +60,7 @@ public class ResFrameTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         resFrame.operateRes(map);
         gridTable=resFrame.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
 
 

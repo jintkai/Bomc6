@@ -48,14 +48,14 @@ public class AlarmConFrameTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=alarmFrame.searchByTree(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider = "alarmFrame",priority = 1,description = "通过告警配置表头查询告警集中配置")
     public void searchByHead(String[] str)
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=alarmFrame.searchByHead(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
 
     @Test(dataProvider = "alarmFrame",priority = 2,description = "增加、修改、删除告警集中配置")
@@ -70,7 +70,7 @@ public class AlarmConFrameTest extends TestCase {
         if(option.equals("删除"))
             alarmFrame.delete(map);
         GridPage gridTable=alarmFrame.searchByHead(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     //@Test(dataProvider = "alarmFrame",description="增加变更项")
     public void addEdit(String[] str)

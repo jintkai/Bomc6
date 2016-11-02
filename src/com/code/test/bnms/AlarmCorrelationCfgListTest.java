@@ -52,12 +52,12 @@ public class AlarmCorrelationCfgListTest extends TestCase {
         gridTable=alrmCorrelation.operate(map);
 
         ArrayList<Integer> list=gridTable.getListOftr(tools.getMapValue(map,"验证列"),tools.getMapValue(map,"目标UNITID"));
-        tools.assertEquals(list.size(),Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+        tools.assertEquals(list.size(),Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
         if (!tools.getMapValue(map,"操作类型").equals("删除")) {
             Map<String, String> resultMap = gridTable.getTrOfAllTd(
                     list.get(0)
             );
-            tools.assertEquals(tools.getMapValue(resultMap, "关联监控点个数"), tools.getMapValue(map, "关联监控点个数"), map);
+            tools.assertEquals(tools.getMapValue(resultMap, "关联监控点个数"), tools.getMapValue(map, "关联监控点个数"), map.toString());
         }
     }
 }

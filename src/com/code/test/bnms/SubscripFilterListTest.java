@@ -46,7 +46,7 @@ public class SubscripFilterListTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=subscriptList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
     @Test(dataProvider = "SubscripFilter",priority = 0,description = "订阅过滤器操作")
     public void operateSubscripFilter(String[] str)
@@ -54,6 +54,6 @@ public class SubscripFilterListTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         subscriptList.operate(map);
         gridTable=subscriptList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
 }

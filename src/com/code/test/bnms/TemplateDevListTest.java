@@ -46,7 +46,7 @@ public class TemplateDevListTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         gridTable=devList.search(map);
-        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
 
     @Test(dataProvider = "TemplateDev",priority = 1,description = "告警模板关联资源查询")
@@ -54,7 +54,7 @@ public class TemplateDevListTest extends TestCase {
     {
         map=tools.changeStringToMap(excelHead,str);
         int row=devList.searchDevSet(map);
-        tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+        tools.assertEquals(row,Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
 
     @Test(dataProvider = "TemplateDev",priority = 2,description = "告警模板关联操作")
@@ -70,10 +70,10 @@ public class TemplateDevListTest extends TestCase {
             for (int i=0;i<syncStatus.length;i++)
             {
                 System.out.println(syncStatus[i]);
-                tools.assertEquals(syncStatus[i],tools.getMapValue(map, "期望值"),map);
+                tools.assertEquals(syncStatus[i],tools.getMapValue(map, "期望值"),map.toString());
             }
         }
         else
-            tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map);
+            tools.assertEquals(gridTable.getRowNum(),Integer.parseInt(tools.getMapValue(map, "期望值")),map.toString());
     }
 }

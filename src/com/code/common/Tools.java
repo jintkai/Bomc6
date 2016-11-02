@@ -232,19 +232,19 @@ public class Tools {
         }
     }
 
-    @Deprecated
-    public void assertEquals(Object actual,Object expected,Map<String,String> map)
-    {
-        try {
-            Assert.assertEquals(actual, expected, map.toString());
-        }catch(AssertionError e){
-            e.printStackTrace();
-            //takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
-            Reporter.log(map.toString());
-            Assert.assertEquals(actual, expected, map.toString());
-
-        }
-    }
+//    @Deprecated
+//    public void assertEquals(Object actual,Object expected,Map<String,String> map)
+//    {
+//        try {
+//            Assert.assertEquals(actual, expected, map.toString());
+//        }catch(AssertionError e){
+//            e.printStackTrace();
+//            //takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
+//            Reporter.log(map.toString());
+//            Assert.assertEquals(actual, expected, map.toString());
+//
+//        }
+//    }
 
     public void assertEquals(Object actual,Object expected,String message)
     {
@@ -281,28 +281,28 @@ public class Tools {
      * @param  msg 错误提示信息
      * @param exception map中的key，通过map，exception来返回预期值；
      */
+//    @Deprecated
+//    public void assertEquals(String actual,String exception,String msg)
+//    {
+//        try {
+//            Assert.assertEquals(actual, exception, msg);
+//        }catch(AssertionError e) {
+//
+//            msg=("实际值:"+actual+",期望值:"+exception)+","+msg;
+//            Assert.assertEquals(actual, exception, msg);
+//        }
+//    }
     @Deprecated
-    public void assertEquals(String actual,String exception,String msg)
-    {
-        try {
-            Assert.assertEquals(actual, exception, msg);
-        }catch(AssertionError e) {
-
-            msg=("实际值:"+actual+",期望值:"+exception)+","+msg;
-            Assert.assertEquals(actual, exception, msg);
-        }
-    }
-    @Deprecated
-    public void assertEquals(String actual,String expected,Map<String,String> map)
-    {
-        try {
-            Assert.assertEquals(actual, expected, map.toString());
-        }catch(AssertionError e) {
-            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
-
-            Assert.assertEquals(actual, expected, map.toString());
-        }
-    }
+//    public void assertEquals(String actual,String expected,Map<String,String> map)
+//    {
+//        try {
+//            Assert.assertEquals(actual, expected, map.toString());
+//        }catch(AssertionError e) {
+//            takesScreenshot(getMapValue(map,"用例编号")+":"+getMapValue(map,"用例描述")+"------------实际值>>>>>"+actual.toString()+"；期望值>>>>>"+expected.toString());
+//
+//            Assert.assertEquals(actual, expected, map.toString());
+//        }
+//    }
     public void assertTrue(boolean actual,String msg)
     {
         try {

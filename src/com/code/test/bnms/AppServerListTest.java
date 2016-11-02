@@ -23,28 +23,10 @@ public class AppServerListTest extends TestCase {
     {
         super(node);
         appServerList=new AppServerListPage(eventDriver);
-        if(DBTools.url.contains("172.21.2.96:3306/bnms_cs")){
-            rowName="应用名称";
-            rowValue="bmcserver26";
-        }
-        if(DBTools.url.contains("172.21.1.5:1523:bnms")){
-            rowName="安装路径";
-            rowValue="/test-bnms/app";
-        }
+        rowName=Config.getProperty("bmcServerKey");
+        rowValue=Config.getProperty("bmcServerValue");
     }
-//    @BeforeMethod
-//    @Parameters({"Action_URL"})
-//    public void beforeMethod(String actionUrl)
-//    {
-//        eventDriver.get(Data.baseUrl + actionUrl);
-//    }
 
-//    @DataProvider(name="AppServerList")
-//    public Iterator dataDriver(Method method) throws IOException, BiffException {
-//        ExcelDriver excelDriver=new ExcelDriver("APPSERVER",method.getName());
-//        excelHead=excelDriver.getHead(0);
-//        return excelDriver;
-//    }
 
     @Test(priority = 0,description = "增加Appserver-BMCServer")
     public void addAppServer()

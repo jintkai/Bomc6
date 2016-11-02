@@ -47,7 +47,7 @@ public class PmAlarmListTest extends TestCase {
         map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=pmAlarm.operatePA(map);
         tools.assertEquals(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).size(),
-                Integer.parseInt(tools.getMapValue(map,"期望值")),map);
+                Integer.parseInt(tools.getMapValue(map,"期望值")),map.toString());
     }
     @Test(dataProvider = "PmAlarmList",priority = 1,description = "部署、启动、停止、卸载pmalarm")
     public void deployPA(String[] str)
@@ -55,6 +55,6 @@ public class PmAlarmListTest extends TestCase {
         Map<String,String> map=tools.changeStringToMap(excelHead,str);
         GridPage gridTable=pmAlarm.deployPA(map);
         Map<String, String> MqMap = gridTable.getTrOfAllTd(gridTable.getListOftr(tools.getMapValue(map,"列表选择器"),tools.getMapValue(map,"列表匹配数据")).get(0));
-        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map);
+        tools.assertEquals(tools.getMapValue(MqMap,tools.getMapValue(map,"状态字段")),tools.getMapValue(map,"期望值"),map.toString());
     }
 }
