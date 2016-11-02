@@ -1,7 +1,6 @@
 package com.code.common;
 
-import com.sun.security.ntlm.Client;
-import org.junit.Test;
+
 
 import java.io.*;
 import java.util.Properties;
