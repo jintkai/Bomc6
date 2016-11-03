@@ -3,6 +3,7 @@ package com.code.bnms.kpilist.page;
 import com.code.common.FormPage;
 import com.code.common.GridPage;
 import com.code.bnms.kpilist.domain.KpiFormDomain;
+import com.code.common.PageInfo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,28 +19,39 @@ public class KpiFormPage extends FormPage {
     {
         super(eventDriver);
     }
+    @PageInfo(info = "指标编号")
     @FindBy(id="kpi.kpiId")
     WebElement kpiId;
+    @PageInfo(info = "指标名称")
     @FindBy(id="kpi.kpiName")
     WebElement kpiName;
+    @PageInfo(info = "KBP编号")
     @FindBy(id="kpi.kbpClass")
     WebElement kbpClass;
+    @PageInfo(info = "指标类型")
     @FindBy(id="kpi.kpiType")
     WebElement kpiType;
+    @PageInfo(info = "数据类型-字符串")
     @FindBy(id="kpi.kpiStylestring")
     WebElement kpiStylestring;
+    @PageInfo(info = "数据类型-数值")
     @FindBy(id="kpi.kpiStylenumber")
     WebElement kpiStylenumber;
-    @FindBy(id="kpi.kpiMeasure")
+    @PageInfo(info = "数据类型-日期时间")
+    @FindBy(id="kpi.kpiStyledatetime")
     WebElement kpiStyledatetime;
+    @PageInfo(info = "单位")
     @FindBy(id="kpi.kpiMeasure")
     WebElement kpiMeasure;
+    @PageInfo(info = "KPI描述")
     @FindBy(id="kpi.kpiDesc")
     WebElement kpiDesc;
+
     @FindBy(id= "kpi_trendFlag")
     WebElement trendFlag;
     @FindBy(id="kpi_baseLineFlag")
     WebElement baseLineFlag;
+    @PageInfo(info = "管理类型")
     @FindBy(id="tr-kpiMngType")
     WebElement kpiMngType;
 

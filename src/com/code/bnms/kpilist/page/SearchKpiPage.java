@@ -3,6 +3,7 @@ package com.code.bnms.kpilist.page;
 import com.code.common.GridPage;
 import com.code.common.Page;
 import com.code.bnms.kpilist.domain.KpiSearchDomain;
+import com.code.common.PageInfo;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
@@ -17,10 +18,13 @@ public class SearchKpiPage extends Page {
     {
         super(eventDriver);
     }
+    @PageInfo(info = "KPI编号")
     @FindBy(name = "filter.kpiId")
     WebElement kpiId;
+    @PageInfo(info = "KPI名称")
     @FindBy(name = "filter.kpiName")
     WebElement kpiName;
+    @PageInfo(info = "查询")
     @FindBy(id = "btn-search")
     WebElement btnSearch;
     @Deprecated

@@ -13,54 +13,14 @@
     </groups>
     <parameter name="Base_URL" value="http://172.21.10.31:8084" />
     <test name="测试环境IE8" preserve-order="true">
-        <parameter name="node" value="http://172.19.129.138:5555/wd/hub"/>
+        <parameter name="node" value="http://172.21.213.42:5555/wd/hub"/>
+
         <classes>
 
-            <class name="com.code.test.bnms.KbpFrameTest2">
-                <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
-            </class>
 
             <class name="com.code.test.bnms.KpiFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
             </class>
-
-            <class name="com.code.test.bnms.ResFrameTest2" >
-                <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
-                <methods><include name="editKpi"></include></methods>
-            </class>
-
-            <class name="com.code.test.bnms.EnvListTest2" >
-                <parameter name="Action_URL" value="/cfgColl/listEnvironment.action" />
-            </class>
-
-            <class name="com.code.test.bnms.MQListTest2" >
-                <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
-            </class >
-
-            <class name="com.code.test.bnms.AgListTest2">
-                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-            </class>
-
-            <class name="com.code.test.bnms.WKlistTest2">
-                <parameter name="Action_URL" value="/cfgColl/listWorkstation.action?type=1"/>
-            </class>
-
-
-            <class name="com.code.test.bnms.PFListTest">
-                <parameter name="Action_URL" value="/cfgColl/listPerformance.action?type=1" />
-            </class>
-
-            <class name="com.code.test.bnms.AppServerListTest">
-                <parameter name="Action_URL" value="/ibnms/appDeploy/deployList.action"></parameter>
-            </class>
-            <class name="com.code.test.bnms.CronsShowTest">
-                <parameter name="Action_URL" value="/ibnms/cfgCrons/showCrons.action"></parameter>
-            </class>
-
-            <class name="com.code.test.bnms.CollBusiConfTest">
-                <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>
-            </class>
-
 
 
         </classes>
@@ -68,15 +28,8 @@
     <!--test name="测试环境IE9" preserve-order="true">
         <parameter name="node" value="http://172.21.133.180:5555/wd/hub"/>
         <classes>
-            <class name="com.code.test.bnms.KbpFrameTest2">
-                <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
-            </class>
 
-            <class name="com.code.test.bnms.KpiFrameTest2" >
-                <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
-            </class>
-
-            <class name="com.code.test.bnms.ResFrameTest2" >
+         <class name="com.code.test.bnms.ResFrameTest2" >
                 <parameter name="Action_URL" value="/ibnms/config/resListFrame.action" />
                 <methods><include name="editKpi"></include></methods>
             </class>
@@ -88,6 +41,18 @@
             <class name="com.code.test.bnms.MQListTest2" >
                 <parameter name="Action_URL" value="/cfgColl/listMq.action?type=1" />
             </class >
+
+            <class name="com.code.test.bnms.KbpFrameTest2">
+                <parameter name="Action_URL" value="/ibnms/config/kbpListFrame.action" />
+            </class>
+
+            <class name="com.code.test.bnms.KpiFrameTest2" >
+                <parameter name="Action_URL" value="/ibnms/config/kpiListFrame.action" />
+            </class>
+
+
+
+
 
             <class name="com.code.test.bnms.AgListTest2">
                 <parameter name="Action_URL" value="/cfgColl/listAgent.action?type=1"></parameter>

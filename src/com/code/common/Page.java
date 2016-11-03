@@ -40,9 +40,9 @@ public class Page {
 
             PageInfo pageInfo=arr[i].getAnnotation(PageInfo.class);
             if(pageInfo!=null) {
-                try {
+
+
                     info.append(",说明:" + pageInfo.info());
-                    Class<?> cls=Class.forName("org.openqa.selenium.WebElement");
                     try {
                         WebElement e = (WebElement) arr[i].get(this);
 
@@ -52,9 +52,7 @@ public class Page {
                     } catch (Exception e1) {
                         e1.printStackTrace();
                     }
-                } catch (ClassNotFoundException e1) {
-                    e1.printStackTrace();
-                }
+
 
 
             }

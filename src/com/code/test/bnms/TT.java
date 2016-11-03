@@ -1,12 +1,15 @@
 package com.code.test.bnms;
 
 import com.code.common.Tools;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -18,7 +21,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
-
+import java.util.Properties;
 /**
  * Created by jinkai on 2014/7/10.
  */
@@ -109,7 +112,10 @@ public class TT {
 
     @Test
     public void t2(){
-
+        PropertyConfigurator.configure("./config/log4j.properties");
+        Logger myLogger = Logger.getLogger("myLogger.mySonLogger");
+        myLogger.error("Hello");
         Assert.assertEquals("a",(Object) "a","c");
+
     }
 }

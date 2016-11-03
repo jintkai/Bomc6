@@ -119,6 +119,7 @@ public class MQListTest2 extends TestCase {
         tools.assertEquals((Object)tools.getMapValue(MqMap,"部署状态"),(Object) "未部署",map.toString());
 
         mqList.deploy("部署",map);
+        tools.sleep(5000);
         mqList.deploy("启动",map);
     }
 }

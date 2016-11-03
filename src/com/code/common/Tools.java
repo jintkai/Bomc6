@@ -1,6 +1,7 @@
 package com.code.common;
 
 
+import com.code.portal.login.LoginPage;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.NoSuchElementException;
@@ -21,6 +22,7 @@ import java.awt.event.KeyEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.Annotation;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
@@ -78,6 +80,8 @@ public class Tools {
             return false;
         }
     }
+
+
     /**
      *描述判断元素是否存在；
      * 该方法主要用于查询多个元素组，由于查询元素组时存在响应时间问题，
@@ -146,6 +150,7 @@ public class Tools {
     public void sendKeys(WebElement ele,String value)
     {
         try {
+
             if (value == null) {
                 return;
             }
